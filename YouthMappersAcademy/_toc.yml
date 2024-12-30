@@ -1,0 +1,17 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+# jupyter-book build YouthMapperAcademy
+# ghp-import -n -p  -c 'pygis.io' -f pygis/_build/html
+
+format: jb-book
+root: intro
+parts:
+- caption: Introductory Track
+  description: In this course you will learn about the origins of the OpenStreetMap project, the infrastructure, the community, how YouthMappers fits into this ecosystem as a community within the community, and what keeps us mapping. If you don’t already have one, you will learn how to create an OpenStreetMap account. We will look at what drove the development of OpenStreetMap, and what the OSM community membership looks like. We will also examine the ethical considerations of mapping in OpenStreetMap, and the best practices in communication for members of the community.
+  numbered: true
+  chapters:
+  - file: Course1-Ecosystem.md
+- caption: Advanced Track
+  numbered: true
+  chapters:
+  - file: Course7-IntroJOSM.md
