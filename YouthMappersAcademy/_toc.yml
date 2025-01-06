@@ -1,5 +1,6 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
+# builds on push to main
 # jupyter-book build . 
 #--path-output=/home/mmann1123/Documents/github/YouthMappersAcademy/docs
 # ghp-import -n -p  -c 'pygis.io' -f pygis/_build/html
