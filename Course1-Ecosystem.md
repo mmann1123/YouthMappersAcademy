@@ -122,65 +122,65 @@ Skills and proficiencies for the YouthMappers Academy Badge align with:
 ### Knowledge Checks
 
 1. The information about “what” something is in OSM is called a:
-   a. Tag
-   b. Label
-   c. Attribute
+   - a. Tag
+   - b. Label
+   - c. Attribute
 
 2. Data quality in OSM is:
-   a. Perfect
-   b. Average
-   c. Very poor
-   d. Of mixed quality
+   - a. Perfect
+   - b. Average
+   - c. Very poor
+   - d. Of mixed quality
 
 3. OSM was developed as a:
-   a. Research project
-   b. Commercial venture
-   c. Response to restricted access
+   - a. Research project
+   - b. Commercial venture
+   - c. Response to restricted access
 
 4. OSM is used (consumed by):
-   a. The public
-   b. For-profit companies
-   c. Students
-   d. Governments
+   - a. The public
+   - b. For-profit companies
+   - c. Students
+   - d. Governments
 
 5. The Humanitarian OpenStreetMap Team formed after a collective response to what major disaster:
-   a. Earthquake in Haiti
-   b. Wildfires in California
-   c. Earthquake in Nepal
-   d. Volcanoes in Guatemala
+   - a. Earthquake in Haiti
+   - b. Wildfires in California
+   - c. Earthquake in Nepal
+   - d. Volcanoes in Guatemala
 
 6. Missing Maps was founded by the following organizations:
-   a. The American Red Cross
-   b. The British Red Cross
-   c. Médecins Sans Frontières (MSF)
-   d. The Humanitarian OpenStreetMap Team
+   - a. The American Red Cross
+   - b. The British Red Cross
+   - c. Médecins Sans Frontières (MSF)
+   - d. The Humanitarian OpenStreetMap Team
 
 7. People before Data is one of the ethical cornerstones of OpenStreetMap. In the spirit of this guideline, which of the following are true:
-   a. Map communities if YOU feel they need data in order to become better places
-   b. Speak with communities before mapping them to understand their needs and appreciate their security concerns
-   c. Assume trained mappers know what’s best
-   d. Strive for direct community involvement in the mapping process
+   - a. Map communities if YOU feel they need data in order to become better places
+   - b. Speak with communities before mapping them to understand their needs and appreciate their security concerns
+   - c. Assume trained mappers know what’s best
+   - d. Strive for direct community involvement in the mapping process
 
 8. YouthMappers chapters are:
-   a. Student led
-   b. Faculty led
-   c. University led
-   d. Steering committee led
+   - a. Student led
+   - b. Faculty led
+   - c. University led
+   - d. Steering committee led
 
 9. The YouthMappers consortium strives to:
-   a. Build socially engaged citizen mappers
-   b. Foster youth leadership
-   c. Support scientific research around open data
-   d. Make commercial data enterprises obsolete
+   - a. Build socially engaged citizen mappers
+   - b. Foster youth leadership
+   - c. Support scientific research around open data
+   - d. Make commercial data enterprises obsolete
 
 10. The OSM foundation functions as:
-    a. A legal entity for the OpenStreetMap Project
-    b. A team that maintains and edits the data
-    c. A fundraising vehicle to support the OpenStreetMap Project
-    d. A for-profit entity that provides cartographic services
+    - a. A legal entity for the OpenStreetMap Project
+    - b. A team that maintains and edits the data
+    - c. A fundraising vehicle to support the OpenStreetMap Project
+    - d. A for-profit entity that provides cartographic services
 
 11. How can changing technology affect the rights of those being mapped?
-    a. Higher resolution imagery can affect privacy and/or security of those being mapped
-    b. Accelerated mapping can improve chances of development
-    c. Consent granted under old conditions may not apply under the microscope of new technology
-    d. As it’s an open platform, we have the right to map anywhere
+    - a. Higher resolution imagery can affect privacy and/or security of those being mapped
+    - b. Accelerated mapping can improve chances of development
+    - c. Consent granted under old conditions may not apply under the microscope of new technology
+    - d. As it’s an open platform, we have the right to map anywhere
