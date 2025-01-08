@@ -120,7 +120,15 @@ Skills and proficiencies for the YouthMappers Academy Badge align with:
 - **National Geographic Standards**
 
 ### Knowledge Checks
+```{admonition} Knowledge Checks
+To test your knowledge, complete the following [test](https://forms.office.com/Pages/ResponsePage.aspx?id=niOJ1pLExkCzkSxZUdMdFFgyN18wLBpEumnEYJ68m-ZUOUdYNTRBVjNXOVlCMFM4MkhBSllTOFc0RS4u).
 
+If you receive a score of 80% or higher, you will receive a badge for this module.
+
+```
+
+
+<!-- 
 1. The information about “what” something is in OSM is called a:
    - a. Tag
    - b. Label
@@ -183,4 +191,4 @@ Skills and proficiencies for the YouthMappers Academy Badge align with:
     - a. Higher resolution imagery can affect privacy and/or security of those being mapped
     - b. Accelerated mapping can improve chances of development
     - c. Consent granted under old conditions may not apply under the microscope of new technology
-    - d. As it’s an open platform, we have the right to map anywhere
+    - d. As it’s an open platform, we have the right to map anywhere -->
