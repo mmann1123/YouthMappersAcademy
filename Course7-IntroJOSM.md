@@ -16,4 +16,4 @@ kernelspec:
  
 ![static/ym_people.png](static/ym_people.png)
 
-t
+
