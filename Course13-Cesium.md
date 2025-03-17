@@ -117,3 +117,110 @@ These standards are crucial for data sharing, reducing redundancy, and ensuring 
 
 Originally developed by Cesium in 2015 to facilitate streaming heterogeneous 3D geospatial datasets, 3D Tiles was later adopted as a community standard by the Open Geospatial Consortium (OGC) in 2019.
 
+```{admonition} In Focus: Combining 3D Tiles and OSM
+:class: note
+
+Developed by [Cesium](https://cesium.com/), 3D Tiles is an open standard designed for streaming large-scale 3D geospatial data efficiently. It allows complex 3D datasets—such as buildings, terrain, point clouds, and vector data—to be rendered smoothly in web applications.
+
+The hierarchical structure of 3D Tiles enables progressive loading, meaning data is displayed based on the user's view. This system, known as Level of Detail (LOD), ensures optimal performance when visualizing massive datasets.
+
+[OpenStreetMap (OSM)](https://www.openstreetmap.org/) is a collaborative mapping project that provides free, editable geographic data. It includes geospatial information such as road networks, buildings, land use, and points of interest. Because OSM data is open-source, developers can access, modify, and integrate it freely into various applications.
+
+### Steps for Using OSM Data to Generate 3D Tiles:
+- **Extract Building Geometry from OSM**: OSM contains building footprints and, in many cases, height attributes. These can be processed to generate 3D building models that are stored in 3D Tiles formats (e.g., B3DM or I3DM). 
+- **Use Height Data**: Many cities in OSM include building heights or floor counts, allowing for the creation of extruded 3D models. 
+- **Convert Data with Tools**: Software such as [osm2world](https://osm2world.org/), [FME (by Safe Software)](https://www.safe.com/), and [Cesium ion](https://cesium.com/cesium-ion/) can be used to convert OSM data into 3D Tiles. Cesium ion supports direct uploads of OSM data, generating 3D Tiles automatically.
+- **Tile Generation for Scalability**: Large cities or extensive datasets can be tiled into smaller sections, ensuring efficient real-time streaming and rendering in platforms like [CesiumJS](https://cesium.com/platform/cesiumjs/).
+
+### 3D Mapping with CesiumJS
+[CesiumJS](https://cesium.com/platform/cesiumjs/) is the primary open-source 3D mapping library that supports 3D Tiles and OSM data integration. It provides an API for advanced visualizations, allowing 2D OSM data to be referenced alongside 3D Tiles models for an interactive mapping experience.
+
+### Benefits of Combining 3D Tiles and OSM:
+- **Open Data**: OSM provides free, publicly available geographic data, which can be transformed into high-quality 3D representations using 3D Tiles.
+- **High Performance**: 3D Tiles are optimized for efficient streaming, making them ideal for real-time web-based rendering.
+- **Interactivity**: The integration of OSM with 3D Tiles allows for a more immersive and dynamic mapping experience, enhancing user engagement and data visualization.
+
+### For Further Learning:
+- [What is 3D Tiles?](https://cesium.com/learn/3d-tiles/)
+- [Cesium OSM Buildings Overview](https://cesium.com/learn/cesium-osm-buildings/)
+- [Cesium Blog: OSM in 3D Tiles](https://cesium.com/blog/)
+``` 
+
+Each type of 3D GIS data serves specific purposes and applications, ranging from basic elevation models to highly detailed representations of the built environment. The choice of data type depends on the requirements of the analysis, the level of detail needed, and the available data sources.
+
+## **What are the applications of 3D data?**
+
+### **Urban Planning and Development**
+
+3D technology allows planners, developers, architects, and policymakers to view and analyze cities in three dimensions, offering insights that traditional 2D maps cannot provide. 3D GIS enhances urban visualization, helping stakeholders understand the spatial relationship between buildings, streets, landscapes, and infrastructure in a more realistic and interactive manner.
+
+- **Enhanced visualization:** 3D models help communicate plans to the public, making complex planning projects more accessible to non-experts. Displaying building heights and density helps assess skyline changes and the impact of new developments on sightlines. 
+
+- **Urban Growth and Land Use Planning:**
+Planners can model future land use, simulate development impacts, and conduct shadow analysis to assess sunlight blockage and viewshed impacts. 
+
+- **Environmental and Sustainability Analysis:**
+Planners can assess risk factors and mitigate flooding impacts on city infrastructure by integrating climate and flood data with 3D buildings. 3D models help analyze the effects of green spaces, tree coverage, and green roofs, simulating their contribution to urban cooling and stormwater management. Planners can also use 3D data for solar exposure analysis, optimizing building orientation and roof design to support solar energy installations.  
+
+Read more about how urban planners are leveraging 3D analysis in ArcGIS [here.](https://www.esri.com/en-us/arcgis/products/arcgis-urban/overview)
+
+- **Utilities and Underground Infrastructure:**
+3D GIS allows utilities (like water, sewage, electricity) and underground structures to be mapped in 3D, helping avoid conflicts between different infrastructure elements and ensuring maintenance and emergency accessibility.
+
+### **Humanitarian and Emergency Management**
+
+3D GIS is an essential tool for disaster response, humanitarian aid, and crisis preparedness. It helps emergency responders, aid organizations, and governments make data-driven decisions in critical situations. 
+
+- **Disaster Risk Reduction:** 3D models allow for the simulation of natural disasters such as earthquakes, floods, landslides, and wildfire--helping predict high-risk areas and improve evacuation planning. By overlaying data like population density or vulnerable areas, responders can strategically plan evacuation routes and resource allocation. 
+- **Post-Disaster Damage Assessment:** After disasters, aerial LiDAR and photogrammetry-based 3D models rapid assessments of the extent of damage to buildings and infrastructure, which can aid post-disaster needs analysis and reconstruction efforts.
+- **Search and Rescue Operations:** 3D mapping of collapsed buildings and terrain post disaster assists in locating trapped individuals and guiding rescue teams. 
+- **Refugee Camp and Shelter Planning:** 3D GIS is used to design temporary settlements, ensuring optimal land use, accessibility to resources, and efficient distribution of aid. 
+
+### **Environmental and Natural Resource Management**
+
+3D GIS plays a critical role in monitoring ecosystems, managing resources, and protecting biodiversity.
+
+- **Watershed Management:**
+Analyzing drainage patterns and hydrological changes to assess water availability, erosion risks, and flooding potential.  
+For example, 3D models can integrate topographic elevation models with hydrology simulations to predict the direction of floodwater during periods of heavy rain.
+
+- **Landslide and Erosion Risk Assessment:**
+Identifying unstable terrain and high-risk zones for proactive mitigation measures.
+
+- **Deforestation and Climate Change Monitoring:** Using LiDAR and satellite-based 3D models to assess tree canopy loss, carbon sequestration, and reforestation efforts.
+
+- **Wildlife Conservation:** Mapping habitats in 3D to track species movement, changes in forest density, and encroachments.
+
+### Architecture, Engineering, and Construction
+
+3D GIS supports the entire building lifecycle from design and construction to maintenance. By integrating geographic and architectural data, 3D GIS enables spatially accurate modeling of structures, improving planning, efficiency, and resilience. 
+
+- **Building Design and Visualization:** 3D GIS allows architects and engineers to create detailed 3D models of buildings, providing realistic visualizations that enhance design accuracy and collaboration.
+
+- **Structural Integrity and Risk Assessment:** 3D GIS can be used to simulate how buildings and infrastructure respond to environmental hazards such as earthquakes, high winds, and floods, supporting disaster resilience and safer construction planning.
+
+### **Navigation and Transportation**
+3D GIS enhances transportation planning and navigation systems, offering realistic, data-driven models for optimizing road networks, transit systems, and pedestrian pathways. 
+
+- **Traffic Analysis:** 3D GIS helps model urban traffic patterns and congestion hotspots, allowing planners to optimize public transit routes, highway interchanges, and traffic flow management. By incorporating sensor data and IoT (Internet of Things) networks—which are interconnected devices such as traffic sensors, cameras, and GPS systems that collect and share real-time data—planners can analyze live traffic updates, improving emergency response times and congestion management.
+
+- **Infrastructure Development:** By integrating elevation and land-use data, 3D GIS assists in designing bridges, tunnels, and rail systems, ensuring efficient alignment with existing landscapes and infrastructure. 
+
+### Telecommunications and Network Planning
+3D GIS is critical for expanding and optimizing telecommunication networks, ensuring efficient signal coverage, infrastructure placement, and connectivity improvements. 
+
+- **Cell Tower Placement:** By analyzing terrain, building heights, and population density, 3D GIS helps optimize cell tower locations, maximizing signal reach and minimizing interference in both urban and rural areas.
+
+- **Signal Propagation Analysis:** 3D GIS allows engineers to simulate and visualize network coverage, improving service reliability in complex environments. 
+
+## What Are the Primary Sources of 3D Data?
+
+### LiDAR (Light Detection and Ranging)
+
+LiDAR provides high-resolution elevation data by measuring the distance to the Earth's surface using laser pulses. A LiDAR sensor emits pulses of light, which bounce back after hitting objects or the ground. By calculating the time taken for each pulse to return, LiDAR generates precise distance measurements. When millions of these points are collected, they create a detailed 3D map of the environment, similar to painting with laser dots instead of brush strokes.
+
+```{dropdown} 🎥 Tip: What Is LiDAR?
+:icon: tip
+
+[**Video: What Is LiDAR and How Does LiDAR Work?** – Phoenix LiDAR Systems (2022)](https://www.youtube.com/watch?v=INSERT_VIDEO_LINK_HERE)  
+This video explains how LiDAR measures distances and creates accurate 3D maps using laser pulses.
