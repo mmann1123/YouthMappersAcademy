@@ -219,8 +219,12 @@ Identifying unstable terrain and high-risk zones for proactive mitigation measur
 
 LiDAR provides high-resolution elevation data by measuring the distance to the Earth's surface using laser pulses. A LiDAR sensor emits pulses of light, which bounce back after hitting objects or the ground. By calculating the time taken for each pulse to return, LiDAR generates precise distance measurements. When millions of these points are collected, they create a detailed 3D map of the environment, similar to painting with laser dots instead of brush strokes.
 
-```{dropdown} 🎥 Tip: What Is LiDAR?
-:icon: tip
+```{admonition} 🎥 What Is LiDAR?  
+**Video:** [What Is LiDAR and How Does LiDAR Work? – Phoenix LiDAR Systems (2022)](https://www.youtube.com/watch?v=dOvMDbQKpwQ)  
 
-[**Video: What Is LiDAR and How Does LiDAR Work?** – Phoenix LiDAR Systems (2022)](https://www.youtube.com/watch?v=INSERT_VIDEO_LINK_HERE)  
 This video explains how LiDAR measures distances and creates accurate 3D maps using laser pulses.
+
+```
+
+### InSAR (Interferometric Synthetic Aperture Radar)
+InSAR is a remote sensing technique that uses radar signals to detect ground surface deformations with high precision. By comparing radar images captured at different times, InSAR reveals subtle changes such as land subsidence, tectonic shifts, or volcanic activity, making it invaluable for geophysical monitoring, disaster management, and infrastructure assessment.
