@@ -1,0 +1,1325 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. Module 13: Introduction to 3D Data &#8212; YouthMappers Academy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'Course13-Cesium';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="2. Introduction to JOSM" href="Course7-IntroJOSM.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/YMlogo.png" class="logo__image only-light" alt="YouthMappers Academy - Home"/>
+    <img src="_static/YMlogo.png" class="logo__image only-dark pst-js-only" alt="YouthMappers Academy - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    YouthMappers Academy
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introductory Track</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Course1-Ecosystem.html">1. Module 1: The OSM Ecosystem</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Advanced Track</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="Course7-IntroJOSM.html">2. Introduction to JOSM</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Module 13: Introduction to 3D Data</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FCourse13-Cesium.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/Course13-Cesium.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Module 13: Introduction to 3D Data</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.1. 13.0 Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-will-learn">3.1.1. What you will learn</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-3d-data">3.2. 13.1 Introduction to 3D Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-3d-data">3.2.1. What is 3D data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-3d-data-important">3.2.2. <strong>Why is 3D Data Important?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-3d-gis-data-represented">3.2.3. <strong>How is 3D GIS Data Represented?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-based-3d-data">3.2.4. <strong>Vector-Based 3D Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sub-13-1-4-raster-based-3d-data">3.2.5. <strong>Sub 13.1.4: Raster-Based 3D Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-3d-models">3.2.6. <strong>Advanced 3D Models</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-data-standards">3.2.7. <strong>3D Data Standards</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-applications-of-3d-data">3.3. 13.2 What are the Applications of 3D Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urban-planning-and-development">3.3.1. <strong>Urban Planning and Development</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#humanitarian-and-emergency-management">3.3.2. <strong>Humanitarian and Emergency Management</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-and-natural-resource-management">3.3.3. <strong>Environmental and Natural Resource Management</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-engineering-and-construction">3.3.4. Architecture, Engineering, and Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation-and-transportation">3.3.5. <strong>Navigation and Transportation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telecommunications-and-network-planning">3.3.6. Telecommunications and Network Planning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-primary-sources-of-3d-data">3.4. 13.3 What Are the Primary Sources of 3D Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lidar-light-detection-and-ranging">3.4.1. 1. LiDAR (Light Detection and Ranging)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insar-interferometric-synthetic-aperture-radar">3.4.2. 2. InSAR (Interferometric Synthetic Aperture Radar)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photogrammetry">3.4.3. 3. Photogrammetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-surveying">3.4.4. <strong>4. Ground Surveying</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#techniques-and-tools">3.4.4.1. Techniques and Tools</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">3.4.4.2. Applications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-field-observations">3.4.5. 5. Simple Field Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.4.5.1. Techniques and Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-and-the-osm-data-model">3.5. 13.4: 3D and the OSM Data model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-structure-tags">3.5.1. Building and Structure Tags</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-type">3.5.1.1. Building Type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#height-and-levels">3.5.1.2. Height and Levels</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roof-details">3.5.1.3. Roof Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#material-and-color">3.5.1.4. Material and Color</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-and-2d-representations">3.5.1.5. 3D and 2D Representations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collecting-simple-3d-data-in-the-field">3.6. 13.5: Collecting Simple 3D Data in the Field</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">3.6.1. <strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#planning-and-preparation">3.6.1.1. <strong>Planning and Preparation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data-collection">3.6.2. <strong>Field Data Collection</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-tools">3.6.2.1. <strong>Mobile Data Collection Tools</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-data-collection-tools">3.6.2.2. <strong>Analog Data Collection Tools</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-geospatial-data">3.6.2.3. <strong>Collect Geospatial Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-upload-and-validation">3.6.3. <strong>Data Upload and Validation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-and-visualization">3.6.4. <strong>Data Processing and Visualization</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-and-further-applications">3.6.5. <strong>Sharing and Further Applications</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers">3.7. <strong>FieldPapers</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers-workflow">3.7.1. <strong>FieldPapers Workflow</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-vespucci-android">3.8. <strong>Mobile Data Collection: Vespucci (Android)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-to-get-started">3.8.1. <strong>Requirements to Get Started</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-vespucci-tools">3.8.2. <strong>Key Vespucci Tools</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-workflow-for-field-mapping">3.9. <strong>Vespucci Workflow for Field Mapping</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-app-questions-exercises">3.10. <strong>Vespucci App Questions &amp; Exercises</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="module-13-introduction-to-3d-data">
+<h1><span class="section-number">3. </span>Module 13: Introduction to 3D Data<a class="headerlink" href="#module-13-introduction-to-3d-data" title="Link to this heading">#</a></h1>
+<section id="overview">
+<h2><span class="section-number">3.1. </span>13.0 Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Welcome to Module 13 of the YouthMappers Academy. This module explores three-dimensional (3D) geospatial data, covering data formats, standards, and a wide range of applications in development.</p>
+<p><img alt="static/13.0_Img1.png" src="_images/13.0_Img1.png" />
+Image source: Esri UK. (n.d.). 3D GIS overview [Image]. Esri UK. Retrieved February 5, 2025, from <a class="reference external" href="https://www.esriuk.com/en-gb/arcgis/3d-gis/overview">https://www.esriuk.com/en-gb/arcgis/3d-gis/overview</a></p>
+<p>You will learn how 3D data is collected through technologies like LiDAR, photogrammetry, and ground surveying, and how it can be integrated into OpenStreetMap (OSM) for mapping urban and natural environments. We will also discuss best practices for visualizing 3D data using tools such as Cesium, QGIS, and ArcGIS.</p>
+<p>3D geospatial data enhances decision-making, planning, and communication among development stakeholders, with critical applications in urban planning, disaster response, infrastructure management, and sustainability efforts aligned with the UN Sustainable Development Goals (SDGs).</p>
+<p><img alt="static/fig2.png" src="_images/fig2.png" /></p>
+<p>Image source: Cesium. (2020, June 1). Cesium OSM Buildings [Image]. Cesium. Retrieved February 5, 2025, from <a class="reference external" href="https://cesium.com/blog/2020/06/01/cesium-osm-buildings/">https://cesium.com/blog/2020/06/01/cesium-osm-buildings/</a></p>
+<section id="what-you-will-learn">
+<h3><span class="section-number">3.1.1. </span>What you will learn<a class="headerlink" href="#what-you-will-learn" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>You will learn about three dimensional data formats, models and standards.</p></li>
+<li><p>You will explore the primary methods of collecting 3D geospatial data, including LiDAR, photogrammetry, InSAR, and ground surveying.</p></li>
+<li><p>You will compare and evaluate different three-dimensional data sources and tools</p></li>
+<li><p>You will explore key applications of 3D geospatial data, including urban planning, disaster response, environmental sustainability, and humanitarian mapping.</p></li>
+<li><p>You will learn about best practices and tools for three dimensional data visualization.</p></li>
+<li><p>You will develop hands-on skills in collecting and integrating simple 3D data in the field using mobile tools like FieldPapers and Vespucci.</p></li>
+<li><p>You will learn how three dimensional data can be incorporated into the OSM data model and the best tools and workflows to facilitate this.</p></li>
+</ul>
+</section>
+</section>
+<section id="introduction-to-3d-data">
+<h2><span class="section-number">3.2. </span>13.1 Introduction to 3D Data<a class="headerlink" href="#introduction-to-3d-data" title="Link to this heading">#</a></h2>
+<section id="what-is-3d-data">
+<h3><span class="section-number">3.2.1. </span>What is 3D data?<a class="headerlink" href="#what-is-3d-data" title="Link to this heading">#</a></h3>
+<p>In Geographic Information Systems (GIS), 3D data refers to spatial data that includes a third dimension—the Z-coordinate—which represents height, depth, or elevation. Unlike traditional 2D GIS, which maps features on a flat plane, 3D GIS enables more detailed, realistic, and interactive visualizations of geographic space.</p>
+</section>
+<section id="why-is-3d-data-important">
+<h3><span class="section-number">3.2.2. </span><strong>Why is 3D Data Important?</strong><a class="headerlink" href="#why-is-3d-data-important" title="Link to this heading">#</a></h3>
+<p>3D GIS is widely used across various industries, including:</p>
+<ul class="simple">
+<li><p>Urban Planning – Visualizing city skylines, zoning impacts, and infrastructure projects.</p></li>
+<li><p>Disaster Response – Modeling floods, landslides, and evacuation routes.</p></li>
+<li><p>Architecture &amp; Construction – Creating accurate 3D models of buildings and infrastructure.</p></li>
+<li><p>Environmental Studies – Analyzing terrain, climate change, and natural resource distribution.</p></li>
+</ul>
+</section>
+<section id="how-is-3d-gis-data-represented">
+<h3><span class="section-number">3.2.3. </span><strong>How is 3D GIS Data Represented?</strong><a class="headerlink" href="#how-is-3d-gis-data-represented" title="Link to this heading">#</a></h3>
+<p>3D GIS data is classified based on how it stores and represents the third dimension. The two primary formats are:</p>
+<ul class="simple">
+<li><p><strong>Vector-based representation</strong>s – Use points, lines, and polygons to define 3D objects.</p></li>
+<li><p><strong>Raster-based representations</strong> – Use grid cells to model elevation (e.g., Digital Elevation Models).</p></li>
+</ul>
+</section>
+<section id="vector-based-3d-data">
+<h3><span class="section-number">3.2.4. </span><strong>Vector-Based 3D Data</strong><a class="headerlink" href="#vector-based-3d-data" title="Link to this heading">#</a></h3>
+<p>Vector data represents specific locations and objects in 3D space. It includes:</p>
+<ul class="simple">
+<li><p><strong>Points (Discrete Locations)</strong></p></li>
+</ul>
+<p>Points represent discrete locations in 3D space, defined by X (longitude), Y (latitude), and Z (height or elevation) coordinates. For example, points can indicate the location of a tree, a communication mast, or a sensor. In addition to spatial coordinates, they may include attributes such as the species of a tree, the model type of a sensor, or the ID number of a radio mast or antenna.</p>
+<p><img alt="static/2D_Point.png" src="_images/2D_Point.png" />
+<em><strong>2D Image:</strong> A 2D point represents a location on a flat surface, defined by its X and Y coordinates. It does not have depth, height, or any physical dimensions—only its position on the 2D plane is described. In this example, the location of the tree is specified in terms of where it stands on the ground, but no information is given about the tree’s height or other attributes.</em></p>
+<p><img alt="static/3D_Point.png" src="_images/3D_Point.png" />
+<em><strong>3D Image:</strong> A 3D point represents a location in three-dimensional space, defined by its X, Y, and Z coordinates. In this example, the tree’s exact location on the ground is combined with the added dimension of height, allowing us to understand both where the tree is and how tall it is, introducing depth to the spatial representation.</em></p>
+<ul class="simple">
+<li><p><strong>Polylines (Linear Features)</strong></p></li>
+</ul>
+<p>Polylines represent continuous objects such as roads, rivers, or utility lines in 3D space. Unlike simple 2D lines, each vertex in a polyline can have a unique Z-value, allowing it to capture elevation changes along its path.</p>
+<p><img alt="static/2D_Polyline.png" src="_images/2D_Polyline.png" />
+<em><strong>2D Caption:</strong> A 2D polyline represents a hiking trail viewed from above, where only the X and Y coordinates (longitude and latitude) are displayed. The line shows the trail’s path on the horizontal plane but does not convey any information about elevation changes encountered during the hike.</em></p>
+<p><img alt="static/3D_polyline.png" src="_images/3D_polyline.png" />
+<em><strong>3D caption:</strong> A 3D polyline displays the hiking trail with elevation data included, represented by the Z-coordinate. In this visualization, the trail not only shows its path on the horizontal plane (X and Y coordinates) but also illustrates how elevation changes throughout the hike. Each vertex of the polyline can hold a different elevation, providing a more accurate representation of the trail’s vertical profile as it ascends and descends over the terrain.</em></p>
+<ul class="simple">
+<li><p><strong>Polygons (Surfaces)</strong></p></li>
+</ul>
+<p>Polygons represent bounded areas, such as building footprints or land parcels, with added height attributes to extend them into 3D space.</p>
+<p>Polygons with height data are often referred to as “Extruded 2D Data” or “2.5D Data” because they are essentially 2D polygons with an associated height value, rather than fully detailed 3D models. This type of representation is commonly used for simple 3D features, such as buildings in a city model.</p>
+<p><img alt="static/2D_Polygon.png" src="_images/2D_Polygon.png" />
+<em><strong>2D Caption:</strong> A 2D building footprint represents the outline of a building on a flat surface, using only X and Y coordinates. These footprints show building locations and shapes but do not provide any information about their height or vertical dimensions.</em></p>
+<p><img alt="static/3D_Polygon.png" src="_images/3D_Polygon.png" />
+<em><strong>3D Caption:</strong> A 3D extruded building extends the footprints vertically by incorporating a Z-coordinate to represent building height. This provides a more realistic view, showing not only the location of the buildings but also their height and volume, offering a better sense of scale and structure in the urban landscape.</em></p>
+</section>
+<section id="sub-13-1-4-raster-based-3d-data">
+<h3><span class="section-number">3.2.5. </span><strong>Sub 13.1.4: Raster-Based 3D Data</strong><a class="headerlink" href="#sub-13-1-4-raster-based-3d-data" title="Link to this heading">#</a></h3>
+<p>Using a raster grid to represent elevation is commonly referred to as a Digital Elevation Model (DEM). A DEM consists of a grid of cells, where each cell stores the elevation value at that specific location on the Earth’s surface.</p>
+<p>While DEMs are often classified as 2.5D—since they do not fully capture complex structures like overhangs—they serve as a foundation for 3D GIS applications.</p>
+<p>DEMs are categorized into two main types:</p>
+<ul class="simple">
+<li><p><strong>Digital Terrain Models (DTMs)</strong>: Represent the bare Earth’s surface, excluding buildings, trees, or other structures. They are used for topographic analysis and hydrological modeling.</p></li>
+<li><p><strong>Digital Surface Models (DSMs):</strong> Capture both natural and man-made features, including buildings, vegetation, and infrastructure, providing a more detailed representation of the Earth’s surface.</p></li>
+</ul>
+<p>By subtracting a DTM from a DSM, we can determine building heights, tree canopy cover, and other structural details—a crucial process for exposure mapping and urban analysis. Additionally, other topographical products can be derived from DTMs, such as slope and aspect, which help analyze terrain characteristics.</p>
+</section>
+<section id="advanced-3d-models">
+<h3><span class="section-number">3.2.6. </span><strong>Advanced 3D Models</strong><a class="headerlink" href="#advanced-3d-models" title="Link to this heading">#</a></h3>
+<p>Some applications require more detailed or flexible 3D representations to accurately capture complex surfaces and terrain features.</p>
+<p><strong>1. Triangulated Irregular Networks (TINs):</strong></p>
+<p>A TIN represents surfaces using non-uniformly spaced points connected by triangles. Each triangle vertex is assigned an elevation value, and together, these triangles form a continuous surface that represents terrain variations.</p>
+<p>TINs are particularly useful for modeling terrain with varying resolutions, as they allow greater detail in areas with complex elevation changes while using fewer data points in flatter areas. This makes them an effective tool for topographic analysis, hydrological modeling, and 3D surface visualization.</p>
+<p><img alt="static/TIN.jpg" src="_images/TIN.jpg" /></p>
+<p><em>Attribution: By AlpSInnsbruck - Own work, CC BY-SA 4.0, <a class="reference external" href="https://commons.wikimedia.org/w/index.php?curid=35634426">https://commons.wikimedia.org/w/index.php?curid=35634426</a></em></p>
+<p><em><strong>Image caption:</strong> Triangulated Irregular Network (TIN) visualizing terrain elevation with interconnected triangular facets for geographic modeling.</em></p>
+<p><strong>2. 3D Mesh Models</strong></p>
+<p>3D mesh models consist of vertices, edges, and faces that together define the shape and structure of a 3D object. These models are widely used for visualizing buildings, terrain, and other complex structures with a high level of detail.</p>
+<p>Mesh models can be highly detailed, making them useful for applications such as urban planning, simulations, and geospatial visualization. They are commonly used in 3D mapping software, game engines, and virtual reality environments to create realistic and interactive representations of geographic spaces.</p>
+<p><img alt="static/Cesium_Mesh.png" src="_images/Cesium_Mesh.png" /></p>
+<p><em><strong>Image caption:</strong> Screenshot of the Cesium Ion Story interface displaying a 3D mesh model layer of a city section, showcasing detailed urban terrain visualization and geospatial analysis.</em></p>
+<p><strong>3. 3D Point Clouds:</strong></p>
+<p>3D point clouds are collections of data points (XYZ coordinates) in three-dimensional space, typically generated by LiDAR or photogrammetry. These data points represent the shape and structure of objects or surfaces, making point clouds an essential tool for creating detailed 3D models of the Earth’s surface, buildings, vegetation, and other physical features.</p>
+<p>Point clouds are widely used in geospatial analysis, construction, and environmental modeling, as they provide highly accurate representations of real-world structures and landscapes.</p>
+<p><img alt="static/pointcloud.png" src="_images/pointcloud.png" />
+<em><strong>Image caption:</strong> 3D point cloud depicting the terrain and landscape</em>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=2crAfWZOgf0">What is a Point Cloud?</a>…</p>
+</div>
+</section>
+<section id="d-data-standards">
+<h3><span class="section-number">3.2.7. </span><strong>3D Data Standards</strong><a class="headerlink" href="#d-data-standards" title="Link to this heading">#</a></h3>
+<p>3D geospatial data standards are essential for ensuring interoperability, accuracy, and consistency across different platforms and applications. Organizations like the
+<a class="reference external" href="https://www.ogc.org/">Open Geospatial Consortium (OGC)</a> and <a class="reference external" href="https://www.iso.org/standards.html">ISO</a> have developed standards to facilitate the exchange and integration of 3D spatial data across industries.</p>
+<p>Notable standards include:</p>
+<ul class="simple">
+<li><p><strong>CityGML –</strong> An XML-based data model designed for representing 3D urban environments.</p></li>
+<li><p><strong>IndoorGML –</strong> Focuses on the modeling of indoor spaces for navigation and spatial analysis.</p></li>
+<li><p><strong>3D Tiles –</strong> A specification developed for efficient streaming and visualization of massive 3D geospatial datasets on the web.</p></li>
+<li><p><strong>KML and COLLADA –</strong> Common formats that support 3D representations in platforms like Google Earth and CAD systems.</p></li>
+</ul>
+<p>These standards are crucial for data sharing, reducing redundancy, and ensuring accuracy in 3D geospatial datasets. They play a key role in applications such as urban planning, environmental monitoring, navigation, and virtual reality experiences.</p>
+<p><strong>3D Tiles:</strong>
+3D Tiles is an open-source format designed to enable the efficient streaming and visualization of large-scale 3D geospatial datasets. This format optimizes rendering performance by breaking down complex 3D models into smaller, manageable chunks, allowing massive datasets to be displayed seamlessly in web-based and mobile applications.</p>
+<p>Originally developed by Cesium in 2015 to facilitate streaming heterogeneous 3D geospatial datasets, 3D Tiles was later adopted as a community standard by the <a class="reference external" href="https://www.ogc.org/">Open Geospatial Consortium (OGC)</a> in 2019.</p>
+<p><img alt="static/3dtile.png" src="_images/3dtile.png" /></p>
+<div class="admonition-in-focus-combining-3d-tiles-and-osm admonition">
+<p class="admonition-title">In Focus: Combining 3D Tiles and OSM</p>
+<p>Developed by <a class="reference external" href="https://cesium.com/">Cesium</a>, 3D Tiles is an open standard designed for streaming large-scale 3D geospatial data efficiently. It allows complex 3D datasets—such as buildings, terrain, point clouds, and vector data—to be rendered smoothly in web applications.</p>
+<p>The hierarchical structure of 3D Tiles enables progressive loading, meaning data is displayed based on the user’s view. This system, known as Level of Detail (LOD), ensures optimal performance when visualizing massive datasets.</p>
+<p><a class="reference external" href="https://www.openstreetmap.org/">OpenStreetMap (OSM)</a> is a collaborative mapping project that provides free, editable geographic data. It includes geospatial information such as road networks, buildings, land use, and points of interest. Because OSM data is open-source, developers can access, modify, and integrate it freely into various applications.</p>
+<h3 class="rubric" id="steps-for-using-osm-data-to-generate-3d-tiles">Steps for Using OSM Data to Generate 3D Tiles:</h3>
+<ul class="simple">
+<li><p><strong>Extract Building Geometry from OSM</strong>: OSM contains building footprints and, in many cases, height attributes. These can be processed to generate 3D building models that are stored in 3D Tiles formats (e.g., B3DM or I3DM).</p></li>
+<li><p><strong>Use Height Data</strong>: Many cities in OSM include building heights or floor counts, allowing for the creation of extruded 3D models.</p></li>
+<li><p><strong>Convert Data with Tools</strong>: Software such as <a class="reference external" href="https://osm2world.org/">osm2world</a>, <a class="reference external" href="https://www.safe.com/">FME (by Safe Software)</a>, and <a class="reference external" href="https://cesium.com/cesium-ion/">Cesium ion</a> can be used to convert OSM data into 3D Tiles. Cesium ion supports direct uploads of OSM data, generating 3D Tiles automatically.</p></li>
+<li><p><strong>Tile Generation for Scalability</strong>: Large cities or extensive datasets can be tiled into smaller sections, ensuring efficient real-time streaming and rendering in platforms like <a class="reference external" href="https://cesium.com/platform/cesiumjs/">CesiumJS</a>.</p></li>
+</ul>
+<h3 class="rubric" id="d-mapping-with-cesiumjs">3D Mapping with CesiumJS</h3>
+<p><a class="reference external" href="https://cesium.com/platform/cesiumjs/">CesiumJS</a> is the primary open-source 3D mapping library that supports 3D Tiles and OSM data integration. It provides an API for advanced visualizations, allowing 2D OSM data to be referenced alongside 3D Tiles models for an interactive mapping experience.</p>
+<h3 class="rubric" id="benefits-of-combining-3d-tiles-and-osm">Benefits of Combining 3D Tiles and OSM:</h3>
+<ul class="simple">
+<li><p><strong>Open Data</strong>: OSM provides free, publicly available geographic data, which can be transformed into high-quality 3D representations using 3D Tiles.</p></li>
+<li><p><strong>High Performance</strong>: 3D Tiles are optimized for efficient streaming, making them ideal for real-time web-based rendering.</p></li>
+<li><p><strong>Interactivity</strong>: The integration of OSM with 3D Tiles allows for a more immersive and dynamic mapping experience, enhancing user engagement and data visualization.</p></li>
+</ul>
+<h3 class="rubric" id="for-further-learning">For Further Learning:</h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cesium.com/learn/3d-tiles/">What is 3D Tiles?</a></p></li>
+<li><p><a class="reference external" href="https://cesium.com/learn/cesium-osm-buildings/">Cesium OSM Buildings Overview</a></p></li>
+<li><p><a class="reference external" href="https://cesium.com/blog/">Cesium Blog: OSM in 3D Tiles</a></p></li>
+</ul>
+</div>
+<p>Each type of 3D GIS data serves specific purposes and applications, ranging from basic elevation models to highly detailed representations of the built environment. The choice of data type depends on the requirements of the analysis, the level of detail needed, and the available data sources.</p>
+</section>
+</section>
+<section id="what-are-the-applications-of-3d-data">
+<h2><span class="section-number">3.3. </span>13.2 What are the Applications of 3D Data?<a class="headerlink" href="#what-are-the-applications-of-3d-data" title="Link to this heading">#</a></h2>
+<section id="urban-planning-and-development">
+<h3><span class="section-number">3.3.1. </span><strong>Urban Planning and Development</strong><a class="headerlink" href="#urban-planning-and-development" title="Link to this heading">#</a></h3>
+<p>3D technology allows planners, developers, architects, and policymakers to view and analyze cities in three dimensions, offering insights that traditional 2D maps cannot provide. 3D GIS enhances urban visualization, helping stakeholders understand the spatial relationship between buildings, streets, landscapes, and infrastructure in a more realistic and interactive manner.</p>
+<ul class="simple">
+<li><p><strong>Enhanced Visualization:</strong> 3D models help communicate plans to the public, making complex planning projects more accessible to non-experts. Displaying building heights and density helps assess skyline changes and the impact of new developments on sightlines.</p></li>
+</ul>
+<p><img alt="static/nyc_3dmodel.jpg" src="_images/nyc_3dmodel.jpg" />
+<em><strong>Citation:</strong> Department of City Planning. (2018). NYC 3D model by community district. <a class="reference external" href="http://NYC.gov">NYC.gov</a>. <a class="reference external" href="https://www.nyc.gov/site/planning/data-maps/open-data/dwn-nyc-3d-model-download.page">https://www.nyc.gov/site/planning/data-maps/open-data/dwn-nyc-3d-model-download.page</a></em></p>
+<p><em><strong>Image Caption:</strong> The 3D model includes data of every building in New York City as of 2014, based on an aerial survey conducted by the Department of Information Technology and Telecommunications (DoITT).</em></p>
+<ul class="simple">
+<li><p><strong>Urban Growth and Land Use Planning:</strong>
+Planners can model future land use, simulate development impacts, and conduct shadow analysis to assess sunlight blockage and viewshed impacts.</p></li>
+<li><p><strong>Environmental and Sustainability Analysis:</strong>
+Planners can assess risk factors and mitigate flooding impacts on city infrastructure by integrating climate and flood data with 3D buildings. 3D models help analyze the effects of green spaces, tree coverage, and green roofs, simulating their contribution to urban cooling and stormwater management. Planners can also use 3D data for solar exposure analysis, optimizing building orientation and roof design to support solar energy installations.</p></li>
+<li><p><strong>Utilities and Underground Infrastructure:</strong>
+3D GIS allows utilities (like water, sewage, electricity) and underground structures to be mapped in 3D, helping avoid conflicts between different infrastructure elements and ensuring maintenance and emergency accessibility.</p></li>
+</ul>
+<p>Read more about how urban planners are leveraging 3D analysis in ArcGIS <a class="reference external" href="https://www.esri.com/en-us/arcgis/products/arcgis-urban/overview">here.</a></p>
+</section>
+<section id="humanitarian-and-emergency-management">
+<h3><span class="section-number">3.3.2. </span><strong>Humanitarian and Emergency Management</strong><a class="headerlink" href="#humanitarian-and-emergency-management" title="Link to this heading">#</a></h3>
+<p>3D GIS is an essential tool for disaster response, humanitarian aid, and crisis preparedness. It helps emergency responders, aid organizations, and governments make data-driven decisions in critical situations.</p>
+<ul class="simple">
+<li><p><strong>Disaster Risk Reduction:</strong> 3D models allow for the simulation of natural disasters such as earthquakes, floods, landslides, and wildfire–helping predict high-risk areas and improve evacuation planning. By overlaying data like population density or vulnerable areas, responders can strategically plan evacuation routes and resource allocation.</p></li>
+<li><p><strong>Post-Disaster Damage Assessment:</strong> After disasters, aerial LiDAR and photogrammetry-based 3D models rapid assessments of the extent of damage to buildings and infrastructure, which can aid post-disaster needs analysis and reconstruction efforts.</p></li>
+<li><p><strong>Search and Rescue Operations:</strong> 3D mapping of collapsed buildings and terrain post disaster assists in locating trapped individuals and guiding rescue teams.</p></li>
+<li><p><strong>Refugee Camp and Shelter Planning:</strong> 3D GIS is used to design temporary settlements, ensuring optimal land use, accessibility to resources, and efficient distribution of aid.</p></li>
+</ul>
+</section>
+<section id="environmental-and-natural-resource-management">
+<h3><span class="section-number">3.3.3. </span><strong>Environmental and Natural Resource Management</strong><a class="headerlink" href="#environmental-and-natural-resource-management" title="Link to this heading">#</a></h3>
+<p>3D GIS plays a critical role in monitoring ecosystems, managing resources, and protecting biodiversity.</p>
+<ul class="simple">
+<li><p><strong>Watershed Management:</strong>
+Analyzing drainage patterns and hydrological changes to assess water availability, erosion risks, and flooding potential.<br />
+For example, 3D models can integrate topographic elevation models with hydrology simulations to predict the direction of floodwater during periods of heavy rain.</p></li>
+<li><p><strong>Landslide and Erosion Risk Assessment:</strong>
+Identifying unstable terrain and high-risk zones for proactive mitigation measures.</p></li>
+<li><p><strong>Deforestation and Climate Change Monitoring:</strong> Using LiDAR and satellite-based 3D models to assess tree canopy loss, carbon sequestration, and reforestation efforts.</p></li>
+<li><p><strong>Wildlife Conservation:</strong> Mapping habitats in 3D to track species movement, changes in forest density, and encroachments.</p></li>
+</ul>
+</section>
+<section id="architecture-engineering-and-construction">
+<h3><span class="section-number">3.3.4. </span>Architecture, Engineering, and Construction<a class="headerlink" href="#architecture-engineering-and-construction" title="Link to this heading">#</a></h3>
+<p>3D GIS supports the entire building lifecycle from design and construction to maintenance. By integrating geographic and architectural data, 3D GIS enables spatially accurate modeling of structures, improving planning, efficiency, and resilience.</p>
+<ul class="simple">
+<li><p><strong>Building Design and Visualization:</strong> 3D GIS allows architects and engineers to create detailed 3D models of buildings, providing realistic visualizations that enhance design accuracy and collaboration.</p></li>
+<li><p><strong>Structural Integrity and Risk Assessment:</strong> 3D GIS can be used to simulate how buildings and infrastructure respond to environmental hazards such as earthquakes, high winds, and floods, supporting disaster resilience and safer construction planning.</p></li>
+</ul>
+</section>
+<section id="navigation-and-transportation">
+<h3><span class="section-number">3.3.5. </span><strong>Navigation and Transportation</strong><a class="headerlink" href="#navigation-and-transportation" title="Link to this heading">#</a></h3>
+<p>3D GIS enhances transportation planning and navigation systems, offering realistic, data-driven models for optimizing road networks, transit systems, and pedestrian pathways.</p>
+<ul class="simple">
+<li><p><strong>Traffic Analysis:</strong> 3D GIS helps model urban traffic patterns and congestion hotspots, allowing planners to optimize public transit routes, highway interchanges, and traffic flow management. By incorporating sensor data and IoT (Internet of Things) networks—which are interconnected devices such as traffic sensors, cameras, and GPS systems that collect and share real-time data—planners can analyze live traffic updates, improving emergency response times and congestion management.</p></li>
+<li><p><strong>Infrastructure Development:</strong> By integrating elevation and land-use data, 3D GIS assists in designing bridges, tunnels, and rail systems, ensuring efficient alignment with existing landscapes and infrastructure.</p></li>
+</ul>
+</section>
+<section id="telecommunications-and-network-planning">
+<h3><span class="section-number">3.3.6. </span>Telecommunications and Network Planning<a class="headerlink" href="#telecommunications-and-network-planning" title="Link to this heading">#</a></h3>
+<p>3D GIS is critical for expanding and optimizing telecommunication networks, ensuring efficient signal coverage, infrastructure placement, and connectivity improvements.</p>
+<ul class="simple">
+<li><p><strong>Cell Tower Placement:</strong> By analyzing terrain, building heights, and population density, 3D GIS helps optimize cell tower locations, maximizing signal reach and minimizing interference in both urban and rural areas.</p></li>
+<li><p><strong>Signal Propagation Analysis:</strong> 3D GIS allows engineers to simulate and visualize network coverage, improving service reliability in complex environments.</p></li>
+</ul>
+</section>
+</section>
+<section id="what-are-the-primary-sources-of-3d-data">
+<h2><span class="section-number">3.4. </span>13.3 What Are the Primary Sources of 3D Data?<a class="headerlink" href="#what-are-the-primary-sources-of-3d-data" title="Link to this heading">#</a></h2>
+<section id="lidar-light-detection-and-ranging">
+<h3><span class="section-number">3.4.1. </span>1. LiDAR (Light Detection and Ranging)<a class="headerlink" href="#lidar-light-detection-and-ranging" title="Link to this heading">#</a></h3>
+<p>LiDAR provides high-resolution elevation data by measuring the distance to the Earth’s surface using laser pulses. A LiDAR sensor emits pulses of light, which bounce back after hitting objects or the ground. By calculating the time taken for each pulse to return, LiDAR generates precise distance measurements. When millions of these points are collected, they create a detailed 3D map of the environment, similar to painting with laser dots instead of brush strokes.</p>
+<div class="admonition-what-is-lidar admonition">
+<p class="admonition-title">🎥 What Is LiDAR?</p>
+<p><strong>Video:</strong> <a class="reference external" href="https://www.youtube.com/watch?v=dOvMDbQKpwQ">What Is LiDAR and How Does LiDAR Work? – Phoenix LiDAR Systems (2022)</a></p>
+<p>This video explains how LiDAR measures distances and creates accurate 3D maps using laser pulses.</p>
+</div>
+</section>
+<section id="insar-interferometric-synthetic-aperture-radar">
+<h3><span class="section-number">3.4.2. </span>2. InSAR (Interferometric Synthetic Aperture Radar)<a class="headerlink" href="#insar-interferometric-synthetic-aperture-radar" title="Link to this heading">#</a></h3>
+<p>InSAR is a remote sensing technique that uses radar signals to detect ground surface deformations with high precision. By comparing radar images captured at different times, InSAR reveals subtle changes such as land subsidence, tectonic shifts, or volcanic activity, making it invaluable for geophysical monitoring, disaster management, and infrastructure assessment.</p>
+<p><img alt="static/insar.gif" src="_images/insar.gif" />
+<em><strong>Image Source:</strong> <a class="reference external" href="https://www.usgs.gov/programs/VHP/insar-satellite-based-technique-captures-overall-deformation-picture">U.S. Geological Survey</a></em></p>
+<p><em><strong>Caption:</strong> A satellite collects data during multiple passes over an area, with at least two passes required to generate InSAR images that reveal changes in ground elevation.</em></p>
+<p><img alt="static/insar2.png" src="_images/insar2.png" />
+<em><strong>Image Source:</strong> <a class="reference external" href="https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/">NASA Jet Propulsion Laboratory</a></em></p>
+<p><em><strong>Caption:</strong> InSAR detects surface deformation by comparing the phase difference in radar waves from two satellite passes over the same location. If the ground moves between passes, the phase difference corresponds to the amount of deformation along the line-of-sight direction.</em></p>
+</section>
+<section id="photogrammetry">
+<h3><span class="section-number">3.4.3. </span>3. Photogrammetry<a class="headerlink" href="#photogrammetry" title="Link to this heading">#</a></h3>
+<p>Photogrammetry is like using a camera to build a 3D puzzle. Photogrammetry uses overlapping images taken from different angles to create a 3D model of the landscape. By analyzing how objects shift between images, computers can measure distances and produce detailed elevation maps—similar to how your mind visualizes a sculpture when viewing photos from all sides.</p>
+<p><strong>Types of Photogrammetry Data Sources:</strong></p>
+<ul class="simple">
+<li><p><strong>Aerial:</strong> Photos from planes or helicopters, ideal for regional maps and elevation models.
+Satellite: Images from space, suitable for large-scale studies like forests or coastlines, but with less detail.</p></li>
+<li><p><strong>Drone:</strong> Low-altitude photos for high-resolution models of small areas such as construction sites, archaeological digs, or urban planning projects.</p></li>
+</ul>
+<p>:class: note</p>
+<p><strong>Watch here:</strong> <a class="reference external" href="https://www.youtube.com/watch?v=Blr3suSQt-Q">Aerial Photogrammetry Explained</a></p>
+<p>📌 <em>This video explains how aerial photogrammetry uses drone photos to create 3D models, detailing the process and techniques involved.</em></p>
+<p>:class: tip</p>
+<p><strong>Read here:</strong> <a class="reference external" href="https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds">Drone Surveying: A Guide to Point Clouds</a></p>
+<p>📌 <em>Explore how drones are used for point cloud generation, enhancing surveying and mapping accuracy.</em></p>
+</section>
+<section id="ground-surveying">
+<h3><span class="section-number">3.4.4. </span><strong>4. Ground Surveying</strong><a class="headerlink" href="#ground-surveying" title="Link to this heading">#</a></h3>
+<p>Ground surveying uses tools like GPS and total stations to measure and map exact ground elevations and locations, providing the highest accuracy for small-scale areas.</p>
+<p><img alt="static/ground.jpg" src="_images/ground.jpg" />
+<em><strong>Image Source:</strong> <a class="reference external" href="https://geotech3d.com/land-surveying/">Geotech3D</a></em></p>
+<p><em><strong>Caption:</strong> A precise GPS-based land surveying setup, including a GNSS receiver and tripod, used for accurate geospatial data collection in construction or topographical mapping projects. The equipment captures satellite signals to determine exact ground coordinates.</em></p>
+<section id="techniques-and-tools">
+<h4><span class="section-number">3.4.4.1. </span>Techniques and Tools<a class="headerlink" href="#techniques-and-tools" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Total Stations:</strong> Measure angles and distances for precise positions, used in construction and engineering projects.</p></li>
+<li><p><strong>GNSS (GPS):</strong> Satellite-based systems for exact ground coordinates, often mounted on tripods for high accuracy.
+Leveling Instruments: Measure height differences, essential for topographic mapping and road construction.</p></li>
+</ul>
+</section>
+<section id="applications">
+<h4><span class="section-number">3.4.4.2. </span>Applications<a class="headerlink" href="#applications" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Construction:</strong> Setting up building foundations and verifying infrastructure placement.</p></li>
+<li><p><strong>Topographic Mapping:</strong> Creating detailed maps of parks, campuses, or small regions.</p></li>
+<li><p><strong>Boundary Surveys:</strong> Accurately marking property lines.</p></li>
+</ul>
+<p><em>Image Source: Geotech3D</em>
+Caption: A precise GPS-based land surveying setup, including a GNSS receiver and tripod, used for accurate geospatial data collection in construction or topographical mapping projects. The equipment captures satellite signals to determine exact ground coordinates.</p>
+</section>
+</section>
+<section id="simple-field-observations">
+<h3><span class="section-number">3.4.5. </span>5. Simple Field Observations<a class="headerlink" href="#simple-field-observations" title="Link to this heading">#</a></h3>
+<p>Field observations involve collecting data directly from the ground using tools like smartphones or GPS devices. Platforms like KoboToolbox make this process scalable and user-friendly.</p>
+<section id="id1">
+<h4><span class="section-number">3.4.5.1. </span>Techniques and Tools<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>GPS/GNSS Devices:</strong> Capture exact point locations, such as trees, infrastructure, or boundaries.</p></li>
+<li><p><strong>Smartphone Apps:</strong></p>
+<ul>
+<li><p><strong>KoboToolbox:</strong> Custom surveys, geotagged data, photos, and field notes.</p>
+<ul>
+<li><p><strong>Survey123 by Esri:</strong> Integrates field data directly into GIS workflows.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Traditional Methods:</strong></p>
+<ul>
+<li><p><strong>Field Papers:</strong> Print maps, take field notes, and upload them to OpenStreetMap (OSM).</p></li>
+<li><p><strong>Clipboards and Forms:</strong> Manual data collection in resource-limited settings.</p></li>
+</ul>
+</li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">🚀 In Focus: Using UAVs (Drones) to Generate Point Clouds</p>
+<p>Unmanned Aerial Vehicles (UAVs) are revolutionizing 3D point cloud generation for geospatial applications. Equipped with cameras or LiDAR sensors, drones capture high-resolution data from the air, producing dense point clouds that represent the surface of objects or terrain.</p>
+<h3 class="rubric" id="how-uavs-generate-point-clouds">How UAVs Generate Point Clouds:</h3>
+<ul class="simple">
+<li><p><strong>Image Capture with Overlap</strong><br />
+Drones fly in a grid pattern, capturing overlapping images to ensure each point appears in multiple images for accurate photogrammetry-based point clouds.</p></li>
+<li><p><strong>Photogrammetry Processing</strong><br />
+Specialized software (e.g., <em>Pix4D, Agisoft Metashape</em>) analyzes the overlapping images to identify common features and calculate their 3D positions using triangulation. The result is a dense point cloud representing the surveyed area.</p></li>
+<li><p><strong>LiDAR Integration</strong><br />
+For applications requiring higher accuracy or vegetation penetration, drones can be equipped with LiDAR sensors. LiDAR emits laser pulses and measures their return time to capture precise elevation and surface details, even through tree canopies.</p></li>
+<li><p><strong>Georeferencing</strong><br />
+UAVs often integrate GPS/GNSS data to georeference the point cloud, ensuring it aligns with real-world coordinates. Ground control points (<em>GCPs</em>) can further enhance accuracy.</p></li>
+</ul>
+<h3 class="rubric" id="tools-and-software-for-uav-point-clouds">Tools and Software for UAV Point Clouds:</h3>
+<ul class="simple">
+<li><p><strong>Drone Models:</strong> <em>DJI Phantom, Mavic, or Matrice</em> series for photogrammetry; <em>Velodyne</em> or <em>RIEGL-equipped drones</em> for LiDAR.</p></li>
+<li><p><strong>Processing Software:</strong> <em>Pix4Dmapper, DroneDeploy, Agisoft Metashape</em> for photogrammetry; <em>Terrasolid</em> or <em>CloudCompare</em> for LiDAR data processing.</p></li>
+<li><p><strong>Visualization Platforms:</strong> <em>CesiumJS, QGIS, or CloudCompare</em> to analyze and display point cloud data.</p></li>
+</ul>
+<h3 class="rubric" id="applications-of-uav-point-clouds">Applications of UAV Point Clouds:</h3>
+<ul class="simple">
+<li><p><strong>Construction Monitoring</strong><br />
+Regular drone surveys create 3D models of construction sites for accurate measurements and progress tracking.</p></li>
+<li><p><strong>Environmental Management</strong><br />
+Analyze terrain, monitor tree canopy heights, and assess forest health.</p></li>
+<li><p><strong>Disaster Response</strong><br />
+Rapidly map affected areas, aiding in planning and reconstruction after disasters.</p></li>
+</ul>
+<h3 class="rubric" id="benefits-of-uavs-for-point-cloud-generation">Benefits of UAVs for Point Cloud Generation:</h3>
+<ul class="simple">
+<li><p><strong>High Resolution:</strong> Drones capture finer details than satellite or aerial methods.</p></li>
+<li><p><strong>Flexibility:</strong> UAVs reach difficult terrain such as forests or mountains.</p></li>
+<li><p><strong>Cost-Effective:</strong> More affordable than manned aircraft for small-scale projects.</p></li>
+<li><p><strong>Efficiency:</strong> Quick deployment and fast data collection for time-sensitive tasks.</p></li>
+</ul>
+<h3 class="rubric" id="the-future-of-uav-point-clouds">The Future of UAV Point Clouds:</h3>
+<p>As UAV technology advances, drones are becoming indispensable in fields like urban planning, environmental management, and disaster response, offering high-accuracy, real-time 3D data collection.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="d-and-the-osm-data-model">
+<h2><span class="section-number">3.5. </span>13.4: 3D and the OSM Data model<a class="headerlink" href="#d-and-the-osm-data-model" title="Link to this heading">#</a></h2>
+<p>To use the OpenStreetMap (OSM) data model for storing 3D data, it is essential to understand and utilize the appropriate tags created to represent three-dimensional attributes of buildings and other structures.</p>
+<p>Here is a guide on how to apply the OSM data model for 3D data: <a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:levels"><strong>3D Tagging in OpenStreetMap</strong></a></p>
+<section id="building-and-structure-tags">
+<h3><span class="section-number">3.5.1. </span>Building and Structure Tags<a class="headerlink" href="#building-and-structure-tags" title="Link to this heading">#</a></h3>
+<section id="building-type">
+<h4><span class="section-number">3.5.1.1. </span>Building Type<a class="headerlink" href="#building-type" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><ul>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building"><code class="docutils literal notranslate"><span class="pre">building=*</span></code></a>: Indicates the type of building (e.g., residential, commercial, industrial).
+<img alt="Key:building" src="_images/key1.png" /></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:part"><code class="docutils literal notranslate"><span class="pre">building:part=*</span></code></a>: Used for parts of a building with different attributes (e.g., varying heights or roof shapes).
+<img alt="alt text" src="_images/height_final-06.png" /></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="height-and-levels">
+<h4><span class="section-number">3.5.1.2. </span>Height and Levels<a class="headerlink" href="#height-and-levels" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:height"><code class="docutils literal notranslate"><span class="pre">height=*</span></code></a>: The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).</p></li>
+</ul>
+<p><img alt="static/height_final-01.png" src="_images/height_final-01.png" /></p>
+<p><em><strong>Image caption:</strong> Image showing the absolute height of a building, measured vertically from ground level to the top edge of the roof.</em></p>
+<ul>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:levels"><code class="docutils literal notranslate"><span class="pre">building:levels=*</span></code></a>: The number of above-ground floors in the building.</p>
+<p><img alt="static/height_final-07.png" src="_images/height_final-07.png" />
+<em><strong>Image Caption:</strong> Illustration of how to tag the number of above-ground levels in a building. Note that underground levels and the roof are tagged separately.</em></p>
+</li>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:levels:underground"><code class="docutils literal notranslate"><span class="pre">building:levels:underground=*</span></code></a>: The number of underground floors in the building.</p></li>
+</ul>
+<p><img alt="static/carpark.png" src="_images/carpark.png" />
+<strong>Source:</strong> OpenStreetMap. <em>(n.d.). Multi-storey underground carpark. <a class="reference external" href="https://wiki.openstreetmap.org/wiki/File:Multi-storey-underground-carpark-20201102.png">OSM Wiki</a>.</em></p>
+</section>
+<hr class="docutils" />
+<section id="roof-details">
+<h4><span class="section-number">3.5.1.3. </span>Roof Details<a class="headerlink" href="#roof-details" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:roof:shape"><code class="docutils literal notranslate"><span class="pre">roof:shape=*</span></code></a>: The shape of the roof (e.g., flat, gabled, hipped).<br />
+<img alt="Common Roof Shapes – OSM Wiki" src="_images/roofshape.png" /></p></li>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:roof:material"><code class="docutils literal notranslate"><span class="pre">roof:material=*</span></code></a>: The material of the roof (e.g., tiles, metal).<br />
+<img alt="Key:roof:material" src="_images/roof_mat.png" /></p></li>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:roof:colour"><code class="docutils literal notranslate"><span class="pre">roof:colour=*</span></code></a>: The color of the roof, specified in hexadecimal codes (e.g., <code class="docutils literal notranslate"><span class="pre">#FFFFFF</span></code> for white) or basic color names (e.g., white, red).<br />
+<img alt="Illustration of roof color tagging" src="_images/height_final-08.png" /></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="material-and-color">
+<h4><span class="section-number">3.5.1.4. </span>Material and Color<a class="headerlink" href="#material-and-color" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:material"><code class="docutils literal notranslate"><span class="pre">building:material=*</span></code></a>: The primary building material (e.g., brick, concrete, wood).<br />
+<img alt="Key:building:material" src="_images/building_mat.png" /></p></li>
+<li><p><a class="reference external" href="https://wiki.openstreetmap.org/wiki/Key:building:colour"><code class="docutils literal notranslate"><span class="pre">building:colour=*</span></code></a>: The primary color of the building.
+<img alt="static/buliding_color.png" src="_images/buliding_color.png" /></p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="d-and-2d-representations">
+<h4><span class="section-number">3.5.1.5. </span>3D and 2D Representations<a class="headerlink" href="#d-and-2d-representations" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>3D Image</strong>: Displays a 3D-rendered building with height, levels, roof shape, and materials accurately represented.<br />
+<img alt="3D-rendered building" src="_images/3d_bldg_tags.png" /></p></li>
+<li><p><strong>2D Image</strong>: Shows a 2D building footprint with the tags <code class="docutils literal notranslate"><span class="pre">building=yes</span></code> and <code class="docutils literal notranslate"><span class="pre">roof:colour=*</span></code> only, as these are the primary attributes visible from satellite imagery.<br />
+<img alt="2D building footprint" src="_images/2d_bldg_tag.png" /></p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="collecting-simple-3d-data-in-the-field">
+<h2><span class="section-number">3.6. </span>13.5: Collecting Simple 3D Data in the Field<a class="headerlink" href="#collecting-simple-3d-data-in-the-field" title="Link to this heading">#</a></h2>
+<p>Free, open, and easy-access tools are a cost-effective way to conduct 3D GIS data collection without the burden of expensive licensing fees. These tools also foster <strong>collaboration, customization, and transparency</strong> by leveraging community-driven development and standardized data models, making it easier to share and integrate data across platforms.</p>
+<hr class="docutils" />
+<section id="step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">
+<h3><span class="section-number">3.6.1. </span><strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong><a class="headerlink" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model" title="Link to this heading">#</a></h3>
+<section id="planning-and-preparation">
+<h4><span class="section-number">3.6.1.1. </span><strong>Planning and Preparation</strong><a class="headerlink" href="#planning-and-preparation" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p><strong>Review Existing Data</strong>: Start by examining current OSM data for your area of interest.</p></li>
+<li><p><strong>Determine 3D Attributes</strong>: Familiarize yourself with the OSM tagging schema for 3D data (e.g., <code class="docutils literal notranslate"><span class="pre">building</span></code>, <code class="docutils literal notranslate"><span class="pre">building:levels</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">roof:shape</span></code>, etc.) to know which attributes to capture.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="field-data-collection">
+<h3><span class="section-number">3.6.2. </span><strong>Field Data Collection</strong><a class="headerlink" href="#field-data-collection" title="Link to this heading">#</a></h3>
+<section id="mobile-data-collection-tools">
+<h4><span class="section-number">3.6.2.1. </span><strong>Mobile Data Collection Tools</strong><a class="headerlink" href="#mobile-data-collection-tools" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Use open-source mobile apps like <strong>Vespucci, OSMAnd, or QField</strong> (integrates with QGIS) to capture georeferenced data on the go.</p></li>
+<li><p>These tools allow you to map <strong>building footprints</strong> and add <strong>3D attributes</strong> on-site.</p></li>
+</ul>
+</section>
+<section id="analog-data-collection-tools">
+<h4><span class="section-number">3.6.2.2. </span><strong>Analog Data Collection Tools</strong><a class="headerlink" href="#analog-data-collection-tools" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>If a mobile app isn’t an option, use an <strong>analog approach</strong> such as <strong>FieldPapers</strong>:</p>
+<ol class="arabic simple">
+<li><p>Create an atlas of your study area on <a class="reference external" href="https://fieldpapers.org">FieldPapers</a>.</p></li>
+<li><p>Print it out and take it into the field to <strong>manually sketch</strong> observations.</p></li>
+<li><p>Capture building footprints, levels, and other key attributes.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<section id="collect-geospatial-data">
+<h4><span class="section-number">3.6.2.3. </span><strong>Collect Geospatial Data</strong><a class="headerlink" href="#collect-geospatial-data" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Walk the survey area using <strong>a mobile app (GPS-enabled device)</strong> or <strong>FieldPapers</strong>.</p></li>
+<li><p>Capture:</p>
+<ul>
+<li><p><strong>Building outlines</strong> (where none exist).</p></li>
+<li><p><strong>Number of levels or actual heights</strong>.</p></li>
+<li><p><strong>Roof shape, material, and color</strong>.</p></li>
+<li><p><strong>Record photos and observations</strong> to support the attribute data.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="data-upload-and-validation">
+<h3><span class="section-number">3.6.3. </span><strong>Data Upload and Validation</strong><a class="headerlink" href="#data-upload-and-validation" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Sync with OSM</strong>: When you have connectivity, upload collected data to the OSM database.</p></li>
+<li><p><strong>Review and Validate in JOSM</strong>:</p>
+<ul>
+<li><p>Use <strong>JOSM (Java OpenStreetMap Editor)</strong> to review and refine data.</p></li>
+<li><p>Ensure <strong>3D tags</strong> are consistent before integrating into OSM.</p></li>
+<li><p>This is required if <strong>FieldPapers</strong> was used.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="data-processing-and-visualization">
+<h3><span class="section-number">3.6.4. </span><strong>Data Processing and Visualization</strong><a class="headerlink" href="#data-processing-and-visualization" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Import and Set Up 3D Visualization</strong>:</p>
+<ul>
+<li><p><strong>QGIS (with 3D plugins)</strong> and <strong>Cesium</strong> allow users to <strong>import, load, and explore 3D data</strong>.</p></li>
+<li><p>(<em>ArcGIS Pro is also an option, though not open source</em>).</p></li>
+</ul>
+</li>
+<li><p><strong>Customize Symbology and Analysis</strong>:</p>
+<ul>
+<li><p>Adjust <strong>styling, lighting, and visual settings</strong> for a better 3D display.</p></li>
+<li><p>Perform <strong>spatial analyses</strong> as needed.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="sharing-and-further-applications">
+<h3><span class="section-number">3.6.5. </span><strong>Sharing and Further Applications</strong><a class="headerlink" href="#sharing-and-further-applications" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Export and Web Visualization</strong>:</p>
+<ul>
+<li><p>Export <strong>3D models</strong> to formats like <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Tiles</span></code> or <code class="docutils literal notranslate"><span class="pre">glTF</span></code> for use in web-based viewers such as <strong>Cesium</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Engage Stakeholders</strong>:</p>
+<ul>
+<li><p>Share <strong>interactive visualizations</strong> with urban planners, community members, or decision-makers.</p></li>
+<li><p>Gather feedback or support planning processes.</p></li>
+</ul>
+</li>
+</ul>
+<p>This workflow leverages OSM for 3D attributes while relying on free/open-source tools—from data collection (Vespucci/FieldPapers) to desktop editing (JOSM) and final visualization in QGIS/Cesium—ensuring a cost-effective and collaborative approach to 3D GIS data collection.</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="fieldpapers">
+<h2><span class="section-number">3.7. </span><strong>FieldPapers</strong><a class="headerlink" href="#fieldpapers" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://fieldpapers.org">FieldPapers</a> is a web-based tool for creating printable OSM-based map for field data collection.<br />
+It provides a low-tech solution for</p>
+<section id="fieldpapers-workflow">
+<h3><span class="section-number">3.7.1. </span><strong>FieldPapers Workflow</strong><a class="headerlink" href="#fieldpapers-workflow" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Visit <a class="reference external" href="https://fieldpapers.org">FieldPapers</a>, create an account, and click <strong>“Make yourself an atlas.”</strong></p></li>
+<li><p>Navigate to your <strong>study area</strong>, define your <strong>scale</strong>, and select <strong>number of pages</strong> for the atlas.</p></li>
+<li><p><strong>Print the map</strong>.</p></li>
+<li><p>Take it into the <strong>field and manually sketch</strong> building attributes.</p></li>
+<li><p>Back at your workspace:</p>
+<ul class="simple">
+<li><p><strong>Scan or photograph the annotated map</strong> and upload it for use in <strong>OSM tools (iD Editor or JOSM)</strong>.</p></li>
+<li><p>Or, use it as a <strong>visual reference</strong> while editing directly in <strong>OSM</strong>.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+<hr class="docutils" />
+<section id="mobile-data-collection-vespucci-android">
+<h2><span class="section-number">3.8. </span><strong>Mobile Data Collection: Vespucci (Android)</strong><a class="headerlink" href="#mobile-data-collection-vespucci-android" title="Link to this heading">#</a></h2>
+<p><strong>Vespucci</strong> is a <strong>free mobile app</strong> for <strong>Android</strong> that supports the <strong>full OSM data model</strong>.<br />
+It allows almost all <strong>desktop editing features</strong> directly from a mobile device.</p>
+<section id="requirements-to-get-started">
+<h3><span class="section-number">3.8.1. </span><strong>Requirements to Get Started</strong><a class="headerlink" href="#requirements-to-get-started" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Android device (or emulator).</p></li>
+<li><p>Vespucci app (<strong><a class="reference external" href="https://vespucci.io/">Download here</a></strong>).</p></li>
+<li><p>Basic <strong>working knowledge of OSM</strong>.</p></li>
+<li><p>OSM <strong>account login</strong>.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="key-vespucci-tools">
+<h3><span class="section-number">3.8.2. </span><strong>Key Vespucci Tools</strong><a class="headerlink" href="#key-vespucci-tools" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
+<th class="head"><p>Icon</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Undo</strong></p></td>
+<td><p>🔄</p></td>
+<td><p>Reverts the last operation</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Transfer</strong></p></td>
+<td><p>🔄</p></td>
+<td><p>Download/upload data to OSM</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Camera</strong></p></td>
+<td><p>📷</p></td>
+<td><p>Add photos to map</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Location</strong></p></td>
+<td><p>📍</p></td>
+<td><p>GPS-based location options</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Find</strong></p></td>
+<td><p>🔍</p></td>
+<td><p>Search locations &amp; pan</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tools</strong></p></td>
+<td><p>🛠️</p></td>
+<td><p>Access imagery tools and styles</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Help</strong></p></td>
+<td><p>❓</p></td>
+<td><p>Open help documentation</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="vespucci-workflow-for-field-mapping">
+<h2><span class="section-number">3.9. </span><strong>Vespucci Workflow for Field Mapping</strong><a class="headerlink" href="#vespucci-workflow-for-field-mapping" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>Review OSM Data</strong>: Check your <strong>Area of Interest (AoI)</strong>.</p></li>
+<li><p><strong>Download Data</strong>:</p>
+<ul class="simple">
+<li><p>Zoom to your <strong>AoI</strong> in Vespucci.</p></li>
+<li><p>Tap the <strong>Transfer icon</strong> → “Download current view.”</p></li>
+</ul>
+</li>
+<li><p><strong>Start Editing</strong>:</p>
+<ul class="simple">
+<li><p>Unlock editing mode by tapping the <strong>lock icon 🔒</strong>.</p></li>
+<li><p>Tap a <strong>feature (e.g., building)</strong> to edit.</p></li>
+<li><p>Open the <strong>Property Editor</strong> to add or modify tags.</p></li>
+</ul>
+</li>
+<li><p><strong>Uploading Edits to OSM</strong>:</p>
+<ul class="simple">
+<li><p>After making several edits, tap <strong>Transfer icon 🔄</strong> → “Upload data to OSM.”</p></li>
+<li><p>Add a <strong>Changeset comment</strong> (e.g., “Updated building levels”).</p></li>
+<li><p>Provide a <strong>Source</strong> (e.g., “Field survey”).</p></li>
+<li><p>Tap <strong>Upload</strong> to sync changes with OSM.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="vespucci-app-questions-exercises">
+<h2><span class="section-number">3.10. </span><strong>Vespucci App Questions &amp; Exercises</strong><a class="headerlink" href="#vespucci-app-questions-exercises" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p><strong>What does tapping the lock icon do?</strong></p>
+<ul class="simple">
+<li><p>A) Opens Property Editor</p></li>
+<li><p>B) Toggles locked/unlocked editing modes</p></li>
+<li><p>C) Downloads map view</p></li>
+<li><p>D) Zooms to location<br />
+<strong>Answer: B</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Which Property Editor tab shows raw key-value attributes?</strong></p>
+<ul class="simple">
+<li><p>A) Presets</p></li>
+<li><p>B) Properties</p></li>
+<li><p>C) Details</p></li>
+<li><p>D) Relations<br />
+<strong>Answer: C</strong></p></li>
+</ul>
+</li>
+<li><p><strong>Which icon must you tap to download OSM features to your device?</strong><br />
+<strong>Answer: Transfer 🔄</strong></p></li>
+<li><p><strong>Match icons to functions:</strong></p>
+<ul class="simple">
+<li><p><strong>A)</strong> 📷 Camera → Starts camera app</p></li>
+<li><p><strong>B)</strong> 📍 Location → Provides GPS-based location options</p></li>
+<li><p><strong>C)</strong> 🛠️ Tools → Access imagery/data tools</p></li>
+<li><p><strong>D)</strong> 🔄 Undo → Reverts last operation</p></li>
+</ul>
+</li>
+<li><p><strong>Which actions can you do in the “Details” tab?</strong> (Select all that apply.)</p>
+<ul class="simple">
+<li><p>☑ View raw key-value attributes</p></li>
+<li><p>☑ Add new tags</p></li>
+<li><p>☐ Apply a preset</p></li>
+<li><p>☐ Edit relation memberships</p></li>
+</ul>
+</li>
+<li><p><strong>Order the steps to upload edits:</strong></p>
+<ul class="simple">
+<li><p>A) Tap <strong>Transfer</strong></p></li>
+<li><p>B) Enter <strong>Changeset comment</strong></p></li>
+<li><p>C) Select <strong>Upload to OSM</strong></p></li>
+<li><p>D) Review <strong>Changes tab</strong></p></li>
+<li><p>E) Tap <strong>Upload</strong><br />
+<strong>Correct Order: A → C → D → B → E</strong></p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Course7-IntroJOSM.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Introduction to JOSM</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">3.1. 13.0 Overview</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-will-learn">3.1.1. What you will learn</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction-to-3d-data">3.2. 13.1 Introduction to 3D Data</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-3d-data">3.2.1. What is 3D data?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-is-3d-data-important">3.2.2. <strong>Why is 3D Data Important?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#how-is-3d-gis-data-represented">3.2.3. <strong>How is 3D GIS Data Represented?</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-based-3d-data">3.2.4. <strong>Vector-Based 3D Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sub-13-1-4-raster-based-3d-data">3.2.5. <strong>Sub 13.1.4: Raster-Based 3D Data</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-3d-models">3.2.6. <strong>Advanced 3D Models</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-data-standards">3.2.7. <strong>3D Data Standards</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-applications-of-3d-data">3.3. 13.2 What are the Applications of 3D Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#urban-planning-and-development">3.3.1. <strong>Urban Planning and Development</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#humanitarian-and-emergency-management">3.3.2. <strong>Humanitarian and Emergency Management</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environmental-and-natural-resource-management">3.3.3. <strong>Environmental and Natural Resource Management</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#architecture-engineering-and-construction">3.3.4. Architecture, Engineering, and Construction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#navigation-and-transportation">3.3.5. <strong>Navigation and Transportation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#telecommunications-and-network-planning">3.3.6. Telecommunications and Network Planning</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-the-primary-sources-of-3d-data">3.4. 13.3 What Are the Primary Sources of 3D Data?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#lidar-light-detection-and-ranging">3.4.1. 1. LiDAR (Light Detection and Ranging)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#insar-interferometric-synthetic-aperture-radar">3.4.2. 2. InSAR (Interferometric Synthetic Aperture Radar)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#photogrammetry">3.4.3. 3. Photogrammetry</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ground-surveying">3.4.4. <strong>4. Ground Surveying</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#techniques-and-tools">3.4.4.1. Techniques and Tools</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#applications">3.4.4.2. Applications</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#simple-field-observations">3.4.5. 5. Simple Field Observations</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.4.5.1. Techniques and Tools</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-and-the-osm-data-model">3.5. 13.4: 3D and the OSM Data model</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#building-and-structure-tags">3.5.1. Building and Structure Tags</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#building-type">3.5.1.1. Building Type</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#height-and-levels">3.5.1.2. Height and Levels</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#roof-details">3.5.1.3. Roof Details</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#material-and-color">3.5.1.4. Material and Color</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#d-and-2d-representations">3.5.1.5. 3D and 2D Representations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collecting-simple-3d-data-in-the-field">3.6. 13.5: Collecting Simple 3D Data in the Field</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">3.6.1. <strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#planning-and-preparation">3.6.1.1. <strong>Planning and Preparation</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data-collection">3.6.2. <strong>Field Data Collection</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-tools">3.6.2.1. <strong>Mobile Data Collection Tools</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-data-collection-tools">3.6.2.2. <strong>Analog Data Collection Tools</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-geospatial-data">3.6.2.3. <strong>Collect Geospatial Data</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-upload-and-validation">3.6.3. <strong>Data Upload and Validation</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-and-visualization">3.6.4. <strong>Data Processing and Visualization</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-and-further-applications">3.6.5. <strong>Sharing and Further Applications</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers">3.7. <strong>FieldPapers</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers-workflow">3.7.1. <strong>FieldPapers Workflow</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-vespucci-android">3.8. <strong>Mobile Data Collection: Vespucci (Android)</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-to-get-started">3.8.1. <strong>Requirements to Get Started</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-vespucci-tools">3.8.2. <strong>Key Vespucci Tools</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-workflow-for-field-mapping">3.9. <strong>Vespucci Workflow for Field Mapping</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-app-questions-exercises">3.10. <strong>Vespucci App Questions &amp; Exercises</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By YouthMappers - Maintained by Michael Mann
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

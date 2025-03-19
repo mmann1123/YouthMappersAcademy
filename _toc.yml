@@ -17,3 +17,4 @@ parts:
   numbered: true
   chapters:
   - file: Course7-IntroJOSM.md
+  - file: Course13-Cesium.md

@@ -1,6 +1,8 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
+# jupyter-book build .
+
 title: YouthMappers Academy
 author: YouthMappers - Maintained by Michael Mann
 logo: static/YMlogo.png
