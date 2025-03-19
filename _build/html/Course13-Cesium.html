@@ -16,33 +16,30 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
-  -->
-  <noscript>
-    <style>
-      .pst-js-only { display: none !important; }
-
-    </style>
-  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
-  <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -66,7 +63,6 @@
     <link rel="prev" title="2. Introduction to JOSM" href="Course7-IntroJOSM.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="" />
   </head>
   
   
@@ -82,8 +78,19 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <dialog id="pst-search-dialog">
-    
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
 <form class="bd-search d-flex align-items-center"
       action="search.html"
       method="get">
@@ -91,6 +98,7 @@
   <input type="search"
          class="form-control"
          name="q"
+         id="search-input"
          placeholder="Search this book..."
          aria-label="Search this book..."
          autocomplete="off"
@@ -98,8 +106,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-  </dialog>
+</form></div>
+  </div>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -115,8 +123,7 @@
       
       
       
-      <dialog id="pst-primary-sidebar-modal"></dialog>
-      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+      <div class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -146,17 +153,21 @@
     
     
     <img src="_static/YMlogo.png" class="logo__image only-light" alt="YouthMappers Academy - Home"/>
-    <img src="_static/YMlogo.png" class="logo__image only-dark pst-js-only" alt="YouthMappers Academy - Home"/>
+    <script>document.write(`<img src="_static/YMlogo.png" class="logo__image only-dark" alt="YouthMappers Academy - Home"/>`);</script>
   
   
 </a></div>
         <div class="sidebar-primary-item">
 
-<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
- <i class="fa-solid fa-magnifying-glass"></i>
- <span class="search-button__default-text">Search</span>
- <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-</button></div>
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
@@ -329,16 +340,24 @@
 
 
 
-<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
-  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
-  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
-  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
-</button>
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
 
 
-<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-</button>
+  </button>
+`);
+</script>
 <button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
 </button>
@@ -411,33 +430,6 @@
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collecting-simple-3d-data-in-the-field">3.6. 13.5: Collecting Simple 3D Data in the Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">3.6.1. <strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#planning-and-preparation">3.6.1.1. <strong>Planning and Preparation</strong></a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data-collection">3.6.2. <strong>Field Data Collection</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-tools">3.6.2.1. <strong>Mobile Data Collection Tools</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-data-collection-tools">3.6.2.2. <strong>Analog Data Collection Tools</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-geospatial-data">3.6.2.3. <strong>Collect Geospatial Data</strong></a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-upload-and-validation">3.6.3. <strong>Data Upload and Validation</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-and-visualization">3.6.4. <strong>Data Processing and Visualization</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-and-further-applications">3.6.5. <strong>Sharing and Further Applications</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers">3.7. <strong>FieldPapers</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers-workflow">3.7.1. <strong>FieldPapers Workflow</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-vespucci-android">3.8. <strong>Mobile Data Collection: Vespucci (Android)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-to-get-started">3.8.1. <strong>Requirements to Get Started</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-vespucci-tools">3.8.2. <strong>Key Vespucci Tools</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-workflow-for-field-mapping">3.9. <strong>Vespucci Workflow for Field Mapping</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-app-questions-exercises">3.10. <strong>Vespucci App Questions &amp; Exercises</strong></a></li>
 </ul>
             </nav>
         </div>
@@ -706,12 +698,16 @@ Identifying unstable terrain and high-risk zones for proactive mitigation measur
 Satellite: Images from space, suitable for large-scale studies like forests or coastlines, but with less detail.</p></li>
 <li><p><strong>Drone:</strong> Low-altitude photos for high-resolution models of small areas such as construction sites, archaeological digs, or urban planning projects.</p></li>
 </ul>
-<p>:class: note</p>
-<p><strong>Watch here:</strong> <a class="reference external" href="https://www.youtube.com/watch?v=Blr3suSQt-Q">Aerial Photogrammetry Explained</a></p>
+<div class="note admonition">
+<p class="admonition-title">Watch here:</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Blr3suSQt-Q">Aerial Photogrammetry Explained</a></p>
 <p>📌 <em>This video explains how aerial photogrammetry uses drone photos to create 3D models, detailing the process and techniques involved.</em></p>
-<p>:class: tip</p>
-<p><strong>Read here:</strong> <a class="reference external" href="https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds">Drone Surveying: A Guide to Point Clouds</a></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Read here:</p>
+<p><a class="reference external" href="https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds">Drone Surveying: A Guide to Point Clouds</a></p>
 <p>📌 <em>Explore how drones are used for point cloud generation, enhancing surveying and mapping accuracy.</em></p>
+</div>
 </section>
 <section id="ground-surveying">
 <h3><span class="section-number">3.4.4. </span><strong>4. Ground Surveying</strong><a class="headerlink" href="#ground-surveying" title="Link to this heading">#</a></h3>
@@ -873,267 +869,6 @@ Rapidly map affected areas, aiding in planning and reconstruction after disaster
 </section>
 </section>
 </section>
-<section id="collecting-simple-3d-data-in-the-field">
-<h2><span class="section-number">3.6. </span>13.5: Collecting Simple 3D Data in the Field<a class="headerlink" href="#collecting-simple-3d-data-in-the-field" title="Link to this heading">#</a></h2>
-<p>Free, open, and easy-access tools are a cost-effective way to conduct 3D GIS data collection without the burden of expensive licensing fees. These tools also foster <strong>collaboration, customization, and transparency</strong> by leveraging community-driven development and standardized data models, making it easier to share and integrate data across platforms.</p>
-<hr class="docutils" />
-<section id="step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">
-<h3><span class="section-number">3.6.1. </span><strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong><a class="headerlink" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model" title="Link to this heading">#</a></h3>
-<section id="planning-and-preparation">
-<h4><span class="section-number">3.6.1.1. </span><strong>Planning and Preparation</strong><a class="headerlink" href="#planning-and-preparation" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p><strong>Review Existing Data</strong>: Start by examining current OSM data for your area of interest.</p></li>
-<li><p><strong>Determine 3D Attributes</strong>: Familiarize yourself with the OSM tagging schema for 3D data (e.g., <code class="docutils literal notranslate"><span class="pre">building</span></code>, <code class="docutils literal notranslate"><span class="pre">building:levels</span></code>, <code class="docutils literal notranslate"><span class="pre">height</span></code>, <code class="docutils literal notranslate"><span class="pre">roof:shape</span></code>, etc.) to know which attributes to capture.</p></li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="field-data-collection">
-<h3><span class="section-number">3.6.2. </span><strong>Field Data Collection</strong><a class="headerlink" href="#field-data-collection" title="Link to this heading">#</a></h3>
-<section id="mobile-data-collection-tools">
-<h4><span class="section-number">3.6.2.1. </span><strong>Mobile Data Collection Tools</strong><a class="headerlink" href="#mobile-data-collection-tools" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Use open-source mobile apps like <strong>Vespucci, OSMAnd, or QField</strong> (integrates with QGIS) to capture georeferenced data on the go.</p></li>
-<li><p>These tools allow you to map <strong>building footprints</strong> and add <strong>3D attributes</strong> on-site.</p></li>
-</ul>
-</section>
-<section id="analog-data-collection-tools">
-<h4><span class="section-number">3.6.2.2. </span><strong>Analog Data Collection Tools</strong><a class="headerlink" href="#analog-data-collection-tools" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>If a mobile app isn’t an option, use an <strong>analog approach</strong> such as <strong>FieldPapers</strong>:</p>
-<ol class="arabic simple">
-<li><p>Create an atlas of your study area on <a class="reference external" href="https://fieldpapers.org">FieldPapers</a>.</p></li>
-<li><p>Print it out and take it into the field to <strong>manually sketch</strong> observations.</p></li>
-<li><p>Capture building footprints, levels, and other key attributes.</p></li>
-</ol>
-</li>
-</ul>
-</section>
-<section id="collect-geospatial-data">
-<h4><span class="section-number">3.6.2.3. </span><strong>Collect Geospatial Data</strong><a class="headerlink" href="#collect-geospatial-data" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>Walk the survey area using <strong>a mobile app (GPS-enabled device)</strong> or <strong>FieldPapers</strong>.</p></li>
-<li><p>Capture:</p>
-<ul>
-<li><p><strong>Building outlines</strong> (where none exist).</p></li>
-<li><p><strong>Number of levels or actual heights</strong>.</p></li>
-<li><p><strong>Roof shape, material, and color</strong>.</p></li>
-<li><p><strong>Record photos and observations</strong> to support the attribute data.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-</section>
-<hr class="docutils" />
-<section id="data-upload-and-validation">
-<h3><span class="section-number">3.6.3. </span><strong>Data Upload and Validation</strong><a class="headerlink" href="#data-upload-and-validation" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Sync with OSM</strong>: When you have connectivity, upload collected data to the OSM database.</p></li>
-<li><p><strong>Review and Validate in JOSM</strong>:</p>
-<ul>
-<li><p>Use <strong>JOSM (Java OpenStreetMap Editor)</strong> to review and refine data.</p></li>
-<li><p>Ensure <strong>3D tags</strong> are consistent before integrating into OSM.</p></li>
-<li><p>This is required if <strong>FieldPapers</strong> was used.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="data-processing-and-visualization">
-<h3><span class="section-number">3.6.4. </span><strong>Data Processing and Visualization</strong><a class="headerlink" href="#data-processing-and-visualization" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Import and Set Up 3D Visualization</strong>:</p>
-<ul>
-<li><p><strong>QGIS (with 3D plugins)</strong> and <strong>Cesium</strong> allow users to <strong>import, load, and explore 3D data</strong>.</p></li>
-<li><p>(<em>ArcGIS Pro is also an option, though not open source</em>).</p></li>
-</ul>
-</li>
-<li><p><strong>Customize Symbology and Analysis</strong>:</p>
-<ul>
-<li><p>Adjust <strong>styling, lighting, and visual settings</strong> for a better 3D display.</p></li>
-<li><p>Perform <strong>spatial analyses</strong> as needed.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="sharing-and-further-applications">
-<h3><span class="section-number">3.6.5. </span><strong>Sharing and Further Applications</strong><a class="headerlink" href="#sharing-and-further-applications" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p><strong>Export and Web Visualization</strong>:</p>
-<ul>
-<li><p>Export <strong>3D models</strong> to formats like <code class="docutils literal notranslate"><span class="pre">3D</span> <span class="pre">Tiles</span></code> or <code class="docutils literal notranslate"><span class="pre">glTF</span></code> for use in web-based viewers such as <strong>Cesium</strong>.</p></li>
-</ul>
-</li>
-<li><p><strong>Engage Stakeholders</strong>:</p>
-<ul>
-<li><p>Share <strong>interactive visualizations</strong> with urban planners, community members, or decision-makers.</p></li>
-<li><p>Gather feedback or support planning processes.</p></li>
-</ul>
-</li>
-</ul>
-<p>This workflow leverages OSM for 3D attributes while relying on free/open-source tools—from data collection (Vespucci/FieldPapers) to desktop editing (JOSM) and final visualization in QGIS/Cesium—ensuring a cost-effective and collaborative approach to 3D GIS data collection.</p>
-</section>
-</section>
-<hr class="docutils" />
-<section id="fieldpapers">
-<h2><span class="section-number">3.7. </span><strong>FieldPapers</strong><a class="headerlink" href="#fieldpapers" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://fieldpapers.org">FieldPapers</a> is a web-based tool for creating printable OSM-based map for field data collection.<br />
-It provides a low-tech solution for</p>
-<section id="fieldpapers-workflow">
-<h3><span class="section-number">3.7.1. </span><strong>FieldPapers Workflow</strong><a class="headerlink" href="#fieldpapers-workflow" title="Link to this heading">#</a></h3>
-<ol class="arabic simple">
-<li><p>Visit <a class="reference external" href="https://fieldpapers.org">FieldPapers</a>, create an account, and click <strong>“Make yourself an atlas.”</strong></p></li>
-<li><p>Navigate to your <strong>study area</strong>, define your <strong>scale</strong>, and select <strong>number of pages</strong> for the atlas.</p></li>
-<li><p><strong>Print the map</strong>.</p></li>
-<li><p>Take it into the <strong>field and manually sketch</strong> building attributes.</p></li>
-<li><p>Back at your workspace:</p>
-<ul class="simple">
-<li><p><strong>Scan or photograph the annotated map</strong> and upload it for use in <strong>OSM tools (iD Editor or JOSM)</strong>.</p></li>
-<li><p>Or, use it as a <strong>visual reference</strong> while editing directly in <strong>OSM</strong>.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-</section>
-<hr class="docutils" />
-<section id="mobile-data-collection-vespucci-android">
-<h2><span class="section-number">3.8. </span><strong>Mobile Data Collection: Vespucci (Android)</strong><a class="headerlink" href="#mobile-data-collection-vespucci-android" title="Link to this heading">#</a></h2>
-<p><strong>Vespucci</strong> is a <strong>free mobile app</strong> for <strong>Android</strong> that supports the <strong>full OSM data model</strong>.<br />
-It allows almost all <strong>desktop editing features</strong> directly from a mobile device.</p>
-<section id="requirements-to-get-started">
-<h3><span class="section-number">3.8.1. </span><strong>Requirements to Get Started</strong><a class="headerlink" href="#requirements-to-get-started" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Android device (or emulator).</p></li>
-<li><p>Vespucci app (<strong><a class="reference external" href="https://vespucci.io/">Download here</a></strong>).</p></li>
-<li><p>Basic <strong>working knowledge of OSM</strong>.</p></li>
-<li><p>OSM <strong>account login</strong>.</p></li>
-</ul>
-</section>
-<hr class="docutils" />
-<section id="key-vespucci-tools">
-<h3><span class="section-number">3.8.2. </span><strong>Key Vespucci Tools</strong><a class="headerlink" href="#key-vespucci-tools" title="Link to this heading">#</a></h3>
-<div class="pst-scrollable-table-container"><table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Tool Name</p></th>
-<th class="head"><p>Icon</p></th>
-<th class="head"><p>Description</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p><strong>Undo</strong></p></td>
-<td><p>🔄</p></td>
-<td><p>Reverts the last operation</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Transfer</strong></p></td>
-<td><p>🔄</p></td>
-<td><p>Download/upload data to OSM</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Camera</strong></p></td>
-<td><p>📷</p></td>
-<td><p>Add photos to map</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Location</strong></p></td>
-<td><p>📍</p></td>
-<td><p>GPS-based location options</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Find</strong></p></td>
-<td><p>🔍</p></td>
-<td><p>Search locations &amp; pan</p></td>
-</tr>
-<tr class="row-odd"><td><p><strong>Tools</strong></p></td>
-<td><p>🛠️</p></td>
-<td><p>Access imagery tools and styles</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>Help</strong></p></td>
-<td><p>❓</p></td>
-<td><p>Open help documentation</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-</section>
-<hr class="docutils" />
-<section id="vespucci-workflow-for-field-mapping">
-<h2><span class="section-number">3.9. </span><strong>Vespucci Workflow for Field Mapping</strong><a class="headerlink" href="#vespucci-workflow-for-field-mapping" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>Review OSM Data</strong>: Check your <strong>Area of Interest (AoI)</strong>.</p></li>
-<li><p><strong>Download Data</strong>:</p>
-<ul class="simple">
-<li><p>Zoom to your <strong>AoI</strong> in Vespucci.</p></li>
-<li><p>Tap the <strong>Transfer icon</strong> → “Download current view.”</p></li>
-</ul>
-</li>
-<li><p><strong>Start Editing</strong>:</p>
-<ul class="simple">
-<li><p>Unlock editing mode by tapping the <strong>lock icon 🔒</strong>.</p></li>
-<li><p>Tap a <strong>feature (e.g., building)</strong> to edit.</p></li>
-<li><p>Open the <strong>Property Editor</strong> to add or modify tags.</p></li>
-</ul>
-</li>
-<li><p><strong>Uploading Edits to OSM</strong>:</p>
-<ul class="simple">
-<li><p>After making several edits, tap <strong>Transfer icon 🔄</strong> → “Upload data to OSM.”</p></li>
-<li><p>Add a <strong>Changeset comment</strong> (e.g., “Updated building levels”).</p></li>
-<li><p>Provide a <strong>Source</strong> (e.g., “Field survey”).</p></li>
-<li><p>Tap <strong>Upload</strong> to sync changes with OSM.</p></li>
-</ul>
-</li>
-</ol>
-</section>
-<hr class="docutils" />
-<section id="vespucci-app-questions-exercises">
-<h2><span class="section-number">3.10. </span><strong>Vespucci App Questions &amp; Exercises</strong><a class="headerlink" href="#vespucci-app-questions-exercises" title="Link to this heading">#</a></h2>
-<ol class="arabic simple">
-<li><p><strong>What does tapping the lock icon do?</strong></p>
-<ul class="simple">
-<li><p>A) Opens Property Editor</p></li>
-<li><p>B) Toggles locked/unlocked editing modes</p></li>
-<li><p>C) Downloads map view</p></li>
-<li><p>D) Zooms to location<br />
-<strong>Answer: B</strong></p></li>
-</ul>
-</li>
-<li><p><strong>Which Property Editor tab shows raw key-value attributes?</strong></p>
-<ul class="simple">
-<li><p>A) Presets</p></li>
-<li><p>B) Properties</p></li>
-<li><p>C) Details</p></li>
-<li><p>D) Relations<br />
-<strong>Answer: C</strong></p></li>
-</ul>
-</li>
-<li><p><strong>Which icon must you tap to download OSM features to your device?</strong><br />
-<strong>Answer: Transfer 🔄</strong></p></li>
-<li><p><strong>Match icons to functions:</strong></p>
-<ul class="simple">
-<li><p><strong>A)</strong> 📷 Camera → Starts camera app</p></li>
-<li><p><strong>B)</strong> 📍 Location → Provides GPS-based location options</p></li>
-<li><p><strong>C)</strong> 🛠️ Tools → Access imagery/data tools</p></li>
-<li><p><strong>D)</strong> 🔄 Undo → Reverts last operation</p></li>
-</ul>
-</li>
-<li><p><strong>Which actions can you do in the “Details” tab?</strong> (Select all that apply.)</p>
-<ul class="simple">
-<li><p>☑ View raw key-value attributes</p></li>
-<li><p>☑ Add new tags</p></li>
-<li><p>☐ Apply a preset</p></li>
-<li><p>☐ Edit relation memberships</p></li>
-</ul>
-</li>
-<li><p><strong>Order the steps to upload edits:</strong></p>
-<ul class="simple">
-<li><p>A) Tap <strong>Transfer</strong></p></li>
-<li><p>B) Enter <strong>Changeset comment</strong></p></li>
-<li><p>C) Select <strong>Upload to OSM</strong></p></li>
-<li><p>D) Review <strong>Changes tab</strong></p></li>
-<li><p>E) Tap <strong>Upload</strong><br />
-<strong>Correct Order: A → C → D → B → E</strong></p></li>
-</ul>
-</li>
-</ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -1182,8 +917,7 @@ It allows almost all <strong>desktop editing features</strong> directly from a m
             
             
               
-                <dialog id="pst-secondary-sidebar-modal"></dialog>
-                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -1241,33 +975,6 @@ It allows almost all <strong>desktop editing features</strong> directly from a m
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#collecting-simple-3d-data-in-the-field">3.6. 13.5: Collecting Simple 3D Data in the Field</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-by-step-workflow-for-collecting-3d-gis-data-using-the-osm-data-model">3.6.1. <strong>Step-by-Step Workflow for Collecting 3D GIS Data Using the OSM Data Model</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#planning-and-preparation">3.6.1.1. <strong>Planning and Preparation</strong></a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#field-data-collection">3.6.2. <strong>Field Data Collection</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-tools">3.6.2.1. <strong>Mobile Data Collection Tools</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analog-data-collection-tools">3.6.2.2. <strong>Analog Data Collection Tools</strong></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#collect-geospatial-data">3.6.2.3. <strong>Collect Geospatial Data</strong></a></li>
-</ul>
-</li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-upload-and-validation">3.6.3. <strong>Data Upload and Validation</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-processing-and-visualization">3.6.4. <strong>Data Processing and Visualization</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sharing-and-further-applications">3.6.5. <strong>Sharing and Further Applications</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers">3.7. <strong>FieldPapers</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fieldpapers-workflow">3.7.1. <strong>FieldPapers Workflow</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mobile-data-collection-vespucci-android">3.8. <strong>Mobile Data Collection: Vespucci (Android)</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#requirements-to-get-started">3.8.1. <strong>Requirements to Get Started</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-vespucci-tools">3.8.2. <strong>Key Vespucci Tools</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-workflow-for-field-mapping">3.9. <strong>Vespucci Workflow for Field Mapping</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vespucci-app-questions-exercises">3.10. <strong>Vespucci App Questions &amp; Exercises</strong></a></li>
 </ul>
   </nav></div>
 
@@ -1316,8 +1023,8 @@ By YouthMappers - Maintained by Michael Mann
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
