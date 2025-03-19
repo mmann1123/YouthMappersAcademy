@@ -10,9 +10,17 @@ date: "2024"
 
 Welcome to Module 13 of the YouthMappers Academy. This module explores three-dimensional (3D) geospatial data, covering data formats, standards, and a wide range of applications in development.
 
+![static/13.0_Img1.png](static/13.0_Img1.png) 
+ Image source: Esri UK. (n.d.). 3D GIS overview [Image]. Esri UK. Retrieved February 5, 2025, from https://www.esriuk.com/en-gb/arcgis/3d-gis/overview
+
+
 You will learn how 3D data is collected through technologies like LiDAR, photogrammetry, and ground surveying, and how it can be integrated into OpenStreetMap (OSM) for mapping urban and natural environments. We will also discuss best practices for visualizing 3D data using tools such as Cesium, QGIS, and ArcGIS.
 
 3D geospatial data enhances decision-making, planning, and communication among development stakeholders, with critical applications in urban planning, disaster response, infrastructure management, and sustainability efforts aligned with the UN Sustainable Development Goals (SDGs).
+
+![static/fig2.png](static/fig2.png) 
+
+Image source: Cesium. (2020, June 1). Cesium OSM Buildings [Image]. Cesium. Retrieved February 5, 2025, from https://cesium.com/blog/2020/06/01/cesium-osm-buildings/
 
 ### What you will learn
 
@@ -54,15 +62,33 @@ Vector data represents specific locations and objects in 3D space. It includes:
 
 Points represent discrete locations in 3D space, defined by X (longitude), Y (latitude), and Z (height or elevation) coordinates. For example, points can indicate the location of a tree, a communication mast, or a sensor. In addition to spatial coordinates, they may include attributes such as the species of a tree, the model type of a sensor, or the ID number of a radio mast or antenna.
 
+![static/2D_Point.png](static/2D_Point.png) 
+***2D Image:** A 2D point represents a location on a flat surface, defined by its X and Y coordinates. It does not have depth, height, or any physical dimensions—only its position on the 2D plane is described. In this example, the location of the tree is specified in terms of where it stands on the ground, but no information is given about the tree’s height or other attributes.*
+
+![static/3D_Point.png](static/3D_Point.png) 
+***3D Image:** A 3D point represents a location in three-dimensional space, defined by its X, Y, and Z coordinates. In this example, the tree's exact location on the ground is combined with the added dimension of height, allowing us to understand both where the tree is and how tall it is, introducing depth to the spatial representation.*
+
 - **Polylines (Linear Features)**
 
  Polylines represent continuous objects such as roads, rivers, or utility lines in 3D space. Unlike simple 2D lines, each vertex in a polyline can have a unique Z-value, allowing it to capture elevation changes along its path.
+
+![static/2D_polyline.png](static/2D_polyline.png) 
+***2D Caption:** A 2D polyline represents a hiking trail viewed from above, where only the X and Y coordinates (longitude and latitude) are displayed. The line shows the trail’s path on the horizontal plane but does not convey any information about elevation changes encountered during the hike.*
+
+ ![static/3D_polyline.png](static/3D_polyline.png) 
+ ***3D caption:** A 3D polyline displays the hiking trail with elevation data included, represented by the Z-coordinate. In this visualization, the trail not only shows its path on the horizontal plane (X and Y coordinates) but also illustrates how elevation changes throughout the hike. Each vertex of the polyline can hold a different elevation, providing a more accurate representation of the trail’s vertical profile as it ascends and descends over the terrain.*
 
 - **Polygons (Surfaces)**
 
  Polygons represent bounded areas, such as building footprints or land parcels, with added height attributes to extend them into 3D space.
 
 Polygons with height data are often referred to as "Extruded 2D Data" or "2.5D Data" because they are essentially 2D polygons with an associated height value, rather than fully detailed 3D models. This type of representation is commonly used for simple 3D features, such as buildings in a city model.
+
+![static/2D_polygon.png](static/2D_polygon.png) 
+***2D Caption:** A 2D building footprint represents the outline of a building on a flat surface, using only X and Y coordinates. These footprints show building locations and shapes but do not provide any information about their height or vertical dimensions.*
+
+![static/3D_polygon.png](static/3D_polygon.png) 
+***3D Caption:** A 3D extruded building extends the footprints vertically by incorporating a Z-coordinate to represent building height. This provides a more realistic view, showing not only the location of the buildings but also their height and volume, offering a better sense of scale and structure in the urban landscape.*
 
 ### **Sub 13.1.4: Raster-Based 3D Data**
 
@@ -88,11 +114,22 @@ A TIN represents surfaces using non-uniformly spaced points connected by triangl
 
 TINs are particularly useful for modeling terrain with varying resolutions, as they allow greater detail in areas with complex elevation changes while using fewer data points in flatter areas. This makes them an effective tool for topographic analysis, hydrological modeling, and 3D surface visualization.
 
+![static/TIN.jpg](static/Tin.jpg) 
+
+*Attribution: By AlpSInnsbruck - Own work, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=35634426*
+
+***Image caption:** Triangulated Irregular Network (TIN) visualizing terrain elevation with interconnected triangular facets for geographic modeling.*
+
+
 **2. 3D Mesh Models**
 
 3D mesh models consist of vertices, edges, and faces that together define the shape and structure of a 3D object. These models are widely used for visualizing buildings, terrain, and other complex structures with a high level of detail.
 
 Mesh models can be highly detailed, making them useful for applications such as urban planning, simulations, and geospatial visualization. They are commonly used in 3D mapping software, game engines, and virtual reality environments to create realistic and interactive representations of geographic spaces.
+
+![static/Cesium_Mesh.png](static/Cesium_Mesh.png) 
+
+***Image caption:** Screenshot of the Cesium Ion Story interface displaying a 3D mesh model layer of a city section, showcasing detailed urban terrain visualization and geospatial analysis.*
 
 **3. 3D Point Clouds:**
 
@@ -100,13 +137,17 @@ Mesh models can be highly detailed, making them useful for applications such as 
 
 Point clouds are widely used in geospatial analysis, construction, and environmental modeling, as they provide highly accurate representations of real-world structures and landscapes.
 
+![static/pointcloud.png](static/pointcloud.png)
+***Image caption:** 3D point cloud depicting the terrain and landscape*. 
+
 ```{tip}
 [What is a Point Cloud?](https://www.youtube.com/watch?v=2crAfWZOgf0)...
 ```
 
 ### **3D Data Standards**
 
-3D geospatial data standards are essential for ensuring interoperability, accuracy, and consistency across different platforms and applications. Organizations like the Open Geospatial Consortium (OGC) and ISO have developed standards to facilitate the exchange and integration of 3D spatial data across industries.
+3D geospatial data standards are essential for ensuring interoperability, accuracy, and consistency across different platforms and applications. Organizations like the
+[Open Geospatial Consortium (OGC)](https://www.ogc.org/) and [ISO](https://www.iso.org/standards.html) have developed standards to facilitate the exchange and integration of 3D spatial data across industries.
 
 Notable standards include:
 
@@ -120,7 +161,9 @@ These standards are crucial for data sharing, reducing redundancy, and ensuring 
 **3D Tiles:**
  3D Tiles is an open-source format designed to enable the efficient streaming and visualization of large-scale 3D geospatial datasets. This format optimizes rendering performance by breaking down complex 3D models into smaller, manageable chunks, allowing massive datasets to be displayed seamlessly in web-based and mobile applications.
 
-Originally developed by Cesium in 2015 to facilitate streaming heterogeneous 3D geospatial datasets, 3D Tiles was later adopted as a community standard by the Open Geospatial Consortium (OGC) in 2019.
+Originally developed by Cesium in 2015 to facilitate streaming heterogeneous 3D geospatial datasets, 3D Tiles was later adopted as a community standard by the [Open Geospatial Consortium (OGC)](https://www.ogc.org/) in 2019.
+
+![static/3dtile.png](static/3dtile.png)
 
 ```{admonition} In Focus: Combining 3D Tiles and OSM
 
@@ -159,6 +202,11 @@ Each type of 3D GIS data serves specific purposes and applications, ranging from
 3D technology allows planners, developers, architects, and policymakers to view and analyze cities in three dimensions, offering insights that traditional 2D maps cannot provide. 3D GIS enhances urban visualization, helping stakeholders understand the spatial relationship between buildings, streets, landscapes, and infrastructure in a more realistic and interactive manner.
 
 - **Enhanced Visualization:** 3D models help communicate plans to the public, making complex planning projects more accessible to non-experts. Displaying building heights and density helps assess skyline changes and the impact of new developments on sightlines.
+
+![static/nyc_3dmodel.jpg](static/nyc_3dmodel.jpg)
+***Citation:** Department of City Planning. (2018). NYC 3D model by community district. NYC.gov. https://www.nyc.gov/site/planning/data-maps/open-data/dwn-nyc-3d-model-download.page*
+
+***Image Caption:** The 3D model includes data of every building in New York City as of 2014, based on an aerial survey conducted by the Department of Information Technology and Telecommunications (DoITT).*
 
 - **Urban Growth and Land Use Planning:**
 Planners can model future land use, simulate development impacts, and conduct shadow analysis to assess sunlight blockage and viewshed impacts.
@@ -239,6 +287,16 @@ This video explains how LiDAR measures distances and creates accurate 3D maps us
 
 InSAR is a remote sensing technique that uses radar signals to detect ground surface deformations with high precision. By comparing radar images captured at different times, InSAR reveals subtle changes such as land subsidence, tectonic shifts, or volcanic activity, making it invaluable for geophysical monitoring, disaster management, and infrastructure assessment.
 
+![static/insar.gif](static/insar.gif)
+***Image Source:** [U.S. Geological Survey](https://www.usgs.gov/programs/VHP/insar-satellite-based-technique-captures-overall-deformation-picture)*
+
+***Caption:** A satellite collects data during multiple passes over an area, with at least two passes required to generate InSAR images that reveal changes in ground elevation.*
+
+![static/insar2.png](static/insar2.png)
+***Image Source:** [NASA Jet Propulsion Laboratory](https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/)*
+
+***Caption:** InSAR detects surface deformation by comparing the phase difference in radar waves from two satellite passes over the same location. If the ground moves between passes, the phase difference corresponds to the amount of deformation along the line-of-sight direction.*
+
 ### 3. Photogrammetry
 
 Photogrammetry is like using a camera to build a 3D puzzle. Photogrammetry uses overlapping images taken from different angles to create a 3D model of the landscape. By analyzing how objects shift between images, computers can measure distances and produce detailed elevation maps—similar to how your mind visualizes a sculpture when viewing photos from all sides.
@@ -266,6 +324,12 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 ### **4. Ground Surveying**
 
 Ground surveying uses tools like GPS and total stations to measure and map exact ground elevations and locations, providing the highest accuracy for small-scale areas.
+
+![static/ground.jpg](static/ground.jpg)
+***Image Source:** [Geotech3D](https://geotech3d.com/land-surveying/)*
+
+***Caption:** A precise GPS-based land surveying setup, including a GNSS receiver and tripod, used for accurate geospatial data collection in construction or topographical mapping projects. The equipment captures satellite signals to determine exact ground coordinates.*
+
 
 #### Techniques and Tools
 
@@ -346,24 +410,31 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 #### Building Type
 
-- `building=*`: Indicates the type of building (e.g., residential, commercial, industrial).  
-  ![Key:building](IMAGE_URL_HERE)
+- - [`building=*`](https://wiki.openstreetmap.org/wiki/Key:building): Indicates the type of building (e.g., residential, commercial, industrial).
+  ![Key:building](static/key1.png)
 
-- `building:part=*`: Used for parts of a building with different attributes (e.g., varying heights or roof shapes).
+- [`building:part=*`](https://wiki.openstreetmap.org/wiki/Key:building:part): Used for parts of a building with different attributes (e.g., varying heights or roof shapes).
+![alt text](static/height_final-06.png)
 
 ---
 
 #### Height and Levels
 
-- `height=*`: The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).  
-  ![Image showing absolute height measurement](IMAGE_URL_HERE)
+- [`height=*`](https://wiki.openstreetmap.org/wiki/Key:height): The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).  
 
-- `building:levels=*`: The number of above-ground floors in the building.  
-  ![Illustration of tagging above-ground levels](IMAGE_URL_HERE)
+![static/height_final-01.png](static/height_final-01.png)
 
-- `building:levels:underground=*`: The number of underground floors in the building.
+***Image caption:** Image showing the absolute height of a building, measured vertically from ground level to the top edge of the roof.*
 
-**Source:** OpenStreetMap. *(n.d.). Multi-storey underground carpark. OSM Wiki.*
+- [`building:levels=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels): The number of above-ground floors in the building.  
+  
+  ![static/height_final-07.png](static/height_final-07.png)
+  ***Image Caption:** Illustration of how to tag the number of above-ground levels in a building. Note that underground levels and the roof are tagged separately.*
+
+- [`building:levels:underground=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels:underground): The number of underground floors in the building.
+
+![static/carpark.png](static/carpark.png)
+**Source:** OpenStreetMap. *(n.d.). Multi-storey underground carpark. [OSM Wiki](https://wiki.openstreetmap.org/wiki/File:Multi-storey-underground-carpark-20201102.png).*
 
 ---
 
@@ -466,14 +537,14 @@ Free, open, and easy-access tools are a cost-effective way to conduct 3D GIS dat
   - Share **interactive visualizations** with urban planners, community members, or decision-makers.
   - Gather feedback or support planning processes.
 
-This workflow **leverages OSM for 3D attributes** while relying on **free/open-source tools**—from **data collection (Vespucci/FieldPapers)** to **desktop editing (JOSM)** and **final visualization in QGIS/Cesium**—ensuring a **cost-effective and collaborative** approach to **3D GIS data collection**.
+This workflow leverages OSM for 3D attributes while relying on free/open-source tools—from data collection (Vespucci/FieldPapers) to desktop editing (JOSM) and final visualization in QGIS/Cesium—ensuring a cost-effective and collaborative approach to 3D GIS data collection.
 
 ---
 
 ## **FieldPapers**
 
-[FieldPapers](https://fieldpapers.org) is a **web-based tool** for creating **printable OSM-based maps** for field data collection.  
-It provides a **low-tech** solution for collecting data **without handheld devices** or **server setups**.
+[FieldPapers](https://fieldpapers.org) is a web-based tool for creating printable OSM-based map for field data collection.  
+It provides a low-tech solution for 
 
 ### **FieldPapers Workflow**
 
