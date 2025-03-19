@@ -440,33 +440,34 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 #### Roof Details
 
-- `roof:shape=*`: The shape of the roof (e.g., flat, gabled, hipped).  
-  ![Common Roof Shapes – OSM Wiki](IMAGE_URL_HERE)  
+- [`roof:shape=*`](https://wiki.openstreetmap.org/wiki/Key:roof:shape): The shape of the roof (e.g., flat, gabled, hipped).  
+  ![Common Roof Shapes – OSM Wiki](static/roofshape.png)  
 
-- `roof:material=*`: The material of the roof (e.g., tiles, metal).  
-  ![Key:roof:material](IMAGE_URL_HERE)  
+- [`roof:material=*`](https://wiki.openstreetmap.org/wiki/Key:roof:material): The material of the roof (e.g., tiles, metal).  
+  ![Key:roof:material](static/roof_mat.png)  
 
-- `roof:colour=*`: The color of the roof, specified in hexadecimal codes (e.g., `#FFFFFF` for white) or basic color names (e.g., white, red).  
-  ![Illustration of roof color tagging](IMAGE_URL_HERE)
+- [`roof:colour=*`](https://wiki.openstreetmap.org/wiki/Key:roof:colour): The color of the roof, specified in hexadecimal codes (e.g., `#FFFFFF` for white) or basic color names (e.g., white, red).  
+  ![Illustration of roof color tagging](static/height_final-08.png)
 
 ---
 
 #### Material and Color
 
-- `building:material=*`: The primary building material (e.g., brick, concrete, wood).  
-  ![Key:building:material](IMAGE_URL_HERE)
+- [`building:material=*`](https://wiki.openstreetmap.org/wiki/Key:building:material): The primary building material (e.g., brick, concrete, wood).  
+  ![Key:building:material](static/building_mat.png)
 
-- `building:colour=*`: The primary color of the building.
-
+- [`building:colour=*`](https://wiki.openstreetmap.org/wiki/Key:building:colour): The primary color of the building.
+ ![static/buliding_color.png](static/buliding_color.png)
 ---
 
 #### 3D and 2D Representations
 
 - **3D Image**: Displays a 3D-rendered building with height, levels, roof shape, and materials accurately represented.  
-  ![3D-rendered building](IMAGE_URL_HERE)
+  ![3D-rendered building](static/3d_bldg_tags.png)
+
 
 - **2D Image**: Shows a 2D building footprint with the tags `building=yes` and `roof:colour=*` only, as these are the primary attributes visible from satellite imagery.  
-  ![2D building footprint](IMAGE_URL_HERE)
+  ![2D building footprint](static/2d_bldg_tag.png)
 
 ## 13.5: Collecting Simple 3D Data in the Field
 
