@@ -317,17 +317,21 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 
 - **Drone:** Low-altitude photos for high-resolution models of small areas such as construction sites, archaeological digs, or urban planning projects.
 
+```{admonition} Watch here:
 :class: note
 
-**Watch here:** [Aerial Photogrammetry Explained](https://www.youtube.com/watch?v=Blr3suSQt-Q)  
+[Aerial Photogrammetry Explained](https://www.youtube.com/watch?v=Blr3suSQt-Q)  
 
 📌 *This video explains how aerial photogrammetry uses drone photos to create 3D models, detailing the process and techniques involved.*
+```
 
-:class: tip
+```{admonition} Read here: 
+:class: note
 
-**Read here:** [Drone Surveying: A Guide to Point Clouds](https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds)  
+[Drone Surveying: A Guide to Point Clouds](https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds)  
 
 📌 *Explore how drones are used for point cloud generation, enhancing surveying and mapping accuracy.*
+```
 
 
 ### **4. Ground Surveying**
