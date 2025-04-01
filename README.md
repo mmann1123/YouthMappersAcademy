@@ -1,5 +1,7 @@
 # YouthMappersAcademy
 
+To access the web book please go to [https://mmann1123.github.io/YouthMappersAcademy/](https://mmann1123.github.io/YouthMappersAcademy/)
+
 Install jupyter-book, open you terminal and run:
 
 ```bash
