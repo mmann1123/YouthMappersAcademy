@@ -1,4 +1,7 @@
 ---
+title: "Planning a Field Project"
+author: "YouthMappers Academy"
+date: "2024"
 jupytext:
   formats: md:myst
   text_representation:
@@ -6,14 +9,5 @@ jupytext:
     format_name: myst
     format_version: 0.13
     jupytext_version: 1.11.5
-kernelspec:
-  display_name: Python 3
-  language: python
-  name: python3
+
 ---
-
-# Introduction to JOSM
- 
-![static/ym_people.png](static/ym_people.png)
-
-

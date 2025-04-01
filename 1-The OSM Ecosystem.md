@@ -17,6 +17,7 @@ Welcome to Module 1 of the YouthMappers Academy. In this module, you will learn 
 - The Code of Conduct for community members
 - Ethical considerations when mapping in OpenStreetMap
 
+
 ## What is OpenStreetMap?
 
 OpenStreetMap is a free, open, editable map of the world built by a global community of collaborators. OSM can be accessed at [OpenStreetMap.org](https://www.openstreetmap.org), contributed to by over six million volunteers. Data is gathered using field-based and desktop mapping techniques, such as manual surveys, GPS devices, and tracing aerial imagery.
