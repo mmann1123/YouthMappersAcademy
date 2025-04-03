@@ -177,6 +177,6 @@ _build/.doctrees/environment.pickle
 
 
 # jupyter book build 
-_build/*
+_build/
 _build/.doctrees/
 
