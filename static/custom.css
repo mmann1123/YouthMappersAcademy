@@ -1,0 +1,48 @@
+/* Set the default font and text size for the entire book */
+body {
+  font-family: 'Arial', sans-serif; /* Change 'Arial' to your preferred font */
+  font-size: 16px; /* Adjust the size as needed */
+  line-height: 1.6; /* Optional: Adjust line spacing for readability */
+  color: #333333; /* Optional: Set the default text color */
+}
+
+/* Optional: Customize paragraph styles */
+p {
+  font-family: inherit; /* Use the default font */
+  font-size: inherit; /* Use the default size */
+  margin-bottom: 1em; /* Add spacing between paragraphs */
+}
+
+/* Style for level 1 headings (e.g., # Heading 1) */
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* Style for level 2 headings (e.g., ## Heading 2) */
+h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: #555555;
+}
+
+/* Style for level 3 headings (e.g., ### Heading 3) */
+h3 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.75em;
+  font-weight: bold;
+  color: #777777;
+}
+
+
+/* Style for level 4 headings (e.g., ### Heading 4) */
+h4 {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.5em;
+  font-style: italic;
+  font-weight: bold;  
+  color: #a5a5a5;
+}
