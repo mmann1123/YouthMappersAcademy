@@ -12,9 +12,9 @@ parts:
   description: In this course you will learn about the origins of the OpenStreetMap project, the infrastructure, the community, how YouthMappers fits into this ecosystem as a community within the community, and what keeps us mapping. If you don’t already have one, you will learn how to create an OpenStreetMap account. We will look at what drove the development of OpenStreetMap, and what the OSM community membership looks like. We will also examine the ethical considerations of mapping in OpenStreetMap, and the best practices in communication for members of the community.
   numbered: true
   chapters:
-  - file: Course1-Ecosystem.md
+  - file: 1-The OSM Ecosystem.md
 - caption: Advanced Track
   numbered: true
   chapters:
-  - file: Course7-IntroJOSM.md
-  - file: Course13-Cesium.md
+  - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
+  - file: 13-Introduction to 3D Data.md

@@ -13,9 +13,9 @@ jupytext:
 ---
 
 
-# Module 13: Introduction to 3D Data
+# Introduction to 3D Data
 
-## 13.0 Overview
+## Overview
 
 Welcome to Module 13 of the YouthMappers Academy. This module explores three-dimensional (3D) geospatial data, covering data formats, standards, and a wide range of applications in development.
 
@@ -41,7 +41,7 @@ Image source: Cesium. (2020, June 1). Cesium OSM Buildings [Image]. Cesium. Retr
 - You will develop hands-on skills in collecting and integrating simple 3D data in the field using mobile tools like FieldPapers and Vespucci.
 - You will learn how three dimensional data can be incorporated into the OSM data model and the best tools and workflows to facilitate this.
 
-## 13.1 Introduction to 3D Data
+## Introduction to 3D Data
 
 ### What is 3D data?
 
@@ -153,7 +153,7 @@ Point clouds are widely used in geospatial analysis, construction, and environme
 [What is a Point Cloud?](https://www.youtube.com/watch?v=2crAfWZOgf0)...
 ```
 
-### **3D Data Standards**
+### 3D Data Standards
 
 3D geospatial data standards are essential for ensuring interoperability, accuracy, and consistency across different platforms and applications. Organizations like the
 [Open Geospatial Consortium (OGC)](https://www.ogc.org/) and [ISO](https://www.iso.org/standards.html) have developed standards to facilitate the exchange and integration of 3D spatial data across industries.
@@ -204,7 +204,7 @@ The hierarchical structure of 3D Tiles enables progressive loading, meaning data
 
 Each type of 3D GIS data serves specific purposes and applications, ranging from basic elevation models to highly detailed representations of the built environment. The choice of data type depends on the requirements of the analysis, the level of detail needed, and the available data sources.
 
-## 13.2 What are the Applications of 3D Data?
+## What are the Applications of 3D Data?
 
 ### **Urban Planning and Development**
 
@@ -228,7 +228,7 @@ Planners can assess risk factors and mitigate flooding impacts on city infrastru
 
 Read more about how urban planners are leveraging 3D analysis in ArcGIS [here.](https://www.esri.com/en-us/arcgis/products/arcgis-urban/overview)
 
-### **Humanitarian and Emergency Management**
+### Humanitarian and Emergency Management
 
 3D GIS is an essential tool for disaster response, humanitarian aid, and crisis preparedness. It helps emergency responders, aid organizations, and governments make data-driven decisions in critical situations.
 
@@ -240,7 +240,7 @@ Read more about how urban planners are leveraging 3D analysis in ArcGIS [here.](
 
 - **Refugee Camp and Shelter Planning:** 3D GIS is used to design temporary settlements, ensuring optimal land use, accessibility to resources, and efficient distribution of aid.
 
-### **Environmental and Natural Resource Management**
+### Environmental and Natural Resource Management
 
 3D GIS plays a critical role in monitoring ecosystems, managing resources, and protecting biodiversity.
 
@@ -263,7 +263,7 @@ Identifying unstable terrain and high-risk zones for proactive mitigation measur
 
 - **Structural Integrity and Risk Assessment:** 3D GIS can be used to simulate how buildings and infrastructure respond to environmental hazards such as earthquakes, high winds, and floods, supporting disaster resilience and safer construction planning.
 
-### **Navigation and Transportation**
+### Navigation and Transportation
 
 3D GIS enhances transportation planning and navigation systems, offering realistic, data-driven models for optimizing road networks, transit systems, and pedestrian pathways.
 
@@ -279,7 +279,7 @@ Identifying unstable terrain and high-risk zones for proactive mitigation measur
 
 - **Signal Propagation Analysis:** 3D GIS allows engineers to simulate and visualize network coverage, improving service reliability in complex environments.
 
-## 13.3 What Are the Primary Sources of 3D Data?
+## What Are the Primary Sources of 3D Data?
 
 ### 1. LiDAR (Light Detection and Ranging)
 
@@ -334,7 +334,7 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 ```
 
 
-### **4. Ground Surveying**
+### 4. Ground Surveying
 
 Ground surveying uses tools like GPS and total stations to measure and map exact ground elevations and locations, providing the highest accuracy for small-scale areas.
 
@@ -413,7 +413,7 @@ Unmanned Aerial Vehicles (UAVs) are revolutionizing 3D point cloud generation fo
 As UAV technology advances, drones are becoming indispensable in fields like urban planning, environmental management, and disaster response, offering high-accuracy, real-time 3D data collection.
 ```
 
-## 13.4: 3D and the OSM Data model
+## 3D and the OSM Data model
 
 To use the OpenStreetMap (OSM) data model for storing 3D data, it is essential to understand and utilize the appropriate tags created to represent three-dimensional attributes of buildings and other structures.
 
@@ -482,7 +482,7 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 - **2D Image**: Shows a 2D building footprint with the tags `building=yes` and `roof:colour=*` only, as these are the primary attributes visible from satellite imagery.  
   ![2D building footprint](static/2d_bldg_tag.png)
 
-## 13.5 Collecting Simple 3D Data in the Field
+## Collecting Simple 3D Data in the Field
 
 Free, open and easy access tools are a cost-effective way to conduct 3D GIS data collection without the burden of expensive licensing fees. These types of tools also foster collaboration, customization, and transparency by leveraging community-driven development and standardized data models, making it easier to share and integrate data across platforms.
 
@@ -686,6 +686,6 @@ Select a building that you know well by tapping on it.
 
 20. As noted at the beginning of this tutorial, you can use the Vespucci mobile app to do almost everything you can from a desktop computer.  To dive deeper on the tools and uses of this app, please review the [Vespucci User's Guide](https://vespucci.io/help/en/Main%20map%20display/).
 
-## 13.6 How Do I Visualize 3D Data?
+## How Do I Visualize 3D Data?
 
 The way in which we visualize 3D GIS data can transform complex geospatial information into immersive, interactive and accessible representations of real-world environments, often with remarkable detail. Advanced techniques, such as realistic shading, texturing, and lighting can enhance the depth and realism of these scenes, while dynamic overlays and interactive tools allow users to explore, manipulate, and analyze the data in real time. Softwares like ArcGIS Pro, QGIS with 3D plugins, and Cesium allow users to explore data on the fly, conduct analyses such as sunlight and shadow modeling, and ultimately support more informed decision-making.
