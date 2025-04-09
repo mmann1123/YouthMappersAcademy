@@ -71,18 +71,19 @@ Vector data represents specific locations and objects in 3D space. It includes:
 
 Points represent discrete locations in 3D space, defined by X (longitude), Y (latitude), and Z (height or elevation) coordinates. For example, points can indicate the location of a tree, a communication mast, or a sensor. In addition to spatial coordinates, they may include attributes such as the species of a tree, the model type of a sensor, or the ID number of a radio mast or antenna.
 
+
 ![static/2D_Point.png](static/2D_Point.png) 
-***2D Image:** A 2D point represents a location on a flat surface, defined by its X and Y coordinates. It does not have depth, height, or any physical dimensions—only its position on the 2D plane is described. In this example, the location of the tree is specified in terms of where it stands on the ground, but no information is given about the tree’s height or other attributes.*
+***2D Image:** A 2D point represents a location on a flat surface, defined by its X and Y coordinates. It does not have depth, height, or any physical dimensions—only its position on the 2D plane is described. In this example, the location of the tree is specified in terms of where it stands on the ground, but no information is given about the tree’s height or other attributes. Source: Elodie Nix, 2024*
 
 ![static/3D_Point.png](static/3D_Point.png) 
-***3D Image:** A 3D point represents a location in three-dimensional space, defined by its X, Y, and Z coordinates. In this example, the tree's exact location on the ground is combined with the added dimension of height, allowing us to understand both where the tree is and how tall it is, introducing depth to the spatial representation.*
+***3D Image:** A 3D point represents a location in three-dimensional space, defined by its X, Y, and Z coordinates. In this example, the tree's exact location on the ground is combined with the added dimension of height, allowing us to understand both where the tree is and how tall it is, introducing depth to the spatial representation. Source: Elodie Nix, 2024*
 
 - **Polylines (Linear Features)**
 
  Polylines represent continuous objects such as roads, rivers, or utility lines in 3D space. Unlike simple 2D lines, each vertex in a polyline can have a unique Z-value, allowing it to capture elevation changes along its path.
 
 ![static/2D_Polyline.png](static/2D_Polyline.png) 
-***2D Caption:** A 2D polyline represents a hiking trail viewed from above, where only the X and Y coordinates (longitude and latitude) are displayed. The line shows the trail’s path on the horizontal plane but does not convey any information about elevation changes encountered during the hike.*
+***2D Caption:** A 2D polyline represents a hiking trail viewed from above, where only the X and Y coordinates (longitude and latitude) are displayed. The line shows the trail’s path on the horizontal plane but does not convey any information about elevation changes encountered during the hike. Source: Elodie Nix, 2024*
 
  ![static/3D_polyline.png](static/3D_polyline.png) 
  ***3D caption:** A 3D polyline displays the hiking trail with elevation data included, represented by the Z-coordinate. In this visualization, the trail not only shows its path on the horizontal plane (X and Y coordinates) but also illustrates how elevation changes throughout the hike. Each vertex of the polyline can hold a different elevation, providing a more accurate representation of the trail’s vertical profile as it ascends and descends over the terrain.*
@@ -97,7 +98,7 @@ Polygons with height data are often referred to as "Extruded 2D Data" or "2.5D D
 ***2D Caption:** A 2D building footprint represents the outline of a building on a flat surface, using only X and Y coordinates. These footprints show building locations and shapes but do not provide any information about their height or vertical dimensions.*
 
 ![static/3D_Polygon.png](static/3D_Polygon.png) 
-***3D Caption:** A 3D extruded building extends the footprints vertically by incorporating a Z-coordinate to represent building height. This provides a more realistic view, showing not only the location of the buildings but also their height and volume, offering a better sense of scale and structure in the urban landscape.*
+***3D Caption:** A 3D extruded building extends the footprints vertically by incorporating a Z-coordinate to represent building height. This provides a more realistic view, showing not only the location of the buildings but also their height and volume, offering a better sense of scale and structure in the urban landscape. Source: Elodie Nix, 2024*
 
 ### **Sub 13.1.4: Raster-Based 3D Data**
 
@@ -424,10 +425,16 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 #### Building Type
 
 - - [`building=*`](https://wiki.openstreetmap.org/wiki/Key:building): Indicates the type of building (e.g., residential, commercial, industrial).
-  ![Key:building](static/key1.png)
+
+<div style="text-align: center;">
+  <img src="static/key1.png" alt="list of building keys from OSMWiki" width="50%">
+</div>
 
 - [`building:part=*`](https://wiki.openstreetmap.org/wiki/Key:building:part): Used for parts of a building with different attributes (e.g., varying heights or roof shapes).
-![alt text](static/height_final-06.png)
+
+<div style="text-align: center;">
+  <img src="static/height_final-06.png" alt="Building part tag" width="50%">
+</div>
 
 ---
 
@@ -435,18 +442,26 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 - [`height=*`](https://wiki.openstreetmap.org/wiki/Key:height): The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).  
 
-![static/height_final-01.png](static/height_final-01.png)
+<div style="text-align: center;">
+  <img src="static/height_final-01.png" alt="Tagging the height of a building or a building height" width="50%">
+</div>
 
 ***Image caption:** Image showing the absolute height of a building, measured vertically from ground level to the top edge of the roof.*
 
 - [`building:levels=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels): The number of above-ground floors in the building.  
   
-  ![static/height_final-07.png](static/height_final-07.png)
+  <div style="text-align: center;">
+  <img src="static/height_final-07.png" alt="The number of above-ground floors in the building" width="50%">
+</div>
+
   ***Image Caption:** Illustration of how to tag the number of above-ground levels in a building. Note that underground levels and the roof are tagged separately.*
 
 - [`building:levels:underground=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels:underground): The number of underground floors in the building.
 
-![static/carpark.png](static/carpark.png)
+ <div style="text-align: center;">
+  <img src="static/carpark.png" alt="Underground parking garage illustrates how to properly tag underground floors of a building" width="50%">
+</div>
+
 **Source:** OpenStreetMap. *(n.d.). Multi-storey underground carpark. [OSM Wiki](https://wiki.openstreetmap.org/wiki/File:Multi-storey-underground-carpark-20201102.png).*
 
 ---
@@ -454,33 +469,55 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 #### Roof Details
 
 - [`roof:shape=*`](https://wiki.openstreetmap.org/wiki/Key:roof:shape): The shape of the roof (e.g., flat, gabled, hipped).  
-  ![Common Roof Shapes – OSM Wiki](static/roofshape.png)  
+
+ <div style="text-align: center;">
+  <img src="static/roofshape.png" alt="Different types of roofs with their associated OSM tag" width="50%">
+</div>
 
 - [`roof:material=*`](https://wiki.openstreetmap.org/wiki/Key:roof:material): The material of the roof (e.g., tiles, metal).  
-  ![Key:roof:material](static/roof_mat.png)  
+
+ <div style="text-align: center;">
+  <img src="static/roof_mat.png" alt="Different types of roof materials" width="50%">
+</div>
 
 - [`roof:colour=*`](https://wiki.openstreetmap.org/wiki/Key:roof:colour): The color of the roof, specified in hexadecimal codes (e.g., `#FFFFFF` for white) or basic color names (e.g., white, red).  
-  ![Illustration of roof color tagging](static/height_final-08.png)
+
+ <div style="text-align: center;">
+  <img src="static/height_final-08.png" alt="roof" width="50%">
+</div> 
 
 ---
 
 #### Material and Color
 
 - [`building:material=*`](https://wiki.openstreetmap.org/wiki/Key:building:material): The primary building material (e.g., brick, concrete, wood).  
-  ![Key:building:material](static/building_mat.png)
+
+<div style="text-align: center;">
+  <img src="static/building_mat.png" alt="Different building materials" width="50%">
+</div>
+
 
 - [`building:colour=*`](https://wiki.openstreetmap.org/wiki/Key:building:colour): The primary color of the building.
- ![static/buliding_color.png](static/buliding_color.png)
+
+<div style="text-align: center;">
+  <img src="static/building_color.png" alt="Building color" width="50%">
+</div>
+
 ---
 
 #### 3D and 2D Representations
 
-- **3D Image**: Displays a 3D-rendered building with height, levels, roof shape, and materials accurately represented.  
-  ![3D-rendered building](static/3d_bldg_tags.png)
+- **3D Image**: Displays a 3D-rendered building with height, levels, roof shape, and materials accurately represented. 
 
+<div style="text-align: center;">
+  <img src="static/3d_bldg_tags.png" alt="3D-rendered building" width="50%">
+</div>
 
 - **2D Image**: Shows a 2D building footprint with the tags `building=yes` and `roof:colour=*` only, as these are the primary attributes visible from satellite imagery.  
-  ![2D building footprint](static/2d_bldg_tag.png)
+
+<div style="text-align: center;">
+  <img src="static/2d_bldg_tag.png" alt="2D building footprint" width="50%">
+</div>
 
 ## Collecting Simple 3D Data in the Field
 
@@ -579,20 +616,28 @@ The map you see in this application is taken from the latest version of OSM. Bef
 - Vespucci makes it very easy to get the needed data. **Zoom to your AoI** using Vespucci's zoom tools or gestures.
 - **Download OSM data** by selecting the Transfer icon and choosing ‘Download current view.’ This will download the current features from OSM to your device. Downloaded features will be highlighted differently from non-downloaded data.
 
-![static/v1.png](static/v1.png)
+
+<div style="text-align: center;">
+  <img src="static/v1.png" alt="preset" width="60%">
+</div>
 
 ### Editing with the Property Editor
 
 By default, editing is locked when you open Vespucci.  In the upper left corner you’ll see the lock icon.  This Indicates the data is locked and cannot be edited.  Tapping this icon you can toggle between locked and unlocked mode. While in unlocked mode, you can edit the downloaded data. 
 
+<div style="text-align: center;">
+  <img src="static/v2.png" alt="preset" width="60%">
+</div>
 
-![static/v2.png](static/v2.png)
-
-![static/v4.png](static/v4.png)
+<div style="text-align: center;">
+  <img src="static/v4.png" alt="preset" width="60%">
+</div>
 
 When you have enabled unlock mode, you can now select any downloaded feature by tapping the orange area around it to begin editing.  
 
-![static/v5.png](static/v5.png)
+<div style="text-align: center;">
+  <img src="static/v5.png" alt="preset" width="60%">
+</div>
 
 Select a feature by tapping it, then open the Property Editor by selecting the Property Icon,[INSERT ICON] ,  to add or modify tags. To exit the Property Editor tap the check mark icon in the upper left corner.  This will also save any changes you’ve made. (NOTE: at this time any changes are only saved to your phone and not to OSM.)
 
@@ -600,19 +645,27 @@ The editor offers several tabs. You can navigate across the tabs by swiping left
 
 - **Presets Tab:** Displays OSM presets for the selected object. 
 
-![static/preset.png](static/preset.png)
+<div style="text-align: center;">
+  <img src="static/preset.png" alt="preset" width="40%">
+</div>
 
 - **Properties Tab (default):** A simplified view showing key-value pairs for the selected feature. This preset driven display shows the description rather than the raw keys.
 
-![static/properties.png](static/properties.png)
+<div style="text-align: center;">
+  <img src="static/properties.png" alt="preset" width="40%">
+</div>
 
 - **Details Tab:** Shows the raw key-value attributes for advanced editing.
 
-![static/details.png](static/details.png)
+<div style="text-align: center;">
+  <img src="static/details.png" alt="preset" width="40%">
+</div>
 
 - **Relations Tab:** Displays any relations the selected feature is part of.
 
-![static/relations.png](static/relations.png)
+<div style="text-align: center;">
+  <img src="static/relations.png" alt="preset" width="40%">
+</div>
 
 - **Member Tab:** Visible only if the object is part of a relation.
 
@@ -629,7 +682,10 @@ Once your edits are complete, tap the check mark icon in the upper-left corner t
 
 After making several edits, return to the main screen. You’ll see a number above the transfer icon indicating the total number of edits made. Tap the transfer icon to begin the upload process to OSM.
 
-![static/v0.png](static/v0.png)
+<div style="text-align: center;">
+  <img src="static/v0.png" alt="preset" width="60%">
+</div>
+
 
 ### Uploading Your Edits to OSM
 
@@ -674,7 +730,9 @@ Select a building that you know well by tapping on it.
 
 16. Tap the arrow in the upper left corner of the screen.  This will take you back to the main page for the app.  You’ll now see the transfer icon with a bubble and number.  This number indicates the total number of edits you have made and are ready to be uploaded to OSM.
 
-![static/v0.png](static/v0.png)
+<div style="text-align: center;">
+  <img src="static/v0.png" alt="preset" width="60%">
+</div>
 
 17. Tap the Transfer icon to bring up its menu.  
 
