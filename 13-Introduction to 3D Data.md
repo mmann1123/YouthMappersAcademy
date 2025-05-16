@@ -426,41 +426,61 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 - - [`building=*`](https://wiki.openstreetmap.org/wiki/Key:building): Indicates the type of building (e.g., residential, commercial, industrial).
 
-<div style="text-align: center;">
-  <img src="static/key1.png" alt="list of building keys from OSMWiki" width="50%">
-</div>
+
+```{figure} static/key1.png
+---
+label: list of building keys from OSMWiki
+width: 75%
+align: center
+---
+```
 
 - [`building:part=*`](https://wiki.openstreetmap.org/wiki/Key:building:part): Used for parts of a building with different attributes (e.g., varying heights or roof shapes).
-
-<div style="text-align: center;">
-  <img src="static/height_final-06.png" alt="Building part tag" width="50%">
-</div>
-
+ 
+```{figure} static/height_final-06.png
+---
+label: Building part tag
+width: 50%
+align: center
+---
+```
 ---
 #### Height and Levels
 
 - [`height=*`](https://wiki.openstreetmap.org/wiki/Key:height): The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).  
-
- <div style="text-align: center;">
-  <img src="static/height_final-01.png" alt="Tagging the height of a building or a building height" width="50%">
-</div>
+ 
+```{figure} static/height_final-01.png
+---
+label: Tagging the height of a building or a building height
+width: 50%
+align: center
+---
+```
 
 ***Image caption:** Image showing the absolute height of a building, measured vertically from ground level to the top edge of the roof.*
 
 - [`building:levels=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels): The number of above-ground floors in the building.  
-  
- <div style="text-align: center;">
-  <img src="static/height_final-07.png" alt="The number of above-ground floors in the building" width="50%">
-</div>
+
+
+```{figure} static/height_final-07.png
+---
+label: The number of above-ground floors in the building
+width: 50%
+align: center
+---
+```
 
   ***Image Caption:** Illustration of how to tag the number of above-ground levels in a building. Note that underground levels and the roof are tagged separately.*
 
 - [`building:levels:underground=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels:underground): The number of underground floors in the building.
 
- <div style="text-align: center;">
-  <img src="static/carpark.png" alt="Underground parking garage illustrates how to properly tag underground floors of a building" width="50%">
-</div>
-
+```{figure} static/carpark.png
+---
+label: Underground parking garage illustrates how to properly tag underground floors of a building
+width: 50%
+align: center
+---
+```
 **Source:** OpenStreetMap. *(n.d.). Multi-storey underground carpark. [OSM Wiki](https://wiki.openstreetmap.org/wiki/File:Multi-storey-underground-carpark-20201102.png).*
 
 --- 
@@ -471,21 +491,33 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 - [`roof:shape=*`](https://wiki.openstreetmap.org/wiki/Key:roof:shape): The shape of the roof (e.g., flat, gabled, hipped).  
 
- <div style="text-align: center;">
-  <img src="static/roofshape.png" alt="Different types of roofs with their associated OSM tag" width="50%">
-</div>
+```{figure} static/roofshape.png
+---
+label: Different types of roofs with their associated OSM tag
+width: 50%
+align: center
+---
+```
 
 - [`roof:material=*`](https://wiki.openstreetmap.org/wiki/Key:roof:material): The material of the roof (e.g., tiles, metal).  
 
- <div style="text-align: center;">
-  <img src="static/roof_mat.png" alt="Different types of roof materials" width="50%">
-</div>
+```{figure} static/roof_mat.png
+---
+label: Different types of roof materials
+width: 50%
+align: center
+---
+```
+
 - [`roof:colour=*`](https://wiki.openstreetmap.org/wiki/Key:roof:colour): The color of the roof, specified in hexadecimal codes (e.g., `#FFFFFF` for white) or basic color names (e.g., white, red).  
 
- <div style="text-align: center;">
-  <img src="static/height_final-08.png" alt="roof" width="50%">
-</div> 
-
+```{figure} static/height_final-08.png
+---
+label: Different types of roof colors
+width: 50%
+align: center
+---
+```
 ---
 
 
@@ -496,7 +528,13 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 <div style="text-align: center;">
   <img src="static/building_mat.png" alt="Different building materials" width="50%">
 </div>
-
+```{figure} static/height_final-08.png
+---
+label: Different types of roof colors
+width: 50%
+align: center
+---
+```
 
 - [`building:colour=*`](https://wiki.openstreetmap.org/wiki/Key:building:colour): The primary color of the building.
 

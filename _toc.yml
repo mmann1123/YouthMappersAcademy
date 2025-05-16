@@ -19,6 +19,6 @@ parts:
   - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
   - file: 13-Introduction to 3D Data.md
 - caption: Exercises
-  numbered: true
+  numbered: false 
   chapters:
   - file: EX1_field_data_collection.md
