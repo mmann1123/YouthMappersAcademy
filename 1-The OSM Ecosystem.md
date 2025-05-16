@@ -4,7 +4,7 @@ author: "YouthMappers Academy"
 date: "2024"
 ---
 
-# Module 1: The OSM Ecosystem
+# The OSM Ecosystem
 
 ## Overview
 
