@@ -244,7 +244,7 @@ Read more about how urban planners are leveraging 3D analysis in ArcGIS [here.](
 ### Environmental and Natural Resource Management
 
 3D GIS plays a critical role in monitoring ecosystems, managing resources, and protecting biodiversity.
-
+ 
 - **Watershed Management:**
 Analyzing drainage patterns and hydrological changes to assess water availability, erosion risks, and flooding potential.  
 For example, 3D models can integrate topographic elevation models with hydrology simulations to predict the direction of floodwater during periods of heavy rain.
@@ -437,12 +437,11 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 </div>
 
 ---
-
 #### Height and Levels
 
 - [`height=*`](https://wiki.openstreetmap.org/wiki/Key:height): The absolute height of the building or building part in meters, measured from the terrain to the highest point of the roof (excluding antennas or equipment).  
 
-<div style="text-align: center;">
+ <div style="text-align: center;">
   <img src="static/height_final-01.png" alt="Tagging the height of a building or a building height" width="50%">
 </div>
 
@@ -450,7 +449,7 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 - [`building:levels=*`](https://wiki.openstreetmap.org/wiki/Key:building:levels): The number of above-ground floors in the building.  
   
-  <div style="text-align: center;">
+ <div style="text-align: center;">
   <img src="static/height_final-07.png" alt="The number of above-ground floors in the building" width="50%">
 </div>
 
@@ -464,7 +463,9 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 **Source:** OpenStreetMap. *(n.d.). Multi-storey underground carpark. [OSM Wiki](https://wiki.openstreetmap.org/wiki/File:Multi-storey-underground-carpark-20201102.png).*
 
----
+--- 
+ 
+
 
 #### Roof Details
 
@@ -479,7 +480,6 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
  <div style="text-align: center;">
   <img src="static/roof_mat.png" alt="Different types of roof materials" width="50%">
 </div>
-
 - [`roof:colour=*`](https://wiki.openstreetmap.org/wiki/Key:roof:colour): The color of the roof, specified in hexadecimal codes (e.g., `#FFFFFF` for white) or basic color names (e.g., white, red).  
 
  <div style="text-align: center;">
@@ -487,6 +487,7 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 </div> 
 
 ---
+
 
 #### Material and Color
 
@@ -517,4 +518,4 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 <div style="text-align: center;">
   <img src="static/2d_bldg_tag.png" alt="2D building footprint" width="50%">
-</div>
+</div>  
