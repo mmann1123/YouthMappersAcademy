@@ -538,22 +538,32 @@ align: center
 
 - [`building:colour=*`](https://wiki.openstreetmap.org/wiki/Key:building:colour): The primary color of the building.
 
-<div style="text-align: center;">
-  <img src="static/building_color.png" alt="Building color" width="50%">
-</div>
-
+```{figure} static/building_color.png
+---
+label: Building color
+width: 50%
+align: center
+---
+```
 ---
 
 #### 3D and 2D Representations
 
 - **3D Image**: Displays a 3D-rendered building with height, levels, roof shape, and materials accurately represented. 
 
-<div style="text-align: center;">
-  <img src="static/3d_bldg_tags.png" alt="3D-rendered building" width="50%">
-</div>
-
+```{figure} static/3d_bldg_tags.png
+---
+label: 3D-rendered building
+width: 50%
+align: center
+---
+```
 - **2D Image**: Shows a 2D building footprint with the tags `building=yes` and `roof:colour=*` only, as these are the primary attributes visible from satellite imagery.  
 
-<div style="text-align: center;">
-  <img src="static/2d_bldg_tag.png" alt="2D building footprint" width="50%">
-</div>  
+```{figure} static/2d_bldg_tag.png
+---
+label: 2D building footprint
+width: 50%
+align: center
+---
+```
