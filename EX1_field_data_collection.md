@@ -110,28 +110,41 @@ The map you see in this application is taken from the latest version of OSM. Bef
 - Vespucci makes it very easy to get the needed data. **Zoom to your AoI** using Vespucci's zoom tools or gestures.
 - **Download OSM data** by selecting the Transfer icon and choosing ‘Download current view.’ This will download the current features from OSM to your device. Downloaded features will be highlighted differently from non-downloaded data.
 
-
-<div style="text-align: center;">
-  <img src="static/v1.png" alt="preset" width="60%">
-</div>
-
+```{figure} static/v1.png
+---
+label: Downloaded data is highlighted red
+width: 60%
+align: center
+---
+```
 ### Editing with the Property Editor
 
 By default, editing is locked when you open Vespucci.  In the upper left corner you’ll see the lock icon.  This Indicates the data is locked and cannot be edited.  Tapping this icon you can toggle between locked and unlocked mode. While in unlocked mode, you can edit the downloaded data. 
 
-<div style="text-align: center;">
-  <img src="static/v2.png" alt="preset" width="60%">
-</div>
-
-<div style="text-align: center;">
-  <img src="static/v4.png" alt="preset" width="60%">
-</div>
-
+```{figure} static/v2.png
+---
+label: Downloaded but locked
+width: 60%
+align: center
+---
+```
+ 
+```{figure} static/v4.png
+---
+label: Downloaded now unlocked
+width: 60%
+align: center
+---
+```
 When you have enabled unlock mode, you can now select any downloaded feature by tapping the orange area around it to begin editing.  
 
-<div style="text-align: center;">
-  <img src="static/v5.png" alt="preset" width="60%">
-</div>
+```{figure} static/v5.png
+---
+label: Feature selected
+width: 60%
+align: center
+---
+```
 
 Select a feature by tapping it, then open the Property Editor by selecting the Property Icon,[INSERT ICON] ,  to add or modify tags. To exit the Property Editor tap the check mark icon in the upper left corner.  This will also save any changes you’ve made. (NOTE: at this time any changes are only saved to your phone and not to OSM.)
 
@@ -139,28 +152,40 @@ The editor offers several tabs. You can navigate across the tabs by swiping left
 
 - **Presets Tab:** Displays OSM presets for the selected object. 
 
-<div style="text-align: center;">
-  <img src="static/preset.png" alt="preset" width="40%">
-</div>
-
+```{figure} static/preset.png
+---
+label: Present types for selected objects
+width: 40%
+align: center
+---
+```
 - **Properties Tab (default):** A simplified view showing key-value pairs for the selected feature. This preset driven display shows the description rather than the raw keys.
 
-<div style="text-align: center;">
-  <img src="static/properties.png" alt="preset" width="40%">
-</div>
-
+```{figure} static/properties.png
+---
+label: Properties table
+width: 40%
+align: center
+---
+```
 - **Details Tab:** Shows the raw key-value attributes for advanced editing.
 
-<div style="text-align: center;">
-  <img src="static/details.png" alt="preset" width="40%">
-</div>
-
+```{figure} static/details.png
+---
+label: Details table
+width: 40%
+align: center
+---
+```
 - **Relations Tab:** Displays any relations the selected feature is part of.
 
-<div style="text-align: center;">
-  <img src="static/relations.png" alt="preset" width="40%">
-</div>
-
+```{figure} static/relations.png
+---
+label: Relations table
+width: 40%
+align: center
+---
+```
 - **Member Tab:** Visible only if the object is part of a relation.
 
 ### Uploading Your Edits to OSM
@@ -176,10 +201,13 @@ Once your edits are complete, tap the check mark icon in the upper-left corner t
 
 After making several edits, return to the main screen. You’ll see a number above the transfer icon indicating the total number of edits made. Tap the transfer icon to begin the upload process to OSM.
 
-<div style="text-align: center;">
-  <img src="static/v0.png" alt="preset" width="60%">
-</div>
-
+```{figure} static/v0.png
+---
+label: Transfer icon
+width: 60%
+align: center
+---
+```
 
 ### Uploading Your Edits to OSM
 
@@ -224,10 +252,14 @@ Select a building that you know well by tapping on it.
 
 16. Tap the arrow in the upper left corner of the screen.  This will take you back to the main page for the app.  You’ll now see the transfer icon with a bubble and number.  This number indicates the total number of edits you have made and are ready to be uploaded to OSM.
 
-<div style="text-align: center;">
-  <img src="static/v0.png" alt="preset" width="60%">
-</div>
-
+ 
+```{figure} static/v0.png
+---
+label: Transfer icon
+width: 60%
+align: center
+---
+```
 17. Tap the Transfer icon to bring up its menu.  
 
 18. Tap ‘Upload data to OSM Server…’ to start the upload process.  In the Upload changes window you have 2 tabs: Changes and Properties
