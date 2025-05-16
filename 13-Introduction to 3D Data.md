@@ -83,9 +83,11 @@ Points represent discrete locations in 3D space, defined by X (longitude), Y (la
  Polylines represent continuous objects such as roads, rivers, or utility lines in 3D space. Unlike simple 2D lines, each vertex in a polyline can have a unique Z-value, allowing it to capture elevation changes along its path.
 
 ![static/2D_Polyline.png](static/2D_Polyline.png) 
+
 ***2D Caption:** A 2D polyline represents a hiking trail viewed from above, where only the X and Y coordinates (longitude and latitude) are displayed. The line shows the trail’s path on the horizontal plane but does not convey any information about elevation changes encountered during the hike. Source: Elodie Nix, 2024*
 
  ![static/3D_polyline.png](static/3D_polyline.png) 
+
  ***3D caption:** A 3D polyline displays the hiking trail with elevation data included, represented by the Z-coordinate. In this visualization, the trail not only shows its path on the horizontal plane (X and Y coordinates) but also illustrates how elevation changes throughout the hike. Each vertex of the polyline can hold a different elevation, providing a more accurate representation of the trail’s vertical profile as it ascends and descends over the terrain.*
 
 - **Polygons (Surfaces)**
@@ -95,12 +97,14 @@ Points represent discrete locations in 3D space, defined by X (longitude), Y (la
 Polygons with height data are often referred to as "Extruded 2D Data" or "2.5D Data" because they are essentially 2D polygons with an associated height value, rather than fully detailed 3D models. This type of representation is commonly used for simple 3D features, such as buildings in a city model.
 
 ![static/2D_Polygon.png](static/2D_Polygon.png) 
+
 ***2D Caption:** A 2D building footprint represents the outline of a building on a flat surface, using only X and Y coordinates. These footprints show building locations and shapes but do not provide any information about their height or vertical dimensions.*
 
 ![static/3D_Polygon.png](static/3D_Polygon.png) 
+
 ***3D Caption:** A 3D extruded building extends the footprints vertically by incorporating a Z-coordinate to represent building height. This provides a more realistic view, showing not only the location of the buildings but also their height and volume, offering a better sense of scale and structure in the urban landscape. Source: Elodie Nix, 2024*
 
-### **Sub 13.1.4: Raster-Based 3D Data**
+### **Raster-Based 3D Data**
 
 Using a raster grid to represent elevation is commonly referred to as a Digital Elevation Model (DEM). A DEM consists of a grid of cells, where each cell stores the elevation value at that specific location on the Earth's surface.
 
@@ -148,6 +152,7 @@ Mesh models can be highly detailed, making them useful for applications such as 
 Point clouds are widely used in geospatial analysis, construction, and environmental modeling, as they provide highly accurate representations of real-world structures and landscapes.
 
 ![static/pointcloud.png](static/pointcloud.png)
+
 ***Image caption:** 3D point cloud depicting the terrain and landscape*. 
 
 ```{tip}
