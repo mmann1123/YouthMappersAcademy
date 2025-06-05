@@ -109,7 +109,7 @@ This tag set is used to describe how a particular structure is used by the occup
 - Healthcare, which contains tags like *amenity=hospital*, or *amenity=pharmacy*
 
 
-## Want to dig a little deeper?
+## Want to Dig a Little Deeper?
 
 Refer to the information below to learn more about OpenStreetMap Data Model materials. 
 
@@ -123,7 +123,7 @@ Refer to the information below to learn more about OpenStreetMap Data Model mate
 
 ### YouthMappers Academy: Skills, Proficiencies, and Standards
 
-The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Coures: Imagery Interpretation. 
+The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Course: The OpenStreetMap Data Model. 
 
 ### The Geospatial Technology Competency Model:
 

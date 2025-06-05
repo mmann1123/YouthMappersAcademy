@@ -191,7 +191,7 @@ Refer to the information below to learn more about imagery interpretation.
 
 ### YouthMappers Academy: Skills, Proficiencies, and Standards
 
-The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Coures: Imagery Interpretation. 
+The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Course: Imagery Interpretation. 
 
 ### The Geospatial Technology Competency Model:
 

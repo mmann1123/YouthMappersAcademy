@@ -93,7 +93,7 @@ Refer to the information below to learn more about mapping with iD Editor.
 
 ### YouthMappers Academy: Skills, Proficiencies, and Standards
 
-The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Coures: Imagery Interpretation. 
+The following competencies derived from both the Geospatial Technology Competency Model and the National Geographic Standards are central to the successful completion of YouthMappers Academy Course: Mapping iD Editor. 
 
 ### The Geospatial Technology Competency Model:
 
