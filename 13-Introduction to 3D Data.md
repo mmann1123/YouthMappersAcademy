@@ -572,3 +572,19 @@ width: 50%
 align: center
 ---
 ```
+
+## Want to Dig a Little Deeper?
+
+Refer to the information below to learn more about OpenStreetMap Data Model materials. 
+
+1. [Mapping in 3D: A Step-by-Step Guide to Using FieldPapers for 3D Mapping in OSM](https://www.youtube.com/watch?v=s5aSkqZD5-4&t=2s)
+
+- In this tutorial, we’ll walk you through how to use Field Papers to collect 3D building data in the field and contribute it to OpenStreetMap. Whether you’re a beginner or experienced mapper, this tool makes offline data collection easy and effective. We’ll cover everything from creating printable map atlases to uploading your annotated field notes and using them to edit OSM. 
+
+2. [Mapping in 3D: Remote Mapping 3D Features with Mapillary & JOSM](https://www.youtube.com/watch?v=Iu3MTOHJX0o&t=9s)
+
+- In this tutorial, we’ll walk you through the process of mapping 3D building features remotely using Mapillary and JOSM (Java OpenStreetMap Editor). Perfect for experienced mappers, this video includes a step-by-step demo of how to identify buildings, apply 3D tags, and upload your edits to OpenStreetMap.
+
+3. [Mapping in 3D: Bringing Geospatial Data to Life with Cesium Stories](https://www.youtube.com/watch?v=gyF7GDfLtiw&t=5s)
+
+- In this tutorial, we’ll introduce you to Cesium ion, a cloud-based platform that lets you create, host, and stream interactive 3D geospatial content—all without installing software. Perfect for students, developers, and GIS professionals, this video covers how Cesium ion transforms raw 3D data into fast, web-friendly 3D Tiles and enables you to build immersive 3D stories using OpenStreetMap data. 
