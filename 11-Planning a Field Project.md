@@ -19,7 +19,7 @@ Welcome to Course 11 of the YouthMappers Academy. In this course, you will learn
 ## Overview 
 The key to successful field work is a meticulously planned tactical approach to your data collection exercise. This begins with a clear definition of the problem you are about to address. In this course, you will learn how to formulate a problem statement, which will help you to formally articulate and communicate your overall research agenda and to prioritize the data necessary to achieve it. You will learn how to develop a simple field work strategy, which involves dissecting your work into tasks while acknowledging the timeline sensitivities and resources required. You will also learn how to illustrate your field work strategy on a detailed timeline, denoting tasks, dependencies, and resources required. 
 
-**In this course, you will:**
+**In this course, you will learn:**
 -How to formulate a problem statement to articulate and communicate your research agenda
 - How to identify and prioritize stakeholder relationships, leading to better project design and implementation
 - How to assess existing datasets, identify data gaps and needs, and prioritize individual datasets for upgrading/replacement
