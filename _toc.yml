@@ -13,10 +13,18 @@ parts:
   numbered: true
   chapters:
   - file: 1-The OSM Ecosystem.md
+  - file: 2-Mapping with ID Editor.md
+  - file: 3-Imagery Interpretation.md
+  - file: 4-The OpenStreetMap Data Model.md
+  - file: 5-Tasking Manager.md
+  - file: 6-Chapter Management.md
 - caption: Advanced Track
   numbered: true
   chapters:
-  # - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
+  - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
+  - file: 10-Gender Perspectives.md
+  - file: 11-Planning a Field Project.md
+  - file: 12-Field Survey Development.md
   - file: 13-Introduction to 3D Data.md
 - caption: Exercises
   numbered: false 

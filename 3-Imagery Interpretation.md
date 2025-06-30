@@ -37,12 +37,13 @@ Most of the imagery available to us in OpenStreetMap is called Natural Color Com
 
 If you are interested in the science behind sensors, and how they capture imagery, please take a closer look [here](https://www.earthdata.nasa.gov/learn/earth-observation-data-basics/remote-sensing).
 
-![alt text](Module_3_Static/3.1.png)
+
+![alt text](Module3_Static/3.1.png)
 *Source: National Ecological Observatory Network (NEON)*
 
 The images we use are stored in digital format by subdividing the entire image area into small equal-sized and similarly shaped areas called pixels. Each pixel represents the brightness of each area with a numeric value or digital number. Data stored in this format is called raster data.
 
-![alt text](Module_3_Static/3.2.png)
+![alt text](Module3_Static/3.2.png)
 Figure: From real-life to a raster depiction 
 *Source: NEON (The National Ecological Observatory Network)*
 
@@ -66,7 +67,7 @@ We tend to prefer vector data (point, line, or area data with labels, tags, and 
 
 While we are making strides using machine learning to help us scour imagery and detect specific features, it’s still a progressing science, and, as yet, it cannot match the level of contextual detail that human interpretation provides.
 
-![alt text](Module_3_Static/3.3.png)
+![alt text](Module3_Static/3.3.png)
 *Source: iD Editor Tutorial*
 
 Looking at the example above, we can see how we represent complex objects, like a parking lot, using more simple features: a) an area (polygon shape) representing the full extent of the parking area, and b) lines representing the paths along which cars navigate the space.   
@@ -80,9 +81,9 @@ Global high-resolution imagery is available from a handful of providers (which g
 
 For instance, in the bottom example below, we see how Bing and Maxar data can provide meaningful differences that can help us distinguish objects. One critical factor here is shadow. Since these images were taken at different times, we can exploit those differences to help us identify individual buildings. Also, if you look at the bottom image below, the four cars parked in one of the gaps in the buildings gives one a sense of scale and an idea that roads connect to this area.
 
-![alt text](Module_3_Static/3.4.png)
+![alt text](Module3_Static/3.4.png)
 *Bing*
-![alt text](Module_3_Static/3.5.png)
+![alt text](Module3_Static/3.5.png)
 *Maxar*
 
 ## Recognizing Features or Objects from Imagery
@@ -90,7 +91,7 @@ The key to the proper use of imagery in OSM is understanding how to appropriatel
 
 Here is some basic advice to help you decide:
  
-![alt text](Module_3_Static/ym3.2.png)
+![alt text](Module3_Static/ym3.2.png)
 
 In order to identify objects, we need to look for clues in the imagery. See below to learn more: 
 
@@ -127,7 +128,7 @@ Let’s practice and pretend that we are trying to find building footprints in O
 
 In many places, our ability to meaningfully distinguish objects from one another is limited, either due to the quality of the image or the complexity of the object on the ground. Let’s take on a few common examples, this time from Addis Ababa, Ethiopia.
 
-![alt text](Module_3_Static/3.9.png)
+![alt text](Module3_Static/3.9.png)
 
 We can take advantage of a few things to help us trace our building footprints correctly. 
 
@@ -135,21 +136,21 @@ We can take advantage of a few things to help us trace our building footprints c
 2. Shadows give us a clear edge along which to trace the outside of a building. 
 3. We can use multiple sources of imagery to help us decide what a specific object is and where its boundaries lie. Below is a best-guess interpretation of two buildings.
 
-![alt text](Module_3_Static/3.10a.png)
+![alt text](Module3_Static/3.10a.png)
 
 Although these buildings are reasonably distinguishable, there are a number of challenges. Shadows only provide clarity along some building edges (use other imagery). Trees hide corners or sometimes even entire objects. Finally, sometimes, imagery is just of too poor quality (grainy or cloud-ridden) to delineate an object with any degree of confidence.
 
-![alt text](Module_3_Static/3.11.png)
+![alt text](Module3_Static/3.11.png)
 
 For instance, the green arrow points to an area that could be a building, parking lot, or construction site. Moreover, the shadows along its edges appear to come from the adjacent buildings with red and blue arrows. Looking at the red arrow building, we can see a clear line delineating both sides of the tin roof, which is a strong clue that this truly is a building. There might even be a small building along the top edge of the property marked with a yellow arrow. In this case, I would likely trace the buildings covered by the red and blue arrows and leave the yellow and green objects until either more clear imagery is available or I had the ability to see the site in person.
 
 Looking more closely at the building under the blue arrow, we can turn to the shadows to help guide us. Below, we circled the shadows along the top edges of the building. Notice how these subtle clues can help us delineate buildings even in low-quality images.
 
-![alt text](Module_3_Static/3.12.png)
+![alt text](Module3_Static/3.12.png)
 
 Unfortunately, tracing can get even harder in areas with complex arrangements of buildings. Looking at the buildings below, it’s is hard to figure out where one starts and where the other one ends, or if it is a building at all. 
 
-![alt text](Module_3_Static/3.13.png)
+![alt text](Module3_Static/3.13.png)
 
 Clues that we are looking at buildings:
 1. Scale relative to cars and trees
@@ -158,7 +159,7 @@ Clues that we are looking at buildings:
 
 OK, it’s a building, but where does it start and end? Complex structures like this are common, and it’s important that everyone knows how to deal with them. The general advice is to treat complex arrangements of buildings as a single building. It is generally better to map those features we are 99% percent sure of, rather than guessing. For instance, in the image above, we would likely create one large polygon for the southernmost structure, as follows:
 
-![alt text](Module_3_Static/3.14.png)
+![alt text](Module3_Static/3.14.png)
 
 It is good practice, however, to check with people experienced in mapping in this area or with organizations that are likely to use this data, as their advice might depend on the objectives of the project you are working on.
 
@@ -174,7 +175,7 @@ In this blog post, Lila discusses her experiences contributing to a mapping proj
 ### Quick Tips
 Here are a few tips to help you get accustomed to working with imagery:
 
-![alt text](Module_3_Static/quicktips.png)
+![alt text](Module3_Static/quicktips.png)
 
 ## Want to dig a little deeper?
 Refer to the information below to learn more about imagery interpretation.
