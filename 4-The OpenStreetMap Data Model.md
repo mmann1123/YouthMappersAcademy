@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Module 4: The OpenStreetMap Data Model
+# The OpenStreetMap Data Model
 
 This is the fourth of six courses that make up the Introduction to Mapping with YouthMappers Learning Track.
 

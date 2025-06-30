@@ -11,7 +11,7 @@ jupytext:
     jupytext_version: 1.11.5
 
 ---
-# Module 2: Mapping with iD Editor
+# Mapping with iD Editor
 
 This is the second of six courses that make up the Introduction to Mapping with YouthMappers Learning Track.
 

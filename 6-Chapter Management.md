@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Module 6: Chapter Management
+# Chapter Management
 
 This is the final course that make up the Introduction to Mapping with YouthMappers learning track.
 

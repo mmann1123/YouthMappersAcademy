@@ -11,7 +11,7 @@ jupytext:
     jupytext_version: 1.11.5
 
 ---
-# Module 9: Data Management
+# Data Management
 
 Welcome to Course 9 of the Youthmappers Academy. 
 

@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Module 5: The Tasking Manager
+# The Tasking Manager
 
 This is the fifth of six courses that make up the Introduction to Mapping with YouthMappers learning track.
 

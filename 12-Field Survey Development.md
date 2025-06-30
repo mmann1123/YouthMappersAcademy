@@ -11,7 +11,7 @@ jupytext:
     jupytext_version: 1.11.5
 
 ---
-# Module 12: Field Survey Development
+# Field Survey Development
 
 This is the 12th course that make up the Advanced Mapping with YouthMappers learning track.
 

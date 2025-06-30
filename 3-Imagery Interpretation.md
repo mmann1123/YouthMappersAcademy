@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Module 3: Image Interpretation
+# Image Interpretation
 This is the third of six courses that make up the Introduction to Mapping with YouthMappers learning track.
 
 ## Overview 

@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Module 11: Planning a Field Project
+# Planning a Field Project
 
 Welcome to Course 11 of the YouthMappers Academy. In this course, you will learn how to craft a problem statement to help you articulate the specific goals of your research and the data necessary to achieve them. 
 
