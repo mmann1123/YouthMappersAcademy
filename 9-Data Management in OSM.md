@@ -52,16 +52,28 @@ To prevent extraordinarily large downloads, the Export button will not be enable
 
 When you click the Export tool, all of the features visible in the OSM window will be available for download as a .OSM file.  This file will contain all of the nodes, ways, and relations for that selected geographic area.
 
+![alt text](Module9_Static/9.01a.png)
+
 The .OSM file can now be opened and utilized in the JOSM editor or added as a vector layer to various GIS systems like QGIS.
 
+![alt text](Module9_Static/9.01b.png)
+
 ## HOT Export Tool 
+
+![alt text](Module9_Static/9.01c.png)
+
 This tool (created and maintained by the Humanitarian OpenStreetMap team) allows users to download up-to-date OSM data by specifying tags, area of interest, and file types. 
 
 Getting data from OSM can be done using the following steps:
 - Log on using your OSM credentials
   - Click on the red Log-In button on the top right-hand corner of the screen and log into the service using your OSM credentials
   - The site may anticipate your OSM credentials if you are already logged into OSM on the same browser
+
+![alt text](Module9_Static/9.01d.png)
+
 - Click on the Start Exploring button, and you will be taken to the tool interface. It’s best to start by defining your area of interest.
+
+![alt text](Module9_Static/9.01e.png)
 
 You can define your area of interest in a number of ways (and indeed you can mix and match the search tools to hone in on your study area). Your options are:
 - Conducting a text-based place name search
@@ -70,32 +82,52 @@ You can define your area of interest in a number of ways (and indeed you can mix
 - Draw a freehand polygon
 - Upload an existing polygon area in GeoJSON format
 
+![alt text](Module9_Static/9.01f.png)
+
 ***Note: The study area chosen cannot contain more than 10,000,000 OSM nodes. If the total number of nodes exceeds that threshold, the export will fail.***
 
 - **Name and describe your export.** 
   - Use this space to add context to the dataset. Information such as its location and features downloaded would be helpful to any that wishes to use these data. If the export is part of a larger project or campaign, that information should also be included. Click Next to choose your file format.
 
+![alt text](Module9_Static/9.01g.png)
+
 - **Choose file format.**
   - You have the option to download the data in a number of different formats: Esri shapefiles, Geopackage, Garmin.IMG, Google.KMZ, OSM, OSM.PBF, and others.
+
+![alt text](Module9_Static/9.01h.png)
 
 - **Choose map features.**
   - This is where you decide on what feature(s) or types of features you’d like to download from OSM. There are many options by category that you can choose from. You can select an entire category such as buildings or sub-selections like building names and geometries or addresses.
 
+![alt text](Module9_Static/9.01i.png)
+
 - **Download the data.** 
   - Once you choose to export your data, you’ll be redirected to the Export Detail Page. This page will show you a brief summary of your request and you’ll see the status of your request near the top of the page. Your status will be one of Submitted, Processing, or Completed. Once the status has changed to Completed, you’ll see a link to a ZIP archive that you can download by clicking on it.
 
+![alt text](Module9_Static/9.01j.png)
+
 - You will see a status window with the details and status of your download. 
 
+![alt text](Module9_Static/9.01k.png)
+
 ## OverPass Turbo 
+![alt text](Module9_Static/9.01l.png)
+
 OverPass Turbo is a web-based data mining tool that allows you to download data from a mirror of the OpenStreetMap database. OverPass Turbo uses something called an Overpass API query to search the OpenStreetMap database and displays the findings on the accompanying map interface. The data can then be downloaded. OverPass Turbo can be a little complicated for new users, but if you stick to the wizard tool and use simple queries (focusing on one feature type at a time), you should be able to use it quite effectively.
 
 - First, locate your study area using the map on the right of the OverPass Turbo interface. You can use a combination of place name searches, panning tools, and bounding boxes to isolate your study area.
 
 ***Note: You will notice that when you run a place name search on OverPass Turbo, it zooms right into the center of your specified location (rather than zooming to its full geographic extent as most other map search functions would). You will need to zoom out to orient yourself and select your study area correctly.***
 
+![alt text](Module9_Static/9.01m.png)
+
 - Next, click on the Wizard button. You can use the Wizard interface to run simple queries based on OSM tags. The example below is a simple string to return all the roads in the map window.
 
+![alt text](Module9_Static/9.01n.png)
+
 - When you click ‘build and run query’, OverPass Turbo will process your request and return the results in the map window. It should look something like this:
+
+![alt text](Module9_Static/9.01o.png)
 
 - To download this data, click on the Export button. You will get the option for four different download types:
   - GeoJSON
@@ -103,23 +135,35 @@ OverPass Turbo is a web-based data mining tool that allows you to download data 
   - KML
   - Raw OSM data
 
+![alt text](Module9_Static/9.01p.png)
+
 If your attempts at query building are successful, and if you anticipate that you will reuse these queries in the future (to either pull newer versions of the same data for this study area or to pull the same types of features for a different study area), then you should copy your query strings to a notebook or save them as a query text file (as shown in the example above).
 
 Working with OverPass Turbo will require familiarity with the important Key/Value pairs from OSM’s tagging system. This can take some time to perfect, and the (OverPass Turbo Wizard Wiki)[https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard] is incredibly helpful when constructing these queries for the first time.
 
 ## Geofabrik 
+![alt text](Module9_Static/9.01q.png)
+
 Geofabrik provides pre-packaged data extracts for all areas of the world. Updated almost every day, you can pick your continent/region and then the Sub Region (country) you wish to download. 
+
+![alt text](Module9_Static/9.01r.png)
 
 Certain Sub Regions have Special Sub Regions available which groups together geographies that are often referenced together. Examples of these include the Alps, Britain, and Ireland and South Africa including Lesotho. Some small island nations are not available for download but the majority of countries are represented. 
 
-For example, if you click on the African Region, it will take you to the Sub Regions, which in this case are the countries.
+![alt text](Module9_Static/9.01s.png)
 
-Clicking on Algeria, you will see the data specific to this country. For this specific country example, there are no special Sub Regions.
+***For example, if you click on the African Region, it will take you to the Sub Regions, which in this case are the countries.***
+
+![alt text](Module9_Static/9.01t.png)
+
+***Clicking on Algeria, you will see the data specific to this country. For this specific country example, there are no special Sub Regions.***
 
 Available formats include Esri shapefiles and OSM.PBF, among others. The data download includes layers such as buildings, transportation features, water features, points of interest, and natural features such as beaches. Unlike the HOT Export Tool, you do not get to select which features you wish to download.
 
 ### Handling .PBF files
-Vector data like that on OSM is extremely large. As such, .pbf files are a highly compressed binary file format, optimized to make storage of this data fast. These files can be thought of as a database containing five tables: points, lines, multipolygons, multilinestrings (routes), other_relations (osm relations).  
+Vector data like that on OSM is extremely large. As such, .pbf files are a highly compressed binary file format, optimized to make storage of this data fast. These files can be thought of as a database containing five tables: points, lines, multipolygons, multilinestrings (routes), other_relations (osm relations). 
+
+![alt text](Module9_Static/9.01u.png)
 
 Likely the easiest way to handle .pbf files is to look at, subset, and export from QGIS. Remember, however, that .shp files can only store a maximum of a few GB of data. Consider exporting to a geopackage format instead. Another option is doing your subsetting and conversion from the command line using [OSMConvert](https://wiki.openstreetmap.org/wiki/Osmconvert). 
 
@@ -129,11 +173,20 @@ One of the most intuitive ways to access OSM data is through the QGIS plug-in Qu
 These steps are adapted from this [excellent tutorial from the HOT Toolbox](https://toolbox.hotosm.org/pages/7_data_use_and_data_analysis/7_1_introduction_to_qgis/).
 
 - Open QGIS, go to the Plug-ins menu, and, in the search box, search for OSM.
+
+![alt text](Module9_Static/9.01v.png)
+
 - Select and install the QuickOSM plug-in
 - Before you run a query, you need to focus your map window on your area of interest. You can use something like QuickMapServices (which is another plug-in that can be used to stream OSM tiles into QGIS). Or, you can display and zoom to a shapefile/geojson layer for your area of interest.
 - Once you have isolated your area of interest, go to Vector > QuickOSM
+
+![alt text](Module9_Static/9.01w.png)
+
 - Use the drop-down menus to build a query. You will need to provide a Key/Value pair. The example above is for all primary roads that fall within the extent of the Freetown_Districts. When you are happy with your selection, click Run Query (you may need to scroll down to do this).
 - Once the query has run, the features will add to the map frame (see below)
+
+![alt text](Module9_Static/9.01x.png)
+
 - The HOT Toolbox segment on [Installing QGIS Plugins](https://toolbox.hotosm.org/pages/7_data_use_and_data_analysis/7_1_introduction_to_qgis/) has the following tips for using the Quick OSM plug-in.
 
 #### Tips for Using QuickOSM Plug-in
@@ -182,23 +235,36 @@ Osmose is a tool that monitors multiple quality control issues in OSM. These inc
 
 - Use the zoom, pan, and search functions in the main map toolbar to navigate to your area of interest.
 
+![alt text](Module9_Static/9.05.png)
+
 - The panel on the left will automatically load all listed issues for your area of interest.
 
 - The issues appear on the map as pins matching the icons from the issues panel. Click on each pin to learn more about the object and associated issue(s).
 
 - The number of issues for any given area can be quite overwhelming, so use the tick boxes or “all/nothing” options to turn thematic issue layers on and off.
 
+![alt text](Module9_Static/9.06.png)
+
 - You can click on individual issues in the map to investigate and edit them. You have the option of opening the issue in JOSM, iD, or in the case of tag issues, you can also edit them directly in the Osmose interface. In the example below, we will examine a duplicate way of using iD Editor.
 
+![alt text](Module9_Static/9.07.png)
+
 - When the issue has been addressed, return to the Osmose interface and mark it as resolved. 
+
+![alt text](Module9_Static/9.08.png)
 
 - If you wish to address issues in a batch fashion, rather than one-by-one, you can download the raw data or open it directly in JOSM for further editing.
 
 - To load the data directly into JOSM, click on Export > JOSM (JOSM will need to be open, and the remote control setting activated). When the issues have been reviewed and edited, you can upload your changes in JOSM as per normal.
 
+![alt text](Module9_Static/9.09.png)
+
 - You can also download the issue files as KML, GPX, GeoJSON, or several other data formats. 
 
 ## OSMCha
+
+![alt text](Module9_Static/9.10.png)
+
  OpenStreetMap Changeset Analyzer is a tool designed to review uploads and changes to OSM data, largely to prevent vandalism and bad edits made to map data. This tool allows users to filter by username, location, dates of upload, and other metadata features. OSMCha is useful for monitoring the progress of data cleaning and upload teams.
 
 - Navigate to OSMCha in your internet browser (Google Chrome preferred).
@@ -213,6 +279,8 @@ Osmose is a tool that monitors multiple quality control issues in OSM. These inc
   - Flags (if any), such as “Possible Import”
   - Number of ways added (highlighted in green), ways modified (highlighted in yellow), and ways deleted (highlighted in red)
 
+![alt text](Module9_Static/9.11.png)
+
 - With OSMCha, you can create customized filters to monitor specific contributions to OSM. This could be for your personal edits, your project team, or, for all mappers in your area of interest.
 
 - Click on Filters in the left-hand panel to open the Filters menu.
@@ -221,17 +289,24 @@ Osmose is a tool that monitors multiple quality control issues in OSM. These inc
 
 - In the following example, filters have been set for a date range and location, but you can see that there are many more filter options available.
 
+![alt text](Module9_Static/9.12.png)
+
 - Click apply when you are happy with your filter selection.
 
 - Click on any of the changesets that appear on the left-hand panel. Do any changesets have flags or warnings?
 
 - Select the changeset you want to investigate, or edit further, and click on the Open With drop-down menu. This gives you the option of opening the changeset in JOSM, iD, and a number of other editors.
 
+![alt text](Module9_Static/9.13.png)
+
 - If you would like to save a specific combination of filters for later use, click on Filters in the left-hand panel, then in the upper-right, click Save to save your filter under a dedicated name.
 
 - You can access your saved filters using the URL or in the My Saved Filters option once you have logged into OSMCha.
 
 ## Map Campaigner 
+
+![alt text](Module9_Static/9.14.png)
+
 MapCampaigner is a tool developed by HOT to monitor attribute completeness for predefined areas of interest (AOI). Based on the data model you submit, the tool checks and highlights any map features that are missing pre-defined tags within your AOI, and allows team validators to download and fix those features. 
 
 Map Campaigner is a great tool for
@@ -243,25 +318,40 @@ Let’s create a simple project for illustration:
 
 - Click on Create in the top right corner of your screen.
 
+![alt text](Module9_Static/9.15.png)
+
 - Specify the name, date range, and a description for your project (be thoughtful when selecting the date range, as Map Campaigner will only check attribution completion for data tags added within this window). Click Next.
+
+![alt text](Module9_Static/9.16.png)
 
 - To identify your area of interest, you can either upload a boundary file or navigate there through the pan/zoom functions and draw a bounding box to indicate your AOI. Click Next.
 
+![alt text](Module9_Static/9.17.png)
+
 - Next, you will indicate which map features you wish to track the tagging completeness for. Click on Add a Feature. 
 
-- If you haven’t yet decided on your data mode, there are several different templates available for you to choose from. 
+- If you haven’t yet decided on your data mode, there are several different templates available for you to choose from:
+
+![alt text](Module9_Static/9.18.png)
 
 - You can add multiple different templates to each project, as you may wish to check for residential buildings, shops, and/or medical facilities, all within the same project. 
 
 - If you have already designed a specific data model, then use the Custom Form option to select your preferred tags.
 
+![alt text](Module9_Static/9.19.png)
+
 - For this demonstration, I have chosen the simple tag set for buildings from the template provided. Click Next.
 
-- You will get the option to select additional project managers, who are mappers that are allowed to View the campaign, as well as mappers whose contributions you wish to watch. Enter these OSM usernames in the boxes provided. 
+![alt text](Module9_Static/9.20.png)
 
+- You will get the option to select additional project managers, who are mappers that are allowed to View the campaign, as well as mappers whose contributions you wish to watch. Enter these OSM usernames in the boxes provided.
+
+![alt text](Module9_Static/9.21.png) 
 - Click Submit and you will be taken to a preliminary Project Overview for your Map Campaign.
 
 - On the map, features are colored by the percent of attributes completed. Select individual features on the map to view the existing tags and missing attributes. If data editing work has yet to start for your area of interest, then you will see something like the project below, where buildings are 0% Complete for the tags specified. 
+
+![alt text](Module9_Static/9.22.png)
 
 - These metrics will change as edits are made to the live map. You will have to refresh your campaign in Map Campaigner, as most edits will not update instantaneously (it typically takes a couple of hours). 
 
@@ -277,22 +367,40 @@ Some data we create or use doesn’t match the OSM data model. In this case, we 
 **Description:** An open service to provide access to a commons of openly licensed drone imagery and map layer services
 
 ## The Humanitarian Data Exchange 
+
+![alt text](Module9_Static/9.23.png)
+
 The [Humanitarian Data Exchange (HDX](https://data.humdata.org/) is an open platform for sharing data across crises and organizations. Launched in July 2014, the goal of HDX is to make humanitarian data easy to find and use for analysis. HDX is managed by OCHA's Center for Humanitarian Data, which is located in The Hague. OCHA is part of the United Nations Secretariat and is responsible for bringing together humanitarian actors to ensure a coherent response to emergencies.
 
+![alt text](Module9_Static/9.24.png)
+
 All the datasets hosted by HDX can be filtered by organization, data type, or location, with a specific filter for geodata. Datasets are accompanied by detailed metadata, and most can be downloaded directly from the site.  
+
+![alt text](Module9_Static/9.25.png)
 
 You can create an account on the platform to stay alerted to data uploads from specific organizations, and for specific locations of interest⏤but⏤in order to be allowed to share data, you must be an employee of one of the registered organizations, or you have to become an approved organization (there is an application process to facilitate this). 
 
 ## OpenAerialMap 
+
+![alt text](Module9_Static/9.26.png)
+
 OpenAerialMap (OAM) is a set of tools for searching, sharing, and using openly licensed satellite and unmanned aerial vehicle (UAV) imagery. All imagery on the platform is publicly licensed and made available through the Humanitarian OpenStreetMap team's Open Imagery Network (OIN) node. All imagery contained in OIN is licensed CC-BY 4.0, with attribution as contributors of Open Imagery Network, and is available to be traced in OpenStreetMap.
 
 - Click on Start Exploring and use the map to pan and zoom to search available imagery in your area of interest. 
 
+![alt text](Module9_Static/9.27.png)
+
 - Grid cells highlighted in blue contain imagery, while blank/clear grid cells do not. If you hover over a specific grid cell, you will see how many images are available for that given cell, and when you click on it, thumbnails for these images will populate in the panel on the left.
+
+![alt text](Module9_Static/9.28.png)
 
 - Imagery can be downloaded or previewed using the tools in the sidebar.
 
+![alt text](Module9_Static/9.29.png)
+
 - You can also launch JOSM or iD directly from the OAM interface. 
+
+![alt text](Module9_Static/9.30.png)
 
 - You do not need to log in to browse, download, or open the imagery in the various OpenStreetMap editors, but you will need to create an account if you wish to share imagery to the platform. 
 
