@@ -8,7 +8,7 @@ date: "2024"
 
 ## Overview
 
-Welcome to Module 1 of the YouthMappers Academy. In this module, you will learn about the origins of the OpenStreetMap (OSM) project, its infrastructure, the community, and what keeps us mapping. If you don’t already have one, you will learn how to create an OpenStreetMap account.
+Welcome to Module 1 of the YouthMappers Academy. In this course you will learn about the origins of the OpenStreetMap project, the infrastructure, the community, and what keeps us mapping. If you don’t already have one, you will learn how to create an OpenStreetMap account. We will look at what drove the development of OpenStreetMap, and what the OSM community membership looks like. We will also examine the ethical considerations of mapping in OpenStreetMap, and the best practices in communication for members of the community.
 
 ### What you will learn:
 - What drove the development of OpenStreetMap
@@ -55,7 +55,7 @@ Members participate in direct mapping activities on the OpenStreetMap platform, 
 ```{admonition} Watch This!
 Get the backstory of how and why the consortium was created. Watch this video and learn from organizers about our vision for Open Mapping for Resilience in Higher Education around the world. This webinar was recorded as part of the series offered by partner organization UCGIS.
 
-[Watch the video](https://www.youtube.com/watch?v=_Y-oIhUcL88&feature=emb_logo )
+[Watch the video](https://www.youtube.com/watch?v=_Y-oIhUcL88&feature=emb_logo)
 ```
 
 While many minds together created the foundation of YouthMappers, the heart of the students is what leads to the success of this global consortium. We are a movement, a movement of students wanting to leave a mark- with the courage to be change agents and resolve in our response to community needs. The collaboration of faculty, staff, and partner organizations has bolstered an experiential learning environment that leads to action. Students decide how and where they put themselves on the map.
@@ -63,31 +63,33 @@ While many minds together created the foundation of YouthMappers, the heart of t
 Read about the experiences of our members throughout our courses, in their own words, through their blogs published on the YouthMappers Website:
 
 **Your YouthMappers Team:**
-- **Director, Principal Investigator:** Patricia Solis, Ph.D., Arizona State University
-- **Co-Principal Investigator:** Nuala Cowan, Ph.D., The George Washington University
+- **Co-Founder, Director, Principal Investigator:** Patricia Solis, Ph.D., Arizona State University
+- **Managing Director:** Marcela Zeballos, Texas Tech University 
+- **Technical Projects Manager:** Elodie Nix, Arizona State University 
+- **Co-Founder, Co-Principal Investigator, Director of Data Quality:** Ryan Engstrom, Ph.D., The George Washington University
+- **Co-Founder, YouthMappers Academy Manager:** Nuala Cowan, The World Bank
+- **Co-Founder:** Brent McCusker, Ph.D., West Virginia University
+- **Co-Founder:** Chad Blevins, Co-Founder, Technical Advisor
+- **Validation Hubs Manager:** Richard Hinton, The George Washington University
+- **OSM Teams Coordinator, Data Systems Analysis and Visualization:** Jennings Anderson, Meta
+- **Special Projects Manager:** Michael Mann, Ph.D., The George Washington University
+- **Data Localization Manager and Alumni Network Lead:** Ebenezer Boateng, Ph.D., Postdoctoral Scholar, Arizona State University
+
+Nuala Cowan, Ph.D., The George Washington University
 - **Co-Principal Investigator:** Brent McCusker, Ph.D., West Virginia University, 
 - **Managing Director:** Marcela Zeballos, Texas Tech University
 - **Communications Specialist:** Dara Carney-Nedelman
 ​- **Technical Advisors:** Chad Blevins, Jennings Anderson
 
-![static/ym_people.png](static/ym_people.png)
+![static/team.png](YouthMappersAcademy/static/team.png)
 
-**Steering Committee Members**
-- Dr. Ryan Engstrom, The George Washington University
-- Richard Hinton, The George Washington University
-- Dr. Michael Mann, The George Washington University
-- Dr. Marie Price, The George Washington University
-- Dr. Jamison Conley, West Virginia University
-
-**​USAID**
-- Carrie Stokes, Director of the USAID GeoCenter
-- Michael Crino, Deputy Director and Program Officer
-- Rory Nealon, Senior GIS Analyst and YouthMappers Activity Manager 
-
+[Meet Our Student Leaders!](https://www.youthmappers.org/regional-ambassadors)
 
 ## Ethics and Etiquette in an Open-Source Community
 
 ### YouthMappers Code of Ethics
+![alt text](static/ethos.png)
+
 YouthMappers adheres to principles of:
 - **Valuing People**
 - **Community Building**
@@ -95,6 +97,8 @@ YouthMappers adheres to principles of:
 - **Open Data**
 - **Privacy and Security**
 - **Human Dignity**
+
+See the full details about our Code of Ethics [here](https://www.youthmappers.org/our-story). 
 
 ### OpenStreetMap Code of Conduct
 Key values include:
