@@ -23,8 +23,8 @@ Most of our early interactions with OSM involve contributing directly to the map
 - Learn how to assess the quality of OSM data for a given geographic extent or project using a variety of tools and platforms beyond the JOSM Validator
 - sExplore new platforms to share and download supplemental data for your research project
 
-# Exporting Data from OSM 
-## Overview 
+## Exporting Data from OSM 
+### Overview 
 Many of us use OSM as our default basemap, opting for its tiled map service to provide context to our cartographic research products. In instances where we wish to conduct our own geospatial analysis, or where we want to produce more refined cartographic products, we will need to extract specific data layers from OSM.
 
 Any time we plan to use OSM data for analysis we have to consider the quality of the data. This brings up the important topic of validation, which we covered in the previous course.
@@ -43,7 +43,7 @@ In this course we will look at several of the most popular tools available to fi
 4. **Geofabrik:** Regularly-updated extracts of continents, countries, and selected cities.
 5. **QuickOSM QGIS Plug-in:** QuickOSM is a QGIS plugin to download data from Overpass server.
 
-## OpenStreetMap Interface 
+### OpenStreetMap Interface 
 You can download data directly from the OpenStreetMap website by navigating to your area of interest and using the Export button found at the top of the page.
 
 ![alt text](Module9_Static/9.01.png)
@@ -58,7 +58,7 @@ The .OSM file can now be opened and utilized in the JOSM editor or added as a ve
 
 ![alt text](Module9_Static/9.01b.png)
 
-## HOT Export Tool 
+### HOT Export Tool 
 
 ![alt text](Module9_Static/9.01c.png)
 
@@ -110,7 +110,7 @@ You can define your area of interest in a number of ways (and indeed you can mix
 
 ![alt text](Module9_Static/9.01k.png)
 
-## OverPass Turbo 
+### OverPass Turbo 
 ![alt text](Module9_Static/9.01l.png)
 
 OverPass Turbo is a web-based data mining tool that allows you to download data from a mirror of the OpenStreetMap database. OverPass Turbo uses something called an Overpass API query to search the OpenStreetMap database and displays the findings on the accompanying map interface. The data can then be downloaded. OverPass Turbo can be a little complicated for new users, but if you stick to the wizard tool and use simple queries (focusing on one feature type at a time), you should be able to use it quite effectively.
@@ -141,7 +141,7 @@ If your attempts at query building are successful, and if you anticipate that yo
 
 Working with OverPass Turbo will require familiarity with the important Key/Value pairs from OSM’s tagging system. This can take some time to perfect, and the (OverPass Turbo Wizard Wiki)[https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard] is incredibly helpful when constructing these queries for the first time.
 
-## Geofabrik 
+### Geofabrik 
 ![alt text](Module9_Static/9.01q.png)
 
 Geofabrik provides pre-packaged data extracts for all areas of the world. Updated almost every day, you can pick your continent/region and then the Sub Region (country) you wish to download. 
@@ -160,14 +160,14 @@ Certain Sub Regions have Special Sub Regions available which groups together geo
 
 Available formats include Esri shapefiles and OSM.PBF, among others. The data download includes layers such as buildings, transportation features, water features, points of interest, and natural features such as beaches. Unlike the HOT Export Tool, you do not get to select which features you wish to download.
 
-### Handling .PBF files
+#### Handling .PBF files
 Vector data like that on OSM is extremely large. As such, .pbf files are a highly compressed binary file format, optimized to make storage of this data fast. These files can be thought of as a database containing five tables: points, lines, multipolygons, multilinestrings (routes), other_relations (osm relations). 
 
 ![alt text](Module9_Static/9.01u.png)
 
 Likely the easiest way to handle .pbf files is to look at, subset, and export from QGIS. Remember, however, that .shp files can only store a maximum of a few GB of data. Consider exporting to a geopackage format instead. Another option is doing your subsetting and conversion from the command line using [OSMConvert](https://wiki.openstreetmap.org/wiki/Osmconvert). 
 
-## QuickOSM QGIS Plug-in
+### QuickOSM QGIS Plug-in
 One of the most intuitive ways to access OSM data is through the QGIS plug-in QuickOSM. It allows the user to quickly generate and execute queries that are sent to overpass in the background. You will need to have a copy of QGIS installed on your machine to use this plug-in.
 
 These steps are adapted from this [excellent tutorial from the HOT Toolbox](https://toolbox.hotosm.org/pages/7_data_use_and_data_analysis/7_1_introduction_to_qgis/).
@@ -197,8 +197,8 @@ These steps are adapted from this [excellent tutorial from the HOT Toolbox](http
 - Did you use the correct spelling in your keys and values? Make sure keys and values are spelled EXACTLY as they are in OSM guides. Otherwise, QuickOSM will be looking for the wrong tag. For example: key=amenity NOT key=amenities
 - Trying to download too large an area can overload the API or will overwhelm a slow internet connection. If you are having difficulty downloading data, try reducing the area, or limiting the data download by changing your tags. For example, downloading all the buildings in a country (or even a city) can be too large for QuickOSM. Instead, try downloading a smaller area or restricting your tags thematically.
 
-# Assessing Data Quality in OSM 
-## Overview 
+## Assessing Data Quality in OSM 
+### Overview 
 In Course 8, we were introduced to validation and focused on JOSM as our primary tool for data validation. JOSM is excellent at drilling down on errors and omissions for feature and tag level issues, but sometimes, we need a broader assessment of OSM coverage and quality, especially when we are preparing to launch a remote mapping campaign or embark on a field work program. There are several excellent tools to help us with determining the geographic scope, completeness, and quality of OSM data:
 
 **Name: [JOSM Validator](https://wiki.openstreetmap.org/wiki/JOSM/Validator)**
@@ -224,7 +224,7 @@ In the context of this module:
 In a couple of words, brainstorm your answer to the following below:
 ***Share three of the most frequently occurring feature or tag level issues you have encountered in OSM.***
 
-## Osmose 
+### Osmose 
 ![alt text](Module9_Static/9.02.png)
 
 Osmose is a tool that monitors multiple quality control issues in OSM. These include issues with feature geometry (such as overlapping buildings/nodes, incomplete features, and duplications) and common tagging issues (such as missing, unsuitable, or poorly formatted tags). More information about Osmose can be found at the [Osmose OSM Wiki Page](https://wiki.openstreetmap.org/wiki/Osmose).
@@ -261,7 +261,7 @@ Osmose is a tool that monitors multiple quality control issues in OSM. These inc
 
 - You can also download the issue files as KML, GPX, GeoJSON, or several other data formats. 
 
-## OSMCha
+### OSMCha
 
 ![alt text](Module9_Static/9.10.png)
 
@@ -303,7 +303,7 @@ Osmose is a tool that monitors multiple quality control issues in OSM. These inc
 
 - You can access your saved filters using the URL or in the My Saved Filters option once you have logged into OSMCha.
 
-## Map Campaigner 
+### Map Campaigner 
 
 ![alt text](Module9_Static/9.14.png)
 
@@ -355,9 +355,9 @@ Let’s create a simple project for illustration:
 
 - These metrics will change as edits are made to the live map. You will have to refresh your campaign in Map Campaigner, as most edits will not update instantaneously (it typically takes a couple of hours). 
 
-# Data Sharing and Data Hosting 
-## Overview 
-### Data Sharing & Data Hosting 
+## Data Sharing and Data Hosting 
+### Overview 
+#### Data Sharing & Data Hosting 
 Some data we create or use doesn’t match the OSM data model. In this case, we have to look to other repositories to help find and share data that might be of interest. 
 
 **Name: [The Humanitarian Data Exchange](https://data.humdata.org/)**
@@ -366,7 +366,7 @@ Some data we create or use doesn’t match the OSM data model. In this case, we 
 **Name: [OpenAerialMap](https://openaerialmap.org/)**
 **Description:** An open service to provide access to a commons of openly licensed drone imagery and map layer services
 
-## The Humanitarian Data Exchange 
+### The Humanitarian Data Exchange 
 
 ![alt text](Module9_Static/9.23.png)
 
@@ -380,7 +380,7 @@ All the datasets hosted by HDX can be filtered by organization, data type, or lo
 
 You can create an account on the platform to stay alerted to data uploads from specific organizations, and for specific locations of interest⏤but⏤in order to be allowed to share data, you must be an employee of one of the registered organizations, or you have to become an approved organization (there is an application process to facilitate this). 
 
-## OpenAerialMap 
+### OpenAerialMap 
 
 ![alt text](Module9_Static/9.26.png)
 
@@ -406,7 +406,7 @@ OpenAerialMap (OAM) is a set of tools for searching, sharing, and using openly l
 
 - If you would like to learn more about hosting and sharing data on the site, please visit the [OpenAerialMaps Docs](https://docs.openaerialmap.org/browser/user-guide/).
 
-## Data Sources 
+### Data Sources 
 There are many excellent online resources to supplement your exports from OSM. A few of our favorites are listed below.
 
 **1. Boundary Files**
@@ -434,7 +434,7 @@ There are many excellent online resources to supplement your exports from OSM. A
 
 - [Maxar Open Data Program](https://www.maxar.com/open-data): Maxar releases high-resolution open imagery for select sudden onset major crisis events from 2010 to 2022.
 
-# Dig Deeper
+## Dig Deeper
 ## Want to Dig a Little Deeper?
 - The [OverPass Turbo Wiki](https://wiki.openstreetmap.org/wiki/Overpass_turbo) gives a nice overview of the tool and its uses for both mappers and developers. The [OverPass Turbo Wizard Wiki](https://wiki.openstreetmap.org/wiki/Overpass_turbo/Wizard) is very handy if you want to learn some go-to query combinations. 
 
@@ -444,8 +444,8 @@ There are many excellent online resources to supplement your exports from OSM. A
 
 ![alt text](Module9_Static/9.04.png)
 
-# Conclusion 
-## Skills, Proficiencies, and Standards 
+## Conclusion 
+### Skills, Proficiencies, and Standards 
 Each badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor’s [Geospatial Technology Competency Model (GTCM)](https://www.careeronestop.org/competencymodel/competency-models/geospatial-technology.aspx), as well as National Geographic’s [National Geography Standards](https://education.nationalgeographic.org/resource/national-geography-standards-index/).
 
 The Geospatial Technology Competency Model identifies the foundational, industry-wide, and industry sector–specific expertise that distinguishes, and binds together, successful geospatial professionals. It identifies core personal, academic, and workplace competencies, as well as sector specific geospatial knowledge and abilities, including specialized competencies related to data acquisition, data analysis and modeling, imagery interpretation, and software and application development. 
