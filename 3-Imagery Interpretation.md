@@ -51,7 +51,7 @@ When we zoom back out we can see how individual pixels create features in the im
 
 ### Advantages of Vector Data
 
-Why do we trace shapes from imagery, rather than use the wonderfully detailed images already at our disposal?
+**Why do we trace shapes from imagery, rather than use the wonderfully detailed images already at our disposal?**
 
 Unprocessed satellite imagery has very few practical applications. It is limited by the fact that objects appearing in an image are identifiable by virtue of viewer interpretation. There is very little meaning or context to these objects outside of what the viewer can determine. 
 
@@ -68,9 +68,13 @@ We tend to prefer vector data (point, line, or area data with labels, tags, and 
 While we are making strides using machine learning to help us scour imagery and detect specific features, it’s still a progressing science, and, as yet, it cannot match the level of contextual detail that human interpretation provides.
 
 ![alt text](Module3_Static/3.3.png)
+
 *Source: iD Editor Tutorial*
 
-Looking at the example above, we can see how we represent complex objects, like a parking lot, using more simple features: a) an area (polygon shape) representing the full extent of the parking area, and b) lines representing the paths along which cars navigate the space.   
+Looking at the example above, we can see how we represent complex objects, like a parking lot, using more simple features:
+
+a) an area (polygon shape) representing the full extent of the parking area, and 
+b) lines representing the paths along which cars navigate the space.   
 
 Although seemingly simple, there are quite a few nuances. For instance, note that the parking lot lines end by connecting to the road centerline; this is so that there is “connectivity” between the road and the parking lot. Without that connection, navigation software will not understand that cars can turn into the parking lot from the adjacent road. It’s the human interpretation of the image and the correct recording of that interpretation in the database that provides us the critical information we need to model and analyze using the type of vector data that OSM contains.
 
@@ -81,10 +85,12 @@ Global high-resolution imagery is available from a handful of providers (which g
 
 For instance, in the bottom example below, we see how Bing and Maxar data can provide meaningful differences that can help us distinguish objects. One critical factor here is shadow. Since these images were taken at different times, we can exploit those differences to help us identify individual buildings. Also, if you look at the bottom image below, the four cars parked in one of the gaps in the buildings gives one a sense of scale and an idea that roads connect to this area.
 
+*Bing:*
 ![alt text](Module3_Static/3.4.png)
-*Bing*
+
+*Maxar:*
 ![alt text](Module3_Static/3.5.png)
-*Maxar*
+
 
 ## Recognizing Features or Objects from Imagery
 The key to the proper use of imagery in OSM is understanding how to appropriately translate what you are seeing on the image, using the tools provided, to create points, lines, areas, and related tags. 
@@ -242,10 +248,4 @@ The following competencies derived from both the Geospatial Technology Competenc
 
 Congratulations on completing Course 3: Imagery Interpretation of the YouthMappers Academy series! 
 
-## What's Next?
-
-The YouthMappers Academy series contains six courses, shown in the image below. 
-
-To read more about the next course in the series, Course 4: The OpenStreetMap Data Model, click [here](https://www.youthmappers.org/academy).
-
-![alt text](static/courses.png)
+![alt text](Module3_Static/badge3.gif)
