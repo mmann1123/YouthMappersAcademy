@@ -17,55 +17,55 @@ jupytext:
 Welcome to Course 7 of the Youthmappers Academy. In this module, we will take a look at JOSM, or, the Java OpenStreetMap Editor. JOSM is a desktop editing application for OpenStreetMap, written in Javascript, which provides a whole host of advanced editing 
 tools for working with OSM data. JOSM is also the preferred tool for validation in OSM (we’ll talk a little more about validation in the next module). Apart from the advanced editing functionality of JOSM, one of its primary benefits is that it allows you to download and work on OSM data offline, which is incredibly beneficial in low/no bandwidth areas. 
 
-# What is JOSM?
-## Overview 
+## What is JOSM?
+### Overview 
 Java OpenStreetMap Editor (JOSM) is an advanced desktop editing application for OpenStreetMap, written in Javascript. It runs on Windows, Mac OS, and Linux operating systems, so is widely accessible. Mappers “check-out” or “download” OSM data to edit offline (which is a huge advantage in low bandwidth areas). When editing is complete, mappers “push” or “upload” their data back to the OSM server. There are built-in checks as part of the re-upload process to check for correct geometry and complete tagging. While JOSM supports the editing and re-upload of existing nodes, ways, tags, and relations that have been downloaded from the OSM database, it also supports the editing of stand-alone GPX tracks and GPX track data, before this data is added to OSM. 
 
 New mappers may find the JOSM interface slightly intimidating, but with practice, most mappers find JOSM to have a much more efficient editing workflow than iD editor, with many great shortcuts to expedite the mapping process.
 
-# JOSM Installation 
-## Overview 
+## JOSM Installation 
+### Overview 
 If you don’t already have a copy of JOSM on your machine, you will need to visit the following link and install the version of JOSM for your operating system: [JOSM Installation Files](https://josm.openstreetmap.de/). 
 
 There are two main categories of installation available to the user:
 - The **josm.jnpl** option, also known as the “web start” option, allows users to start the application software directly from the internet using a web browser. The main benefit of this option is seamless version updating and greater control of memory allocation. 
 - The **josm-tested.jar** version is the standard desktop installation (which works across all operating systems), but you can also click on the dedicated install links for certain popular OS (windows/macOS) from the front page. 
 
-### So Which One Should I Choose?
+#### So Which One Should I Choose?
 Every regular JOSM user has a preference for one installation or another. I’ve tried both (.jnpl and dedicated OS install), and both have worked equally well for me. More recently I’ve opted for the .jnpl install, as the automatic updates are a really nice feature. For someone who uses JOSM regularly, it really does cut down on maintenance. 
 
 It is important to note that JOSM requires the most recent version of Java to be installed on your machine in order to function properly. You can either go to [Java Installation](https://www.java.com/en/download/) to check and see that you have the latest version of Java installed, or, wait for the prompt during the JOSM installation, which will also alert you to update your Java (if necessary).
 
 ![alt text](Module7_Static/7.01.png)
 
-# Navigating the JOSM Interface 
-## Launch JOSM
-### Overview 
-#### Launch JOSM 
+## Navigating the JOSM Interface 
+### Launch JOSM
+#### Overview 
+##### Launch JOSM 
 When JOSM is launched and loaded, the main interface will look like this: 
 
 ![alt text](Module7_Static/7.02.png)
 
 ***Note: Depending on whether you have a PC, Mac, or Linux operating system, the “look and feel” of JOSM will be slightly different, as will the location of some of the menus. Where possible, we will provide both Mac and PC screenshots to help you navigate the most popular options.***
 
-#### Accessing Your Preferences 
+##### Accessing Your Preferences 
 There are quite an array of menus and toolbars in JOSM, with many functions accessible in more than one location. Let’s take a walk-through to familiarize you with the most important ones⏤then we’ll start mapping.
 
 There are a number of key settings that need to be in place before you begin mapping, so let’s look at those first. These settings are found in the JOSM Preference menu. To access the Preferences menu:
 - **PC:** Go to Edit > Preferences
 - **MacOS:** Go to JOSM (in the main Mac toolbar) > Preferences(Refer to the image to the right if using a Mac.) 
 
-#### Mac Visual 
+##### Mac Visual 
 ![alt text](Module7_Static/7.03.png)
 
-#### The Preferences Menu
+##### The Preferences Menu
 The multiple tabs to the left contain detailed settings for everything from display settings to default colors, default language, and data handling. We won’t go through each one in detail, just one or two key settings to get us up and mapping. But, on your own time, navigate through each to see the level of customization possible to create a very personalized editing experience within JOSM.
 
 ![alt text](Module7_Static/7.04.png)
 
 ***Note: You may have fewer tabs in your view. Additional tabs are associated with customization through plugins.***
 
-### Connect to the OSM Server 
+#### Connect to the OSM Server 
 The most important setting to specify is your connection to the OSM server, along with your personal OSM credentials. This will ensure that any edits and subsequent uploads that you make to OSM data using JOSM will be attributed to your OSM account. 
 
 To start, click on the OSM Server tab in the Preferences dialog box (this is the sixth tab down on the left-hand side).
@@ -81,8 +81,8 @@ There are two ways to go about this:
 
 For now, let’s work with your OSM username and password, and, on your own time, you can set up a more permanent connection through OAuth.
 
-## Customize JOSM 
-### OAuth Steps 
+### Customize JOSM 
+#### OAuth Steps 
 If you choose to go with the OAuth option for account verification, you are granting JOSM the right to automatically upload map data on your behalf for all future download/upload requests. In order to facilitate this, you must receive an “access token” from the OpenStreetMap website. You initiate the process by entering your OSM username and password. 
 
 - Enter your username and password into the dialog boxes
@@ -91,17 +91,17 @@ If you choose to go with the OAuth option for account verification, you are gran
 You will receive notification that an OAuth Access token has been granted, which you must accept. 
 - Click on Accept Access Token This token will be used in subsequent upload requests to access the OSM application user interface (API).
 
-### Plug-ins 
+#### Plug-ins 
 ![alt text](Module7_Static/7.06.png)
 
-#### Plug-ins 
+##### Plug-ins 
 There are many **plug-ins** that you can add to the basic JOSM install to improve functionality and interactions with other platforms. Plug-ins are add-ons or extensions that enhance the capabilities of a software platform, without the need to alter the existing software install. 
 
 In JOSM we have many plug-ins to choose from, including one dedicated to drawing pre-tagged, geometrically accurate buildings, and another that allows us to work with Field Papers more efficiently. 
 
 We will look at plug-ins in more detail in the next module.
 
-### Remote Control 
+#### Remote Control 
 The last setting we’re going to set up is **remote control**. This is a particularly important feature if you want your JOSM installation to work with certain websites, like the various OSM Tasking Managers. It will allow your JOSM instance to do things like download data with specific geographic extents, like the extent of a grid cell from the tasking manager. 
 
 - Click on the Remote Control tab from the side menu
@@ -158,15 +158,15 @@ Finally, at the bottom of the JOSM window, the Status Bar gives coordinates and 
 
 ![alt text](Module7_Static/7.15.png)
 
-# Drawing Features in JOSM 
-## JOSM: Drawing Basic Features 
-### Overview 
+## Drawing Features in JOSM 
+### JOSM: Drawing Basic Features 
+#### Overview 
 Remember, we first covered OSM data types in Course 2 when we learned how to draw our first features with iD editor, and also in Course 4, when we learned about the OSM data model. 
 
 Here is a quick reminder:
 ![alt text](Module7_Static/7.16.png)
 
-### JOSM Basic Editing Tools
+#### JOSM Basic Editing Tools
 - **Select:** For selecting elements, viewing/editing their tags, and moving them (Keyboard shortcut: S for PC and MacOS). Just click on the “Select” tool and use the left mouse button to select and/or move your object.
 - **Draw:** For adding elements such as standalone nodes, adding new nodes to create a new way, or extending an existing way (Keyboard shortcut: A for PC and MacOS).
 - Delete: Delete is for deleting elements. You simply select a feature (using the select tool) and then use the delete button on your keyboard (PC) or Fn+delete (MacOS). Alternatively, you can enter into Delete Mode which will delete every feature you left-click on with your mouse. You can enter into Delete mode by:
@@ -175,7 +175,7 @@ Here is a quick reminder:
 ![alt text](Module7_Static/7.17.png)
   - Once you've activated Delete Mode, click on nodes, way segments, and ways to delete them. 
 
-### JOSM Basic Navigation 
+#### JOSM Basic Navigation 
 ![alt text](Module7_Static/7.18.png)
 Moving about can be a little different in JOSM than in other mapping software or platforms, but you’ll soon get the hang of it.
 - Drag the map: Hold down the right mouse button
@@ -190,7 +190,7 @@ Hear from Alysa as she talks us through learning JOSM as a non-technical student
 
 ```
 
-### Drawing a Node 
+#### Drawing a Node 
 To draw a standalone node:
 
 - Click on the Draw/Add tool (keyboard shortcut: A). When you move your mouse over the Map View, you will see a little crosshairs icon.
@@ -198,7 +198,7 @@ To draw a standalone node:
 - Double-click quickly on the left mouse button to create a single node.
 ***Note: If you don’t double-click quickly enough, your draw tool may stay activated, and attempt to draw a line. If this happens, hit escape on your keyboard, and your drawing will revert to a single node.***
 
-### Drawing a Way 
+#### Drawing a Way 
 To draw a way:
 
 - Click on the Draw/Add tool (***keyboard shortcut: A***). 
@@ -211,7 +211,7 @@ To draw a way:
 
 - To finish the way, either double click, click on the Select tool (***keyboard shortcut: S***), or hit the Escape button on your keyboard.
 
-### Drawing an Area 
+#### Drawing an Area 
 Drawing an area in JOSM is much the same as drawing a way⏤the only difference is that you have to close or complete the area by deliberately returning to the first node you drew and double-clicking. This is essentially “closing” the way.
 
 - Once again, click on the Draw/Add tool (***keyboard shortcut: A***). 
@@ -223,7 +223,7 @@ Drawing an area in JOSM is much the same as drawing a way⏤the only difference 
 - When you have defined the shape of your area, double-click once more on the starting node to complete it.
 ***Note: You might have to check to make sure that you are “snapping” to the right node before you commit to your last double-click.***
 
-### Tagging 
+#### Tagging 
 We learned about tagging in both courses  2 and 4, but as a quick refresher:
 ![alt text](Module7_Static/7.19.png)
 
@@ -260,7 +260,7 @@ You will have to develop a certain familiarity with the OSM data model in order 
 
 [Click here](https://wiki.openstreetmap.org/wiki/Map_features) to navigate to the Map Features OSM main page.
 
-### Using the Preset Tagging Menu 
+#### Using the Preset Tagging Menu 
 Another way to approach tagging is to use JOSM’s preset tagging menus, as they have a nicely organized hierarchy of tags. There are two ways to access the preset tagging: either through the drop-down menu or the toolbar. 
 
 First, let's look at the drop-down menu:
@@ -268,7 +268,7 @@ First, let's look at the drop-down menu:
 
 The tagging drop-down menu is a highly comprehensive menu of tagging choices, arranged neatly into thematic categories. This is incredibly helpful if you are still rather new to the OSM data model, though it will still take time to learn where all your favorites reside. 
 
-#### Tagging a (Fictional) Restaurant
+##### Tagging a (Fictional) Restaurant
 Let’s take a look at the process of tagging a (fictional) restaurant. 
 
 - Draw a node in the map view
@@ -301,7 +301,7 @@ You may edit any of these individual tags at any time by clicking on the Edit op
 
 The tagging toolbar presents a slightly more restricted selection of tag choices but does feature several of the more frequently used tags. The detailed tagging interface you will encounter is exactly the same as that found under the Preset drop-down, so it’s really just personal preference as to which of these handy tagging tools you may use. You will not need any of the features that you have created or tagged up to this point, so there is no need to save your work unless you want to.
 
-## Shortcuts in JOSM 
+### Shortcuts in JOSM 
 One of my favorite aspects of working in JOSM is the many keyboard shortcuts you can use to streamline your mapping workflow. Instead of having to locate a specific tool from a toolbar (or buried several levels deep in an editing menu), you can activate that same tool using a single keyboard shortcut. This may not seem like a timesaver right now (especially when you will have to learn what shortcut goes with what tool), but when you become familiar with them you will see a noticeable difference in the speed and efficiency with which you map!
 
 Once again, these shortcuts might vary depending on your operating system, but they are mostly consistent. See here: https://josm.openstreetmap.de/wiki/Shortcuts 
@@ -313,9 +313,9 @@ There is also this handy visual, one that I have printed out and have hanging ov
 
 [Click here to download your own copy of this handy visual!](https://drive.google.com/file/d/1EKyGYivWHoK3YYqRqcdFC6mkn-AbUIfQ/view)
 
-# Working with Real OSM Data in JOSM 
-## Adding and Downloading OSM Data
-### Overview
+## Working with Real OSM Data in JOSM 
+### Adding and Downloading OSM Data
+#### Overview
 One of the main benefits of working with JOSM is that you create and update data offline, so data usage is limited. This is particularly handy when working with low or inconsistent bandwidth. There are several different ways to download data locally to JOSM. 
 
 - To explore these, go to **File > Download data** or click on the Download data button (green downward arrow)
@@ -346,7 +346,7 @@ Notice that the bounding box that you specified in the Download dialog is indica
 If your bounding box is set by a tasking service such as the HOT Tasking Manager, or the TeachOSM Tasking Manager, you should only edit the data that falls within the black box, and refrain from editing any features that fall within the striped/crosshatched area, as those features fall within the task area of another mapper. 
 ![alt text](Module7_Static/7.32.png)
 
-### Adding Imagery to the Editing Window 
+#### Adding Imagery to the Editing Window 
 Unless you are working with a Tasking Manager, such as the HOT Tasking Manager, or the TeachOSM Tasking Manager, imagery does not automatically appear behind your downloaded data. 
 - To add imagery to the window, go to the Imagery drop-down menu at the top of the screen. Notice you have many of the same imagery options that you are familiar with in iD.
 ![alt text](Module7_Static/7.33.png)
@@ -356,7 +356,7 @@ I’m choosing Bing imagery for my editing session as I have edited in this area
 
 You can add several different imagery sources to your JOSM editing session, and you can switch between them quickly and easily to assist your editing decisions. You can turn the imagery layer on and off and also adjust the opacity, contrast, and sharpness of the image.  
 
-### Managing and Deleting Data Layers in JOSM 
+#### Managing and Deleting Data Layers in JOSM 
 If your initial data download was for a particularly busy or previously well-mapped area, then you may want to consider removing that layer and re-downloading a smaller, more manageable area to map.
 
 - To delete the first layer that you created, click on the little waste bin icon in the bottom right-hand corner of the layers window, or simply turn it off by clicking on the little eye icon beside the layer name. 
@@ -367,8 +367,8 @@ You can then add an additional data layer to the map window by downloading a new
 If you have not made any changes to a layer that you have downloaded, deleting it simply removes the downloaded layer from your device⏤it doesn’t delete it from OSM (remember, it’s just a localized copy). If you have made any changes to the layer since you’ve downloaded it, JOSM will always give you a warning to check if you really wish to delete the layer or to review and upload your edits.
 ![alt text](Module7_Static/7.36.png)
 
-## Editing and Uploading OSM Data
-### Overview 
+### Editing and Uploading OSM Data
+#### Overview 
 Now that you’ve downloaded some real OSM data, let’s revisit the editing process in JOSM and walk through the process of saving and re-uploading to OSM. 
 ![alt text](Module7_Static/7.37.png)
 
@@ -380,7 +380,7 @@ These side by side images show the same area (with main road highlighted for ref
 
 ![alt text](Module7_Static/7.38.png)
 
-### Drawing a Building 
+#### Drawing a Building 
 - Remember, to add a new feature, click on the Draw/Add tool (you will see a little crosshairs icon as you move over the map window)
 
 - Click once on the map canvas to draw the first node of your building
@@ -394,7 +394,7 @@ These side by side images show the same area (with main road highlighted for ref
 - To tag your building, click on the Edit button in the Tags/Membership window, and select “Building” and “Yes”
 ![alt text](Module7_Static/7.39.png)
 
-### Saving and Uploading Data to OSM
+#### Saving and Uploading Data to OSM
 If you have a reliable connection, it's good practice to save regularly. (Remember, this was a practice we spoke about when mapping with iD editor. It’s the best way to prevent conflicts if there are other active mappers in your area.) 
 
 - Go to File > Upload Data or simply click on the Upload Data button (green up arrow)
@@ -416,8 +416,8 @@ Hear from Leigh as she shares her experiences in switching from iD Editor to JOS
 
 ```
 
-## Dealing with Errors During Upload
-### Overview
+### Dealing with Errors During Upload
+#### Overview
 We will look at the Validation workflow in more detail in the next course, but every new mapper has to learn to deal with errors and fixes to the data they create in order to successfully upload their edits to OSM.
 ![alt text](Module7_Static/7.42.png)
 
@@ -425,7 +425,7 @@ In the image above you can see an attempt to upload two (deliberately incorrect)
 
 Once the JOSM uploader detects the errors, it automatically adds the “Validation Results” window to the right-hand panel. Using this panel, you can navigate/zoom directly to the offending geometry to fix it, which is particularly useful when you have a lot of data. We will look at this panel in more detail in the next course.
 
-### Fixing Overlapping Buildings 
+#### Fixing Overlapping Buildings 
 In the previous example, we had two overlapping buildings rejected for upload. Let’s fix them quickly, and push the corrected geometries to OSM. Again, this is an illustrative example, just follow along.
 
 - First, zoom in on the features you wish to fix so that you can clearly see the error and any nodes that need to be selected and moved.
@@ -450,8 +450,8 @@ You will notice that there are many different geometry editing options available
 When you are happy with your building edits, you can attempt to re-upload the data to OSM. This time, you should have no issues with the upload process.
 ![alt text](Module7_Static/7.45.png)
 
-# Dig Deeper 
-## Want to Dig a Little Deeper?
+## Dig Deeper 
+### Want to Dig a Little Deeper?
 - **LearnOSM:** [Getting Started with JOSM](https://learnosm.org/en/josm/start-josm/)
   - LearnOSM is an online resource with step-by-step instructions (in multiple languages) on the many tools and platforms that can be used to generate or add data to OpenStreetMap. It features a section on iDEditor, JOSM, and editing using smartphones.
 
@@ -466,11 +466,11 @@ When you are happy with your building edits, you can attempt to re-upload the da
   - **HOT Community Webinar Recording:** [Introduction to JOSM](https://www.youtube.com/watch?v=tF3MIHoPzoI)
   - **[JOSM for iD Users Playlist (nine videos)](https://www.youtube.com/watch?v=2-duP9ljCng&list=PL54o5PaKgnbKU-vXe11cSmmsxIYnL5oDU)**
 
-# Assignment 
-## JOSM 1: Introduction to Mapping With JOSM Assignment
+## Assignment 
+### JOSM 1: Introduction to Mapping With JOSM Assignment
 For the following assignment, you will demonstrate your ability to use basic mapping functions in JOSM. You will be asked to add tagged buildings, roads, and points of interest to the .osm file provided. **You will not upload this data to OSM.** You will resave the edits you have made and submit the file to the YouthMappers team for review and grading. 
 
-## Instructions
+### Instructions
 1. Download the following file: [JOSM_YM_Demo.osm](https://youthmappers.course.tc/api/v2/links?to=https%253A%252F%252Fds8h8s59z0bwt.cloudfront.net%252Fyouthmappers%252Ftrack_2%252Fcourse7%252FJOSM_YM_DEMO.osm&scope=session&scope_id=c0367dad-433e-4511-b2a3-2b11a6ada5cb&id=5ebfff64-bb96-4dc5-9697-a9d2850f2474)
 2. Launch JOSM, and open the file
 3. Go to the Imagery drop-down, and turn on the Bing imagery source (there is one building contained in this demo file, and it is sufficient to navigate you to the correct location on the imagery)
@@ -512,8 +512,8 @@ To save the edits to your layer file, right-click on the layer in the Layer menu
 ![alt text](Module7_Static/7.48.png)
 ***Tip: Save your version of the file after you make your very first edit. Continue to right-click and save regularly while editing.***
 
-# Conclusion 
-### Skills, Proficiencies, and Standards 
+## Conclusion 
+#### Skills, Proficiencies, and Standards 
 Each badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor’s Geospatial Technology Competency Model (GTCM), as well as National Geographic’s National Geography Standards.
 
 The Geospatial Technology Competency Model identifies the foundational, industry-wide, and industry sector-specific expertise that distinguishes, and binds together, successful geospatial professionals. It identifies core personal, academic, and workplace competencies, as well as sector-specific geospatial knowledge and abilities, including specialized competencies related to data acquisition, data analysis and modeling, imagery interpretation, and software and application development. 
