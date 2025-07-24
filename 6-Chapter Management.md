@@ -33,28 +33,48 @@ Key parts of chapter management include attracting new chapter members, mentorin
 Video: 
 [How miscommunication happens (and how to avoid it)](https://www.youtube.com/watch?v=gCfzeONu3Mo) - Katherine Hampsten
 
-![alt text](Module6_Static/6.0.png)
+```{image} Module5_Static/6.0png
+:alt: alt text
+:width: 100px
+
 1. **Provide meaningful engagement:** People want to make a difference and make their communities or world better. To help participants find meaning, link your projects to things that are happening in the world, such as addressing a crisis or helping researchers in the field. Make sure you have a clear and powerful message, and keep saying it! Watch the video above to learn more about clear communication.
 
-![alt text](Module6_Static/6.01.png)
+```{image} Module5_Static/6.01png
+:alt: alt text
+:width: 100px
+
 2. **Provide value:** Make sure that each event provides something meaningful to your participants. Consider mapping topics that support the interests of other student organizations on campus (such as environmental or social issues), or connect events to local business or community leaders and find ways to leverage these events to provide real value to participants.
 
-![alt text](Module6_Static/6.02.png)
+```{image} Module5_Static/6.02png
+:alt: alt text
+:width: 100px
 
 3. **Publicize everything:** You need to be a salesperson for your chapter. Make sure everyone knows about it. Use social media, flyers, and word of mouth to get people involved. Involve chapter members in publicizing things. Various members can hand out flyers or announce the event during class or in another organizational meeting.
 
 For more advice, please see the [YouthMappers Social Media Toolkit](https://sites.google.com/view/youthmapperswiki/chapter-resources/communications-toolkit?authuser=0).
 
-![alt text](Module6_Static/6.03.png)
+```{image} Module5_Static/6.03png
+:alt: alt text
+:width: 100px
+
 4. **Use the YouthMappers network:** Your chapter is part of an ever growing international network. Engage with a sister chapter in another country to support their work on a shared topic of interest, or collaborate with multiple chapters to complete large mapping tasks online. If you are a relatively new chapter, it is good to have the support of your peers, in addition to YouthMappers central, when planning a new mapping activity or public event.
 
-![alt text](Module6_Static/6.05.png)
+```{image} Module5_Static/6.05png
+:alt: alt text
+:width: 100px
+
 5. **Invite engagement and leadership:** Encourage members to think of ways they can invest in your chapter. Ask them to join in event planning and organization. Trust them with leadership roles and let them start deciding how to run the chapter.
 
-![alt text](Module6_Static/6.06.png)
+```{image} Module5_Static/6.06png
+:alt: alt text
+:width: 100px
+
 6. **Share the credit:** Make sure to highlight the accomplishments of your chapter members. Making them feel valued will keep them engaged with you.
 
-![alt text](Module6_Static/6.07.png)
+```{image} Module5_Static/6.07png
+:alt: alt text
+:width: 100px
+
 7. **Engage the local OSM community:** YouthMappers is part of a large diverse community of mappers. Unfortunately, many within the community do not engage outside of the editing environment. If you would like to work on a specific mapping topic or task within a specific geographic area, it is important to reach out virtually to those already mapping there. You can start by searching online for local OSM chapters or groups and follow up by scanning the live map for the usernames of regular and trusted contributors. You can reach out to these mappers through the OSM interface to make your introduction.
 
 ### Keeping People Motivated
@@ -102,7 +122,7 @@ Video: [Two Minute Tutorials: How to host an OpenStreetMap mapathon](https://www
 
 On the day of the mapathon, you can use our [checklist](https://d2jbbv3z6z1uwh.cloudfront.net/youthmappers.course.tc/onboarding/content/uploads/2020/10/22102503/YM_6.2.2_Checklist_v1.pdf) to help you keep organized.
 
-![alt text](Module6_Static/6.1.png)
+![alt text](Module6_Static/6.10.png)
 
 Be sure to check out this [mapathon resource library](https://sites.google.com/view/youthmapperswiki/chapter-resources/mapathons?authuser=0) for more information.
 
@@ -120,7 +140,9 @@ Stella W. Nakacwa (Makerere University, Uganda), and Sonia Torres (Rice Universi
 **Branding, Style, and Visual Representation**
 We encourage you to promote yourselves and your events by using YouthMappers branding. YouthMappers is a large organization and, as such, it’s important to create consistent standards for logos, naming conventions, and use of color across our communications. This will help your group gain and maintain credibility and grow your active members. 
 
-![alt text](Module6_Static/6.11.jpg)
+```{image} Module5_Static/6.11png
+:alt: alt text
+:width: 60px
 
 To help you apply YouthMappers communications standards, please look through the  [YouthMappers Brand, Name, and Logo Usage Policy](https://docs.google.com/document/d/15CD-5yTIWF0mniuxhZ49i8XQQYjMYauMynGPirQuebk/edit?tab=t.0) and the [Style Tip Sheet](https://docs.google.com/document/d/1r04mPBlqynF3WBJNRCgmioEnT7JiZpb-axmElAFOfWs/edit?tab=t.0#heading=h.gjdgxs). The YouthMappers Brand, Name, and Logo Usage Policy explains logo usage, branding policy, acknowledgements, messaging, and media/press guidance. All chapters should reference this document when starting their chapter and creating official chapter products (e.g., chapter logo, t-shirts, external chapter documents for outreach, and more). The Style Tip Sheet is a quick reference guide for YouthMappers branding policies and it also provides brief social media and writing tips. 
 
@@ -158,13 +180,13 @@ Refer to the links below to learn more about chapter management.
   - [Organizing a Mapathon Checklist](https://www.google.com/search?sca_esv=af4d784551d81640&sxsrf=AE3TifORfcwX9Yi4TViKIGAFBeGO82WYYw:1749510600266&q=https%25253A%25252F%25252Fd2jbbv3z6z1uwh.cloudfront.net%25252Fyouthmappers.course.tc%25252f+Cohort-1-6%25252+Content%25252+Uploads%25252F2021%25252F03%25252F30082203%25252FPlanning-a-Mapathon-Checklist.docx%26scope%3Dsession%26scope_id%3D6bf50bf8-489e-4d67-9518-68349480069b%26id%3D626fa72a-632a-4657-8e0b-1d5e5790b344&spell=1&sa=X&ved=2ahUKEwi9h_DuuuWNAxWng4kEHTXsIB0QBSgAegQIEBAB&biw=1440&bih=669&dpr=2)
   - [Day of Mapathon Checklist](https://youthmappers.course.tc/api/v2/links?to=https%253A%252F%252Fd2jbbv3z6z1uwh.cloudfront.net%252Fyouthmappers.course.tc%252Fcohort-1-6%252Fcontent%252Fuploads%252F2021%252F03%252F30082205%252FDay-of-Mapathon-Checklist-.docx&scope=session&scope_id=6bf50bf8-489e-4d67-9518-68349480069b&id=826c5ea5-3e8a-44c8-a282-b67ed315e4f5)
 
-  ![alt text](Module6_Static/6.13.png)
+  ```{image} Module5_Static/6.13png
+:alt: alt text
+:width: 100px
 
 ## Conclusion
 ### Skills, Proficiencies, and Standards 
 Each badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor's [Geospatial Technology Competency Model (GTCM)](https://www.careeronestop.org/competencymodel/competency-models/geospatial-technology.aspx) as well as National Geographic’s [National Geography Standards](https://education.nationalgeographic.org/resource/national-geography-standards-index/).
-
-![alt text](Module6_Static/6.14.png)
 
 **The Geospatial Technology Competency Model:**
 
