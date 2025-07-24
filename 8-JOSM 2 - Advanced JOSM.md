@@ -47,6 +47,7 @@ Hear what Grace has to share about her experiences working as a training coordin
 ### Overview 
 #### Validation Skills and Workflows 
 The preferred editor for validation in OpenStreetMap is JOSM. The wealth of geometry and tagging tools coupled with JOSM’s built-in validation tools makes it the ideal application for this type of work. 
+
 ![alt text](Module8_Static/8.02.png)
 
 In order to harness the power of JOSM for both mapping and validation, you will need to expand your repertoire of tools and plug-ins. For the purposes of this course, we will focus on a number of select tools and plug-ins that will increase your mapping efficiency and form a comprehensive toolkit for validation activities.
@@ -67,11 +68,17 @@ have not looked for issues in your study area.
 ### Installing JOSM Plug-ins
 - Start JOSM
 - Click on the Preferences button
+
 ![alt text](Module8_Static/8.03.png)
+
 - Choose the Plug-ins option from the menu on the left
+
 ![alt text](Module8_Static/8.04.png)
+
 - To begin, search for Buildings. You will find a plug-in called ‘buildings_tools’. Click on the check box beside it.
+
 ![alt text](Module8_Static/8.05.png)
+
 - It is possible to install multiple plug-ins simultaneously, so search for and check off any additional plug-ins you would like to install, then click OK at the bottom of the screen.
 - The plug-ins you have selected will download. You will need to restart JOSM to finalize the download and install of the plug-ins.
 
@@ -95,13 +102,21 @@ alignment issues (between new and old images, AND, between old tracings and new 
 - Navigate to your area of interest. This may be via a bookmark for an area that you are already familiar with, or it may be through Tasking Manager if you are participating in an organized validation project. We will talk a little more about this later on. 
 - Once your data has loaded, check to see if you have the Validation Window open in your right-hand panel.
 - If your Validation Window doesn’t automatically open, go to the Windows drop-down and click on Validation Results to launch it. 
+
 ![alt text](Module8_Static/8.06.png)
+
 - Click on the Validate Tool button in the Validation Window. The tool will run a check for a standard set of errors for the downloaded data. 
+
 ![alt text](Module8_Static/8.07.png)
+
 - A list of warnings or errors will be displayed (depending on the mapping errors in your area, the warnings will vary).
+
 ![alt text](Module8_Static/8.08.png)
+
 - Let’s look through these warnings/errors one by one. To navigate directly to a warning/error, right-click on it in the table of contents and select Zoom to Problem.
+
 ![alt text](Module8_Static/8.09.png)
+
 - In this instance, the road has been overdrawn and is glued to the corner node of a building.
 
 **To fix this error, the user must:**
@@ -112,15 +127,15 @@ it to the small residential access road.
 **Let’s fix another problem. **
 - Let’s zoom to the overlapping buildings. In this
 instance, we will move the nodes to remove the overlap, and reflect the correct building footprint
+
 ![alt text](Module8_Static/8.11.png)
+
 - Once the overlap has been corrected, make sure to re-square the building that you have edited and run the validation tool again to make sure that the warning/error has indeed been fixed.
 - Let’s tackle the untagged way next. Untagged ways are simply lines on the map. Without a proper tag, we have no indication as to whether this is a boundary, a river, a road, or something else entirely. 
 - In this instance, it’s obvious from the imagery that the way is a residential road, so let’s retag it as such and re-run the validation tool to make sure this is an acceptable edit. 
+
 ![alt text](Module8_Static/8.12.png)
 
-Quick Fire Question
-After making corrections, to make sure that the warning/error has indeed been fixed, you must:
-- Run the validation tool again
 
 #### Important Considerations when Using the Built-in JOSM Validation Tool:
 - You will notice that the initial validation check for this area flagged more than 19 unnamed ways in the project area. Note that this is a validation warning, rather than an error. Ideally, all roads should have a name associated with them, but in many remote mapping scenarios, this information isn’t known to the mapper, and therefore can’t be improved upon at this time. It is OK to ignore ‘unnamed ways’ in most instances, unless you have local knowledge of an area. 
@@ -217,14 +232,19 @@ Working on a validation project through the HOT Tasking Manager may be your firs
 - Log on using your OSM credentials, and click on Start Mapping
 - Under the Any Project drop-down menu, chose Projects to Validate
 - If this is the first time that you have worked as a validator, be sure to select a project that is earmarked for Beginner Validators
+
 ![alt text](Module8_Static/8.18.png)
+
 - Choose a task based on your level of experience
 - Read through the task instructions carefully. If the task manager explicitly requests that roads are the focus of the task, then you should focus on adding and/or fixing any roads that you encounter. You should not spend time on buildings or any other features. Also make sure that you follow any tagging conventions specifically mentioned in the task instructions.
 
 
 **2. Selecting a Square**
+
 ![alt text](Module8_Static/8.19.png)
+
 Click on Contribute to move to the next informational window. As with most Tasking Manager projects, the more detailed, explicit instructions are found after you click on Contribute.
+
 ![alt text](Module8_Static/8.20.png)
 
 You will notice the manager of this task has highlighted issues with imagery alignment and has given explicit instructions to address this⏤there are also specific instructions regarding buildings and their interactions with roads in the area. 
@@ -240,6 +260,7 @@ Once you have selected the square that you wish to validate, click on the Valida
 
 - You set the editor to JOSM at the bottom of the window (as it defaults to iD)
 - You have JOSM open on your computers
+
 ![alt text](Module8_Static/8.21.png)
 
 - Select the square you wish to validate and launch to JOSM. Data from the square you have selected should automatically open in JOSM.
@@ -261,6 +282,7 @@ If for any other reason you cannot complete validation on the square, simply cli
 Sometimes the degree of time, effort, and expertise required to finish or fix the work of another mapper is excessive. The threshold for this is unique to each participant. The team at Missing Maps has a nice decision tool to help new validators decide on when to persevere with a validation square, or when to kick it back to the original mapper (or someone more experienced).
 
 ![alt text](Module8_Static/8.24.png)
+
 ***Validation Decision Tree reproduced from the Missing Maps Validation Guide***
 
 Typically, if the task is time-sensitive (like in the case of a disaster response), then most validators will persist with their self-assigned squares and make all the improvements necessary to progress the overall task to fully complete.
@@ -287,11 +309,15 @@ The collaborative mapping platform OpenStreetMap (OSM) is a great platform for u
 The Hub members approach validation in two main ways:
 
 **1. Traditional Task Validation**
+
 ![alt text](Module8_Static/8.26.png)
+
 This is the systematic validation of “complete” cells in the Tasking Manager, which involves the checking and fixing of geometry and tags within those cells (and marking them as validated for the purpose of task completion). This can also potentially involve authoring both congratulatory and improvement notes to mappers within the Tasking Manager interface (although, the validator will typically fix the work in order to expedite task completion). This is the most traditional interpretation of the concept of “validation” within the Validation Hub, and we typically perform this type of validation for older “idle” (but not archived) tasks. Typically, an “idle” task would be two or more months old, but this is determined on a case-by-case basis.
 
 **2. Interactive Validation**
+
 ![alt text](Module8_Static/8.27.png)
+
 This type of validation is aimed at changing and/or improving mapping behavior and practices amongst mappers. As part of this role, the Hub validators act in a monitoring role during a time-bounded (active) task. The Hub will work in close coordination with the Project Manager (the person managing the mappers and/or project). Hub validators will regularly check the mapper’s work and provide feedback and pointers (through both the OSM and the TM platforms) during the active mapping period, without actually editing the geometry/tags themselves. Once the time period for active mapping has ended, the Project Manager can/will take time to evaluate the mapper's work, THEN, the Hub validators will be assigned the task for a traditional more passive validation session.
 
 The purpose of interacting with mappers in (near) real-time is to help them foster good practices and community, which are YouthMappers Validation Hub goals. It has been shown that giving feedback, both positive and corrective, has yielded higher quality edits and mappers.
@@ -300,11 +326,14 @@ In this context, the role of the validator is not to fix problematic edits, but 
 
 ### Communication is Key!
 #### Overview
+
 ![alt text](Module8_Static/8.28.png)
+
 It is of vital importance to be constructive and courteous to other mappers, especially when dealing with the delicate issue of their mapping quality. The team at the YouthMappers Validation Hub has plenty of experience with this and has developed extensive training, complete with a playbook, to make sure new members adopt a consistent approach to outreach and assistance.  
 
 #### General Messages to Express Gratitude or Support 
 In many cases, our mappers do a good job, and we don’t need to change much (if anything) in their submissions. It’s still important for this work to be recognized and appreciated. Sending a short simple message to a mapper lets them know we appreciate what they’re doing, and the effort can really encourage participation and retention. (Make sure to include @theirusername so that the message is flagged for their attention.)
+
 ![alt text](Module8_Static/8.27.png)
 
 Example messages include:
@@ -398,7 +427,7 @@ To save the edits to your layer file, right-click on the layer in the Layer menu
 
 ## Conclusion
 ### Skills, Proficiencies, and Standards 
-ach badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor's Geospatial Technology Competency Model (GTCM), as well as National Geographic’s National Geography Standards.
+Each badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor's Geospatial Technology Competency Model (GTCM), as well as National Geographic’s National Geography Standards.
 
 The Geospatial Technology Competency Model identifies the foundational, industry-wide, and industry sector-specific expertise that distinguishes, and binds together, successful geospatial professionals. It identifies core personal, academic, and workplace competencies, as well as sector-specific geospatial knowledge and abilities, including specialized competencies related to data acquisition, data analysis and modeling, imagery interpretation, and software and application development.
 
