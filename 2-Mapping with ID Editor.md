@@ -28,7 +28,7 @@ In this course, you will learn how to add map features to OpenStreetMap (OSM) us
 
 iD Editor is a web-based editor used to create map data on openstreetmap.org. Developed by Mapbox in 2013, this easy-to-use tool is the default option for new mappers wishing to contribute to OSM. Mappers will trace map features from the satellite imagery provided, and tag or label the map features from a set of pre-defined options (points, lines, and areas that define the OSM Data Model). iD requires a stable internet connection, as edits are saved and pushed to OpenStreetMap in real-time.
 
-1. To begin mapping, use your new OSM account credentials to log in at <www.openstreetmap.org>.
+1. To begin mapping, use your new OSM account credentials to log in at www.openstreetmap.org.
 
 2. Using the Search button in the top left-hand corner of the map, or the map navigation tools to the right (zoom in, zoom out, pan), navigate to the location in which you wish to begin mapping. It is always a good idea to begin mapping in a place that is familiar to you so that you can add your local knowledge as you trace from satellite imagery.  
 
@@ -145,12 +145,5 @@ Congratulations on completing **Course 2: Mapping with iD Editor**  of the Youth
 
 ![alt text](Module2_Static/2.7.gif)
 
-### What's Next?
-
-The YouthMappers Academy series contains six courses, shown in the image below. 
-
-To read more about the next course in the series, Course 3: Imagery Interpretation, click [here](https://www.youthmappers.org/academy).
-
-![alt text](static/courses.png)
 
 
