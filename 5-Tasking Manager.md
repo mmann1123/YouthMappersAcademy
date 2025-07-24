@@ -39,16 +39,18 @@ This incredibly effective tasking system allows mappers all over the world to co
 ### Getting Started 
 To begin, go to the [Tasking Manager website](https://tasks.hotosm.org/). Log in using your OSM credentials (the same credentials you used on the iD platform), this way, any edits you make while working through the Tasking Manager platform will be associated with your OSM account.
 
-Once logged on, you can immediately find a project to work on ([EXPLORE PROJECTS](https://tasks.hotosm.org/explore?omitMapResults=1)), or learn more about HOT and the Tasking Manager via the links near the top of the page ([LEARN](https://tasks.hotosm.org/learn/map)).
+Once logged on, you can immediately find a project to work on by clicking [explore projects](https://tasks.hotosm.org/explore?omitMapResults=1), or learn more about HOT and the Tasking Manager by clicking [learn](https://tasks.hotosm.org/learn/map).
 
 ### Finding Projects
 
-To find a project to work on, click on "[EXPLORE PROJECTS](https://tasks.hotosm.org/explore?omitMapResults=1)" near the top of the page. This will bring up the dashboard which shows the active projects sorted by priority, with the most urgent project tiles listed first. There is also a toggle button in the upper right corner to turn on/off the project map locator if you would like a visual of current projects.
+To find a project to work on, click on "[Explore Projects](https://tasks.hotosm.org/explore?omitMapResults=1)" near the top of the page. This will bring up the dashboard which shows the active projects sorted by priority, with the most urgent project tiles listed first. There is also a toggle button in the upper right corner to turn on/off the project map locator if you would like a visual of current projects.
 
 
 ### Filter Tools
 
-![alt text](Module5_Static/5.1.png)
+```{image} Module5_Static/5.1.png
+:alt: alt text
+:width: 150px
 
 To help you find a task you are interested in, several filter tools are available to you. These tools allow you to refine your search for a project based on its level of difficulty, the type of feature to map (a project that focuses on roads or buildings), the campaign, organization, geographical location, and/or specific project number. If you are working on a particular campaign or know the specific project number you can search for those specific items to bring up the project tile immediately.
 
@@ -60,7 +62,9 @@ To help you find a task you are interested in, several filter tools are availabl
 
 2. This will bring up the overview page of the project which will present additional information, such as who set up the project, why it is important, what features to map or imagery to use, and a detailed description.  
 
-![alt text](Module5_Static/5.2.png)
+```{image} Module5_Static/5.2.png
+:alt: alt text
+:width: 150px 
 
 3. As you scroll down the page you’ll also see information on who can map and validate this project (beginner, intermediate mapper, or advanced mapper), a space to post questions and comments, any previous contributors, and the contributions timeline.
 
@@ -95,11 +99,15 @@ To help you find a task you are interested in, several filter tools are availabl
 
 Once you have saved and uploaded your map edits in the embedded version of iD, you need to update the HOT Tasking Manager Task Status.
 
-![alt text](Module5_Static/5.4.png)
+```{image} Module5_Static/5.4.png
+:alt: alt text
+:width: 150px
 
 3. You will update the HOT Tasking Manager **Task Status** by answering the question: **Is this task completely mapped?**
 
-![alt text](Module5_Static/5.5.png)
+```{image} Module5_Static/5.5.png
+:alt: alt text
+:width: 150px
 
 4. You have another opportunity to comment on the work that you have completed. This is in addition to any **Commit Message** that you have already submitted through iD.
 
@@ -120,14 +128,18 @@ In this collaborative blog post, Mercy, Michael, and Victor speak about their pa
 
 When working in a collaborative environment, clear and polite communication is key to achieving the project goals (something we have already discussed in the OSM Code of Conduct). The Tasking Manager allows contributors to ask questions, make comments, and provide information as needed.
 
-![alt text](Module5_Static/5.6.png)
+```{image} Module5_Static/5.6.png
+:alt: alt text
+:width: 100px
 
 ### Project Communication 
 Each project has a “Questions and Comments” section on the main page of the project. Remarks made in this space will be posted on this page and the person who created this project will receive a notification of your post. This is an informative space to see what comments and issues mappers have had in the past along with the posted solutions. 
 
 ### Task Communication 
 
-![alt text](Module5_Static/5.7.png)
+```{image} Module5_Static/5.7.png
+:alt: alt text
+:width: 150px
 
 You can also communicate on issues pertaining to a specific task. When you are mapping in a chosen task, below the **Task Status** radio buttons, there is a **Comment** box. 
 
@@ -139,7 +151,9 @@ When you click the **Submit Task** button, immediately below the **Comment** tex
 
 The image below illustrates the screen that follows the submission of a task by clicking the **Submit Task** button.
 
-![alt text](Module5_Static/5.8.png)
+```{image} Module5_Static/5.8.png
+:alt: alt text
+:width: 150px
 
 ## Want to Dig a Little Deeper?
 Refer to the websites linked below to learn more about the Tasking Manager.
@@ -150,7 +164,9 @@ Refer to the websites linked below to learn more about the Tasking Manager.
 
 - [TeachOSM Tasking Manager](https://tasks.teachosm.org/learn/map): For projects that do not have a humanitarian context. This site can host your chapter projects and provides the same functionality of the HOT Tasking Manager.
 
-![alt text](Module5_Static/5.9.png)
+```{image} Module5_Static/5.9.png
+:alt: alt text
+:width: 100px
 
 ## Conclusion 
 ### YouthMappers Academy: Skills, Proficiencies, and Standards
@@ -202,12 +218,3 @@ The following competencies derived from both the Geospatial Technology Competenc
 Congratulations on completing Course 5: The Tasking Manager of the YouthMappers Academy series! 
 
 ![alt text](Module5_Static/5.11.gif)
-
-## What's Next?
-
-The YouthMappers Academy series contains six courses, shown in the image below. 
-
-To read more about the next course in the series, Course 6: Chapter Management, click [here](https://www.youthmappers.org/academy).
-
-![alt text](static/courses.png)
-
