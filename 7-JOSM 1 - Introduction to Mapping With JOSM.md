@@ -56,7 +56,9 @@ There are a number of key settings that need to be in place before you begin map
 - **MacOS:** Go to JOSM (in the main Mac toolbar) > Preferences(Refer to the image to the right if using a Mac.) 
 
 ##### Mac Visual 
-![alt text](Module7_Static/7.03.png)
+```{image} Module5_Static/7.03png
+:alt: alt text
+:width: 100px
 
 ##### The Preferences Menu
 The multiple tabs to the left contain detailed settings for everything from display settings to default colors, default language, and data handling. We won’t go through each one in detail, just one or two key settings to get us up and mapping. But, on your own time, navigate through each to see the level of customization possible to create a very personalized editing experience within JOSM.
@@ -92,7 +94,9 @@ You will receive notification that an OAuth Access token has been granted, which
 - Click on Accept Access Token This token will be used in subsequent upload requests to access the OSM application user interface (API).
 
 #### Plug-ins 
-![alt text](Module7_Static/7.06.png)
+```{image} Module5_Static/7.06png
+:alt: alt text
+:width: 100px
 
 ##### Plug-ins 
 There are many **plug-ins** that you can add to the basic JOSM install to improve functionality and interactions with other platforms. Plug-ins are add-ons or extensions that enhance the capabilities of a software platform, without the need to alter the existing software install. 
@@ -118,10 +122,12 @@ Before we download or edit any live data, let’s tour the JOSM interface and pr
 - Go to File > New Layer. You will see the following screen:
 7.08
 
-**MacOS View**
+**MacOS View:**
+
 ![alt text](Module7_Static/7.08.png)
 
-**PC View**
+**PC View:**
+
 ![alt text](Module7_Static/7.09.png)
 
 The main window or panel within the interface (the part which is currently black) is called the Map View. This is where the data is displayed and where the editing takes place.
@@ -134,22 +140,32 @@ These are the main **drawing tools:**
 - Select (S) ***(top)***
 - Draw Nodes (A) ***(bottom)***
 
-![alt text](Module7_Static/7.10.png)
+```{image} Module5_Static/7.10png
+:alt: alt text
+:width: 100px
 
 These are the tools to **open, save, download, and upload** your data:
-![alt text](Module7_Static/7.11.png)
+
+```{image} Module5_Static/7.11png
+:alt: alt text
+:width: 100px
 
 These are the **preset tagging tools**, for popular road/street, transport, and facility tags: 
+
 ![alt text](Module7_Static/7.12.png)
 
 ### Information Panels 
 The Information Panels to the right of the Map Frame show information about the data in JOSM, the different layers in the view, the imagery being used, how objects are tagged, and who the last mapper to edit a feature was.
 
-![alt text](Module7_Static/7.13.png)
+```{image} Module5_Static/7.13png
+:alt: alt text
+:width: 160px
 
 You can customize which panels you’d like to feature in this bar on the right-hand side of the map view. The options are available under the “Windows” drop-down menu at the top of the screen.
 
-![alt text](Module7_Static/7.14.png)
+```{image} Module5_Static/7.14png
+:alt: alt text
+:width: 160px
 
 ***Note: The options you see in your Windows drop-down list will depend on the plug-ins that you have installed on your machine.***
 
@@ -176,7 +192,10 @@ Here is a quick reminder:
   - Once you've activated Delete Mode, click on nodes, way segments, and ways to delete them. 
 
 #### JOSM Basic Navigation 
-![alt text](Module7_Static/7.18.png)
+```{image} Module5_Static/7.18png
+:alt: alt text
+:width: 100px
+
 Moving about can be a little different in JOSM than in other mapping software or platforms, but you’ll soon get the hang of it.
 - Drag the map: Hold down the right mouse button
 - Zoom in/out: Use your scroll wheel
@@ -264,6 +283,7 @@ You will have to develop a certain familiarity with the OSM data model in order 
 Another way to approach tagging is to use JOSM’s preset tagging menus, as they have a nicely organized hierarchy of tags. There are two ways to access the preset tagging: either through the drop-down menu or the toolbar. 
 
 First, let's look at the drop-down menu:
+
 ![alt text](Module7_Static/7.22.png)
 
 The tagging drop-down menu is a highly comprehensive menu of tagging choices, arranged neatly into thematic categories. This is incredibly helpful if you are still rather new to the OSM data model, though it will still take time to learn where all your favorites reside. 
@@ -319,7 +339,11 @@ There is also this handy visual, one that I have printed out and have hanging ov
 One of the main benefits of working with JOSM is that you create and update data offline, so data usage is limited. This is particularly handy when working with low or inconsistent bandwidth. There are several different ways to download data locally to JOSM. 
 
 - To explore these, go to **File > Download data** or click on the Download data button (green downward arrow)
-![alt text](Module7_Static/7.27.png)
+
+```{image} Module5_Static/7.27png
+:alt: alt text
+:width: 60px
+
 - In the Download from OSM dialog box, you will see five tabs that indicate the five different ways you can download data for editing
 
 ![alt text](Module7_Static/7.28.png)
@@ -349,9 +373,11 @@ If your bounding box is set by a tasking service such as the HOT Tasking Manager
 #### Adding Imagery to the Editing Window 
 Unless you are working with a Tasking Manager, such as the HOT Tasking Manager, or the TeachOSM Tasking Manager, imagery does not automatically appear behind your downloaded data. 
 - To add imagery to the window, go to the Imagery drop-down menu at the top of the screen. Notice you have many of the same imagery options that you are familiar with in iD.
+
 ![alt text](Module7_Static/7.33.png)
 
 I’m choosing Bing imagery for my editing session as I have edited in this area before and I know that it has the best resolution and is the most current.
+
 ![alt text](Module7_Static/7.34.png)
 
 You can add several different imagery sources to your JOSM editing session, and you can switch between them quickly and easily to assist your editing decisions. You can turn the imagery layer on and off and also adjust the opacity, contrast, and sharpness of the image.  
@@ -362,14 +388,17 @@ If your initial data download was for a particularly busy or previously well-map
 - To delete the first layer that you created, click on the little waste bin icon in the bottom right-hand corner of the layers window, or simply turn it off by clicking on the little eye icon beside the layer name. 
 
 You can then add an additional data layer to the map window by downloading a new geographic extent.
+
 ![alt text](Module7_Static/7.35.png)
 
 If you have not made any changes to a layer that you have downloaded, deleting it simply removes the downloaded layer from your device⏤it doesn’t delete it from OSM (remember, it’s just a localized copy). If you have made any changes to the layer since you’ve downloaded it, JOSM will always give you a warning to check if you really wish to delete the layer or to review and upload your edits.
+
 ![alt text](Module7_Static/7.36.png)
 
 ### Editing and Uploading OSM Data
 #### Overview 
 Now that you’ve downloaded some real OSM data, let’s revisit the editing process in JOSM and walk through the process of saving and re-uploading to OSM. 
+
 ![alt text](Module7_Static/7.37.png)
 
 This is a download of a much simpler area, one that has new development (and recently updated imagery). I’m going to trace several new houses and upload them to OSM. Simply follow along for now. Then, you can replicate the steps in an area of your own choosing. 
@@ -399,8 +428,10 @@ If you have a reliable connection, it's good practice to save regularly. (Rememb
 
 - Go to File > Upload Data or simply click on the Upload Data button (green up arrow)
 - You will see the following interface: 
+
 ![alt text](Module7_Static/7.40.png)
 - Add a changeset comment (remember this from iD, it’s a brief description of the work that you have completed in this editing session)
+
 ![alt text](Module7_Static/7.41.png)
 
 When you are happy with your changeset comment, click Upload Changes 
@@ -419,6 +450,7 @@ Hear from Leigh as she shares her experiences in switching from iD Editor to JOS
 ### Dealing with Errors During Upload
 #### Overview
 We will look at the Validation workflow in more detail in the next course, but every new mapper has to learn to deal with errors and fixes to the data they create in order to successfully upload their edits to OSM.
+
 ![alt text](Module7_Static/7.42.png)
 
 In the image above you can see an attempt to upload two (deliberately incorrect) buildings to OSM. JOSM picks up on the incorrect geometry, the fact that the buildings are overlapping, and that one or more of their nodes are connected or “glued”.
@@ -445,9 +477,11 @@ In the previous example, we had two overlapping buildings rejected for upload. L
 ![alt text](Module7_Static/7.43.png)
 
 You will notice that there are many different geometry editing options available under the **Tools** menu. We won’t go through each of the options one by one, but you should explore these on your own time to become familiar with their function. You will probably recognize quite a few from your time editing in iD editor. 
+
 ![alt text](Module7_Static/7.44.png)
 
 When you are happy with your building edits, you can attempt to re-upload the data to OSM. This time, you should have no issues with the upload process.
+
 ![alt text](Module7_Static/7.45.png)
 
 ## Dig Deeper 
@@ -504,12 +538,14 @@ Not everyone’s attempt for this assignment will look exactly the same, but you
 ***Note: The field, school, and shop should be the same, the roads and basic buildings can be of your own choosing.***
 
 ![alt text](Module7_Static/7.47.png)
+
 **Example of a fully edited submission without imagery**
 ***Note: The field, school, and shop should be the same, the roads and basic buildings can be of your own choosing.***
 
 To save the edits to your layer file, right-click on the layer in the Layer menu and select Save As. Save your changes to a file with the following naming convention: JOSM_YM_”your name”.osm (e.g: JOSM_YM_JaneSmyth.osm)
 
 ![alt text](Module7_Static/7.48.png)
+
 ***Tip: Save your version of the file after you make your very first edit. Continue to right-click and save regularly while editing.***
 
 ## Conclusion 
@@ -554,4 +590,5 @@ The National Geography Standards are benchmarks of geographic literacy to determ
 
 ### Congratulations 
 Congratulations on completing Course 7: JOSM 1 - Introduction to Mapping with JOSM of the YouthMappers Academy series!
+
 ![alt text](Module7_Static/7.49.png)
