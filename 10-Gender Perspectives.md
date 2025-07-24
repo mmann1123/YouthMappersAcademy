@@ -46,7 +46,10 @@ YouthMappers Blogspot: If You Can’t See It, You Can’t Be It
 ```
 
 ### Start with Inclusive Language
-![alt text](Module10_Static/10.01.jpg)
+
+```{image} Module5_Static/10.01.png
+:alt: alt text
+:width: 100px
 
 As members and leaders of the YouthMappers network, it’s important that we understand gender-related terms and concepts so we can ensure our chapters feel welcoming and safe to any students who want to join us. We are going to start this course by introducing and defining key gender terms to help ensure we are all on the same page and can discuss gender using inclusive and appropriate language. We also recognize that gender terms and concepts may have different meanings or nuances across geographies and cultures. 
 
@@ -97,7 +100,7 @@ You may know of the acronym “LGBTQI+” (or something similar). You might be v
 
 **“Lesbian”** refers to women who are emotionally and romantically attracted to other women. 
 
-**"Gay"**refers to men who are emotionally and romantically attracted to men and is often used as an umbrella term for all people who experience same-sex attraction.
+**"Gay"** refers to men who are emotionally and romantically attracted to men and is often used as an umbrella term for all people who experience same-sex attraction.
 
 **“Bisexual”** refers to individuals who are emotionally and romantically attracted to both men and women.
 
@@ -117,6 +120,7 @@ In the following activity, you will learn the definitions of several key inclusi
 **Instructions:** Read the definition within each of the orange boxes, then drag and drop each definition into the box with the matching term. Once you have assigned all of the definitions to their correct terms, see below for the correct answers. 
 
 ![alt text](Module10_Static/10.03.png)
+
 
 **Correct Answers:**
 ![alt text](Module10_Static/10.04.png)
@@ -140,7 +144,9 @@ To learn more about responding to offensive comments, read [“How to Respond to
 #### Language is Dynamic 
 All languages⏤not just words related to gender⏤constantly evolve and change. Words like “emoji” and “blog” were probably not commonly used when you were born, but they have become a normal part of our everyday lives. Similarly, gender-related words change over time when there are shifts in what language is considered inclusive. Therefore, it’s important to keep an open mind and always be willing to learn and adapt. And most importantly, remember we are all learning to be more inclusive together!
 
-![alt text](Module10_Static/10.06.png)
+```{image} Module5_Static/10.06.png
+:alt: alt text
+:width: 100px
 
 In a couple of words, brainstorm your answer to the following question below: *What does inclusivity mean to you?*
 
@@ -165,7 +171,9 @@ It’s important to respect people’s preferences for their pronouns, because i
 **How Can I Know Someone Else’s Gender Identity or Preferred Pronouns?**
 A lot of gender terms have to do with people’s personal identities. Pause for a moment and think about all the identities you apply to yourself. These might include your nationality, your place in your family, your role as a student, and even your membership in YouthMappers. It would be impossible for a stranger to accurately guess all of your identities just from looking at you, right? Well, the same goes for gender identity. 
 
-![alt text](Module10_Static/10.07.png)
+```{image} Module5_Static/10.07.png
+:alt: alt text
+:width: 100px
 
 We’ve covered a lot of terms related to gender identity, and you may wonder how you can be sure you’re using the correct language when speaking to or about another person. If you are unsure of someone’s preferred personal pronouns, the best way is to ask in a polite and empathetic way. Some people might not wish to share this information with you, which is okay too.
 
@@ -238,7 +246,9 @@ Now let’s take a look at how gender norms can evolve over time.
 Today in the U.S., pink is strongly associated with girls, and blue is strongly associated with boys. A century ago, the opposite was true⏤pink was considered a “strong color” and was thus associated with boys, whereas blue was considered “delicate” and was thus associated with girls. (The Atlantic) Before that, most Americans considered pink a gender-neutral color. Clearly, this gender norm is arbitrary and has nothing to do with actual biological differences.
 
 **Women in Computer Science**
+
 ![alt text](Module10_Static/10.09.png)
+
 Would it surprise you to know many of the first computer scientists were women? You wouldn’t be alone, since this field is now dominated by men. Two men designed the first computer during the Second World War, and they hired a team of skilled women mathematicians to compute weapons trajectories using the machine. These six women successfully designed a way to program the computer and laid the groundwork for modern coding, and yet, unlike the men, they received no credit or recognition for their work until recently. Because computer programming was initially considered a low-skill, low-level profession on par with typing or filing, organizations hired women to do the work. Rear Admiral Dr. Grace Hopper, a woman, invented the first computer language compiler, which allows programmers to write software in human-like language. ([History](https://www.history.com/articles/coding-used-to-be-a-womans-job-so-it-was-paid-less-and-undervalued))
 
 The number of women studying computer science in the U.S. peaked in the 1980s for a number of reasons. But now that many more men than women are computer scientists, computer programming and coding is considered a high-skill profession that is well-paid and prestigious. ([NPR](https://www.npr.org/sections/money/2014/10/21/357629765/when-women-stopped-coding))
@@ -274,6 +284,7 @@ In the online course “Understanding Gender Equity”, Catalyst, a leading non-
 - Lay-offs or firing of women and gender-nonconforming people for reasons related to their gender (it’s often illegal to fire someone because of her gender, but it still happens⏤the employers just give other reasons as the “official” reasons for the firing)
 
 **Take a look at some key data points that illustrate the effects of gender discrimination in the workplace:**
+
 ![alt text](Module10_Static/10.10.png)
 
 “As of 2020, around 47% of women globally participated in the labor force, compared to 74% of men.” ([UNESCO](https://www.unesco.org/reports/science/2021/en)) 
@@ -284,6 +295,7 @@ In the online course “Understanding Gender Equity”, Catalyst, a leading non-
 “Women also only make up less than a third (31%) of senior roles⏤and this is the highest proportion of women in leadership ever recorded.” ([UNESCO](https://www.unesco.org/reports/science/2021/en)) In other words, for every 100 senior leaders in the workplace, only 31 are women.
 
 ![alt text](Module10_Static/10.12.png)
+
 Globally, for every $100 USD men earn, women earn only $68.60. ([World Economic Forum](https://www.weforum.org/publications/gender-gap-2020-report-100-years-pay-equality/digest/))
 
 ![alt text](Module10_Static/10.13.png)
@@ -333,15 +345,18 @@ A leaky pipeline is commonly used as a visual image to demonstrate the many reas
 
 For women and gender-nonconforming people, the path from undergraduate student to a PhD and/or leadership role has many more challenges and potential pitfalls than the path for men does. In other words, there are a lot more leaks in the pipeline that women have to move through to achieve as much as their men peers. Watch [this short](https://www.youtube.com/watch?v=liCIvVbMG2I) video or study the image below to further understand this concept. 
 
-*Note:* the video and image specifically reference the leaky pipeline for women who work in STEM (science, technology, engineering, and mathematics), but the concept can apply to nearly all academic fields and professions.
+*Note: the video and image specifically reference the leaky pipeline for women who work in STEM (science, technology, engineering, and mathematics), but the concept can apply to nearly all academic fields and professions.*
 
 Some criticize the leaky pipeline metaphor because they think it puts too much blame on individual women who leave their careers and doesn’t acknowledge that these women still often have incredible careers in other fields or are highly fulfilled by their choice to be a full-time caregiver. ([Frontiers in Psychology](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00037/full)) Many of these critiques are valid, and no metaphor can be perfect, but we think the leaky pipeline is still a useful concept to demonstrate the barriers women face to advancing in their careers.
 
 ### Case Study 
-![alt text](Module10_Static/10.16.png)
+```{image} Module5_Static/10.16.png
+:alt: alt text
+:width: 100px
+
 We’re going to introduce a case study to bring these issues to life through the stories of three YouthMappers students. The students in the case study are fictional, but their experiences are based on real lived experiences of YouthMappers students and women and gender-nonconforming people in STEM. 
 
-#### Meet Lucia**
+#### Meet Lucia
 Lucia is a second-year undergraduate student pursuing a Bachelor of Science degree in Geomatics Engineering. Lucia identifies as a woman, uses she/her pronouns, and lives in Central America. 
 
 **Her current goals related to her profession and family are:**
@@ -371,7 +386,7 @@ Her current goals related to her profession and family are:
 - Join her country’s National Academy of Science
 - Potentially get married⏤she isn’t sure yet if she wants to
 
-**Scenario #1**
+**Scenario #1:**
 After completing her undergraduate program with honors, Lucia secured a full-time position at a large, global technology company. After five years of gainful employment, Lucia and her partner decided they would like to have a child. Unfortunately, the parental leave policy at her company would not allow Lucia adequate time with her newborn baby. If she took an extended leave from the organization, Lucia knew she risked being overlooked for promotion.
 
 **The above scenario is an example of which of the following discriminatory practices?**
@@ -409,7 +424,7 @@ The above scenario may be a result of which of the following? Check all that app
 - Cultures and attitudes that make women and gender nonconforming people feel unwelcome or out of place
 
 **Solution:**
--Few opportunities to engage with women and gender nonconforming STEM professionals
+Few opportunities to engage with women and gender nonconforming STEM professionals
 - A lack of women and gender nonconforming people studying and teaching STEM at the university level
 - Cultures and attitudes that make women and gender nonconforming people feel unwelcome or out of place
 
@@ -422,7 +437,8 @@ Equality is “treating everyone the same way, often while assuming that everyon
 Equity is “working toward fair outcomes for people or groups by treating them in ways that address their unique advantages or barriers. Gender equity takes into account the real-world differences in ensuring fair access to those opportunities.”
 
 ![alt text](Module10_Static/10.17.png)
-Illustration by Angus Maguire.
+
+*Illustration by Angus Maguire.*
 
 The image to the left is commonly used to demonstrate the key difference between equality and equity. In the equality situation, everyone is given the same box to stand on, no matter their height (e.g., their starting point). It seems fair until you realize all three individuals were given the same number of boxes, even though those in red and purple are shorter, and the person in blue doesn’t need a box at all. In the equity situation, the person in red receives one box and the person in purple receives two boxes, which allows them to achieve the same height as the person in blue and watch the sporting event. 
 
@@ -449,7 +465,9 @@ If you do find something that works well for your chapter, please share it with 
 **Within Your Chapter**
 The most important first step your chapter can take to be more inclusive of women and gender-nonconforming people is to understand the current situation and any barriers that currently exist. Create space and time for chapter members to speak about any barriers they face to participating in your chapter’s activities. You may want or need to create space for women and gender-nonconforming people in your chapter to meet without men present if they don’t feel comfortable speaking openly about the challenges they face. If that is the case, be sure that one of the participants in the discussion takes notes and summarizes the challenges that women and gender-nonconforming people in your chapter face while keeping specific quotes and thoughts anonymous. If you want to enable complete anonymity, consider creating a survey that chapter members can complete without sharing their identities. 
 
-![alt text](Module10_Static/10.18.png)
+```{image} Module5_Static/10.18.png
+:alt: alt text
+:width: 100px
 
 There are many ways you can collect information and feedback from your fellow chapter members, but it’s critical you protect peoples’ privacy and respect what they say, even if you have had a different experience. Otherwise, it’s unlikely that you will receive candid feedback.
 
@@ -464,7 +482,10 @@ For more information on planning and facilitating inclusive group discussions on
 
 **Within Your Community**
 You can also seek to identify and understand challenges that women, gender-nonconforming people, and girls in your broader community face. 
-![alt text](Module10_Static/10.19.png)
+
+```{image} Module5_Static/10.19.png
+:alt: alt text
+:width: 100px
 
 - Is it particularly challenging for women to access jobs and economic opportunities? 
 - Are women and girls primarily responsible for tasks like gathering water, tending to agricultural plots, cooking, and/or keeping the household running? 
@@ -483,20 +504,31 @@ The specific ideas your chapter generates should be the direct result of your le
 
 1. **Accessibility**
 
-![alt text](Module10_Static/10.20.png)
+```{image} Module5_Static/10.20.png
+:alt: alt text
+:width: 100px
+
 Ensure the days, times, and locations of your YouthMappers chapter meetings and activities are accessible to everyone. Ask yourselves: 
 - If you meet in the evenings, do participants feel safe traveling to and from the meeting location? 
 - Is there sufficient lighting and access to transportation or safe walking routes? 
 - Are there adequate, private sanitation facilities for people of all genders?
 
 2. **Recruitment Strategies**
-![alt text](Module10_Static/10.21.png)
+
+```{image} Module5_Static/10.21.png
+:alt: alt text
+:width: 100px
+
 Examine your recruitment strategies. Ask yourselves:
 - Do you only recruit new members from certain academic departments within your university? 
 - Could you expand your recruitment efforts to other departments or the entire university, which could help increase women’s participation in your chapter? 
 
 3. **Topics**
-![alt text](Module10_Static/10.23.png)
+
+```{image} Module5_Static/10.23.png
+:alt: alt text
+:width: 100px
+
 Consider the topics your chapter focuses on when designing mapping activities, mapathons, research projects, and/or field work projects. Ask yourselves: 
 - What topics or issues do we tend to map for? 
 - For whom do we map? Do our mapping activities benefit a particular group of people? Do women, girls, and gender-nonconforming people benefit from our mapping activities? If not, what challenges do women and girls in our community face, and how can we learn about and address these challenges through mapping?
@@ -512,7 +544,11 @@ Establish a chapter code of conduct, terms of participation, or another framewor
 Your chapter can generate exciting ideas and solutions using a variety of methods, but one of our favorite methods is brainstorming. To access a variety of world-class resources related to brainstorming and generating ideas, visit IDEO U’s “[Brainstorming](https://www.ideou.com/pages/brainstorming)” webpage. 
 
 #### Phase 3: Test Your Ideas and Learn 
-![alt text](Module10_Static/10.25.png)
+
+```{image} Module5_Static/10.25.png
+:alt: alt text
+:width: 100px
+
 Once your chapter chooses an idea to implement, it’s important to define your goals. Ask yourselves: 
 - What will successful implementation of this idea look like? 
 - What impact will it have on our chapter and/or our community? 
@@ -523,7 +559,9 @@ Now it’s time to implement your idea! Most new ideas aren’t 100% successful 
 #### Phase 4: Implement and Monitor Your Best Ideas
 Now that you have piloted your ideas and gathered feedback and data about their success, your chapter should fully implement any ideas which were successful in the “test” phase. It’s not enough to make a change once and think it will automatically continue without active monitoring. For example, your chapter might choose to introduce a modified chapter code of conduct that emphasizes allowing more leadership opportunities for women and gender-nonconforming people. It probably won’t succeed if you simply announce the change once. You’ll need to actively work to ensure women and gender-nonconforming members of your chapter are actually given meaningful opportunities to lead the chapter as well as be willing to adjust or try a new idea if you don’t achieve the impact you want.
 
-![alt text](Module10_Static/10.26.png)
+```{image} Module5_Static/10.26.png
+:alt: alt text
+:width: 100px
 
 It can be difficult and time-consuming to change well-established habits and behaviors both within individuals and within organizations. (Have you ever started exercising again after taking a few months off? You probably had to work harder at the beginning to re-establish exercise as a habit in your routine.) Just as we assess and adjust our individual habits to keep ourselves healthy and flourishing, we need to do the same with our groups and organizations. This requires more planning and work on the front end, but it’s well worth it to have a YouthMappers chapter that meets its goals, has an impact on its community and members, and empowers all members to participate and lead. 
 
@@ -552,7 +590,11 @@ Refer to the information below to learn more about gender perspectives.
 - How to Disagree with Someone More Powerful than You: How exactly do you voice dissent with your superior? And is it always worth it to do so? Communication experts say that while just agreeing feels easier, it’s not always the best decision to make. Read this [article from Harvard Business Review](https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you?utm_medium=email&utm_source=tgr_newregistrants&utm_campaign=subscribetohbr_gbb&utm_content=engagment5_suboffer_t3&utm_term=touch3&deliveryName=DM155783) on how to disagree with someone more powerful than you. 
 
 ### Explore Your Gender
-![alt text](Module10_Static/10.27.png)
+
+```{image} Module5_Static/10.27.png
+:alt: alt text
+:width: 100px
+
 Gender is also a personal topic. In this course, we would like to provide you with the opportunity to explore your own personal understanding of gender. Below are some exercises you may consider completing.
 
 In a couple of words, think about your answer to the following question: 
