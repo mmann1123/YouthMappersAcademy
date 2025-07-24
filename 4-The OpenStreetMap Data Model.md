@@ -67,7 +67,7 @@ OSM [organizes geographic data](https://wiki.openstreetmap.org/wiki/Elements) in
 ### An Introduction to Tagging 
 OpenStreetMap's free tagging system allows us to include an unlimited number of attributes describing each feature. The community agrees on certain key and value combinations for the most commonly used tags, which act as informal standards. However, established users regularly suggest new tags to improve the style of the map; therefore, it is important to keep a close eye on the Wiki, so that you are aware of any additions to the tag library.  
 
-OpenStreetMap has an incredibly detailed Wiki, with subpages devoted to commonly used key and value pairs. These feature short descriptions of key/value pairs that relate to particular topics or interests, with images to help the mapper to distinguish the real world feature. Remember: Most features can be described using only a small number of tags, such as a neighborhood road with a classification tag such as highway=residential, complemented with its name using the tag name=*. 
+OpenStreetMap has an incredibly detailed [Wiki](https://wiki.openstreetmap.org/), with subpages devoted to commonly used key and value pairs. These feature short descriptions of key/value pairs that relate to particular topics or interests, with images to help the mapper to distinguish the real world feature. Remember: Most features can be described using only a small number of tags, such as a neighborhood road with a classification tag such as highway=residential, complemented with its name using the tag name=*. 
 
 ![alt text](Module4_Static/4.4.jpg)
 
@@ -77,7 +77,7 @@ Don’t be daunted. It takes time and practice to become proficient in tagging!
 
 ### Frequently Used Classifications
 
-The **Map Features Page** on the OSM Tagging Wiki has a well organized layout.  
+The [**Map Features Page**](https://wiki.openstreetmap.org/wiki/Map_features) on the OSM Tagging Wiki has a well organized layout.  
 
 Every entry has a key and value pairing, a detailed description, and image example of the feature in the real world. 
 
@@ -88,13 +88,17 @@ In particular, you should become familiar with the tagging conventions for Highw
 
 [**Highways**](https://wiki.openstreetmap.org/wiki/Key:highway)
 
-![ ](Module4_Static/4.6.png)
+```{image} Module4_Static/4.6.png
+:width: 30px
+:alt: Small icon
 
 This tag set is used to distinguish between different types of roads, streets, or paths. As road standards and classification systems vary from country to country, this tag set can be difficult to standardize globally. In OSM we tend to categorize (and tag) our roads according to their importance within the network for that particular country. Therefore, what constitutes a primary road in England, will look different to a primary road in Nigeria or Nepal. Common tag pairs include; *highway=primary, highway=residential, and highway=pathway*. It is important to study the road tags used by experienced mappers in your area, to familiarize yourself with the local convention. If you are participating in a team mapping project, the project manager will usually instruct mappers as to the correct identification and tagging to be used for the highway/road network in that area. The wiki also contains a useful table to help mappers understand the [International Equivalent](https://wiki.openstreetmap.org/wiki/International_highway_classification_equivalence) when it comes to highways. 
 
 [**Buildings**](https://wiki.openstreetmap.org/wiki/Map_Features#Building)
 
-![alt text](Module4_Static/4.7.png)
+```{image} Module4_Static/4.7.png
+:width: 30px
+:alt: Small icon
 
 This tag set is used for the physical identification of a structure. At the most basic level, we use the pairing *building=yes* - this denotes that we have a building structure of some type, but do not know what it is specifically. Building=yes is the most common tag that remote mappers use when tracing buildings from satellite imagery, as it is often impossible to tell whether a building is a home, commercial, or civic property (or some mixture of all) from an aerial perspective. Other popular building tags are *building=residential* and *building=commercial*. These are hard to determine from aerial imagery and *are not used unless the mapper has personal/local knowledge of an area*. The building tag set has many more detailed sub-options, so please take a look at the wiki and become familiar with them all. 
 
@@ -174,11 +178,3 @@ The following competencies derived from both the Geospatial Technology Competenc
 Congratulations on completing Course 4: The OpenStreetMap Data Model of the YouthMappers Academy series! 
 
 ![alt text](Module4_Static/4.9.gif)
-
-## What's Next?
-
-The YouthMappers Academy series contains six courses, shown in the image below. 
-
-To read more about the next course in the series, Course 4: The OpenStreetMap Data Model, click [here](https://www.youthmappers.org/academy).
-
-![alt text](static/courses.png)
