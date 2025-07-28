@@ -27,7 +27,9 @@ Welcome to Course 12 of the YouthMappers Academy. In this course, we will look a
 ## What is a Survey?
 
 ### Overview 
-![alt text](Module12_Static/12.1.png)
+```{image} Module12_Static/12.1.png
+:alt: alt text
+:width: 100px
 
 Depending on the subject matter and context, the definition of a “survey” can be quite different. From the perspective of a cartographer, a survey is a field activity to capture the measurements and details of one’s physical surroundings. This is often necessary to create a detailed and accurate map, especially in instances where detail and context cannot be determined from existing maps or aerial imagery. 
 
@@ -57,7 +59,9 @@ A question shouldn’t raise more questions. Questions should be clearly worded,
 Do not ask double-barreled questions. In other words, don’t ask questions that touch on more than one issue, but only give one opportunity for response. Follow-up questions are the simplest way to get more detailed information about a topic or feature while keeping the confusion to a minimum (remember, in OSM, features can have many tags).
   - If follow-up questions are required for the same map feature, many data collection apps have a feature called skip-logic. Skip-logic creates a custom path through a set of survey questions that varies based on a respondent's previous answers.
 
-![alt text](Module12_Static/12.3.png)
+```{image} Module12_Static/12.3.png
+:alt: alt text
+:width: 100px
 
 #### 3. Do not use institutional or academic jargon
 Do not assume the participants (or data collectors) are familiar with your industry jargon. Just because a term is frequently used in academic literature, it may hold little or no meaning for the general population. Remember that your survey teams may be drawn from the local population. It is a good idea to “test” your survey and any introductory material with a select group of potential surveyors, or locals, to check for any language issues. 
@@ -68,7 +72,10 @@ Do not assume the participants (or data collectors) are familiar with your indus
 
 #### 4. All terms should be clearly defined (and illustrated if possible)
 If it is important to use specific terms as part of the survey, make sure your training involves a proper definition and description of the term and its usage. This should also be reiterated in either field notes, or as a note that appears with the question. In cases where your survey will involve the categorization of a geographic feature in the field, it is a good idea to include example photos of the different options as part of the training materials (and perhaps also as part of the field packet that surveyors will take to the field). Reinforcement is the best way to communicate a new or important concept. 
-![alt text](Module12_Static/12.4.png)
+```{image} Module12_Static/12.4.png
+:alt: alt text
+:width: 100px
+
 
 #### 5. No leading questions
 Leading questions are questions that subtly prompt the respondent to answer in a particular way. This can also mean questions that are overly assumptive in their wording, such as, “what level of education do you have?” or, “what job do you have?” You don't know if the respondent has a job, or if they were exposed to formal education. This is more of an issue when speaking directly to respondents, rather than in a situation where a surveyor is making a direct observation about a piece of infrastructure. 
@@ -79,14 +86,21 @@ It is very important to double-check the phrasing and any subsequent translation
 #### 7. Avoid the use of negative words
 Using negative words in questions confuses people. For example: “Did you not?” or “Do you not?” It’s also leading and assumptive of the answer. Ask something in a clear fashion that allows for an unbiased yes/no answer.
 
-![alt text](Module12_Static/12.5.png)
+```{image} Module12_Static/12.5.png
+:alt: alt text
+:width: 100px
+
 
 #### 8. Lost in translation
 In certain cases, you may need to translate your survey/questionnaire into one or more alternate languages. This may be required if you recruit local participants in the data collection, or if your survey is being used in more than one location. It is very important that the survey instrument is easy to use for both the surveyor and the participant. You do not want the surveyor to have to translate on-the-fly (especially in instances where the surveyor might need to communicate directly with survey participants). This can lead to confusion and miscommunication. It is important to have someone fluent in both the language of design and the language of delivery to cross-check all questions and replies. Ideally, you should run a simple pilot to make sure that both surveyors and potential participants understand the instructions, questions, and replies. 
 
 ### Question Response Style 
 Most survey instruments will be composed of a series of questions or prompts. There are two main styles of response to survey questions.
-![alt text](Module12_Static/12.6.png)
+
+```{image} Module12_Static/12.6.png
+:alt: alt text
+:width: 100px
+
 
 - **Closed response questions** provide a list of acceptable responses. Checklists, multiple-choice questions, true/false questions, and sliding scales are all types of closed responses. Respondents or surveyors may find it easier to answer the question when response alternatives are provided, and it is easier and less time-consuming to interpret and analyze these types of responses. While answers generated using this style of question can be useful to generate statistics, and are easier to interpret and analyze, they lack detail, richness, and personal viewpoints. **Closed response questions are critical for adhering to Data Models for GIS database construction.** Using multiple-choice options keeps tagging consistent, and one can always use the “other” option to allow for flexibility. If you put time and effort into the development of your data model, survey construction for the purpose of collecting feature tags should be a much easier lift.
 
@@ -142,7 +156,7 @@ The main difference between ODK and OMK is that OpenMapKit allows users to tag p
 KoBo is seen as a more streamlined and complete solution to the entire survey workflow, covering design, deployment, data management, and analysis. Kobo includes a form builder, an app, a web server, and a dashboard for analyzing and managing data to create maps and reports. If you are new to field data collection, KoBo Toolbox is a complete package in terms of survey administration, and an excellent place to start. It is free to use (without limitations) for registered humanitarian organizations, and free (with some restrictions) for everyone else.
 
 #### QField and QGIS 
-[QField] (https://qfield.org/) is the mobile accompaniment to [QGIS](https://www.qgis.org/), which allows you to take your QGIS projects from the desktop environment to the field. It is GPS-centric, and QGIS desktop compatible. Project preparation can begin on the desktop version. It is fully operational offline, but with synchronization capabilities. Users can add new points to an existing database, or edit the attribution of existing features (points, lines, or polygons). QField is an open source project and the source code is available on GitHub.
+[QField](https://qfield.org/) is the mobile accompaniment to [QGIS](https://www.qgis.org/), which allows you to take your QGIS projects from the desktop environment to the field. It is GPS-centric, and QGIS desktop compatible. Project preparation can begin on the desktop version. It is fully operational offline, but with synchronization capabilities. Users can add new points to an existing database, or edit the attribution of existing features (points, lines, or polygons). QField is an open source project and the source code is available on GitHub.
 
 #### Maps.Me
 
@@ -194,42 +208,38 @@ Read about the YouthMappers of the University of Ghana and their use of ODK and 
 ### Overview
 The data collection process starts by translating data models into forms that can be read by data collection software such as OpenDataKit or KoboCollect. For each software type, this process can look different⏤either building xlsforms in spreadsheet software or using online builders (which is probably the recommended path for new users). Once completed, these forms are uploaded onto mobile data collection devices.
 
-![alt text](Module12_Static/12.15.png)
+```{image} Module12_Static/12.15.png
+:alt: alt text
+:width: 100px
+
 
 In the field, mappers open the applications and when they reach the object they wish to map, they initiate a fresh survey (usually by collecting a GPS point), and progress through the series of survey questions to collect the attribute/tag data. Both geospatial and attribute data are saved directly to the device (unless you have good connectivity and an option to push data directly to your server). After data collection, teams review data in JOSM before uploading it to OSM. Kobo provides an additional environment where teams can aggregate and analyze the raw data on the Kobo Toolbox. 
 
-![alt text](Module12_Static/12.16.png)
+```{image} Module12_Static/12.16.png
+:alt: alt text
+:width: 100px
+
 
 Your choice of workflow and the tools associated with it must meet your resources. If a heavily digital workflow exceeds your hardware budget or the technical capacity of your volunteers, then you need to plan accordingly. Mapping workflows can be exclusively paper-based (e.g., Field Papers and paper questionnaires), a combination of paper and digital (e.g., Field Papers and a data collection app or GPS), or an exclusively digital workflow (e.g., OpenDataKit/OpenMapKit). There are pros and cons to each combination ranging from cost to ease of setup and training to error reduction and quality control. 
 
 ### Data Collection Workflow Activity
-In the following activity, you will learn the pros and cons of the following data collection workflows:
+In the following section, you will learn the pros and cons of the following data collection workflows:
 
 - Paper Workflow
 - Paper/Digital Hybrid Workflow
 - Digital Workflow
 
-**Instructions:** Read the description beneath the title of each data collection workflow, then read through the green boxes and assign them them to the relevant column (either 'Pros' or 'Cons'). Note that you might not need to use all of the green boxes provided. Once you have sorted the green boxes, look below to see the answers. 
-
-1. **Activity : Paper Workflow**
-
-![alt text](Module12_Static/12.17.png)
-
-**Solution: Paper Workflow**
+1. **Paper Workflow:**
 
 ![alt text](Module12_Static/12.18.png)
 
 
-2. **Activity: Paper/Digital Hybrid Worflow**
-![alt text](Module12_Static/12.19.png)
+2. **Paper/Digital Hybrid Worflow**
 
-**Solution: Paper Workflow**
 ![alt text](Module12_Static/12.20..png)
 
-3. **Activity: Digital Workflow**
-![alt text](Module12_Static/12.21.png)
+3. **Digital Workflow**
 
-**Solution: Digital Workflow**
 ![alt text](Module12_Static/12.22.png)
 
 ### Additional Field Logistics
@@ -249,7 +259,10 @@ When working in the field, be polite and engage with residents and other people 
 
 ## Want to Dig a Little Deeper?
 Refer to the information below to learn more about field survey development.
-![alt text](Module12_Static/12.23.png)
+
+```{image} Module12_Static/12.23.png
+:alt: alt text
+:width: 100px
 
 - Once again, the [HOT Toolbox](https://toolbox.hotosm.org/pages/introduction/how_to_use_toolbox/) is a wonderfully comprehensive guide to take a project manager through the entire mapping workflow, from project design to the more technical aspects of technology options for field deployment. There is an entire section dedicated to [Data Collection Applications](https://toolbox.hotosm.org/pages/2_field_mapping_prep/2_2_data_collection_applications/).  
 
@@ -265,8 +278,6 @@ Each badge awarded as part of the YouthMappers Academy has been aligned to the s
 The **Geospatial Technology Competency Model** identifies the foundational, industry-wide, and industry sector–specific expertise that distinguishes, and binds together, successful geospatial professionals. It identifies core personal, academic, and workplace competencies, as well as sector specific geospatial knowledge and abilities, including specialized competencies related to data acquisition, data analysis and modeling, imagery interpretation, and software and application development. 
 
 The **National Geography Standards** are benchmarks of geographic literacy to determine a comprehensive understanding of the interaction of space and place, and the skills to analyze and critique these dynamics. These standards are measured through knowledge and mastery of three things: (1) factual knowledge; (2) mental maps and tools; (3) and ways of thinking.
-
-![alt text](Module12_Static/12.24.png)
 
 The following competencies derived from both the Geospatial Technology Competency Model and the National Geography Standards are central to the successful completion of YouthMappers Academy Course 12: Survey Instruments and Tools. 
 
