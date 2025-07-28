@@ -84,6 +84,21 @@ FieldPapers is a web-based tool that allows you to create a printable map atlas 
 - Make an account before you get started - if you would like to be able to return to and reprint your atlas at a later date. 
 - Have access to a printer to create hard copies of your atlas.
 
+```{admonition} In Focus: Mapping in 3D: A Step-by-Step Guide to Using FieldPapers for 3D Mapping in OSM
+
+[Watch now!](https://www.youtube.com/watch?v=s5aSkqZD5-4&t=2s) 
+
+In this tutorial, we’ll walk you through how to use Field Papers to collect 3D building data in the field and contribute it to OpenStreetMap. Whether you’re a beginner or experienced mapper, this tool makes offline data collection easy and effective. We’ll cover everything from creating printable map atlases to uploading your annotated field notes and using them to edit OSM. Thank you to Cesium for making this video possible.
+
+**What You’ll Learn:**
+Creating custom Field Papers map atlases for your area of interest
+Annotating 3D building features like height, roof shape, and materials
+Uploading and georeferencing annotated field maps
+Contributing your data to OpenStreetMap using standard 3D tags
+
+```
+
+
 ## Mobile Data Collection 
 
 Today there are a host of different applications you can use to capture, edit and view OSM data using your mobile device. Some are platform dependent such as GoMap! (iOS) or Vespucci (Android) while others will work on almost any device you have like OSMAnd and Every Door.  This is a very short list of the applications available.  For the purposes of this module, we’ll focus on using Vespucci as the primary application to capture, edit and update OSM data. 
@@ -273,3 +288,21 @@ align: center
 ## How Do I Visualize 3D Data?
 
 The way in which we visualize 3D GIS data can transform complex geospatial information into immersive, interactive and accessible representations of real-world environments, often with remarkable detail. Advanced techniques, such as realistic shading, texturing, and lighting can enhance the depth and realism of these scenes, while dynamic overlays and interactive tools allow users to explore, manipulate, and analyze the data in real time. Softwares like ArcGIS Pro, QGIS with 3D plugins, and Cesium allow users to explore data on the fly, conduct analyses such as sunlight and shadow modeling, and ultimately support more informed decision-making.
+
+```{admonition} In Focus: 
+Mapping in 3D: Bringing Geospatial Data to Life with Cesium Stories
+
+[Watch now!](https://www.youtube.com/watch?v=gyF7GDfLtiw&t=94s) 
+
+In this tutorial, we’ll introduce you to Cesium ion, a cloud-based platform that lets you create, host, and stream interactive 3D geospatial content—all without installing software. Perfect for students, developers, and GIS professionals, this video covers how Cesium ion transforms raw 3D data into fast, web-friendly 3D Tiles and enables you to build immersive 3D stories using OpenStreetMap data. 
+
+Thank you to Cesium for supporting this video.
+
+**What You’ll Learn:**
+What Cesium ion is and how it works with 3D Tiles
+Accessing curated global 3D data like terrain, satellite imagery, and city models
+Creating interactive 3D presentations with Cesium Stories
+How Cesium ion integrates with OpenStreetMap for realistic city visualizations
+Uploading and streaming large 3D datasets securely in the cloud
+
+```
