@@ -20,7 +20,8 @@ jupytext:
 Welcome to Module 13 of the YouthMappers Academy. This module explores three-dimensional (3D) geospatial data, covering data formats, standards, and a wide range of applications in development.
 
 ![static/13.0_Img1.png](static/13.0_Img1.png) 
- Image source: Esri UK. (n.d.). 3D GIS overview [Image]. Esri UK. Retrieved February 5, 2025, from https://www.esriuk.com/en-gb/arcgis/3d-gis/overview
+
+ *Image source: Esri UK. (n.d.). 3D GIS overview [Image]. Esri UK. Retrieved February 5, 2025, from https://www.esriuk.com/en-gb/arcgis/3d-gis/overview*
 
 
 You will learn how 3D data is collected through technologies like LiDAR, photogrammetry, and ground surveying, and how it can be integrated into OpenStreetMap (OSM) for mapping urban and natural environments. We will also discuss best practices for visualizing 3D data using tools such as Cesium, QGIS, and ArcGIS.
@@ -29,7 +30,7 @@ You will learn how 3D data is collected through technologies like LiDAR, photogr
 
 ![static/fig2.png](static/fig2.png) 
 
-Image source: Cesium. (2020, June 1). Cesium OSM Buildings [Image]. Cesium. Retrieved February 5, 2025, from https://cesium.com/blog/2020/06/01/cesium-osm-buildings/
+*Image source: Cesium. (2020, June 1). Cesium OSM Buildings [Image]. Cesium. Retrieved February 5, 2025, from https://cesium.com/blog/2020/06/01/cesium-osm-buildings/*
 
 ### What you will learn
 
@@ -51,10 +52,10 @@ In Geographic Information Systems (GIS), 3D data refers to spatial data that inc
 
 3D GIS is widely used across various industries, including:
 
-- Urban Planning – Visualizing city skylines, zoning impacts, and infrastructure projects.
-- Disaster Response – Modeling floods, landslides, and evacuation routes.
-- Architecture & Construction – Creating accurate 3D models of buildings and infrastructure.
-- Environmental Studies – Analyzing terrain, climate change, and natural resource distribution.
+- **Urban Planning** – Visualizing city skylines, zoning impacts, and infrastructure projects.
+- **Disaster Response** – Modeling floods, landslides, and evacuation routes.
+- **Architecture & Construction** – Creating accurate 3D models of buildings and infrastructure.
+- **Environmental Studies** – Analyzing terrain, climate change, and natural resource distribution.
 
 ### **How is 3D GIS Data Represented?**
 
@@ -67,18 +68,20 @@ In Geographic Information Systems (GIS), 3D data refers to spatial data that inc
 
 Vector data represents specific locations and objects in 3D space. It includes:
 
-- **Points (Discrete Locations)**
+1. **Points (Discrete Locations)**
 
 Points represent discrete locations in 3D space, defined by X (longitude), Y (latitude), and Z (height or elevation) coordinates. For example, points can indicate the location of a tree, a communication mast, or a sensor. In addition to spatial coordinates, they may include attributes such as the species of a tree, the model type of a sensor, or the ID number of a radio mast or antenna.
 
 
 ![static/2D_Point.png](static/2D_Point.png) 
+
 ***2D Image:** A 2D point represents a location on a flat surface, defined by its X and Y coordinates. It does not have depth, height, or any physical dimensions—only its position on the 2D plane is described. In this example, the location of the tree is specified in terms of where it stands on the ground, but no information is given about the tree’s height or other attributes. Source: Elodie Nix, 2024*
 
 ![static/3D_Point.png](static/3D_Point.png) 
+
 ***3D Image:** A 3D point represents a location in three-dimensional space, defined by its X, Y, and Z coordinates. In this example, the tree's exact location on the ground is combined with the added dimension of height, allowing us to understand both where the tree is and how tall it is, introducing depth to the spatial representation. Source: Elodie Nix, 2024*
 
-- **Polylines (Linear Features)**
+2. **Polylines (Linear Features)**
 
  Polylines represent continuous objects such as roads, rivers, or utility lines in 3D space. Unlike simple 2D lines, each vertex in a polyline can have a unique Z-value, allowing it to capture elevation changes along its path.
 
@@ -90,7 +93,7 @@ Points represent discrete locations in 3D space, defined by X (longitude), Y (la
 
  ***3D caption:** A 3D polyline displays the hiking trail with elevation data included, represented by the Z-coordinate. In this visualization, the trail not only shows its path on the horizontal plane (X and Y coordinates) but also illustrates how elevation changes throughout the hike. Each vertex of the polyline can hold a different elevation, providing a more accurate representation of the trail’s vertical profile as it ascends and descends over the terrain.*
 
-- **Polygons (Surfaces)**
+3. **Polygons (Surfaces)**
 
  Polygons represent bounded areas, such as building footprints or land parcels, with added height attributes to extend them into 3D space.
 
@@ -156,7 +159,9 @@ Point clouds are widely used in geospatial analysis, construction, and environme
 ***Image caption:** 3D point cloud depicting the terrain and landscape*. 
 
 ```{tip}
-[What is a Point Cloud?](https://www.youtube.com/watch?v=2crAfWZOgf0)...
+[What is a Point Cloud?](https://www.youtube.com/watch?v=2crAfWZOgf0)
+
+This video explains what a point cloud is and the various methods of creating one. 
 ```
 
 ### 3D Data Standards
@@ -303,11 +308,13 @@ This video explains how LiDAR measures distances and creates accurate 3D maps us
 InSAR is a remote sensing technique that uses radar signals to detect ground surface deformations with high precision. By comparing radar images captured at different times, InSAR reveals subtle changes such as land subsidence, tectonic shifts, or volcanic activity, making it invaluable for geophysical monitoring, disaster management, and infrastructure assessment.
 
 ![static/insar.gif](static/insar.gif)
+
 ***Image Source:** [U.S. Geological Survey](https://www.usgs.gov/programs/VHP/insar-satellite-based-technique-captures-overall-deformation-picture)*
 
 ***Caption:** A satellite collects data during multiple passes over an area, with at least two passes required to generate InSAR images that reveal changes in ground elevation.*
 
 ![static/insar2.png](static/insar2.png)
+
 ***Image Source:** [NASA Jet Propulsion Laboratory](https://nisar.jpl.nasa.gov/mission/get-to-know-sar/interferometry/)*
 
 ***Caption:** InSAR detects surface deformation by comparing the phase difference in radar waves from two satellite passes over the same location. If the ground moves between passes, the phase difference corresponds to the amount of deformation along the line-of-sight direction.*
@@ -323,7 +330,7 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 
 - **Drone:** Low-altitude photos for high-resolution models of small areas such as construction sites, archaeological digs, or urban planning projects.
 
-```{admonition} Watch here:
+```{admonition} Learn More:
 :class: note
 
 [Aerial Photogrammetry Explained](https://www.youtube.com/watch?v=Blr3suSQt-Q)  
@@ -331,7 +338,7 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 📌 *This video explains how aerial photogrammetry uses drone photos to create 3D models, detailing the process and techniques involved.*
 ```
 
-```{admonition} Read here: 
+```{admonition} Learn More: 
 :class: note
 
 [Drone Surveying: A Guide to Point Clouds](https://www.heliguy.com/blogs/posts/drove-surveying-guide-to-point-clouds)  
@@ -362,6 +369,8 @@ Leveling Instruments: Measure height differences, essential for topographic mapp
 - **Topographic Mapping:** Creating detailed maps of parks, campuses, or small regions.
 - **Boundary Surveys:** Accurately marking property lines.
 
+![alt text](static/13.111.jpeg)
+
 *Image Source: Geotech3D*
 Caption: A precise GPS-based land surveying setup, including a GNSS receiver and tripod, used for accurate geospatial data collection in construction or topographical mapping projects. The equipment captures satellite signals to determine exact ground coordinates.
 
@@ -381,7 +390,7 @@ Field observations involve collecting data directly from the ground using tools 
   - **Field Papers:** Print maps, take field notes, and upload them to OpenStreetMap (OSM).
   - **Clipboards and Forms:** Manual data collection in resource-limited settings.
 
-```{admonition} 🚀 In Focus: Using UAVs (Drones) to Generate Point Clouds
+```{admonition} In Focus: Using UAVs (Drones) to Generate Point Clouds
 :class: note
 
 Unmanned Aerial Vehicles (UAVs) are revolutionizing 3D point cloud generation for geospatial applications. Equipped with cameras or LiDAR sensors, drones capture high-resolution data from the air, producing dense point clouds that represent the surface of objects or terrain.
@@ -530,12 +539,9 @@ align: center
 
 - [`building:material=*`](https://wiki.openstreetmap.org/wiki/Key:building:material): The primary building material (e.g., brick, concrete, wood).  
 
-<div style="text-align: center;">
-  <img src="static/building_mat.png" alt="Different building materials" width="50%">
-</div>
 ```{figure} static/height_final-08.png
 ---
-label: Different types of roof colors
+label: Different types of building materials
 width: 50%
 align: center
 ---
@@ -543,14 +549,13 @@ align: center
 
 - [`building:colour=*`](https://wiki.openstreetmap.org/wiki/Key:building:colour): The primary color of the building.
 
-```{figure} static/building_color.png
+```{figure} static/buliding_color.png
 ---
-label: Building color
+label: Different types of building materials
 width: 50%
 align: center
 ---
 ```
----
 
 #### 3D and 2D Representations
 
