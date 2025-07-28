@@ -47,7 +47,7 @@ YouthMappers Blogspot: If You Can’t See It, You Can’t Be It
 
 ### Start with Inclusive Language
 
-```{image} Module5_Static/10.01.png
+```{image} Module10_Static/10.01.png
 :alt: alt text
 :width: 100px
 
@@ -144,7 +144,7 @@ To learn more about responding to offensive comments, read [“How to Respond to
 #### Language is Dynamic 
 All languages⏤not just words related to gender⏤constantly evolve and change. Words like “emoji” and “blog” were probably not commonly used when you were born, but they have become a normal part of our everyday lives. Similarly, gender-related words change over time when there are shifts in what language is considered inclusive. Therefore, it’s important to keep an open mind and always be willing to learn and adapt. And most importantly, remember we are all learning to be more inclusive together!
 
-```{image} Module5_Static/10.06.png
+```{image} Module10_Static/10.06.png
 :alt: alt text
 :width: 100px
 
@@ -171,7 +171,7 @@ It’s important to respect people’s preferences for their pronouns, because i
 **How Can I Know Someone Else’s Gender Identity or Preferred Pronouns?**
 A lot of gender terms have to do with people’s personal identities. Pause for a moment and think about all the identities you apply to yourself. These might include your nationality, your place in your family, your role as a student, and even your membership in YouthMappers. It would be impossible for a stranger to accurately guess all of your identities just from looking at you, right? Well, the same goes for gender identity. 
 
-```{image} Module5_Static/10.07.png
+```{image} Module10_Static/10.07.png
 :alt: alt text
 :width: 100px
 
@@ -350,7 +350,7 @@ For women and gender-nonconforming people, the path from undergraduate student t
 Some criticize the leaky pipeline metaphor because they think it puts too much blame on individual women who leave their careers and doesn’t acknowledge that these women still often have incredible careers in other fields or are highly fulfilled by their choice to be a full-time caregiver. ([Frontiers in Psychology](https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2015.00037/full)) Many of these critiques are valid, and no metaphor can be perfect, but we think the leaky pipeline is still a useful concept to demonstrate the barriers women face to advancing in their careers.
 
 ### Case Study 
-```{image} Module5_Static/10.16.png
+```{image} Module10_Static/10.16.png
 :alt: alt text
 :width: 100px
 
@@ -465,7 +465,7 @@ If you do find something that works well for your chapter, please share it with 
 **Within Your Chapter**
 The most important first step your chapter can take to be more inclusive of women and gender-nonconforming people is to understand the current situation and any barriers that currently exist. Create space and time for chapter members to speak about any barriers they face to participating in your chapter’s activities. You may want or need to create space for women and gender-nonconforming people in your chapter to meet without men present if they don’t feel comfortable speaking openly about the challenges they face. If that is the case, be sure that one of the participants in the discussion takes notes and summarizes the challenges that women and gender-nonconforming people in your chapter face while keeping specific quotes and thoughts anonymous. If you want to enable complete anonymity, consider creating a survey that chapter members can complete without sharing their identities. 
 
-```{image} Module5_Static/10.18.png
+```{image} Module10_Static/10.18.png
 :alt: alt text
 :width: 100px
 
@@ -483,7 +483,7 @@ For more information on planning and facilitating inclusive group discussions on
 **Within Your Community**
 You can also seek to identify and understand challenges that women, gender-nonconforming people, and girls in your broader community face. 
 
-```{image} Module5_Static/10.19.png
+```{image} Module10_Static/10.19.png
 :alt: alt text
 :width: 100px
 
@@ -504,7 +504,7 @@ The specific ideas your chapter generates should be the direct result of your le
 
 1. **Accessibility**
 
-```{image} Module5_Static/10.20.png
+```{image} Module10_Static/10.20.png
 :alt: alt text
 :width: 100px
 
@@ -515,7 +515,7 @@ Ensure the days, times, and locations of your YouthMappers chapter meetings and 
 
 2. **Recruitment Strategies**
 
-```{image} Module5_Static/10.21.png
+```{image} Module10_Static/10.21.png
 :alt: alt text
 :width: 100px
 
@@ -525,7 +525,7 @@ Examine your recruitment strategies. Ask yourselves:
 
 3. **Topics**
 
-```{image} Module5_Static/10.23.png
+```{image} Module10_Static/10.23.png
 :alt: alt text
 :width: 100px
 
@@ -545,7 +545,7 @@ Your chapter can generate exciting ideas and solutions using a variety of method
 
 #### Phase 3: Test Your Ideas and Learn 
 
-```{image} Module5_Static/10.25.png
+```{image} Module10_Static/10.25.png
 :alt: alt text
 :width: 100px
 
@@ -559,7 +559,7 @@ Now it’s time to implement your idea! Most new ideas aren’t 100% successful 
 #### Phase 4: Implement and Monitor Your Best Ideas
 Now that you have piloted your ideas and gathered feedback and data about their success, your chapter should fully implement any ideas which were successful in the “test” phase. It’s not enough to make a change once and think it will automatically continue without active monitoring. For example, your chapter might choose to introduce a modified chapter code of conduct that emphasizes allowing more leadership opportunities for women and gender-nonconforming people. It probably won’t succeed if you simply announce the change once. You’ll need to actively work to ensure women and gender-nonconforming members of your chapter are actually given meaningful opportunities to lead the chapter as well as be willing to adjust or try a new idea if you don’t achieve the impact you want.
 
-```{image} Module5_Static/10.26.png
+```{image} Module10_Static/10.26.png
 :alt: alt text
 :width: 100px
 
@@ -591,7 +591,7 @@ Refer to the information below to learn more about gender perspectives.
 
 ### Explore Your Gender
 
-```{image} Module5_Static/10.27.png
+```{image} Module10_Static/10.27.png
 :alt: alt text
 :width: 100px
 
