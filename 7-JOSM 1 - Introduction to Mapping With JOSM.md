@@ -56,7 +56,7 @@ There are a number of key settings that need to be in place before you begin map
 - **MacOS:** Go to JOSM (in the main Mac toolbar) > Preferences(Refer to the image to the right if using a Mac.) 
 
 ##### Mac Visual 
-```{image} Module5_Static/7.03png
+```{image} Module7_Static/7.03png
 :alt: alt text
 :width: 100px
 
@@ -94,7 +94,7 @@ You will receive notification that an OAuth Access token has been granted, which
 - Click on Accept Access Token This token will be used in subsequent upload requests to access the OSM application user interface (API).
 
 #### Plug-ins 
-```{image} Module5_Static/7.06png
+```{image} Module7_Static/7.06png
 :alt: alt text
 :width: 100px
 
@@ -140,13 +140,13 @@ These are the main **drawing tools:**
 - Select (S) ***(top)***
 - Draw Nodes (A) ***(bottom)***
 
-```{image} Module5_Static/7.10png
+```{image} Module7_Static/7.10png
 :alt: alt text
 :width: 100px
 
 These are the tools to **open, save, download, and upload** your data:
 
-```{image} Module5_Static/7.11png
+```{image} Module7_Static/7.11png
 :alt: alt text
 :width: 100px
 
@@ -157,13 +157,13 @@ These are the **preset tagging tools**, for popular road/street, transport, and 
 ### Information Panels 
 The Information Panels to the right of the Map Frame show information about the data in JOSM, the different layers in the view, the imagery being used, how objects are tagged, and who the last mapper to edit a feature was.
 
-```{image} Module5_Static/7.13png
+```{image} Module7_Static/7.13png
 :alt: alt text
 :width: 160px
 
 You can customize which panels you’d like to feature in this bar on the right-hand side of the map view. The options are available under the “Windows” drop-down menu at the top of the screen.
 
-```{image} Module5_Static/7.14png
+```{image} Module7_Static/7.14png
 :alt: alt text
 :width: 160px
 
@@ -192,7 +192,7 @@ Here is a quick reminder:
   - Once you've activated Delete Mode, click on nodes, way segments, and ways to delete them. 
 
 #### JOSM Basic Navigation 
-```{image} Module5_Static/7.18png
+```{image} Module7_Static/7.18png
 :alt: alt text
 :width: 100px
 
@@ -340,7 +340,7 @@ One of the main benefits of working with JOSM is that you create and update data
 
 - To explore these, go to **File > Download data** or click on the Download data button (green downward arrow)
 
-```{image} Module5_Static/7.27png
+```{image} Module7_Static/7.27png
 :alt: alt text
 :width: 60px
 
