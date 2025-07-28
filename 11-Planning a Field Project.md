@@ -20,7 +20,7 @@ Welcome to Course 11 of the YouthMappers Academy. In this course, you will learn
 The key to successful field work is a meticulously planned tactical approach to your data collection exercise. This begins with a clear definition of the problem you are about to address. In this course, you will learn how to formulate a problem statement, which will help you to formally articulate and communicate your overall research agenda and to prioritize the data necessary to achieve it. You will learn how to develop a simple field work strategy, which involves dissecting your work into tasks while acknowledging the timeline sensitivities and resources required. You will also learn how to illustrate your field work strategy on a detailed timeline, denoting tasks, dependencies, and resources required. 
 
 **In this course, you will learn:**
--How to formulate a problem statement to articulate and communicate your research agenda
+- How to formulate a problem statement to articulate and communicate your research agenda
 - How to identify and prioritize stakeholder relationships, leading to better project design and implementation
 - How to assess existing datasets, identify data gaps and needs, and prioritize individual datasets for upgrading/replacement
 - How to develop a simple field work strategy, which is a meticulously planned approach to your data collection. This will involve dissecting your work into tasks while acknowledging the timeline sensitivities and resources required. 
@@ -29,7 +29,11 @@ The key to successful field work is a meticulously planned tactical approach to 
 ## Defining Your Problem and the Scope of Your Project 
 
 ### Overview 
-![alt text](Module11_Static/11.1.png) 
+
+```{image} Module11_Static/11.1.png
+:alt: alt text
+:width: 100px
+
 Research starts with a desire to better understand and potentially address a problem. In the context of YouthMappers, this is usually a problem relating to development⏤very often in a community or location that is already well known to us. Being close to a problem (either through research familiarity or geographic proximity) doesn’t always make it easier when it comes to designing research and planning field work. This is why we should always adopt a systematic approach to the design and planning process. 
 
 All good research begins with a problem statement.
@@ -39,18 +43,21 @@ In a couple of words, brainstorm your answer to the following question: *How wou
 ### What is a Problem Statement?
 A problem statement is a short description of issues you intend to address through the course of your research. It should contain a clear and concise articulation of the issues themselves, the end goal of any intervention you propose, and the methods used to get there. A good problem statement should outline any data to be collected and include a preliminary acknowledgment of the primary stakeholders involved and a specific geographic scope for the assignment.
 
-![alt text](Module11_Static/11.2.png)
+```{image} Module11_Static/11.2.png
+:alt: alt text
+:width: 100px
 
 This sounds like a lot to consider, but if you think clearly and logically about each of these individual elements, the problem statement will almost write itself! While problem statements or research questions are often a formal requirement of the dissertation process, the formulation process itself can be quite enlightening. Planning and forethought are keys to success, and should be just as important to formal and extracurricular research efforts.
 
 
 ### Dissecting a Problem Statement 
-One popular approach to dissecting a research problem is to identify the “Five W’s”. These are: What, Who, When, Where, and Why. This is really just a step-by-step approach to tackling the problem statement components above, and the checklists can be a little easier to work through:
+One popular approach to dissecting a research problem is to identify the “Five W’s”. These are: **What, Who, When, Where, and Why**. This is really just a step-by-step approach to tackling the problem statement components above, and the checklists can be a little easier to work through:
 
 1. **What:**
+
 This is where you consider the issues that you are attempting to address. It is okay to start with multiple potential problems: you can prioritize and refine them to arrive at the ones that make the most sense for your specific project. The identification of issues kicks off a chain of other “What” questions for you to consider, and you can already see how the scope of one project can burgeon at an early stage. 
 
-For you to think about: 
+*For you to think about:* 
 - What are the issues at play?
 - What are the primary challenges my community faces (or the impacts of the issues outlined above)?
 - What will be the benefits/outcome of fixing these issues? 
@@ -59,25 +66,28 @@ For you to think about:
 - Can this problem be meaningfully addressed with data collection and sharing via OSM?
 
 2. **Who:**
+
 Here is where you do a preliminary identification of your stakeholders. A stakeholder is anyone who may affect or be affected by the process and/or outcomes of a given project. We will look at different types of stakeholders in more detail in the next section.
 
-For you to think about:
+*For you to think about:*
 - Who does the problem affect? 
 - Who stands to benefit or enjoy a better quality of life based on the success of your implementations? 
 
 3. **When:**
+
 Not all problem statements consider a specific time period or duration of the issues at hand, but the concept of time could be critical to defining the scope of your research, and the ultimate timing of your field work. Things like flood seasons and election cycles are important considerations. Do you need to collect your data by a certain window, to inform an intervention in a timely manner? Or, could social unrest associated with elections or major events interrupt fieldwork plans? 
 
-For you to think about: 
+*For you to think about: *
 - When does the issue occur? 
 - Is it persistent or cyclical? 
 - Is it something we can predict with any degree of confidence? 
 - When does the issue need to be fixed?
 
 4. **Where:**
+
 Though the issue you have identified may affect a larger community, you may have to restrict the scope of your field work to a more refined study area. Time and resources will determine how much area you can cover, and the level of detail possible for your survey. 
 
-In order to determine the geographical scope of your field work, consider the following:
+*In order to determine the geographical scope of your field work, consider the following:*
 - Where is the issue occurring?
 - Can you clearly demarcate this area on a map? 
 - How large is this area?
@@ -87,16 +97,19 @@ In order to determine the geographical scope of your field work, consider the fo
 ***Remember***:  It is better to do something well in a smaller, more focused pilot area, rather than it is to overextend yourself and your field team with an overly ambitious geographic scope. A successful pilot methodology can be replicated and scaled in an incremental fashion when time and resources are available. This is another element that may not make it into the problem statement directly (or if it does, it will be in rather general terms).
 
 5. **Why:**
+
 The question of “Why” a particular issue requires attention may seem entirely obvious to you, but you need to be able to articulate this clearly and defensibly when presenting your argument to potential supporters and stakeholders. 
 
-You need to identify addressable issues with clear and useful impacts in order to focus your project:
+*You need to identify addressable issues with clear and useful impacts in order to focus your project:*
 - Why is it important that you fix the problem? 
 - What impact does it have on the stakeholders you have identified? 
 
 ### Key Points to Remember When Writing Your Statement 
 The following recommendations refer to the tone of the written statement itself. These tips won’t help you to construct your statement, but they will ensure that in its written format it is accessible to the widest possible audience.
 
-![alt text](Module11_Static/11.3.png)
+```{image} Module11_Static/11.3.png
+:alt: alt text
+:width: 100px
 
 **Keep it short and focused:** The purpose of a problem statement is to lay out the primary issues at hand (one or two key issues at most), the key players, and the potential solution. The problem statement does not provide a complete overview of the project process. The statement should be a short paragraph, consisting of a few sentences at most. Keep your sentences short, and your language simple.
 
@@ -108,7 +121,9 @@ The following recommendations refer to the tone of the written statement itself.
 
 ## Identifying and Engaging Your Stakeholders 
 ### Overview 
-![alt text](Module11_Static/11.4.png)
+```{image} Module11_Static/11.4.png
+:alt: alt text
+:width: 100px
 
 In the YouthMappers community (and indeed the wider OpenStreetMap community) we advocate for collaborative, transparent data collection efforts. Our mission is to help create open data to address development challenges, therefore any data collection campaign will require community engagement on a number of different levels. As we have already learned, a stakeholder is someone who may affect or be affected by the process and/or outcomes of a given project. Local communities and local governments are usually the most obvious stakeholders in any mapping project, but we shouldn’t restrict ourselves to those two groups.
 
@@ -123,9 +138,9 @@ Ask yourself the following questions to help identify additional stakeholder gro
 
 In most community mapping projects, typical stakeholder groups to consider are:
 - **Local communities:** The affected community should always be considered a primary stakeholder in any mapping effort. The data needs YOU anticipate based on preliminary research may not align with local needs. It is important to discuss needs and expectations with local communities, as there may be underlying issues that aren’t captured in previous research or formal documentation. We always strive to map with communities, not for them.
-- ***Government:** The engagement would often start with local government, but it could extend to regional or national governments if the issue in question goes beyond the expertise or purview of local authorities.
+- **Government:** The engagement would often start with local government, but it could extend to regional or national governments if the issue in question goes beyond the expertise or purview of local authorities.
 - **The OSM community:** This includes any active OSM chapter in the area as well as active remote mappers who have engaged regularly with the area in which you plan to work. 
-- **Academic/scientific community:** Enlist the cooperation and support of research and technical experts, especially those who have worked in this area (both geographically and thematically), as they can help refine your data model and inform your data collection process. 
+- **Academic/Scientific Community:** Enlist the cooperation and support of research and technical experts, especially those who have worked in this area (both geographically and thematically), as they can help refine your data model and inform your data collection process. 
 - **Local NGO’s and civil society groups:** Aligning with other groups working in the same area can help with context and introductions to the local community. Cooperation on the data collection exercise itself could allow for a broader scope both geographically and thematically.
 
 ```{tip} 
@@ -145,7 +160,9 @@ Different stakeholder groups will be engaged to greater and lesser degrees, with
 
 Many disciplines engage in a formal process of stakeholder mapping. This isn’t the type of mapping that we’re used to⏤it’s more like a brainstorming exercise to identify all interested parties, and the degree to which we anticipate their level of interest and engagement in the planned activity. There are many different takes on what constitutes “stakeholder mapping”, but the simplified grid below gives you an idea of some basic sliding categories that can help you categorize and prioritize your stakeholders. 
 
-![alt text](Module11_Static/11.6.png)
+```{image} Module11_Static/11.6.png
+:alt: alt text
+:width: 100px
 
 **Stakeholder interest** speaks to the degree to which the stakeholders are invested in the success of the project and affected by the outcomes. Typically, communities have a high level of interest and the most to gain from a successful outcome, but we should not overlook groups such as civil society organizations or NGO’s who may stand to benefit from a collaborative data collection effort. Governments may also have a high degree of interest here. Comprehensive datasets can help inform decisions, and direct participation can help build institutional capacity.  
 
@@ -212,7 +229,9 @@ Depending on the problem that you are trying to address, you may want to categor
 ### Where to Start? 
 The easiest way to begin your assessment is a simple web search. Some of the base data layers you need may be openly available from trusted sources, such as the Humanitarian Data Exchange (HDX). 
 
-![alt text](Module11_Static/11.11.png)
+```{image} Module11_Static/11.11.png
+:alt: alt text
+:width: 100px
 
 You should focus on local, national, and regional government departments or agencies that serve as guardians of geospatial data for your country of study. You should also search thematically, looking to research and academic institutions that maintain global databases on everything from meteorological data to seismic events.
 
@@ -220,39 +239,41 @@ As you progress in your stakeholder engagement, you may have access to unpublish
 
 ## Field Work Strategy
 ### Overview 
-![alt text](Module11_Static/11.12.png)
+```{image} Module11_Static/11.12.png
+:alt: alt text
+:width: 100px
 
 Planning is key to a successful field work campaign. Therefore, one of the most important things you can invest time and energy on is the development of a field work plan or strategy.
 
 ### What is a Field Work Strategy?
 A field work strategy is a meticulously planned tactical approach to your data collection process. A strategy is composed of a series of interrelated tasks, each with its own to-do list, logistical requirements, and timeline; it also acknowledges any important dependencies that might affect the overall progress and ultimate success of the data collection exercise.
 
-![alt text](Module11_Static/11.13.png)
+```{image} Module11_Static/11.13.png
+:alt: alt text
+:width: 100px
 
-**Study Area**
+**Study Area:**
+
 As you develop your strategy, you will make some key decisions, such as deciding on the exact area to be mapped (the dimensions and boundaries of your “study area”), choosing which objects will be mapped within that area, and the attributes or “tags” you plan to collect for each object. 
 
-**Field Logistics**
+**Field Logistics:**
+
 This process also includes outlining field logistics and the various data collection and mapping tools and techniques you plan to employ. These decisions will guide your staffing, training, and equipment needs, while also helping you refine the project timetable. 
 
-**Project Workflow**
+**Project Workflow:**
+
 The tasks in a typical data collection project are somewhat linear, therefore, as part of your data capture strategy, you will have to determine the dependencies between these tasks so that the overall project workflow encounters minimal interruption should one aspect of the plan encounter issues.
 
 #### What is Dependency in the Context of Project Management?
 Dependency in project management refers to the management of a series of interrelated tasks, whose timing must be carefully sequenced to ensure the project runs smoothly.
 
-![alt text](Module11_Static/11.14.png)
+```{image} Module11_Static/11.14.png
+:alt: alt text
+:width: 100px
 
 Some tasks need to be fully completed before a second task can begin. For example, if you plan to collect data at the building or household level for your field work, then you need to make sure that your remote digitization and validation tasks are fully complete before you prepare the materials and deploy your field campaign.
 
 Tasks like data assessment and stakeholder engagement can occur simultaneously and will potentially inform one another as they progress.
-
-```{tip} 
-YouthMappers Reflection
-
-What are some of the key tasks you consider when developing a field work strategy?
-
-```
 
 ```{tip} 
 YouthMappers Blogspot: My Experience in Chepang Community Mapping
@@ -268,29 +289,40 @@ Read Sunil’s experience participating in fieldwork as part of “Trails and Co
 Read through each of the key tasks outlined below, then answer the questions (in which you will order the tasks chronologically from 1 to 5 to develop a comprehensive field strategy).
 
 1. **Develop your Data Model**
+
 The data model outlines the geographical features to be collected for the study site, as well as the attributes (or tags) to be collected for those features. At a very basic level, this acknowledges whether the team will collect (for example) points of interest, road infrastructure, and drainage features, and what attributes, or tags, will be collected about those features. We talk in more detail about data models in the next course.
 
 The data model needs to not only reflect the basic tagging system of OSM, but also the data needs identified in the problem statement. The development of the data model should be a collaborative process which includes stakeholders and is not solely dictated by the research lead. Remember, the structure of the data model will also guide the creation of your training materials.
 
-2. **Field Data Collection**
-![alt text](Module11_Static/11.16.png)
+2. **Field Data Collection:**
+
+```{image} Module11_Static/11.16.png
+:alt: alt text
+:width: 100px
+
 For this task, you will deploy a team to the field for the purposes of field data collection activities. Using the data created during the remote mapping exercise to orient your field activities, you will collect tags or attributes using a survey. The survey will be based on the data model you designed in conjunction with your stakeholders. A mobile data collection platform is advisable for this stage but can be used in conjunction with paper maps.  We will focus on this particular task, and the various tools and approaches you can deploy, in the next course.
 
-3. **Define Your Study Area**
+3. **Define Your Study Area:**
+
 Your task is to determine the specific geographical extent of the study area for your project. This should be discussed with all priority stakeholders to make sure the area depicted meets the needs and expectations of all involved. The study area extent should be represented both digitally and on paper to facilitate sharing and discussion. The boundary file should be exported as a (.json) file so that it can be used in desktop GIS to help estimate the amount of desktop mapping and validation required within the study area, and, to subsequently create a mapping task in the HOT tasking manager. This estimate will also help you determine the number of staff and/or volunteers required for both the desktop mapping and field data collection phases.
 
 
-4. **Remote Mapping**
+4. **Remote Mapping:**
+
 During the remote mapping phase, you will trace map features within the study area from imagery in the OpenStreetMap platform. You should use the OSM Tasking Manager to coordinate mapping activities for the study area, and decide whether the remote mapping activities can be completed by you and a support team, or whether a Mapathon training activity is required to supplement tracing. All traced data should be subject to secondary remote validation before the field data collection process. 
 
 You will need to plan for training activities which will include the development of training materials and plans for hosting (which could include booking a space and providing machines). Even if the team you assemble to assist with remote mapping activities is experienced, it is still advisable to hold a training session.
-![alt text](Module11_Static/11.17.png)
+
+```{image} Module11_Static/11.17.png
+:alt: alt text
+:width: 100px
 
 5. **Field Data Validation**
+
 This task involves the validation and integration of the data collected in the field with the remotely traced data in OSM. Whether you choose to work with paper maps or a mobile app, you will need to organize a logical and systematic workflow for how you plan to address this task. Depending on your research objectives, some of the data collected in the field is suitable to host on OSM, while some may be beyond the scope of the OSM data model (and may also have privacy concerns). Most practiced field mappers used JOSM as the anchor for that stage of the workflow, therefore it is key that your support team is well trained in its use.
 
-**Develop a Comprehensive Field Strategy**
-Develop a Comprehensive Field Strategy
+**Develop a Comprehensive Field Strategy:**
+
 Read through each of the key tasks outlined above, then come back and order the tasks chronologically (from 1 to 5) to develop a comprehensive field strategy.
 
 **Which of the following is task #1?**
@@ -328,7 +360,8 @@ Read through each of the key tasks outlined above, then come back and order the 
 - Develop Your Data Model
 - Remote Mapping
 
-**Correct Answers"**
++++
+**Correct Answers:**
 1. Define Your Study Area 
 2. Develop Your Data Model 
 3. Remote Mapping 
@@ -339,7 +372,9 @@ Read through each of the key tasks outlined above, then come back and order the 
 ### Overview 
 As previously mentioned, the tasks in a field data collection project are somewhat linear, therefore, as part of your strategy development, you will have to determine dependencies between these tasks so that the project can continue to progress should one element encounter issues.  
 
-![alt text](Module11_Static/11.18.png)
+```{image} Module11_Static/11.18.png
+:alt: alt text
+:width: 100px
 
 In order to manage task dependencies, and to plan for any unexpected interruptions, you should create a detailed timeline for your project. Use something simple like spreadsheet software to facilitate this. The timeline should incorporate all the tasks outlined above and any significant sub-activities. The timeline should also allow for data recapture, should issues arise in the field and the reconciliation of the newly acquired field data with the existing data on the OSM platform. 
 
@@ -410,6 +445,7 @@ The following competencies derived from both the Geospatial Technology Competenc
   Congratulations on completing Course 11: Planning a Field Project of the YouthMappers Academy series!
 
 ![alt text](Module11_Static/11.19.png)
+
 
 
 
