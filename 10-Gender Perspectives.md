@@ -11,7 +11,7 @@ jupytext:
     jupytext_version: 1.11.5
 
 ---
-# Gender Perspectives
+# Gender Dimensions
 
 Welcome to Course 10 of the YouthMappers Academy. In this course, you will learn about the fundamentals of gender-related concepts, inclusive language, gender discrimination, and how to make your YouthMappers chapter a welcoming and safe space where all members can be their best selves.
 
