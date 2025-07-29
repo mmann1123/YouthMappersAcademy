@@ -50,6 +50,7 @@ YouthMappers Blogspot: If You Can’t See It, You Can’t Be It
 ```{image} Module10_Static/10.01.png
 :alt: alt text
 :width: 100px
+```
 
 As members and leaders of the YouthMappers network, it’s important that we understand gender-related terms and concepts so we can ensure our chapters feel welcoming and safe to any students who want to join us. We are going to start this course by introducing and defining key gender terms to help ensure we are all on the same page and can discuss gender using inclusive and appropriate language. We also recognize that gender terms and concepts may have different meanings or nuances across geographies and cultures. 
 
@@ -147,6 +148,7 @@ All languages⏤not just words related to gender⏤constantly evolve and change.
 ```{image} Module10_Static/10.06.png
 :alt: alt text
 :width: 100px
+```
 
 In a couple of words, brainstorm your answer to the following question below: *What does inclusivity mean to you?*
 
@@ -174,6 +176,7 @@ A lot of gender terms have to do with people’s personal identities. Pause for 
 ```{image} Module10_Static/10.07.png
 :alt: alt text
 :width: 100px
+```
 
 We’ve covered a lot of terms related to gender identity, and you may wonder how you can be sure you’re using the correct language when speaking to or about another person. If you are unsure of someone’s preferred personal pronouns, the best way is to ask in a polite and empathetic way. Some people might not wish to share this information with you, which is okay too.
 
@@ -198,7 +201,7 @@ Take a few minutes to reflect on the questions below before continuing.
 3. How do these stereotypes affect you?
 
 #### Gender Stereotypes
-A *gender* stereotype is a stereotype applied to individuals because of their perceived or expressed gender identity. Most people are exposed to gender stereotypes from a very early age. As a result, we tend to internalize gender stereotypes and even apply them to ourselves, often without realizing we’re doing so. 
+A *gender* stereotype is a stereotype applied to individuals because of their perceived or expressed gender identity. Most people are exposed to gender stereotypes from a very early age. As a result, we tend to internalize gender stereotypes and even apply them to ourselves, often without realizing we’re doing so.
 
 For example, many societies perpetuate stereotypes about how girls and boys should play. A common stereotype about girls is that their play is quiet and related to domestic life, such as pretending to be a mother to a doll or playing “house”. A common stereotype about boys is that their play is loud and related to physical activity, such as playing with balls or wrestling. In reality, there is nothing biologically inherent in either girls or boys that dictates how they should play or behave⏤but children pick up on messages they receive from their families and friends about what is proper according to their gender. Families reinforce these stereotypes when they buy dolls for girls and footballs for boys. 
 
@@ -353,6 +356,7 @@ Some criticize the leaky pipeline metaphor because they think it puts too much b
 ```{image} Module10_Static/10.16.png
 :alt: alt text
 :width: 100px
+```
 
 We’re going to introduce a case study to bring these issues to life through the stories of three YouthMappers students. The students in the case study are fictional, but their experiences are based on real lived experiences of YouthMappers students and women and gender-nonconforming people in STEM. 
 
@@ -468,6 +472,7 @@ The most important first step your chapter can take to be more inclusive of wome
 ```{image} Module10_Static/10.18.png
 :alt: alt text
 :width: 100px
+```
 
 There are many ways you can collect information and feedback from your fellow chapter members, but it’s critical you protect peoples’ privacy and respect what they say, even if you have had a different experience. Otherwise, it’s unlikely that you will receive candid feedback.
 
@@ -486,6 +491,7 @@ You can also seek to identify and understand challenges that women, gender-nonco
 ```{image} Module10_Static/10.19.png
 :alt: alt text
 :width: 100px
+```
 
 - Is it particularly challenging for women to access jobs and economic opportunities? 
 - Are women and girls primarily responsible for tasks like gathering water, tending to agricultural plots, cooking, and/or keeping the household running? 
@@ -507,6 +513,7 @@ The specific ideas your chapter generates should be the direct result of your le
 ```{image} Module10_Static/10.20.png
 :alt: alt text
 :width: 100px
+```
 
 Ensure the days, times, and locations of your YouthMappers chapter meetings and activities are accessible to everyone. Ask yourselves: 
 - If you meet in the evenings, do participants feel safe traveling to and from the meeting location? 
@@ -518,6 +525,7 @@ Ensure the days, times, and locations of your YouthMappers chapter meetings and 
 ```{image} Module10_Static/10.21.png
 :alt: alt text
 :width: 100px
+```
 
 Examine your recruitment strategies. Ask yourselves:
 - Do you only recruit new members from certain academic departments within your university? 
@@ -528,6 +536,7 @@ Examine your recruitment strategies. Ask yourselves:
 ```{image} Module10_Static/10.23.png
 :alt: alt text
 :width: 100px
+```
 
 Consider the topics your chapter focuses on when designing mapping activities, mapathons, research projects, and/or field work projects. Ask yourselves: 
 - What topics or issues do we tend to map for? 
@@ -548,6 +557,7 @@ Your chapter can generate exciting ideas and solutions using a variety of method
 ```{image} Module10_Static/10.25.png
 :alt: alt text
 :width: 100px
+```
 
 Once your chapter chooses an idea to implement, it’s important to define your goals. Ask yourselves: 
 - What will successful implementation of this idea look like? 
@@ -562,6 +572,7 @@ Now that you have piloted your ideas and gathered feedback and data about their 
 ```{image} Module10_Static/10.26.png
 :alt: alt text
 :width: 100px
+```
 
 It can be difficult and time-consuming to change well-established habits and behaviors both within individuals and within organizations. (Have you ever started exercising again after taking a few months off? You probably had to work harder at the beginning to re-establish exercise as a habit in your routine.) Just as we assess and adjust our individual habits to keep ourselves healthy and flourishing, we need to do the same with our groups and organizations. This requires more planning and work on the front end, but it’s well worth it to have a YouthMappers chapter that meets its goals, has an impact on its community and members, and empowers all members to participate and lead. 
 
@@ -594,6 +605,7 @@ Refer to the information below to learn more about gender perspectives.
 ```{image} Module10_Static/10.27.png
 :alt: alt text
 :width: 100px
+```
 
 Gender is also a personal topic. In this course, we would like to provide you with the opportunity to explore your own personal understanding of gender. Below are some exercises you may consider completing.
 
