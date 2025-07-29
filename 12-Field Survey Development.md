@@ -30,6 +30,7 @@ Welcome to Course 12 of the YouthMappers Academy. In this course, we will look a
 ```{image} Module12_Static/12.1.png
 :alt: alt text
 :width: 100px
+```
 
 Depending on the subject matter and context, the definition of a “survey” can be quite different. From the perspective of a cartographer, a survey is a field activity to capture the measurements and details of one’s physical surroundings. This is often necessary to create a detailed and accurate map, especially in instances where detail and context cannot be determined from existing maps or aerial imagery. 
 
@@ -62,6 +63,7 @@ Do not ask double-barreled questions. In other words, don’t ask questions that
 ```{image} Module12_Static/12.3.png
 :alt: alt text
 :width: 100px
+```
 
 #### 3. Do not use institutional or academic jargon
 Do not assume the participants (or data collectors) are familiar with your industry jargon. Just because a term is frequently used in academic literature, it may hold little or no meaning for the general population. Remember that your survey teams may be drawn from the local population. It is a good idea to “test” your survey and any introductory material with a select group of potential surveyors, or locals, to check for any language issues. 
@@ -75,6 +77,7 @@ If it is important to use specific terms as part of the survey, make sure your t
 ```{image} Module12_Static/12.4.png
 :alt: alt text
 :width: 100px
+```
 
 
 #### 5. No leading questions
@@ -89,6 +92,7 @@ Using negative words in questions confuses people. For example: “Did you not?�
 ```{image} Module12_Static/12.5.png
 :alt: alt text
 :width: 100px
+```
 
 
 #### 8. Lost in translation
@@ -100,6 +104,7 @@ Most survey instruments will be composed of a series of questions or prompts. Th
 ```{image} Module12_Static/12.6.png
 :alt: alt text
 :width: 100px
+```
 
 
 - **Closed response questions** provide a list of acceptable responses. Checklists, multiple-choice questions, true/false questions, and sliding scales are all types of closed responses. Respondents or surveyors may find it easier to answer the question when response alternatives are provided, and it is easier and less time-consuming to interpret and analyze these types of responses. While answers generated using this style of question can be useful to generate statistics, and are easier to interpret and analyze, they lack detail, richness, and personal viewpoints. **Closed response questions are critical for adhering to Data Models for GIS database construction.** Using multiple-choice options keeps tagging consistent, and one can always use the “other” option to allow for flexibility. If you put time and effort into the development of your data model, survey construction for the purpose of collecting feature tags should be a much easier lift.
@@ -211,6 +216,7 @@ The data collection process starts by translating data models into forms that ca
 ```{image} Module12_Static/12.15.png
 :alt: alt text
 :width: 100px
+```
 
 
 In the field, mappers open the applications and when they reach the object they wish to map, they initiate a fresh survey (usually by collecting a GPS point), and progress through the series of survey questions to collect the attribute/tag data. Both geospatial and attribute data are saved directly to the device (unless you have good connectivity and an option to push data directly to your server). After data collection, teams review data in JOSM before uploading it to OSM. Kobo provides an additional environment where teams can aggregate and analyze the raw data on the Kobo Toolbox. 
@@ -218,6 +224,7 @@ In the field, mappers open the applications and when they reach the object they 
 ```{image} Module12_Static/12.16.png
 :alt: alt text
 :width: 100px
+```
 
 
 Your choice of workflow and the tools associated with it must meet your resources. If a heavily digital workflow exceeds your hardware budget or the technical capacity of your volunteers, then you need to plan accordingly. Mapping workflows can be exclusively paper-based (e.g., Field Papers and paper questionnaires), a combination of paper and digital (e.g., Field Papers and a data collection app or GPS), or an exclusively digital workflow (e.g., OpenDataKit/OpenMapKit). There are pros and cons to each combination ranging from cost to ease of setup and training to error reduction and quality control. 
@@ -263,6 +270,7 @@ Refer to the information below to learn more about field survey development.
 ```{image} Module12_Static/12.23.png
 :alt: alt text
 :width: 100px
+```
 
 - Once again, the [HOT Toolbox](https://toolbox.hotosm.org/pages/introduction/how_to_use_toolbox/) is a wonderfully comprehensive guide to take a project manager through the entire mapping workflow, from project design to the more technical aspects of technology options for field deployment. There is an entire section dedicated to [Data Collection Applications](https://toolbox.hotosm.org/pages/2_field_mapping_prep/2_2_data_collection_applications/).  
 
