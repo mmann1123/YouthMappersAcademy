@@ -59,6 +59,7 @@ There are a number of key settings that need to be in place before you begin map
 ```{image} Module7_Static/7.03png
 :alt: alt text
 :width: 100px
+```
 
 ##### The Preferences Menu
 The multiple tabs to the left contain detailed settings for everything from display settings to default colors, default language, and data handling. We won’t go through each one in detail, just one or two key settings to get us up and mapping. But, on your own time, navigate through each to see the level of customization possible to create a very personalized editing experience within JOSM.
@@ -97,6 +98,7 @@ You will receive notification that an OAuth Access token has been granted, which
 ```{image} Module7_Static/7.06png
 :alt: alt text
 :width: 100px
+```
 
 ##### Plug-ins 
 There are many **plug-ins** that you can add to the basic JOSM install to improve functionality and interactions with other platforms. Plug-ins are add-ons or extensions that enhance the capabilities of a software platform, without the need to alter the existing software install. 
@@ -143,12 +145,14 @@ These are the main **drawing tools:**
 ```{image} Module7_Static/7.10png
 :alt: alt text
 :width: 100px
+```
 
 These are the tools to **open, save, download, and upload** your data:
 
 ```{image} Module7_Static/7.11png
 :alt: alt text
 :width: 100px
+```
 
 These are the **preset tagging tools**, for popular road/street, transport, and facility tags: 
 
@@ -160,12 +164,14 @@ The Information Panels to the right of the Map Frame show information about the 
 ```{image} Module7_Static/7.13png
 :alt: alt text
 :width: 160px
+```
 
 You can customize which panels you’d like to feature in this bar on the right-hand side of the map view. The options are available under the “Windows” drop-down menu at the top of the screen.
 
 ```{image} Module7_Static/7.14png
 :alt: alt text
 :width: 160px
+```
 
 ***Note: The options you see in your Windows drop-down list will depend on the plug-ins that you have installed on your machine.***
 
@@ -195,6 +201,7 @@ Here is a quick reminder:
 ```{image} Module7_Static/7.18png
 :alt: alt text
 :width: 100px
+```
 
 Moving about can be a little different in JOSM than in other mapping software or platforms, but you’ll soon get the hang of it.
 - Drag the map: Hold down the right mouse button
@@ -271,7 +278,6 @@ As a rule of thumb, if a feature is grayed out, then it is not selected. If it i
 
 Another nice feature of the JOSM tagging tool is that it remembers the last tagging pair used. You will notice in the last .gif that the tagging pair of ***building + yes*** was already populated. In fact, the tagging feature recalls the last five tagging pairs used. This is particularly handy when you are working with several recurring map features within a given area.
 
-
 ![alt text](Module7_Static/7.21.png)
 Add Tag Dialog Box: PC and MacOSM View
 
@@ -343,6 +349,7 @@ One of the main benefits of working with JOSM is that you create and update data
 ```{image} Module7_Static/7.27png
 :alt: alt text
 :width: 60px
+```
 
 - In the Download from OSM dialog box, you will see five tabs that indicate the five different ways you can download data for editing
 
