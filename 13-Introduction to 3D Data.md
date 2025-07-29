@@ -351,12 +351,6 @@ Satellite: Images from space, suitable for large-scale studies like forests or c
 
 Ground surveying uses tools like GPS and total stations to measure and map exact ground elevations and locations, providing the highest accuracy for small-scale areas.
 
-![static/ground.jpg](static/ground.jpg)
-***Image Source:** [Geotech3D](https://geotech3d.com/land-surveying/)*
-
-***Caption:** A precise GPS-based land surveying setup, including a GNSS receiver and tripod, used for accurate geospatial data collection in construction or topographical mapping projects. The equipment captures satellite signals to determine exact ground coordinates.*
-
-
 #### Techniques and Tools
 
 - **Total Stations:** Measure angles and distances for precise positions, used in construction and engineering projects.
