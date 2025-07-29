@@ -81,7 +81,7 @@ Nuala Cowan, Ph.D., The George Washington University
 - **Communications Specialist:** Dara Carney-Nedelman
 ​- **Technical Advisors:** Chad Blevins, Jennings Anderson
 
-![static/team.png](YouthMappersAcademy/static/team.png)
+![alt text](static/team.png)
 
 [Meet Our Student Leaders!](https://www.youthmappers.org/regional-ambassadors)
 
