@@ -12,7 +12,7 @@ jupytext:
 
 ---
 
-# Introduction to Mapping with JOSM 
+# Advanced JOSM Techniques & Validation
  
 ## Overview 
 Data quality is an important consideration when working in OSM. Map Validation is the process of reviewing completed work (both your own, and of other mappers), to make sure that the feature geometry is captured accurately, and that the tags applied are appropriate. Mapping experience is critical when performing validation activities, coupled with the best tools to perform this task most effectively and efficiently. Good command of JOSM is also important to a validator, and in this course, you will learn about several specific techniques and tools to assist in the validation workflow. You will also learn about validation from a more holistic project management perspective, and the various approaches you can use to manage and facilitate team validation for your projects. 
