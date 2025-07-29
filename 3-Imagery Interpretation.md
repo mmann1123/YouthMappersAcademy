@@ -24,7 +24,6 @@ Welcome to Module 3 of the YouthMappers Academy. In this course, you will learn 
 - Tips and clues on how to recognize features from imagery
 
 
-
 ## An Introduction to Imagery Interpretation for OSM
 
 ### The Role of Imagery in the OSM Workflow
@@ -208,21 +207,21 @@ The following competencies derived from both the Geospatial Technology Competenc
 
 3. Dependability and Reliability: Displaying responsible behaviors at work/school
 
-4. 5. Lifelong Learning: Displaying a willingness to learn and apply new knowledge and skills
+4. Lifelong Learning: Displaying a willingness to learn and apply new knowledge and skills
 
-6. Reading: Understanding written sentences and paragraphs in work-related documents 
+5. Reading: Understanding written sentences and paragraphs in work-related documents 
 
-7. Geography: Understanding the science of place and space; geographic skills
+6. Geography: Understanding the science of place and space; geographic skills
 
-8. Basic Computer Skills: Using a computer and related applications to input and retrieve information; navigation and file management, and internet and email
+7. Basic Computer Skills: Using a computer and related applications to input and retrieve information; navigation and file management, and internet and email
 
-9. Planning and Organizing: Planning and prioritizing work to manage time effectively and accomplish assigned tasks; planning and organizing; adaptability and flexibility; time management
+8. Planning and Organizing: Planning and prioritizing work to manage time effectively and accomplish assigned tasks; planning and organizing; adaptability and flexibility; time management
 
-10. Data Quality: Accuracy, resolution, precision, fitness for use; quality control versus quality assurance; data quality implications of legacy systems
+9. Data Quality: Accuracy, resolution, precision, fitness for use; quality control versus quality assurance; data quality implications of legacy systems
 
-11. Remote sensing and photogrammetry: Basic introduction
+10. Remote sensing and photogrammetry: Basic introduction
 
-12. Geographic Information Systems: Conceptual foundations, including representation and uncertainty
+11. Geographic Information Systems: Conceptual foundations, including representation and uncertainty
 
 ### The National Geographic Standards:
 
