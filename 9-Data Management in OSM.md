@@ -1,5 +1,5 @@
 ---
-title: "Data Management in OSM"
+title: "OSM Data Management & Export"
 author: "YouthMappers Academy"
 date: "2024"
 jupytext:

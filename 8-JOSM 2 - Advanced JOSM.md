@@ -1,5 +1,5 @@
 ---
-title: "Advanced JOSM"
+title: "Advanced JOSM Techniques & Validation"
 author: "YouthMappers Academy"
 date: "2024"
 jupytext:

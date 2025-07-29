@@ -1,5 +1,5 @@
 ---
-title: "Gender Perspectives"
+title: "Gender Dimensions"
 author: "YouthMappers Academy"
 date: "2024"
 jupytext:
