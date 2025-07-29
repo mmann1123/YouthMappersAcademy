@@ -52,6 +52,8 @@ To find a project to work on, click on "[Explore Projects](https://tasks.hotosm.
 :alt: alt text
 :width: 150px
 
+```
+
 To help you find a task you are interested in, several filter tools are available to you. These tools allow you to refine your search for a project based on its level of difficulty, the type of feature to map (a project that focuses on roads or buildings), the campaign, organization, geographical location, and/or specific project number. If you are working on a particular campaign or know the specific project number you can search for those specific items to bring up the project tile immediately.
 
 ## Contribute to a Project 
@@ -66,11 +68,11 @@ To help you find a task you are interested in, several filter tools are availabl
 :alt: alt text
 :width: 150px 
 
+```
+
 3. As you scroll down the page you’ll also see information on who can map and validate this project (beginner, intermediate mapper, or advanced mapper), a space to post questions and comments, any previous contributors, and the contributions timeline.
 
 *NOTE: Additional components can be found at the bottom of the task description. Notice in the image above the bottom bar includes Overview, Description, Coordination, Teams & Permissions, Questions & Comments, and, Contributions.*
-
-
 
 ### Mapping a Task
 1. To begin mapping, click the *Contribute* button in the bottom right-hand corner of the screen.
@@ -103,11 +105,15 @@ Once you have saved and uploaded your map edits in the embedded version of iD, y
 :alt: alt text
 :width: 150px
 
+```
+
 3. You will update the HOT Tasking Manager **Task Status** by answering the question: **Is this task completely mapped?**
 
 ```{image} Module5_Static/5.5.png
 :alt: alt text
 :width: 150px
+
+```
 
 4. You have another opportunity to comment on the work that you have completed. This is in addition to any **Commit Message** that you have already submitted through iD.
 
@@ -132,6 +138,8 @@ When working in a collaborative environment, clear and polite communication is k
 :alt: alt text
 :width: 100px
 
+```
+
 ### Project Communication 
 Each project has a “Questions and Comments” section on the main page of the project. Remarks made in this space will be posted on this page and the person who created this project will receive a notification of your post. This is an informative space to see what comments and issues mappers have had in the past along with the posted solutions. 
 
@@ -140,6 +148,8 @@ Each project has a “Questions and Comments” section on the main page of the 
 ```{image} Module5_Static/5.7.png
 :alt: alt text
 :width: 150px
+
+```
 
 You can also communicate on issues pertaining to a specific task. When you are mapping in a chosen task, below the **Task Status** radio buttons, there is a **Comment** box. 
 
@@ -155,6 +165,8 @@ The image below illustrates the screen that follows the submission of a task by 
 :alt: alt text
 :width: 150px
 
+```
+
 ## Want to Dig a Little Deeper?
 Refer to the websites linked below to learn more about the Tasking Manager.
 
@@ -167,6 +179,8 @@ Refer to the websites linked below to learn more about the Tasking Manager.
 ```{image} Module5_Static/5.9.png
 :alt: alt text
 :width: 100px
+
+```
 
 ## Conclusion 
 ### YouthMappers Academy: Skills, Proficiencies, and Standards
