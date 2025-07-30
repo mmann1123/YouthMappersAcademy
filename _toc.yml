@@ -22,6 +22,8 @@ parts:
   numbered: true
   chapters:
   - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
+  - file: 8-JOSM 2 - Advanced JOSM.md
+  - file: 9-Data Management in OSM.md
   - file: 10-Gender Perspectives.md
   - file: 11-Planning a Field Project.md
   - file: 12-Field Survey Development.md
