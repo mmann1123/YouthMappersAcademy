@@ -19,6 +19,7 @@ parts:
   - file: 5-Tasking Manager.md
   - file: 6-Chapter Management.md
 - caption: Advanced Track
+  description: This advanced-level track consists of 6 courses that will help elevate your technical skills, community participation, and overall project management know-how. Courses 7 and 8 focus on advanced editing skills, through the introduction of the Java OpenStreetMap editor, coupled with guidance on a more structured approach to data validation at both the individual and group level. Courses 9 through 12 focus on theory and techniques that will help you design, plan and implement a successful field work campaign.
   numbered: true
   chapters:
   - file: 7-JOSM 1 - Introduction to Mapping With JOSM.md
