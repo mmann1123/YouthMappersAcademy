@@ -120,8 +120,8 @@ alignment issues (between new and old images, AND, between old tracings and new 
 - In this instance, the road has been overdrawn and is glued to the corner node of a building.
 
 **To fix this error, the user must:**
-- Unglue the nodes and adjust the road to it’s proper position, reconnecting
-it to the small residential access road.
+- Unglue the nodes and adjust the road to it’s proper position, reconnecting it to the small residential access road.
+
 ![alt text](Module8_Static/8.10.png)
 
 **Let’s fix another problem. **
@@ -419,6 +419,7 @@ For the following assignment, you will demonstrate your ability to scan for issu
   - There are 10 issues total (you will need to catch at least six of these to pass this assignment)
 5. Save your edits to the data layer (using the following format “JOSM_Validate_YM_yourname”).
 6. Remember: DO NOT UPLOAD the contents of your edited file to OSM. This file is for demonstration purposes only.
+
 ![alt text](Module8_Static/8.29.png)
 
 To save the edits to your layer file, right-click on the layer in the Layer menu and select Save As. Save your changes to a file with the following naming convention: JOSM_Validate_YM_”your name”.osm (e.g., JOSM_Validate_YM_JaneSmyth.osm).

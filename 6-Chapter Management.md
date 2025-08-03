@@ -41,15 +41,16 @@ Video:
 
 1. **Provide meaningful engagement:** People want to make a difference and make their communities or world better. To help participants find meaning, link your projects to things that are happening in the world, such as addressing a crisis or helping researchers in the field. Make sure you have a clear and powerful message, and keep saying it! Watch the video above to learn more about clear communication.
 
-```{image} Module6_Static/6.01png
+```{image} Module6_Static/6.01.png
 :alt: alt text
 :width: 100px
 
 ```
 
+
 2. **Provide value:** Make sure that each event provides something meaningful to your participants. Consider mapping topics that support the interests of other student organizations on campus (such as environmental or social issues), or connect events to local business or community leaders and find ways to leverage these events to provide real value to participants.
 
-```{image} Module6_Static/6.02png
+```{image} Module6_Static/6.02.png
 :alt: alt text
 :width: 100px
 
@@ -59,7 +60,7 @@ Video:
 
 For more advice, please see the [YouthMappers Social Media Toolkit](https://sites.google.com/view/youthmapperswiki/chapter-resources/communications-toolkit?authuser=0).
 
-```{image} Module6_Static/6.03png
+```{image} Module6_Static/6.03.png
 :alt: alt text
 :width: 100px
 
@@ -67,7 +68,7 @@ For more advice, please see the [YouthMappers Social Media Toolkit](https://site
 
 4. **Use the YouthMappers network:** Your chapter is part of an ever growing international network. Engage with a sister chapter in another country to support their work on a shared topic of interest, or collaborate with multiple chapters to complete large mapping tasks online. If you are a relatively new chapter, it is good to have the support of your peers, in addition to YouthMappers central, when planning a new mapping activity or public event.
 
-```{image} Module6_Static/6.05png
+```{image} Module6_Static/6.05.png
 :alt: alt text
 :width: 100px
 
@@ -75,7 +76,7 @@ For more advice, please see the [YouthMappers Social Media Toolkit](https://site
 
 5. **Invite engagement and leadership:** Encourage members to think of ways they can invest in your chapter. Ask them to join in event planning and organization. Trust them with leadership roles and let them start deciding how to run the chapter.
 
-```{image} Module6_Static/6.06png
+```{image} Module6_Static/6.06.png
 :alt: alt text
 :width: 100px
 
@@ -83,7 +84,7 @@ For more advice, please see the [YouthMappers Social Media Toolkit](https://site
 
 6. **Share the credit:** Make sure to highlight the accomplishments of your chapter members. Making them feel valued will keep them engaged with you.
 
-```{image} Module6_Static/6.07png
+```{image} Module6_Static/6.07.png
 :alt: alt text
 :width: 100px
 
@@ -154,7 +155,7 @@ Stella W. Nakacwa (Makerere University, Uganda), and Sonia Torres (Rice Universi
 **Branding, Style, and Visual Representation**
 We encourage you to promote yourselves and your events by using YouthMappers branding. YouthMappers is a large organization and, as such, it’s important to create consistent standards for logos, naming conventions, and use of color across our communications. This will help your group gain and maintain credibility and grow your active members. 
 
-```{image} Module6_Static/6.11png
+```{image} Module6_Static/6.11.png
 :alt: alt text
 :width: 60px
 ```
@@ -195,7 +196,7 @@ Refer to the links below to learn more about chapter management.
   - [Organizing a Mapathon Checklist](https://www.google.com/search?sca_esv=af4d784551d81640&sxsrf=AE3TifORfcwX9Yi4TViKIGAFBeGO82WYYw:1749510600266&q=https%25253A%25252F%25252Fd2jbbv3z6z1uwh.cloudfront.net%25252Fyouthmappers.course.tc%25252f+Cohort-1-6%25252+Content%25252+Uploads%25252F2021%25252F03%25252F30082203%25252FPlanning-a-Mapathon-Checklist.docx%26scope%3Dsession%26scope_id%3D6bf50bf8-489e-4d67-9518-68349480069b%26id%3D626fa72a-632a-4657-8e0b-1d5e5790b344&spell=1&sa=X&ved=2ahUKEwi9h_DuuuWNAxWng4kEHTXsIB0QBSgAegQIEBAB&biw=1440&bih=669&dpr=2)
   - [Day of Mapathon Checklist](https://youthmappers.course.tc/api/v2/links?to=https%253A%252F%252Fd2jbbv3z6z1uwh.cloudfront.net%252Fyouthmappers.course.tc%252Fcohort-1-6%252Fcontent%252Fuploads%252F2021%252F03%252F30082205%252FDay-of-Mapathon-Checklist-.docx&scope=session&scope_id=6bf50bf8-489e-4d67-9518-68349480069b&id=826c5ea5-3e8a-44c8-a282-b67ed315e4f5)
 
-```{image} Module6_Static/6.13png
+```{image} Module6_Static/6.13.png
 :alt: alt text
 :width: 100px
 ```

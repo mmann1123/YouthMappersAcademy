@@ -104,6 +104,7 @@ Most survey instruments will be composed of a series of questions or prompts. Th
 ```{image} Module12_Static/12.6.png
 :alt: alt text
 :width: 100px
+
 ```
 
 

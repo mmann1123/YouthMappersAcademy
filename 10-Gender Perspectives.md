@@ -47,7 +47,7 @@ YouthMappers Blogspot: If You Can’t See It, You Can’t Be It
 
 ### Start with Inclusive Language
 
-```{image} Module10_Static/10.01.png
+```{image} Module10_Static/10.01.jpg
 :alt: alt text
 :width: 100px
 ```
@@ -150,6 +150,7 @@ All languages⏤not just words related to gender⏤constantly evolve and change.
 :width: 100px
 ```
 
+
 In a couple of words, brainstorm your answer to the following question below: *What does inclusivity mean to you?*
 
 #### Personal Pronouns
@@ -176,6 +177,7 @@ A lot of gender terms have to do with people’s personal identities. Pause for 
 ```{image} Module10_Static/10.07.png
 :alt: alt text
 :width: 100px
+
 ```
 
 We’ve covered a lot of terms related to gender identity, and you may wonder how you can be sure you’re using the correct language when speaking to or about another person. If you are unsure of someone’s preferred personal pronouns, the best way is to ask in a polite and empathetic way. Some people might not wish to share this information with you, which is okay too.
@@ -240,7 +242,9 @@ It’s important to keep in mind that gender norms are byproducts of our specifi
 India has many patrilocal communities, where married couples traditionally reside with or near the husband’s parents. Families place a greater emphasis on boys’ education because the boys will usually remain with their families when they grow up and get married. Indonesia, on the other hand, has many matrilocal communities, and as a result, parents tend to invest more in their daughter’s education than in non-matrilocal communities. ([UCLA Anderson Review](https://anderson-review.ucla.edu/gender-and-culture/))
 
 **Gender Categories**
+
 ![alt text](Module10_Static/10.08.jpg)
+
 While many cultures rely on binary gender categories (man and woman), quite a few also historically have had a third gender category. Examples include the “two-spirit” in many Native American cultures, the hijra in South Asia, and the Oman xanith. Some societies have even more genders. For example, the Bugis of Indonesia recognizes five different genders. ([Yale Human Relations Area Files](https://hraf.yale.edu/ehc/summaries/gender))
 
 Now let’s take a look at how gender norms can evolve over time. 
@@ -299,12 +303,14 @@ In the online course “Understanding Gender Equity”, Catalyst, a leading non-
 
 ![alt text](Module10_Static/10.12.png)
 
-Globally, for every $100 USD men earn, women earn only $68.60. ([World Economic Forum](https://www.weforum.org/publications/gender-gap-2020-report-100-years-pay-equality/digest/))
+Globally, for every \$100 USD men earn, women earn only \$68.60. ([World Economic Forum](https://www.weforum.org/publications/gender-gap-2020-report-100-years-pay-equality/digest/))
 
 ![alt text](Module10_Static/10.13.png)
+
 ![alt text](Module10_Static/10.14.png)
 
-**Field Work**
+**Field Work:**
+
 Fieldwork can be an important or even mandatory part of careers related to scientific research and geography. Historically, the field has been a space of particular discrimination against women and favoritism toward men.
 
 Which of the following are highly biased “reasons” given for why women should not be given jobs or opportunities that require field work? Check all that apply.
@@ -317,7 +323,8 @@ Which of the following are highly biased “reasons” given for why women shoul
 
 4. Men on the field work team won’t feel comfortable spending so much time in proximity to women. Field work is a great bonding experience among members of the team, and men will feel like they have to be on guard and can’t relax if women are around.
 
-**Feedback:** Unfortunately, ALL of the above are typically quoted as “reasons” or “justifications” for why a woman should not receive a job opportunity that involves field work.
+**Feedback:** 
+Unfortunately, ALL of the above are typically quoted as “reasons” or “justifications” for why a woman should not receive a job opportunity that involves field work.
 
 Of course, none of these are valid reasons for excluding women from field work opportunities. While some of the risks listed above might be somewhat real (e.g., in some places, it is dangerous for women to travel alone), they can all be mitigated through proper planning and support from the employer sponsoring the field work. Field work offers so many career benefits, learning experiences, and even moments of joy and discovery that no one should be dissuaded from pursuing it because of their gender.
 
@@ -339,7 +346,7 @@ Women currently earn 44% of doctoral degrees worldwide, but once they graduate, 
 ```{tip} 
 YouthMappers Blogspot: Why is a Day Important to Celebrate the Space of Women in Science?
 
-[Why is a Day Important to Celebrate the Space of Women in Science?](https://www.youthmappers.org/post/why-is-a-day-important-to-celebrate-the-space-of-women-in-science)By Natália da Silveira Arruda, 2021 Everywhere She Maps Regional Ambassador
+[Why is a Day Important to Celebrate the Space of Women in Science?](https://www.youthmappers.org/post/why-is-a-day-important-to-celebrate-the-space-of-women-in-science) By Natália da Silveira Arruda, 2021 Everywhere She Maps Regional Ambassador
 
 ```
 
@@ -472,6 +479,7 @@ The most important first step your chapter can take to be more inclusive of wome
 ```{image} Module10_Static/10.18.png
 :alt: alt text
 :width: 100px
+
 ```
 
 There are many ways you can collect information and feedback from your fellow chapter members, but it’s critical you protect peoples’ privacy and respect what they say, even if you have had a different experience. Otherwise, it’s unlikely that you will receive candid feedback.
@@ -482,7 +490,7 @@ For more information and resources about creating safe spaces for women and girl
   - [Women and Girls Safe Spaces: A Toolkit for Advancing Women’s and Girl’s Empowerment in Humanitarian Settings](https://gbvresponders.org/empowerment/womens-and-girls-safe-spaces/)
 
 For more information on planning and facilitating inclusive group discussions on challenging topics, check out these resources: 
-  - [Ten Tips for Facilitating Discussions on Sensitive Topics]](https://ianr.unl.edu/ten-tips-facilitating-discussions-sensitive-topics/)
+  - [Ten Tips for Facilitating Discussions on Sensitive Topics](https://ianr.unl.edu/ten-tips-facilitating-discussions-sensitive-topics/)
   - [How to Facilitate Discussions](https://blink.ucsd.edu/HR/training/instructor/tools/discussions.html#6.-Summarize-the-results.)
 
 **Within Your Community**
@@ -491,6 +499,7 @@ You can also seek to identify and understand challenges that women, gender-nonco
 ```{image} Module10_Static/10.19.png
 :alt: alt text
 :width: 100px
+
 ```
 
 - Is it particularly challenging for women to access jobs and economic opportunities? 
@@ -513,6 +522,7 @@ The specific ideas your chapter generates should be the direct result of your le
 ```{image} Module10_Static/10.20.png
 :alt: alt text
 :width: 100px
+
 ```
 
 Ensure the days, times, and locations of your YouthMappers chapter meetings and activities are accessible to everyone. Ask yourselves: 
@@ -525,6 +535,7 @@ Ensure the days, times, and locations of your YouthMappers chapter meetings and 
 ```{image} Module10_Static/10.21.png
 :alt: alt text
 :width: 100px
+
 ```
 
 Examine your recruitment strategies. Ask yourselves:
@@ -536,6 +547,7 @@ Examine your recruitment strategies. Ask yourselves:
 ```{image} Module10_Static/10.23.png
 :alt: alt text
 :width: 100px
+
 ```
 
 Consider the topics your chapter focuses on when designing mapping activities, mapathons, research projects, and/or field work projects. Ask yourselves: 
@@ -557,6 +569,7 @@ Your chapter can generate exciting ideas and solutions using a variety of method
 ```{image} Module10_Static/10.25.png
 :alt: alt text
 :width: 100px
+
 ```
 
 Once your chapter chooses an idea to implement, it’s important to define your goals. Ask yourselves: 
@@ -572,6 +585,7 @@ Now that you have piloted your ideas and gathered feedback and data about their 
 ```{image} Module10_Static/10.26.png
 :alt: alt text
 :width: 100px
+
 ```
 
 It can be difficult and time-consuming to change well-established habits and behaviors both within individuals and within organizations. (Have you ever started exercising again after taking a few months off? You probably had to work harder at the beginning to re-establish exercise as a habit in your routine.) Just as we assess and adjust our individual habits to keep ourselves healthy and flourishing, we need to do the same with our groups and organizations. This requires more planning and work on the front end, but it’s well worth it to have a YouthMappers chapter that meets its goals, has an impact on its community and members, and empowers all members to participate and lead. 
@@ -598,13 +612,14 @@ Refer to the information below to learn more about gender perspectives.
 
 - **5 Ways to Engage Men in Gender Diversity Initiatives:** Gender equality is still an issue at work, but it is not a women’s issue. Gender initiatives have traditionally focused on improving women’s participation in the workplace, but recently (in sociological terms, anyway) there has been a shift toward making ‘gender’ a gender-neutral problem. We need men to be part of the conversation on diversity. Read more about [how to engage men in gender diversity initiatives](https://theglasshammer.com/2010/09/5-ways-to-engage-men-in-gender-diversity-initiatives/). 
 
-- How to Disagree with Someone More Powerful than You: How exactly do you voice dissent with your superior? And is it always worth it to do so? Communication experts say that while just agreeing feels easier, it’s not always the best decision to make. Read this [article from Harvard Business Review](https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you?utm_medium=email&utm_source=tgr_newregistrants&utm_campaign=subscribetohbr_gbb&utm_content=engagment5_suboffer_t3&utm_term=touch3&deliveryName=DM155783) on how to disagree with someone more powerful than you. 
+- **How to Disagree with Someone More Powerful than You**: How exactly do you voice dissent with your superior? And is it always worth it to do so? Communication experts say that while just agreeing feels easier, it’s not always the best decision to make. Read this [article from Harvard Business Review](https://hbr.org/2016/03/how-to-disagree-with-someone-more-powerful-than-you?utm_medium=email&utm_source=tgr_newregistrants&utm_campaign=subscribetohbr_gbb&utm_content=engagment5_suboffer_t3&utm_term=touch3&deliveryName=DM155783) on how to disagree with someone more powerful than you. 
 
 ### Explore Your Gender
 
 ```{image} Module10_Static/10.27.png
 :alt: alt text
 :width: 100px
+
 ```
 
 Gender is also a personal topic. In this course, we would like to provide you with the opportunity to explore your own personal understanding of gender. Below are some exercises you may consider completing.
