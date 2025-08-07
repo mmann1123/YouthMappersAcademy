@@ -155,66 +155,175 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     // Create a new Google Slides presentation
     const presentation = SlidesApp.create(`YouthMappers_Certificate_${name}`);
-    const slide = presentation.getSlides()[0];
+    const slides = presentation.getSlides();
+    const slide = slides[0];
     
-    // Get the certificate template
+    // Get the certificate template file
     const templateFile = DriveApp.getFileById(templateFileId);
     const imageBlob = templateFile.getBlob();
     
-    // Insert the background image
-    slide.insertImage(imageBlob);
+    console.log('Template file found:', templateFile.getName());
     
-    // Get the image and resize to fit slide
-    const images = slide.getImages();
-    if (images.length > 0) {
-      const bgImage = images[0];
-      // Set to standard slide dimensions
-      bgImage.setWidth(720).setHeight(540);
-      bgImage.setLeft(0).setTop(0);
-    }
+    // Remove default elements from slide
+    const elements = slide.getPageElements();
+    elements.forEach(element => {
+      element.remove();
+    });
     
-    // Add date text box (bottom left area)
-    // Adjust these coordinates based on your certificate layout
-    const dateBox = slide.insertTextBox(new Date().toLocaleDateString(), 
-                                        60,   // left position (adjust as needed)
-                                        460,  // top position (adjust as needed)
-                                        180,  // width
-                                        25);  // height
+    // Insert the background certificate image
+    const insertedImage = slide.insertImage(imageBlob);
     
-    const dateText = dateBox.getText();
-    dateText.getTextStyle()
-      .setFontSize(12)
+    // Set the image to fill the entire slide (720x540 points)
+    insertedImage.setWidth(720).setHeight(540);
+    insertedImage.setLeft(0).setTop(0);
+    
+    console.log('Certificate background image inserted');
+    
+    // Add the date text box (bottom left area)
+    // Based on your certificate layout, positioning the date
+    const currentDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long', 
+      day: 'numeric'
+    });
+    
+    const dateBox = slide.insertTextBox(currentDate);
+    dateBox.setLeft(90);   // Position from left edge
+    dateBox.setTop(450);   // Position from top edge
+    dateBox.setWidth(180); // Width of text box
+    dateBox.setHeight(30); // Height of text box
+    
+    // Style the date text
+    const dateTextRange = dateBox.getText();
+    dateTextRange.getTextStyle()
+      .setFontSize(14)
       .setFontFamily('Arial')
       .setBold(true)
-      .setForegroundColor('#000000');
+      .setForegroundColor('#000000'); // Black text
     
-    // Add name text box (bottom right area)
-    const nameBox = slide.insertTextBox(name,
-                                        480,  // left position (adjust as needed)
-                                        460,  // top position (adjust as needed)
-                                        220,  // width
-                                        25);  // height
+    // Center align the date text
+    dateTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
     
-    const nameText = nameBox.getText();
-    nameText.getTextStyle()
-      .setFontSize(12)
+    console.log('Date added:', currentDate);
+    
+    // Add the recipient name text box (bottom right area)
+    const nameBox = slide.insertTextBox(name);
+    nameBox.setLeft(450);  // Position from left edge
+    nameBox.setTop(450);   // Position from top edge  
+    nameBox.setWidth(220); // Width of text box
+    nameBox.setHeight(30); // Height of text box
+    
+    // Style the name text
+    const nameTextRange = nameBox.getText();
+    nameTextRange.getTextStyle()
+      .setFontSize(14)
       .setFontFamily('Arial')
       .setBold(true)
-      .setForegroundColor('#000000');
+      .setForegroundColor('#000000'); // Black text
+    
+    // Center align the name text
+    nameTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
+    
+    console.log('Name added:', name);
+    
+    // Save the presentation to trigger updates
+    presentation.saveAndClose();
+    
+    // Wait a moment for the presentation to be saved
+    Utilities.sleep(1000);
     
     // Convert to PDF
     const presentationId = presentation.getId();
     const pdfBlob = DriveApp.getFileById(presentationId).getAs('application/pdf');
-    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}.pdf`);
+    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_${new Date().getTime()}.pdf`);
+    
+    console.log('Certificate converted to PDF successfully');
     
     // Clean up - delete the temporary presentation
     DriveApp.getFileById(presentationId).setTrashed(true);
     
-    console.log('YouthMappers certificate created successfully');
     return pdfBlob;
     
   } catch (error) {
     console.error('Error creating YouthMappers certificate:', error);
+    
+    // Fallback: Create a simple text certificate if image method fails
+    return createFallbackCertificate(name, percentage, earnedPoints, totalPoints);
+  }
+}
+
+// Fallback certificate creation if the image method fails
+function createFallbackCertificate(name, percentage, earnedPoints, totalPoints) {
+  try {
+    console.log('Creating fallback text certificate for:', name);
+    
+    const doc = DocumentApp.create(`YouthMappers_Certificate_${name}_Fallback`);
+    const body = doc.getBody();
+    body.clear();
+    
+    // Add certificate content with YouthMappers branding
+    body.appendParagraph('YOUTHMAPPERS ACADEMY')
+      .setHeading(DocumentApp.ParagraphHeading.TITLE)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    
+    body.appendParagraph('CERTIFICATE OF COMPLETION')
+      .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    
+    body.appendParagraph('\n');
+    
+    body.appendParagraph('OSM ECOSYSTEM')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true).setFontSize(18);
+    
+    body.appendParagraph('YOUTHMAPPERS ACADEMY - BADGE 1')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true).setFontSize(14);
+    
+    body.appendParagraph('\n');
+    
+    body.appendParagraph('THIS CERTIFIES SUCCESSFUL COMPLETION OF YOUTHMAPPERS')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    
+    body.appendParagraph('OPENSTREETMAP TRAINING CHAPTER 1 - OPENSTREETMAP ECOSYSTEM')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setItalic(true);
+    
+    body.appendParagraph('\n\n');
+    
+    // Date and name section
+    const table = body.appendTable();
+    const row = table.appendTableRow();
+    
+    const dateCell = row.appendTableCell(`Date\n\n${new Date().toLocaleDateString()}`);
+    dateCell.setWidth(250);
+    
+    const nameCell = row.appendTableCell(`Recipient\n\n${name}`);
+    nameCell.setWidth(250);
+    
+    table.setBorderWidth(0);
+    
+    body.appendParagraph('\n');
+    body.appendParagraph(`Score: ${percentage}% (${earnedPoints}/${totalPoints} points)`)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true);
+    
+    body.appendParagraph('\nyouthmappers')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setItalic(true);
+    
+    doc.saveAndClose();
+    
+    const pdfBlob = DriveApp.getFileById(doc.getId()).getAs('application/pdf');
+    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_Fallback.pdf`);
+    
+    DriveApp.getFileById(doc.getId()).setTrashed(true);
+    
+    console.log('Fallback certificate created successfully');
+    return pdfBlob;
+    
+  } catch (error) {
+    console.error('Error creating fallback certificate:', error);
     throw error;
   }
 }
@@ -555,6 +664,41 @@ function diagnoseForm() {
   inspectForm();
 }
 
+// Test function to create a sample certificate
+function testCertificateCreation() {
+  try {
+    console.log('Testing certificate creation...');
+    
+    const sampleName = 'John Doe';
+    const samplePercentage = 95;
+    const sampleEarned = 19;
+    const sampleTotal = 20;
+    
+    const certificateBlob = createYouthMappersCertificate(sampleName, samplePercentage, sampleEarned, sampleTotal);
+    
+    console.log('Certificate created successfully!');
+    console.log('Certificate name:', certificateBlob.getName());
+    console.log('Certificate size:', certificateBlob.getBytes().length, 'bytes');
+    
+    // Optionally email the test certificate to yourself
+    const testEmail = Session.getActiveUser().getEmail();
+    GmailApp.sendEmail(
+      testEmail,
+      'Test YouthMappers Certificate',
+      'Here is a test certificate generated by the script.',
+      {
+        attachments: [certificateBlob],
+        name: 'YouthMappers Academy'
+      }
+    );
+    
+    console.log('Test certificate emailed to:', testEmail);
+    
+  } catch (error) {
+    console.error('Error testing certificate creation:', error);
+  }
+}
+
 // Test email functionality
 function testEmailSetup() {
   const testEmail = Session.getActiveUser().getEmail();
@@ -566,5 +710,4 @@ function testEmailSetup() {
   console.log('Test email sent to:', testEmail);
 }
 
-
-testLatestResponse()
+testCertificateCreation()
