@@ -2,6 +2,42 @@
 // Form ID: 1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A
 // Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8
 
+// . Open google form, click three veritical dots to get new script
+
+// 2. Access the Triggers Panel
+
+// Look at the left sidebar
+// Click the ⏰ Triggers icon (clock symbol)
+
+// 3. Add a New Trigger
+
+// Click "+ Add Trigger" button (blue button in bottom right)
+
+// 4. Configure the Trigger Settings
+// Set these options exactly:
+// Choose which function to run:
+
+// Select: onFormSubmit
+
+// Choose which deployment should run:
+
+// Select: Head (or your deployment name)
+
+// Select event source:
+
+// Select: From form
+
+// Select event type:
+
+// Select: On form submit
+
+// 5. Save the Trigger
+
+// Click "Save"
+// Grant permissions when prompted
+// Click "Allow" for any permission requests
+
+
 function onFormSubmit(e) {
   console.log('Form submitted! Processing response...');
   
