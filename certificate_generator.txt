@@ -1,0 +1,570 @@
+// Google Apps Script for Auto-Grading Quiz and Sending YouthMappers Certificates
+// Form ID: 1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A
+// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8
+
+function onFormSubmit(e) {
+  console.log('Form submitted! Processing response...');
+  
+  try {
+    // Get your specific form by ID
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    
+    // Use the event parameter if available, otherwise get latest response
+    let formResponse;
+    if (e && e.response) {
+      formResponse = e.response;
+      console.log('Using response from event trigger');
+    } else {
+      const responses = form.getResponses();
+      formResponse = responses[responses.length - 1];
+      console.log('Using latest response (manual trigger)');
+    }
+    
+    // Get respondent email
+    const respondentEmail = formResponse.getRespondentEmail();
+    console.log('Respondent email:', respondentEmail);
+    
+    // Get all item responses to find the name
+    const itemResponses = formResponse.getItemResponses();
+    
+    // Extract student name
+    let studentName = 'Student';
+    for (let itemResponse of itemResponses) {
+      const item = itemResponse.getItem();
+      const title = item.getTitle().toLowerCase();
+      
+      if (title.includes('name') || title.includes('full name') || 
+          title.includes('your name') || title.includes('student name')) {
+        const nameResponse = itemResponse.getResponse();
+        if (nameResponse && nameResponse.toString().trim() !== '') {
+          studentName = nameResponse.toString().trim();
+          console.log('Found name:', studentName);
+          break;
+        }
+      }
+    }
+    
+    // If no name found, use email
+    if (studentName === 'Student' && respondentEmail) {
+      studentName = respondentEmail.split('@')[0].replace(/[._]/g, ' ');
+      console.log('Using name from email:', studentName);
+    }
+    
+    // Get gradable responses (the key insight!)
+    const gradableResponses = formResponse.getGradableItemResponses();
+    console.log(`Found ${gradableResponses.length} gradable questions`);
+    
+    let totalEarned = 0;
+    let totalPossible = 0;
+    
+    // Calculate scores using the correct method
+    gradableResponses.forEach((gradableResponse, index) => {
+      const item = gradableResponse.getItem();
+      const score = gradableResponse.getScore();
+      const response = gradableResponse.getResponse();
+      
+      // Get max points from the form item
+      let maxPoints = 0;
+      const itemType = item.getType();
+      
+      try {
+        if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
+          maxPoints = item.asMultipleChoiceItem().getPoints();
+        } else if (itemType === FormApp.ItemType.CHECKBOX) {
+          maxPoints = item.asCheckboxItem().getPoints();
+        } else if (itemType === FormApp.ItemType.TEXT) {
+          maxPoints = item.asTextItem().getPoints();
+        } else if (itemType === FormApp.ItemType.PARAGRAPH_TEXT) {
+          maxPoints = item.asParagraphTextItem().getPoints();
+        }
+      } catch (e) {
+        console.log(`Could not get max points for question ${index + 1}: ${e.message}`);
+        // If we can't get max points, assume the score is the max if they got it right
+        maxPoints = score > 0 ? score : 1; // Fallback assumption
+      }
+      
+      console.log(`Question ${index + 1}: "${item.getTitle()}"`);
+      console.log(`  Response: "${response}"`);
+      console.log(`  Score: ${score}/${maxPoints} points`);
+      
+      totalEarned += score;
+      totalPossible += maxPoints;
+    });
+    
+    console.log(`Final Score: ${totalEarned}/${totalPossible} points`);
+    
+    // Calculate percentage
+    const percentage = totalPossible > 0 ? Math.round((totalEarned / totalPossible) * 100) : 0;
+    console.log(`Percentage: ${percentage}%`);
+    
+    // Check if passed (80% or higher)
+    if (percentage >= 80) {
+      sendCertificate(respondentEmail, studentName, percentage, totalEarned, totalPossible);
+    } else {
+      sendFailureNotification(respondentEmail, studentName, percentage);
+    }
+    
+  } catch (error) {
+    console.error('Error processing form submission:', error);
+    console.log('Full error details:', error.toString());
+  }
+}
+
+function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
+  try {
+    console.log(`Sending certificate to ${name} (${email}) - Score: ${percentage}%`);
+    
+    // Create certificate with your YouthMappers template
+    const certificateBlob = createYouthMappersCertificate(name, percentage, earnedPoints, totalPoints);
+    
+    // Email subject and body
+    const subject = 'Congratulations! Your YouthMappers Certificate';
+    const body = `Dear ${name},\n\nCongratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).\n\nPlease find your certificate of completion attached.\n\nBest regards,\nYouthMappers Academy Team`;
+    
+    // Send email with certificate attachment
+    GmailApp.sendEmail(
+      email,
+      subject,
+      body,
+      {
+        attachments: [certificateBlob],
+        name: 'YouthMappers Academy'
+      }
+    );
+    
+    console.log(`Certificate sent successfully to ${email}`);
+    
+  } catch (error) {
+    console.error('Error sending certificate:', error);
+  }
+}
+
+function sendFailureNotification(email, name, percentage) {
+  const subject = 'Quiz Results - Please Retake';
+  const body = `Dear ${name},\n\nThank you for taking the OpenStreetMap Ecosystem quiz. Unfortunately, you scored ${percentage}%, which is below the required 80% passing grade.\n\nPlease review the material and retake the quiz when you're ready.\n\nBest regards,\nYouthMappers Academy Team`;
+  
+  GmailApp.sendEmail(email, subject, body, {name: 'YouthMappers Academy'});
+}
+
+function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoints) {
+  try {
+    console.log('Creating YouthMappers certificate for:', name);
+    
+    // Your YouthMappers certificate template
+    const templateFileId = '199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8';
+    
+    // Create a new Google Slides presentation
+    const presentation = SlidesApp.create(`YouthMappers_Certificate_${name}`);
+    const slide = presentation.getSlides()[0];
+    
+    // Get the certificate template
+    const templateFile = DriveApp.getFileById(templateFileId);
+    const imageBlob = templateFile.getBlob();
+    
+    // Insert the background image
+    slide.insertImage(imageBlob);
+    
+    // Get the image and resize to fit slide
+    const images = slide.getImages();
+    if (images.length > 0) {
+      const bgImage = images[0];
+      // Set to standard slide dimensions
+      bgImage.setWidth(720).setHeight(540);
+      bgImage.setLeft(0).setTop(0);
+    }
+    
+    // Add date text box (bottom left area)
+    // Adjust these coordinates based on your certificate layout
+    const dateBox = slide.insertTextBox(new Date().toLocaleDateString(), 
+                                        60,   // left position (adjust as needed)
+                                        460,  // top position (adjust as needed)
+                                        180,  // width
+                                        25);  // height
+    
+    const dateText = dateBox.getText();
+    dateText.getTextStyle()
+      .setFontSize(12)
+      .setFontFamily('Arial')
+      .setBold(true)
+      .setForegroundColor('#000000');
+    
+    // Add name text box (bottom right area)
+    const nameBox = slide.insertTextBox(name,
+                                        480,  // left position (adjust as needed)
+                                        460,  // top position (adjust as needed)
+                                        220,  // width
+                                        25);  // height
+    
+    const nameText = nameBox.getText();
+    nameText.getTextStyle()
+      .setFontSize(12)
+      .setFontFamily('Arial')
+      .setBold(true)
+      .setForegroundColor('#000000');
+    
+    // Convert to PDF
+    const presentationId = presentation.getId();
+    const pdfBlob = DriveApp.getFileById(presentationId).getAs('application/pdf');
+    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}.pdf`);
+    
+    // Clean up - delete the temporary presentation
+    DriveApp.getFileById(presentationId).setTrashed(true);
+    
+    console.log('YouthMappers certificate created successfully');
+    return pdfBlob;
+    
+  } catch (error) {
+    console.error('Error creating YouthMappers certificate:', error);
+    throw error;
+  }
+}
+
+// Set up the form trigger (run this once manually)
+function setupFormTrigger() {
+  try {
+    // Get your specific form by ID
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    
+    // Delete existing triggers to avoid duplicates
+    const triggers = ScriptApp.getProjectTriggers();
+    triggers.forEach(trigger => {
+      if (trigger.getHandlerFunction() === 'onFormSubmit') {
+        ScriptApp.deleteTrigger(trigger);
+      }
+    });
+    
+    // Create new form submit trigger
+    const trigger = ScriptApp.newTrigger('onFormSubmit')
+      .timeBased()
+      .everyMinutes(1) // Check every minute for new responses
+      .create();
+    
+    console.log('Form trigger setup complete for:', form.getTitle());
+    console.log('Trigger ID:', trigger.getUniqueId());
+    
+  } catch (error) {
+    console.error('Error setting up trigger:', error);
+    console.log('You can also test manually by running testLatestResponse()');
+  }
+}
+
+// Configuration: Set your actual quiz point values here
+// IMPORTANT: Update these to match your actual Google Form quiz setup!
+function getQuestionPoints(questionIndex, questionTitle) {
+  // Configure your actual point values here:
+  // Index 0 = name field (skip)
+  // Index 1 = first quiz question  
+  // Index 2 = second quiz question, etc.
+  
+  const pointsConfig = {
+    1: 1, // "Say hi" question - UPDATE THIS to your actual point value
+    2: 1, // "Say Bye" question - UPDATE THIS to your actual point value
+    // Add more questions as needed:
+    // 3: 2, // Third question = 2 points
+    // 4: 1, // Fourth question = 1 point
+  };
+  
+  return pointsConfig[questionIndex] || 1; // Default to 1 point if not specified
+}
+
+// Test function to check form items and their points directly
+function testFormStructure() {
+  try {
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    const items = form.getItems();
+    
+    console.log('=== TESTING FORM STRUCTURE ===');
+    console.log(`Form: "${form.getTitle()}"`);
+    console.log(`Is Quiz: ${form.isQuiz()}`);
+    
+    items.forEach((item, index) => {
+      console.log(`\n${index + 1}. "${item.getTitle()}"`);
+      const itemType = item.getType();
+      console.log(`   Type: ${itemType}`);
+      
+      try {
+        let points = 0;
+        
+        if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
+          const mcItem = item.asMultipleChoiceItem();
+          points = mcItem.getPoints();
+          console.log(`   ✓ Multiple Choice - ${points} points`);
+          
+        } else if (itemType === FormApp.ItemType.CHECKBOX) {
+          const checkboxItem = item.asCheckboxItem();
+          points = checkboxItem.getPoints();
+          console.log(`   ✓ Checkbox - ${points} points`);
+          
+        } else if (itemType === FormApp.ItemType.TEXT) {
+          const textItem = item.asTextItem();
+          points = textItem.getPoints();
+          console.log(`   ✓ Text - ${points} points`);
+          
+        } else if (itemType === FormApp.ItemType.PARAGRAPH_TEXT) {
+          const paragraphItem = item.asParagraphTextItem();
+          points = paragraphItem.getPoints();
+          console.log(`   ✓ Paragraph - ${points} points`);
+          
+        } else {
+          console.log(`   - Not a gradeable item type`);
+        }
+        
+      } catch (error) {
+        console.log(`   ✗ Error getting points: ${error.message}`);
+      }
+    });
+    
+  } catch (error) {
+    console.error('Error testing form structure:', error);
+  }
+}
+
+// Manual scoring function when Google Forms doesn't auto-calculate
+function calculateManualScore(formItem, studentResponse, itemType) {
+  try {
+    if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
+      const mcItem = formItem.asMultipleChoiceItem();
+      const maxPoints = mcItem.getPoints();
+      const choices = mcItem.getChoices();
+      
+      // Find the correct answer
+      for (let choice of choices) {
+        if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
+          const correctAnswer = choice.getValue();
+          console.log(`    Correct answer: "${correctAnswer}"`);
+          console.log(`    Student answer: "${studentResponse}"`);
+          
+          if (studentResponse === correctAnswer) {
+            return maxPoints;
+          }
+        }
+      }
+      return 0; // Wrong answer
+      
+    } else if (itemType === FormApp.ItemType.CHECKBOX) {
+      const checkboxItem = formItem.asCheckboxItem();
+      const maxPoints = checkboxItem.getPoints();
+      const choices = checkboxItem.getChoices();
+      
+      // Get all correct answers
+      const correctAnswers = [];
+      for (let choice of choices) {
+        if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
+          correctAnswers.push(choice.getValue());
+        }
+      }
+      
+      // Check if student selected all correct answers (and no wrong ones)
+      const studentAnswers = Array.isArray(studentResponse) ? studentResponse : [studentResponse];
+      
+      if (correctAnswers.length === studentAnswers.length &&
+          correctAnswers.every(answer => studentAnswers.includes(answer))) {
+        return maxPoints;
+      }
+      
+      return 0; // Partial credit could be implemented here
+      
+    } else if (itemType === FormApp.ItemType.TEXT || itemType === FormApp.ItemType.PARAGRAPH_TEXT) {
+      // For text questions, we'd need to compare against acceptable answers
+      // This is more complex - for now, return 0 and handle manually
+      console.log(`    Text answer grading not implemented: "${studentResponse}"`);
+      return 0;
+    }
+    
+  } catch (error) {
+    console.log(`    Error in manual scoring: ${error.message}`);
+  }
+  
+  return 0;
+}
+
+// Function to manually grade responses (when Google Forms doesn't auto-grade)
+function manuallyGradeResponses() {
+  try {
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    const formItems = form.getItems();
+    const responses = form.getResponses();
+    
+    console.log('=== MANUALLY GRADING RESPONSES ===');
+    
+    responses.forEach((response, responseIndex) => {
+      console.log(`\nGrading Response #${responseIndex + 1}:`);
+      const itemResponses = response.getItemResponses();
+      
+      itemResponses.forEach((itemResponse, itemIndex) => {
+        const formItem = formItems[itemIndex];
+        const questionTitle = formItem.getTitle();
+        const studentAnswer = itemResponse.getResponse();
+        const itemType = formItem.getType();
+        
+        // Skip name fields
+        if (questionTitle.toLowerCase().includes('name')) {
+          console.log(`  Skipping name field: "${questionTitle}"`);
+          return;
+        }
+        
+        console.log(`  Question: "${questionTitle}"`);
+        console.log(`  Student Answer: "${studentAnswer}"`);
+        console.log(`  Type: ${itemType}`);
+        
+        try {
+          if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
+            const mcItem = formItem.asMultipleChoiceItem();
+            const maxPoints = mcItem.getPoints();
+            
+            // Get correct answer
+            const choices = mcItem.getChoices();
+            let correctAnswer = null;
+            let score = 0;
+            
+            choices.forEach(choice => {
+              if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
+                correctAnswer = choice.getValue();
+              }
+            });
+            
+            if (correctAnswer && studentAnswer === correctAnswer) {
+              score = maxPoints;
+            }
+            
+            console.log(`  Correct Answer: "${correctAnswer}"`);
+            console.log(`  Score: ${score}/${maxPoints}`);
+            
+            // Try to set the score on the response
+            try {
+              itemResponse.setScore(score);
+            } catch (e) {
+              console.log(`  Cannot set score: ${e.message}`);
+            }
+          }
+          
+        } catch (error) {
+          console.log(`  Error grading: ${error.message}`);
+        }
+      });
+    });
+    
+  } catch (error) {
+    console.error('Error manually grading responses:', error);
+  }
+}
+
+// Alternative: Force Google Forms to recalculate scores
+function forceRecalculateScores() {
+  try {
+    console.log('Attempting to force Google Forms to recalculate scores...');
+    
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    
+    // Try to trigger recalculation by toggling quiz mode
+    const wasQuiz = form.isQuiz();
+    console.log('Current quiz status:', wasQuiz);
+    
+    if (wasQuiz) {
+      // This might trigger recalculation (experimental)
+      console.log('Form is already a quiz. Scores should be calculated automatically.');
+      console.log('Try submitting a new response to test if scoring works.');
+    }
+    
+  } catch (error) {
+    console.error('Error forcing recalculation:', error);
+  }
+}
+
+// Test function to check the latest response manually
+function testLatestResponse() {
+  console.log('Testing with the latest form response...');
+  onFormSubmit(); // This will process the most recent submission
+}
+
+// Helper function to inspect your form structure
+function inspectForm() {
+  try {
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    console.log('=== FORM INSPECTION ===');
+    console.log('Form Title:', form.getTitle());
+    console.log('Is Quiz:', form.isQuiz());
+    console.log('Collect Email:', form.collectsEmail());
+    
+    const items = form.getItems();
+    console.log('\n=== FORM QUESTIONS ===');
+    items.forEach((item, index) => {
+      console.log(`\n${index + 1}. "${item.getTitle()}"`);
+      console.log(`   Type: ${item.getType()}`);
+      
+      // Try to get quiz info
+      try {
+        const quizItem = item.asQuizItem();
+        const points = quizItem.getPoints();
+        console.log(`   ✓ QUIZ ITEM: ${points} points`);
+        
+        // Get feedback if available
+        const feedback = quizItem.getFeedbackForCorrect();
+        if (feedback) {
+          console.log(`   Correct feedback: "${feedback.getText()}"`);
+        }
+        
+      } catch (e) {
+        console.log(`   ✗ NOT a quiz item: ${e.message}`);
+        
+        // Check what type it is specifically
+        if (item.getType() === FormApp.ItemType.MULTIPLE_CHOICE) {
+          console.log(`   (This is a multiple choice item without quiz scoring)`);
+        } else if (item.getType() === FormApp.ItemType.CHECKBOX) {
+          console.log(`   (This is a checkbox item without quiz scoring)`);
+        } else if (item.getType() === FormApp.ItemType.TEXT) {
+          console.log(`   (This is a text item - probably the name field)`);
+        }
+      }
+    });
+    
+    const responses = form.getResponses();
+    console.log(`\n=== RESPONSES (${responses.length} total) ===`);
+    
+    if (responses.length > 0) {
+      console.log('\nMost Recent Response Details:');
+      const latest = responses[responses.length - 1];
+      const itemResponses = latest.getItemResponses();
+      
+      itemResponses.forEach((itemResponse, index) => {
+        const response = itemResponse.getResponse();
+        const score = itemResponse.getScore();
+        const item = itemResponse.getItem();
+        
+        console.log(`\n${index + 1}. Question: "${item.getTitle()}"`);
+        console.log(`   Student Answer: "${response}"`);
+        console.log(`   Score: ${score}`);
+        
+        // Try to get max points
+        try {
+          const maxPoints = item.asQuizItem().getPoints();
+          console.log(`   Max Points: ${maxPoints}`);
+        } catch (e) {
+          console.log(`   Max Points: N/A (not a quiz item)`);
+        }
+      });
+    }
+    
+  } catch (error) {
+    console.error('Error inspecting form:', error);
+  }
+}
+
+// Diagnostic function
+function diagnoseForm() {
+  inspectForm();
+}
+
+// Test email functionality
+function testEmailSetup() {
+  const testEmail = Session.getActiveUser().getEmail();
+  GmailApp.sendEmail(
+    testEmail,
+    'Test Email from YouthMappers Quiz Script',
+    'If you receive this email, the script setup is working correctly!'
+  );
+  console.log('Test email sent to:', testEmail);
+}
+
+
+testLatestResponse()
