@@ -1,41 +1,6 @@
 // Google Apps Script for Auto-Grading Quiz and Sending YouthMappers Certificates
 // Form ID: 1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A
-// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8
-
-// . Open google form, click three veritical dots to get new script
-
-// 2. Access the Triggers Panel
-
-// Look at the left sidebar
-// Click the ⏰ Triggers icon (clock symbol)
-
-// 3. Add a New Trigger
-
-// Click "+ Add Trigger" button (blue button in bottom right)
-
-// 4. Configure the Trigger Settings
-// Set these options exactly:
-// Choose which function to run:
-
-// Select: onFormSubmit
-
-// Choose which deployment should run:
-
-// Select: Head (or your deployment name)
-
-// Select event source:
-
-// Select: From form
-
-// Select event type:
-
-// Select: On form submit
-
-// 5. Save the Trigger
-
-// Click "Save"
-// Grant permissions when prompted
-// Click "Allow" for any permission requests
+// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8 (original)  1zWBGq39IwAGZa8dmqYyfGkBWEBeaWJ9g (4:3 ratio)
 
 
 function onFormSubmit(e) {
@@ -54,11 +19,37 @@ function onFormSubmit(e) {
       const responses = form.getResponses();
       formResponse = responses[responses.length - 1];
       console.log('Using latest response (manual trigger)');
+      
+      // For manual testing, always process
+      // But for time-based triggers, we need to prevent duplicates
+      if (!e) {
+        // Check if this is a manual call by looking at the stack
+        const currentTime = new Date().getTime();
+        const lastProcessTime = PropertiesService.getScriptProperties().getProperty('lastProcessTime');
+        
+        if (lastProcessTime && (currentTime - parseInt(lastProcessTime)) < 30000) {
+          console.log('Response already processed recently. Skipping to avoid duplicates.');
+          return;
+        }
+        
+        // Update last process time
+        PropertiesService.getScriptProperties().setProperty('lastProcessTime', currentTime.toString());
+      }
     }
     
     // Get respondent email
     const respondentEmail = formResponse.getRespondentEmail();
     console.log('Respondent email:', respondentEmail);
+    
+    // Additional duplicate protection: check if we already sent certificate to this email recently
+    const emailKey = `cert_sent_${respondentEmail.replace(/[^a-zA-Z0-9]/g, '_')}`;
+    const lastSentTime = PropertiesService.getScriptProperties().getProperty(emailKey);
+    const currentTime = new Date().getTime();
+    
+    if (lastSentTime && (currentTime - parseInt(lastSentTime)) < 300000) { // 5 minutes
+      console.log(`Certificate already sent to ${respondentEmail} in the last 5 minutes. Skipping.`);
+      return;
+    }
     
     // Get all item responses to find the name
     const itemResponses = formResponse.getItemResponses();
@@ -98,6 +89,13 @@ function onFormSubmit(e) {
       const item = gradableResponse.getItem();
       const score = gradableResponse.getScore();
       const response = gradableResponse.getResponse();
+      const questionTitle = item.getTitle();
+      
+      // Skip name fields even if they appear as gradable
+      if (questionTitle.toLowerCase().includes('name')) {
+        console.log(`Skipping name field: "${questionTitle}"`);
+        return;
+      }
       
       // Get max points from the form item
       let maxPoints = 0;
@@ -114,12 +112,12 @@ function onFormSubmit(e) {
           maxPoints = item.asParagraphTextItem().getPoints();
         }
       } catch (e) {
-        console.log(`Could not get max points for question ${index + 1}: ${e.message}`);
+        console.log(`Could not get max points for question "${questionTitle}": ${e.message}`);
         // If we can't get max points, assume the score is the max if they got it right
         maxPoints = score > 0 ? score : 1; // Fallback assumption
       }
       
-      console.log(`Question ${index + 1}: "${item.getTitle()}"`);
+      console.log(`Question: "${questionTitle}"`);
       console.log(`  Response: "${response}"`);
       console.log(`  Score: ${score}/${maxPoints} points`);
       
@@ -135,6 +133,9 @@ function onFormSubmit(e) {
     
     // Check if passed (80% or higher)
     if (percentage >= 80) {
+      // Record that we're sending a certificate
+      PropertiesService.getScriptProperties().setProperty(emailKey, currentTime.toString());
+      
       sendCertificate(respondentEmail, studentName, percentage, totalEarned, totalPossible);
     } else {
       sendFailureNotification(respondentEmail, studentName, percentage);
@@ -150,7 +151,7 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
   try {
     console.log(`Sending certificate to ${name} (${email}) - Score: ${percentage}%`);
     
-    // Create certificate with your YouthMappers template
+    // Create certificate with your YouthMappers template (4:3 ratio)
     const certificateBlob = createYouthMappersCertificate(name, percentage, earnedPoints, totalPoints);
     
     // Email subject and body
@@ -186,7 +187,7 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
   try {
     console.log('Creating YouthMappers certificate for:', name);
     
-    // Your YouthMappers certificate template
+    // Your YouthMappers certificate template (4:3 ratio)
     const templateFileId = '199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8';
     
     // Create a new Google Slides presentation
@@ -209,14 +210,17 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     // Insert the background certificate image
     const insertedImage = slide.insertImage(imageBlob);
     
-    // Set the image to fill the entire slide (720x540 points)
-    insertedImage.setWidth(720).setHeight(540);
+    // Set dimensions for perfect 4:3 ratio (no cropping)
+    // Standard Google Slides dimensions are 720x540 (4:3 ratio)
+    const slideWidth = 720;
+    const slideHeight = 540;
+    
+    // insertedImage.setWidth(slideWidth).setHeight(slideHeight);
     insertedImage.setLeft(0).setTop(0);
     
-    console.log('Certificate background image inserted');
+    console.log('Certificate background image inserted at 4:3 ratio:', slideWidth, 'x', slideHeight);
     
-    // Add the date text box (bottom left area)
-    // Based on your certificate layout, positioning the date
+    // Add the date text box (positioned for 4:3 certificate layout)
     const currentDate = new Date().toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long', 
@@ -224,56 +228,57 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     });
     
     const dateBox = slide.insertTextBox(currentDate);
-    dateBox.setLeft(90);   // Position from left edge
-    dateBox.setTop(450);   // Position from top edge
-    dateBox.setWidth(180); // Width of text box
-    dateBox.setHeight(30); // Height of text box
+    // Positioned for typical certificate "Date" line at bottom left
+    dateBox.setLeft(80);    // Left side positioning
+    dateBox.setTop(430);    // Near bottom for date line
+    dateBox.setWidth(200);  // Wide enough for full date
+    dateBox.setHeight(35);  // Sufficient height for text
     
     // Style the date text
     const dateTextRange = dateBox.getText();
     dateTextRange.getTextStyle()
-      .setFontSize(14)
+      .setFontSize(16)       // Good size for readability
       .setFontFamily('Arial')
       .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
-    // Center align the date text
+    // Center align the date text within its box
     dateTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
     
     console.log('Date added:', currentDate);
     
-    // Add the recipient name text box (bottom right area)
+    // Add the recipient name text box (positioned for "Recipient" line)
     const nameBox = slide.insertTextBox(name);
-    nameBox.setLeft(450);  // Position from left edge
-    nameBox.setTop(450);   // Position from top edge  
-    nameBox.setWidth(220); // Width of text box
-    nameBox.setHeight(30); // Height of text box
+    nameBox.setLeft(420);   // Right side positioning for recipient line
+    nameBox.setTop(430);    // Same vertical position as date
+    nameBox.setWidth(250);  // Wide enough for longer names
+    nameBox.setHeight(35);  // Same height as date box
     
     // Style the name text
     const nameTextRange = nameBox.getText();
     nameTextRange.getTextStyle()
-      .setFontSize(14)
+      .setFontSize(16)       // Same size as date
       .setFontFamily('Arial')
       .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
-    // Center align the name text
+    // Center align the name text within its box
     nameTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
     
     console.log('Name added:', name);
     
-    // Save the presentation to trigger updates
+    // Save the presentation
     presentation.saveAndClose();
     
-    // Wait a moment for the presentation to be saved
-    Utilities.sleep(1000);
+    // Wait for the presentation to be saved
+    Utilities.sleep(2000);
     
-    // Convert to PDF
+    // Convert to PDF with proper 4:3 aspect ratio
     const presentationId = presentation.getId();
     const pdfBlob = DriveApp.getFileById(presentationId).getAs('application/pdf');
     pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_${new Date().getTime()}.pdf`);
     
-    console.log('Certificate converted to PDF successfully');
+    console.log('4:3 Certificate converted to PDF successfully');
     
     // Clean up - delete the temporary presentation
     DriveApp.getFileById(presentationId).setTrashed(true);
@@ -288,333 +293,83 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
   }
 }
 
-// Fallback certificate creation if the image method fails
-function createFallbackCertificate(name, percentage, earnedPoints, totalPoints) {
-  try {
-    console.log('Creating fallback text certificate for:', name);
+// // Fallback certificate creation if the image method fails
+// function createFallbackCertificate(name, percentage, earnedPoints, totalPoints) {
+//   try {
+//     console.log('Creating fallback text certificate for:', name);
     
-    const doc = DocumentApp.create(`YouthMappers_Certificate_${name}_Fallback`);
-    const body = doc.getBody();
-    body.clear();
+//     const doc = DocumentApp.create(`YouthMappers_Certificate_${name}_Fallback`);
+//     const body = doc.getBody();
+//     body.clear();
     
-    // Add certificate content with YouthMappers branding
-    body.appendParagraph('YOUTHMAPPERS ACADEMY')
-      .setHeading(DocumentApp.ParagraphHeading.TITLE)
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+//     // Add certificate content with YouthMappers branding
+//     body.appendParagraph('YOUTHMAPPERS ACADEMY')
+//       .setHeading(DocumentApp.ParagraphHeading.TITLE)
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-    body.appendParagraph('CERTIFICATE OF COMPLETION')
-      .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+//     body.appendParagraph('CERTIFICATE OF COMPLETION')
+//       .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-    body.appendParagraph('\n');
+//     body.appendParagraph('\n');
     
-    body.appendParagraph('OSM ECOSYSTEM')
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-      .editAsText().setBold(true).setFontSize(18);
+//     body.appendParagraph('OSM ECOSYSTEM')
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+//       .editAsText().setBold(true).setFontSize(18);
     
-    body.appendParagraph('YOUTHMAPPERS ACADEMY - BADGE 1')
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-      .editAsText().setBold(true).setFontSize(14);
+//     body.appendParagraph('YOUTHMAPPERS ACADEMY - BADGE 1')
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+//       .editAsText().setBold(true).setFontSize(14);
     
-    body.appendParagraph('\n');
+//     body.appendParagraph('\n');
     
-    body.appendParagraph('THIS CERTIFIES SUCCESSFUL COMPLETION OF YOUTHMAPPERS')
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+//     body.appendParagraph('THIS CERTIFIES SUCCESSFUL COMPLETION OF YOUTHMAPPERS')
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-    body.appendParagraph('OPENSTREETMAP TRAINING CHAPTER 1 - OPENSTREETMAP ECOSYSTEM')
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-      .editAsText().setItalic(true);
+//     body.appendParagraph('OPENSTREETMAP TRAINING CHAPTER 1 - OPENSTREETMAP ECOSYSTEM')
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+//       .editAsText().setItalic(true);
     
-    body.appendParagraph('\n\n');
+//     body.appendParagraph('\n\n');
     
-    // Date and name section
-    const table = body.appendTable();
-    const row = table.appendTableRow();
+//     // Date and name section
+//     const table = body.appendTable();
+//     const row = table.appendTableRow();
     
-    const dateCell = row.appendTableCell(`Date\n\n${new Date().toLocaleDateString()}`);
-    dateCell.setWidth(250);
+//     const dateCell = row.appendTableCell(`Date\n\n${new Date().toLocaleDateString()}`);
+//     dateCell.setWidth(250);
     
-    const nameCell = row.appendTableCell(`Recipient\n\n${name}`);
-    nameCell.setWidth(250);
+//     const nameCell = row.appendTableCell(`Recipient\n\n${name}`);
+//     nameCell.setWidth(250);
     
-    table.setBorderWidth(0);
+//     table.setBorderWidth(0);
     
-    body.appendParagraph('\n');
-    body.appendParagraph(`Score: ${percentage}% (${earnedPoints}/${totalPoints} points)`)
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-      .editAsText().setBold(true);
+//     body.appendParagraph('\n');
+//     body.appendParagraph(`Score: ${percentage}% (${earnedPoints}/${totalPoints} points)`)
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+//       .editAsText().setBold(true);
     
-    body.appendParagraph('\nyouthmappers')
-      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-      .editAsText().setItalic(true);
+//     body.appendParagraph('\nyouthmappers')
+//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+//       .editAsText().setItalic(true);
     
-    doc.saveAndClose();
+//     doc.saveAndClose();
     
-    const pdfBlob = DriveApp.getFileById(doc.getId()).getAs('application/pdf');
-    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_Fallback.pdf`);
+//     const pdfBlob = DriveApp.getFileById(doc.getId()).getAs('application/pdf');
+//     pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_Fallback.pdf`);
     
-    DriveApp.getFileById(doc.getId()).setTrashed(true);
+//     DriveApp.getFileById(doc.getId()).setTrashed(true);
     
-    console.log('Fallback certificate created successfully');
-    return pdfBlob;
+//     console.log('Fallback certificate created successfully');
+//     return pdfBlob;
     
-  } catch (error) {
-    console.error('Error creating fallback certificate:', error);
-    throw error;
-  }
-}
-
-// Set up the form trigger (run this once manually)
-function setupFormTrigger() {
-  try {
-    // Get your specific form by ID
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
-    
-    // Delete existing triggers to avoid duplicates
-    const triggers = ScriptApp.getProjectTriggers();
-    triggers.forEach(trigger => {
-      if (trigger.getHandlerFunction() === 'onFormSubmit') {
-        ScriptApp.deleteTrigger(trigger);
-      }
-    });
-    
-    // Create new form submit trigger
-    const trigger = ScriptApp.newTrigger('onFormSubmit')
-      .timeBased()
-      .everyMinutes(1) // Check every minute for new responses
-      .create();
-    
-    console.log('Form trigger setup complete for:', form.getTitle());
-    console.log('Trigger ID:', trigger.getUniqueId());
-    
-  } catch (error) {
-    console.error('Error setting up trigger:', error);
-    console.log('You can also test manually by running testLatestResponse()');
-  }
-}
-
-// Configuration: Set your actual quiz point values here
-// IMPORTANT: Update these to match your actual Google Form quiz setup!
-function getQuestionPoints(questionIndex, questionTitle) {
-  // Configure your actual point values here:
-  // Index 0 = name field (skip)
-  // Index 1 = first quiz question  
-  // Index 2 = second quiz question, etc.
+//   } catch (error) {
+//     console.error('Error creating fallback certificate:', error);
+//     throw error;
+//   }
+// }
   
-  const pointsConfig = {
-    1: 1, // "Say hi" question - UPDATE THIS to your actual point value
-    2: 1, // "Say Bye" question - UPDATE THIS to your actual point value
-    // Add more questions as needed:
-    // 3: 2, // Third question = 2 points
-    // 4: 1, // Fourth question = 1 point
-  };
-  
-  return pointsConfig[questionIndex] || 1; // Default to 1 point if not specified
-}
-
-// Test function to check form items and their points directly
-function testFormStructure() {
-  try {
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
-    const items = form.getItems();
-    
-    console.log('=== TESTING FORM STRUCTURE ===');
-    console.log(`Form: "${form.getTitle()}"`);
-    console.log(`Is Quiz: ${form.isQuiz()}`);
-    
-    items.forEach((item, index) => {
-      console.log(`\n${index + 1}. "${item.getTitle()}"`);
-      const itemType = item.getType();
-      console.log(`   Type: ${itemType}`);
-      
-      try {
-        let points = 0;
-        
-        if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
-          const mcItem = item.asMultipleChoiceItem();
-          points = mcItem.getPoints();
-          console.log(`   ✓ Multiple Choice - ${points} points`);
-          
-        } else if (itemType === FormApp.ItemType.CHECKBOX) {
-          const checkboxItem = item.asCheckboxItem();
-          points = checkboxItem.getPoints();
-          console.log(`   ✓ Checkbox - ${points} points`);
-          
-        } else if (itemType === FormApp.ItemType.TEXT) {
-          const textItem = item.asTextItem();
-          points = textItem.getPoints();
-          console.log(`   ✓ Text - ${points} points`);
-          
-        } else if (itemType === FormApp.ItemType.PARAGRAPH_TEXT) {
-          const paragraphItem = item.asParagraphTextItem();
-          points = paragraphItem.getPoints();
-          console.log(`   ✓ Paragraph - ${points} points`);
-          
-        } else {
-          console.log(`   - Not a gradeable item type`);
-        }
-        
-      } catch (error) {
-        console.log(`   ✗ Error getting points: ${error.message}`);
-      }
-    });
-    
-  } catch (error) {
-    console.error('Error testing form structure:', error);
-  }
-}
-
-// Manual scoring function when Google Forms doesn't auto-calculate
-function calculateManualScore(formItem, studentResponse, itemType) {
-  try {
-    if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
-      const mcItem = formItem.asMultipleChoiceItem();
-      const maxPoints = mcItem.getPoints();
-      const choices = mcItem.getChoices();
-      
-      // Find the correct answer
-      for (let choice of choices) {
-        if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
-          const correctAnswer = choice.getValue();
-          console.log(`    Correct answer: "${correctAnswer}"`);
-          console.log(`    Student answer: "${studentResponse}"`);
-          
-          if (studentResponse === correctAnswer) {
-            return maxPoints;
-          }
-        }
-      }
-      return 0; // Wrong answer
-      
-    } else if (itemType === FormApp.ItemType.CHECKBOX) {
-      const checkboxItem = formItem.asCheckboxItem();
-      const maxPoints = checkboxItem.getPoints();
-      const choices = checkboxItem.getChoices();
-      
-      // Get all correct answers
-      const correctAnswers = [];
-      for (let choice of choices) {
-        if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
-          correctAnswers.push(choice.getValue());
-        }
-      }
-      
-      // Check if student selected all correct answers (and no wrong ones)
-      const studentAnswers = Array.isArray(studentResponse) ? studentResponse : [studentResponse];
-      
-      if (correctAnswers.length === studentAnswers.length &&
-          correctAnswers.every(answer => studentAnswers.includes(answer))) {
-        return maxPoints;
-      }
-      
-      return 0; // Partial credit could be implemented here
-      
-    } else if (itemType === FormApp.ItemType.TEXT || itemType === FormApp.ItemType.PARAGRAPH_TEXT) {
-      // For text questions, we'd need to compare against acceptable answers
-      // This is more complex - for now, return 0 and handle manually
-      console.log(`    Text answer grading not implemented: "${studentResponse}"`);
-      return 0;
-    }
-    
-  } catch (error) {
-    console.log(`    Error in manual scoring: ${error.message}`);
-  }
-  
-  return 0;
-}
-
-// Function to manually grade responses (when Google Forms doesn't auto-grade)
-function manuallyGradeResponses() {
-  try {
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
-    const formItems = form.getItems();
-    const responses = form.getResponses();
-    
-    console.log('=== MANUALLY GRADING RESPONSES ===');
-    
-    responses.forEach((response, responseIndex) => {
-      console.log(`\nGrading Response #${responseIndex + 1}:`);
-      const itemResponses = response.getItemResponses();
-      
-      itemResponses.forEach((itemResponse, itemIndex) => {
-        const formItem = formItems[itemIndex];
-        const questionTitle = formItem.getTitle();
-        const studentAnswer = itemResponse.getResponse();
-        const itemType = formItem.getType();
-        
-        // Skip name fields
-        if (questionTitle.toLowerCase().includes('name')) {
-          console.log(`  Skipping name field: "${questionTitle}"`);
-          return;
-        }
-        
-        console.log(`  Question: "${questionTitle}"`);
-        console.log(`  Student Answer: "${studentAnswer}"`);
-        console.log(`  Type: ${itemType}`);
-        
-        try {
-          if (itemType === FormApp.ItemType.MULTIPLE_CHOICE) {
-            const mcItem = formItem.asMultipleChoiceItem();
-            const maxPoints = mcItem.getPoints();
-            
-            // Get correct answer
-            const choices = mcItem.getChoices();
-            let correctAnswer = null;
-            let score = 0;
-            
-            choices.forEach(choice => {
-              if (choice.isCorrectAnswer && choice.isCorrectAnswer()) {
-                correctAnswer = choice.getValue();
-              }
-            });
-            
-            if (correctAnswer && studentAnswer === correctAnswer) {
-              score = maxPoints;
-            }
-            
-            console.log(`  Correct Answer: "${correctAnswer}"`);
-            console.log(`  Score: ${score}/${maxPoints}`);
-            
-            // Try to set the score on the response
-            try {
-              itemResponse.setScore(score);
-            } catch (e) {
-              console.log(`  Cannot set score: ${e.message}`);
-            }
-          }
-          
-        } catch (error) {
-          console.log(`  Error grading: ${error.message}`);
-        }
-      });
-    });
-    
-  } catch (error) {
-    console.error('Error manually grading responses:', error);
-  }
-}
-
-// Alternative: Force Google Forms to recalculate scores
-function forceRecalculateScores() {
-  try {
-    console.log('Attempting to force Google Forms to recalculate scores...');
-    
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
-    
-    // Try to trigger recalculation by toggling quiz mode
-    const wasQuiz = form.isQuiz();
-    console.log('Current quiz status:', wasQuiz);
-    
-    if (wasQuiz) {
-      // This might trigger recalculation (experimental)
-      console.log('Form is already a quiz. Scores should be calculated automatically.');
-      console.log('Try submitting a new response to test if scoring works.');
-    }
-    
-  } catch (error) {
-    console.error('Error forcing recalculation:', error);
-  }
-}
+ 
 
 // Test function to check the latest response manually
 function testLatestResponse() {
@@ -622,88 +377,10 @@ function testLatestResponse() {
   onFormSubmit(); // This will process the most recent submission
 }
 
-// Helper function to inspect your form structure
-function inspectForm() {
-  try {
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
-    console.log('=== FORM INSPECTION ===');
-    console.log('Form Title:', form.getTitle());
-    console.log('Is Quiz:', form.isQuiz());
-    console.log('Collect Email:', form.collectsEmail());
-    
-    const items = form.getItems();
-    console.log('\n=== FORM QUESTIONS ===');
-    items.forEach((item, index) => {
-      console.log(`\n${index + 1}. "${item.getTitle()}"`);
-      console.log(`   Type: ${item.getType()}`);
-      
-      // Try to get quiz info
-      try {
-        const quizItem = item.asQuizItem();
-        const points = quizItem.getPoints();
-        console.log(`   ✓ QUIZ ITEM: ${points} points`);
-        
-        // Get feedback if available
-        const feedback = quizItem.getFeedbackForCorrect();
-        if (feedback) {
-          console.log(`   Correct feedback: "${feedback.getText()}"`);
-        }
-        
-      } catch (e) {
-        console.log(`   ✗ NOT a quiz item: ${e.message}`);
-        
-        // Check what type it is specifically
-        if (item.getType() === FormApp.ItemType.MULTIPLE_CHOICE) {
-          console.log(`   (This is a multiple choice item without quiz scoring)`);
-        } else if (item.getType() === FormApp.ItemType.CHECKBOX) {
-          console.log(`   (This is a checkbox item without quiz scoring)`);
-        } else if (item.getType() === FormApp.ItemType.TEXT) {
-          console.log(`   (This is a text item - probably the name field)`);
-        }
-      }
-    });
-    
-    const responses = form.getResponses();
-    console.log(`\n=== RESPONSES (${responses.length} total) ===`);
-    
-    if (responses.length > 0) {
-      console.log('\nMost Recent Response Details:');
-      const latest = responses[responses.length - 1];
-      const itemResponses = latest.getItemResponses();
-      
-      itemResponses.forEach((itemResponse, index) => {
-        const response = itemResponse.getResponse();
-        const score = itemResponse.getScore();
-        const item = itemResponse.getItem();
-        
-        console.log(`\n${index + 1}. Question: "${item.getTitle()}"`);
-        console.log(`   Student Answer: "${response}"`);
-        console.log(`   Score: ${score}`);
-        
-        // Try to get max points
-        try {
-          const maxPoints = item.asQuizItem().getPoints();
-          console.log(`   Max Points: ${maxPoints}`);
-        } catch (e) {
-          console.log(`   Max Points: N/A (not a quiz item)`);
-        }
-      });
-    }
-    
-  } catch (error) {
-    console.error('Error inspecting form:', error);
-  }
-}
-
-// Diagnostic function
-function diagnoseForm() {
-  inspectForm();
-}
-
 // Test function to create a sample certificate
 function testCertificateCreation() {
   try {
-    console.log('Testing certificate creation...');
+    console.log('Testing 4:3 certificate creation...');
     
     const sampleName = 'John Doe';
     const samplePercentage = 95;
@@ -712,7 +389,7 @@ function testCertificateCreation() {
     
     const certificateBlob = createYouthMappersCertificate(sampleName, samplePercentage, sampleEarned, sampleTotal);
     
-    console.log('Certificate created successfully!');
+    console.log('4:3 Certificate created successfully!');
     console.log('Certificate name:', certificateBlob.getName());
     console.log('Certificate size:', certificateBlob.getBytes().length, 'bytes');
     
@@ -720,8 +397,8 @@ function testCertificateCreation() {
     const testEmail = Session.getActiveUser().getEmail();
     GmailApp.sendEmail(
       testEmail,
-      'Test YouthMappers Certificate',
-      'Here is a test certificate generated by the script.',
+      'Test YouthMappers 4:3 Certificate',
+      'Here is a test certificate generated with the new 4:3 ratio template.',
       {
         attachments: [certificateBlob],
         name: 'YouthMappers Academy'
@@ -745,5 +422,49 @@ function testEmailSetup() {
   );
   console.log('Test email sent to:', testEmail);
 }
+
+// Helper function to inspect your form structure
+function inspectForm() {
+  try {
+    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    console.log('=== FORM INSPECTION ===');
+    console.log('Form Title:', form.getTitle());
+    console.log('Is Quiz:', form.isQuiz());
+    console.log('Collect Email:', form.collectsEmail());
+    
+    const items = form.getItems();
+    console.log('\n=== FORM QUESTIONS ===');
+    items.forEach((item, index) => {
+      console.log(`\n${index + 1}. "${item.getTitle()}"`);
+      console.log(`   Type: ${item.getType()}`);
+      
+      // Try to get quiz info
+      try {
+        const quizItem = item.asQuizItem();
+        const points = quizItem.getPoints();
+        console.log(`   ✓ QUIZ ITEM: ${points} points`);
+        
+      } catch (e) {
+        console.log(`   ✗ NOT a quiz item: ${e.message}`);
+        
+        // Check what type it is specifically
+        if (item.getType() === FormApp.ItemType.MULTIPLE_CHOICE) {
+          console.log(`   (This is a multiple choice item without quiz scoring)`);
+        } else if (item.getType() === FormApp.ItemType.CHECKBOX) {
+          console.log(`   (This is a checkbox item without quiz scoring)`);
+        } else if (item.getType() === FormApp.ItemType.TEXT) {
+          console.log(`   (This is a text item - probably the name field)`);
+        }
+      }
+    });
+    
+    const responses = form.getResponses();
+    console.log(`\n=== RESPONSES (${responses.length} total) ===`);
+    
+  } catch (error) {
+    console.error('Error inspecting form:', error);
+  }
+}
+
 
 testCertificateCreation()
