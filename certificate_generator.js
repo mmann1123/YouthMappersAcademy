@@ -1,7 +1,7 @@
 // Google Apps Script for Auto-Grading Quiz and Sending YouthMappers Certificates
 // Form ID: 1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A
-// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8 (original)  1zWBGq39IwAGZa8dmqYyfGkBWEBeaWJ9g (4:3 ratio)
-
+// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8 (4:3 ratio)
+// presentation custom size 1TUZFft_YqSbqRP3vEjP3Z0S_VfEm_FvHwjMXeIoLkrw
 
 function onFormSubmit(e) {
   console.log('Form submitted! Processing response...');
@@ -151,12 +151,43 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
   try {
     console.log(`Sending certificate to ${name} (${email}) - Score: ${percentage}%`);
     
-    // Create certificate with your YouthMappers template (4:3 ratio)
+    // Create certificate PNG with your YouthMappers template
     const certificateBlob = createYouthMappersCertificate(name, percentage, earnedPoints, totalPoints);
+    
+    // Check if it's PNG or PDF
+    const fileExtension = certificateBlob.getName().includes('.png') ? 'PNG' : 'PDF';
     
     // Email subject and body
     const subject = 'Congratulations! Your YouthMappers Certificate';
-    const body = `Dear ${name},\n\nCongratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).\n\nPlease find your certificate of completion attached.\n\nBest regards,\nYouthMappers Academy Team`;
+    const body = `Dear ${name},
+
+🎉 Congratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
+
+📜 Your official YouthMappers Academy Certificate of Completion is attached as a high-quality ${fileExtension} image.
+
+🖨️ For best results:
+• Download the certificate to your computer
+• Print on high-quality paper (letter or A4 size)
+• Use high-resolution print settings
+• Consider using photo paper for premium finish
+
+🏆 Course Details:
+• Course: OpenStreetMap Training - Chapter 1: OpenStreetMap Ecosystem
+• Badge: YouthMappers Academy Badge 1
+• Completion Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+
+📧 Next Steps:
+• Continue with Chapter 2 of the OpenStreetMap training series
+• Join the YouthMappers community for ongoing mapping activities
+• Share your achievement on social media using #YouthMappers
+
+Thank you for your commitment to learning and contributing to the global mapping community!
+
+Best regards,
+YouthMappers Academy Team
+
+---
+This is an automated message from the YouthMappers Academy certification system.`;
     
     // Send email with certificate attachment
     GmailApp.sendEmail(
@@ -169,7 +200,7 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
       }
     );
     
-    console.log(`Certificate sent successfully to ${email}`);
+    console.log(`Certificate ${fileExtension} sent successfully to ${email}`);
     
   } catch (error) {
     console.error('Error sending certificate:', error);
@@ -191,10 +222,28 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     const templateFileId = '199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8';
     
     // Create a new Google Slides presentation
-    const presentation = SlidesApp.create(`YouthMappers_Certificate_${name}`);
+    // const presentation = SlidesApp.create(`YouthMappers_Certificate_${name}`);
+    // const slides = presentation.getSlides();
+    // const slide = slides[0];
+    
+    const templateId = '1TUZFft_YqSbqRP3vEjP3Z0S_VfEm_FvHwjMXeIoLkrw'; 
+    const newPresentationName = 'YouthMappers_Certificate_User';
+
+    // Get the file object of the template
+    const pres_templateFile = DriveApp.getFileById(templateId);
+
+    // Make a copy of the template and rename it
+    const newPresentationFile = pres_templateFile.makeCopy(newPresentationName);
+
+    // Get the ID of the new presentation to work with it
+    const newPresentationId = newPresentationFile.getId();
+    const presentation = SlidesApp.openById(newPresentationId);
     const slides = presentation.getSlides();
     const slide = slides[0];
-    
+
+
+
+
     // Get the certificate template file
     const templateFile = DriveApp.getFileById(templateFileId);
     const imageBlob = templateFile.getBlob();
@@ -293,83 +342,149 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
   }
 }
 
-// // Fallback certificate creation if the image method fails
-// function createFallbackCertificate(name, percentage, earnedPoints, totalPoints) {
-//   try {
-//     console.log('Creating fallback text certificate for:', name);
+// Fallback certificate creation if the image method fails
+function createFallbackCertificate(name, percentage, earnedPoints, totalPoints) {
+  try {
+    console.log('Creating fallback text certificate for:', name);
     
-//     const doc = DocumentApp.create(`YouthMappers_Certificate_${name}_Fallback`);
-//     const body = doc.getBody();
-//     body.clear();
+    const doc = DocumentApp.create(`YouthMappers_Certificate_${name}_Fallback`);
+    const body = doc.getBody();
+    body.clear();
     
-//     // Add certificate content with YouthMappers branding
-//     body.appendParagraph('YOUTHMAPPERS ACADEMY')
-//       .setHeading(DocumentApp.ParagraphHeading.TITLE)
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    // Add certificate content with YouthMappers branding
+    body.appendParagraph('YOUTHMAPPERS ACADEMY')
+      .setHeading(DocumentApp.ParagraphHeading.TITLE)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-//     body.appendParagraph('CERTIFICATE OF COMPLETION')
-//       .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    body.appendParagraph('CERTIFICATE OF COMPLETION')
+      .setHeading(DocumentApp.ParagraphHeading.SUBTITLE)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-//     body.appendParagraph('\n');
+    body.appendParagraph('\n');
     
-//     body.appendParagraph('OSM ECOSYSTEM')
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-//       .editAsText().setBold(true).setFontSize(18);
+    body.appendParagraph('OSM ECOSYSTEM')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true).setFontSize(18);
     
-//     body.appendParagraph('YOUTHMAPPERS ACADEMY - BADGE 1')
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-//       .editAsText().setBold(true).setFontSize(14);
+    body.appendParagraph('YOUTHMAPPERS ACADEMY - BADGE 1')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true).setFontSize(14);
     
-//     body.appendParagraph('\n');
+    body.appendParagraph('\n');
     
-//     body.appendParagraph('THIS CERTIFIES SUCCESSFUL COMPLETION OF YOUTHMAPPERS')
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+    body.appendParagraph('THIS CERTIFIES SUCCESSFUL COMPLETION OF YOUTHMAPPERS')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER);
     
-//     body.appendParagraph('OPENSTREETMAP TRAINING CHAPTER 1 - OPENSTREETMAP ECOSYSTEM')
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-//       .editAsText().setItalic(true);
+    body.appendParagraph('OPENSTREETMAP TRAINING CHAPTER 1 - OPENSTREETMAP ECOSYSTEM')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setItalic(true);
     
-//     body.appendParagraph('\n\n');
+    body.appendParagraph('\n\n');
     
-//     // Date and name section
-//     const table = body.appendTable();
-//     const row = table.appendTableRow();
+    // Date and name section
+    const table = body.appendTable();
+    const row = table.appendTableRow();
     
-//     const dateCell = row.appendTableCell(`Date\n\n${new Date().toLocaleDateString()}`);
-//     dateCell.setWidth(250);
+    const dateCell = row.appendTableCell(`Date\n\n${new Date().toLocaleDateString()}`);
+    dateCell.setWidth(250);
     
-//     const nameCell = row.appendTableCell(`Recipient\n\n${name}`);
-//     nameCell.setWidth(250);
+    const nameCell = row.appendTableCell(`Recipient\n\n${name}`);
+    nameCell.setWidth(250);
     
-//     table.setBorderWidth(0);
+    table.setBorderWidth(0);
     
-//     body.appendParagraph('\n');
-//     body.appendParagraph(`Score: ${percentage}% (${earnedPoints}/${totalPoints} points)`)
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-//       .editAsText().setBold(true);
+    body.appendParagraph('\n');
+    body.appendParagraph(`Score: ${percentage}% (${earnedPoints}/${totalPoints} points)`)
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setBold(true);
     
-//     body.appendParagraph('\nyouthmappers')
-//       .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
-//       .editAsText().setItalic(true);
+    body.appendParagraph('\nyouthmappers')
+      .setAlignment(DocumentApp.HorizontalAlignment.CENTER)
+      .editAsText().setItalic(true);
     
-//     doc.saveAndClose();
+    doc.saveAndClose();
     
-//     const pdfBlob = DriveApp.getFileById(doc.getId()).getAs('application/pdf');
-//     pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_Fallback.pdf`);
+    const pdfBlob = DriveApp.getFileById(doc.getId()).getAs('application/pdf');
+    pdfBlob.setName(`YouthMappers_Certificate_${name.replace(/\s+/g, '_')}_Fallback.pdf`);
     
-//     DriveApp.getFileById(doc.getId()).setTrashed(true);
+    DriveApp.getFileById(doc.getId()).setTrashed(true);
     
-//     console.log('Fallback certificate created successfully');
-//     return pdfBlob;
+    console.log('Fallback certificate created successfully');
+    return pdfBlob;
     
-//   } catch (error) {
-//     console.error('Error creating fallback certificate:', error);
-//     throw error;
-//   }
-// }
-  
- 
+  } catch (error) {
+    console.error('Error creating fallback certificate:', error);
+    throw error;
+  }
+}
+
+// URGENT: Run this to stop any email spam
+function stopEmailSpam() {
+  try {
+    console.log('🛑 STOPPING EMAIL SPAM - Deleting all triggers...');
+    
+    // Delete ALL triggers to stop the spam
+    const triggers = ScriptApp.getProjectTriggers();
+    triggers.forEach((trigger, index) => {
+      console.log(`Deleting trigger ${index + 1}: ${trigger.getHandlerFunction()} (${trigger.getEventType()})`);
+      ScriptApp.deleteTrigger(trigger);
+    });
+    
+    console.log('✅ All triggers deleted. Email spam should stop now!');
+    console.log('');
+    console.log('🔧 Next steps:');
+    console.log('1. Wait a few minutes for any running executions to finish');
+    console.log('2. Run manualTriggerSetupInstructions() to see how to set up the proper trigger');
+    console.log('3. Or just use testLatestResponse() to test manually');
+    
+    // Clear any stored properties that might cause issues
+    PropertiesService.getScriptProperties().deleteAll();
+    console.log('✅ Cleared all stored properties');
+    
+  } catch (error) {
+    console.error('Error stopping email spam:', error);
+  }
+}
+
+// Set up the form trigger (run this once manually)
+function setupFormTrigger() {
+  try {
+    console.log('=== MANUAL TRIGGER SETUP INSTRUCTIONS ===');
+    console.log('1. Go to your Google Form: https://docs.google.com/forms/d/1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A/edit');
+    console.log('2. Click the three dots menu (⋮) in the top right');
+    console.log('3. Select "Script editor"');
+    console.log('4. In Apps Script, click "Triggers" (clock icon) on the left sidebar');
+    console.log('5. Click "Add Trigger"');
+    console.log('6. Configure:');
+    console.log('   - Function: onFormSubmit');
+    console.log('   - Event source: From form');
+    console.log('   - Event type: On form submit');
+    console.log('7. Click "Save"');
+    console.log('');
+    console.log('This will create a PROPER form submit trigger that only runs when someone actually submits the form.');
+    
+  } catch (error) {
+    console.error('Error setting up trigger:', error);
+    console.log('You can also test manually by running testLatestResponse()');
+  }
+}
+
+// PROPER way to set up form submit trigger (Manual Setup Required)
+function manualTriggerSetupInstructions() {
+  console.log('=== MANUAL TRIGGER SETUP INSTRUCTIONS ===');
+  console.log('1. Go to your Google Form: https://docs.google.com/forms/d/1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A/edit');
+  console.log('2. Click the three dots menu (⋮) in the top right');
+  console.log('3. Select "Script editor"');
+  console.log('4. In Apps Script, click "Triggers" (clock icon) on the left sidebar');
+  console.log('5. Click "Add Trigger"');
+  console.log('6. Configure:');
+  console.log('   - Function: onFormSubmit');
+  console.log('   - Event source: From form');
+  console.log('   - Event type: On form submit');
+  console.log('7. Click "Save"');
+  console.log('');
+  console.log('This will create a PROPER form submit trigger that only runs when someone actually submits the form.');
+}
 
 // Test function to check the latest response manually
 function testLatestResponse() {
@@ -380,7 +495,7 @@ function testLatestResponse() {
 // Test function to create a sample certificate
 function testCertificateCreation() {
   try {
-    console.log('Testing 4:3 certificate creation...');
+    console.log('Testing PNG certificate creation with placeholders...');
     
     const sampleName = 'John Doe';
     const samplePercentage = 95;
@@ -389,23 +504,27 @@ function testCertificateCreation() {
     
     const certificateBlob = createYouthMappersCertificate(sampleName, samplePercentage, sampleEarned, sampleTotal);
     
-    console.log('4:3 Certificate created successfully!');
+    console.log('Certificate created successfully!');
     console.log('Certificate name:', certificateBlob.getName());
     console.log('Certificate size:', certificateBlob.getBytes().length, 'bytes');
     
-    // Optionally email the test certificate to yourself
+    // Determine file type
+    const fileType = certificateBlob.getName().includes('.png') ? 'PNG' : 'PDF';
+    console.log('File type:', fileType);
+    
+    // Email the test certificate to yourself
     const testEmail = Session.getActiveUser().getEmail();
     GmailApp.sendEmail(
       testEmail,
-      'Test YouthMappers 4:3 Certificate',
-      'Here is a test certificate generated with the new 4:3 ratio template.',
+      `Test YouthMappers Certificate (${fileType})`,
+      `Here is a test certificate generated with your Google Slides template.\n\nThe certificate should show:\n• Name: ${sampleName}\n• Date: ${new Date().toLocaleDateString()}\n\nThis ${fileType} preserves the exact 2000x1545 dimensions without cropping.`,
       {
         attachments: [certificateBlob],
         name: 'YouthMappers Academy'
       }
     );
     
-    console.log('Test certificate emailed to:', testEmail);
+    console.log(`Test certificate (${fileType}) emailed to:`, testEmail);
     
   } catch (error) {
     console.error('Error testing certificate creation:', error);
@@ -465,6 +584,4 @@ function inspectForm() {
     console.error('Error inspecting form:', error);
   }
 }
-
-
 testCertificateCreation()
