@@ -46,10 +46,10 @@ function onFormSubmit(e) {
     const lastSentTime = PropertiesService.getScriptProperties().getProperty(emailKey);
     const currentTime = new Date().getTime();
     
-    if (lastSentTime && (currentTime - parseInt(lastSentTime)) < 300000) { // 5 minutes
-      console.log(`Certificate already sent to ${respondentEmail} in the last 5 minutes. Skipping.`);
-      return;
-    }
+    // if (lastSentTime && (currentTime - parseInt(lastSentTime)) < 300000) { // 5 minutes
+    //   console.log(`Certificate already sent to ${respondentEmail} in the last 5 minutes. Skipping.`);
+    //   return;
+    // }
     
     // Get all item responses to find the name
     const itemResponses = formResponse.getItemResponses();
@@ -161,22 +161,22 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
     const subject = 'Congratulations! Your YouthMappers Certificate';
     const body = `Dear ${name},
 
-🎉 Congratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
+Congratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
 
-📜 Your official YouthMappers Academy Certificate of Completion is attached as a high-quality ${fileExtension} image.
+Your official YouthMappers Academy Certificate of Completion is attached as a high-quality ${fileExtension} image.
 
-🖨️ For best results:
+For best results:
 • Download the certificate to your computer
 • Print on high-quality paper (letter or A4 size)
 • Use high-resolution print settings
 • Consider using photo paper for premium finish
 
-🏆 Course Details:
+Course Details:
 • Course: OpenStreetMap Training - Chapter 1: OpenStreetMap Ecosystem
 • Badge: YouthMappers Academy Badge 1
 • Completion Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
 
-📧 Next Steps:
+Next Steps:
 • Continue with Chapter 2 of the OpenStreetMap training series
 • Join the YouthMappers community for ongoing mapping activities
 • Share your achievement on social media using #YouthMappers
@@ -280,13 +280,16 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     const dateBox = slide.insertTextBox(currentDate);
     // Positioned for typical certificate "Date" line at bottom left
-    dateBox.setLeft(220);    // Left side positioning
+    dateBox.setLeft(230);    // Left side positioning
     dateBox.setTop(840);    // Near bottom for date line
-    dateBox.setWidth(250);  // Wide enough for full date
+    dateBox.setWidth(450);  // Wide enough for full date
     dateBox.setHeight(35);  // Sufficient height for text
     
     // Style the date text
     const dateTextRange = dateBox.getText();
+        // Center align the name text within its box
+    dateTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
+    
     dateTextRange.getTextStyle()
       .setFontSize(30)       // Good size for readability
       .setFontFamily('Sans Serif')
@@ -300,22 +303,22 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     // Add the recipient name text box (positioned for "Recipient" line)
     const nameBox = slide.insertTextBox(name);
-    nameBox.setLeft(820);   // Right side positioning for recipient line
+    nameBox.setLeft(870);   // Right side positioning for recipient line
     nameBox.setTop(840);    // Same vertical position as date
-    nameBox.setWidth(250);  // Wide enough for longer names
+    nameBox.setWidth(450);  // Wide enough for longer names
     nameBox.setHeight(35);  // Same height as date box
-    
+      
     // Style the name text
     const nameTextRange = nameBox.getText();
+    // Set the horizontal alignment for the text within the box
+    nameTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
     nameTextRange.getTextStyle()
       .setFontSize(30)       // Same size as date
       .setFontFamily('Sans Serif')
       .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
-    // Center align the name text within its box
-    nameTextRange.getParagraphStyle().setParagraphAlignment(SlidesApp.ParagraphAlignment.CENTER);
-    
+
     console.log('Name added:', name);
     
     // Save the presentation
@@ -586,4 +589,5 @@ function inspectForm() {
     console.error('Error inspecting form:', error);
   }
 }
-testCertificateCreation()
+// testCertificateCreation()
+onFormSubmit() 
