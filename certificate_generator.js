@@ -238,6 +238,8 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     // Get the ID of the new presentation to work with it
     const newPresentationId = newPresentationFile.getId();
     const presentation = SlidesApp.openById(newPresentationId);
+    presentation.replaceAllText('{{NAME}}', 'Your User Name');
+
     const slides = presentation.getSlides();
     const slide = slides[0];
 
@@ -278,16 +280,16 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     const dateBox = slide.insertTextBox(currentDate);
     // Positioned for typical certificate "Date" line at bottom left
-    dateBox.setLeft(80);    // Left side positioning
-    dateBox.setTop(430);    // Near bottom for date line
-    dateBox.setWidth(200);  // Wide enough for full date
+    dateBox.setLeft(220);    // Left side positioning
+    dateBox.setTop(840);    // Near bottom for date line
+    dateBox.setWidth(250);  // Wide enough for full date
     dateBox.setHeight(35);  // Sufficient height for text
     
     // Style the date text
     const dateTextRange = dateBox.getText();
     dateTextRange.getTextStyle()
-      .setFontSize(16)       // Good size for readability
-      .setFontFamily('Arial')
+      .setFontSize(30)       // Good size for readability
+      .setFontFamily('Sans Serif')
       .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
@@ -298,16 +300,16 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     // Add the recipient name text box (positioned for "Recipient" line)
     const nameBox = slide.insertTextBox(name);
-    nameBox.setLeft(420);   // Right side positioning for recipient line
-    nameBox.setTop(430);    // Same vertical position as date
+    nameBox.setLeft(820);   // Right side positioning for recipient line
+    nameBox.setTop(840);    // Same vertical position as date
     nameBox.setWidth(250);  // Wide enough for longer names
     nameBox.setHeight(35);  // Same height as date box
     
     // Style the name text
     const nameTextRange = nameBox.getText();
     nameTextRange.getTextStyle()
-      .setFontSize(16)       // Same size as date
-      .setFontFamily('Arial')
+      .setFontSize(30)       // Same size as date
+      .setFontFamily('Sans Serif')
       .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
