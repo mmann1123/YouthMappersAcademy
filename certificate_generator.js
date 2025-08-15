@@ -163,14 +163,6 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
 
 Congratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
 
-Your official YouthMappers Academy Certificate of Completion is attached as a high-quality ${fileExtension} image.
-
-For best results:
-• Download the certificate to your computer
-• Print on high-quality paper (letter or A4 size)
-• Use high-resolution print settings
-• Consider using photo paper for premium finish
-
 Course Details:
 • Course: OpenStreetMap Training - Chapter 1: OpenStreetMap Ecosystem
 • Badge: YouthMappers Academy Badge 1
@@ -293,7 +285,7 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     dateTextRange.getTextStyle()
       .setFontSize(30)       // Good size for readability
       .setFontFamily('Sans Serif')
-      .setBold(true)
+      // .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
     // Center align the date text within its box
@@ -315,7 +307,7 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     nameTextRange.getTextStyle()
       .setFontSize(30)       // Same size as date
       .setFontFamily('Sans Serif')
-      .setBold(true)
+      // .setBold(true)
       .setForegroundColor('#000000'); // Black text
     
 
