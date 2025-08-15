@@ -250,7 +250,7 @@ Course Details:
 Next Steps:
 • Contintue working on YM Academy! 
 • Share your achievement on social media using #YouthMappers
-• Make sure your chapter's contributions are tracked! Add all new members <a href="https://mapping.team/>here</a>.
+• Make sure your chapter's contributions are tracked! Add all new members here: https://mapping.team/ 
 
 Thank you for your commitment to learning and contributing to the global mapping community!
 
@@ -351,7 +351,7 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     const dateBox = slide.insertTextBox(currentDate);
     // Positioned for typical certificate "Date" line at bottom left
-    dateBox.setLeft(230);    // Left side positioning
+    dateBox.setLeft(234);    // Left side positioning
     dateBox.setTop(840);    // Near bottom for date line
     dateBox.setWidth(450);  // Wide enough for full date
     dateBox.setHeight(35);  // Sufficient height for text
@@ -374,7 +374,7 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     
     // Add the recipient name text box (positioned for "Recipient" line)
     const nameBox = slide.insertTextBox(name);
-    nameBox.setLeft(870);   // Right side positioning for recipient line
+    nameBox.setLeft(830);   // Right side positioning for recipient line
     nameBox.setTop(840);    // Same vertical position as date
     nameBox.setWidth(450);  // Wide enough for longer names
     nameBox.setHeight(35);  // Same height as date box
@@ -623,4 +623,4 @@ function inspectForm() {
 }
 // testCertificateCreation()
 // testLatestResponse()
-onFormSubmit() 
+// onFormSubmit() 
