@@ -1,14 +1,50 @@
-// Google Apps Script for Auto-Grading Quiz and Sending YouthMappers Certificates
-// Form ID: 1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A
-// Certificate Template ID: 199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8 (4:3 ratio)
-// presentation custom size 1TUZFft_YqSbqRP3vEjP3Z0S_VfEm_FvHwjMXeIoLkrw
+/**
+ * Google Apps Script for Auto-Grading Quiz and Sending YouthMappers Certificates
+ * 
+ * SETUP INSTRUCTIONS:
+ * 1. Update the configuration variables below for your specific course
+ * 2. Go to your Google Form: https://docs.google.com/forms/d/[YOUR_FORM_ID]/edit
+ * 3. Click the three dots menu (⋮) in the top right → Select "Script editor"
+ * 4. In Apps Script, click "Triggers" (clock icon) on the left sidebar → Click "Add Trigger"
+ * 5. Configure: Function: onFormSubmit, Event source: From form, Event type: On form submit
+ * 6. Click "Save" - This creates a proper form submit trigger
+ * 
+ * TESTING:
+ * - Run testLatestResponse() to test with the most recent form submission
+ * - Run testCertificateCreation() to test certificate generation
+ * - Run inspectForm() to examine your form structure
+ */
+
+// ==================== CONFIGURATION VARIABLES ====================
+// Update these variables for each new YouthMappers course:
+
+const COURSE_CONFIG = {
+  // Form ID for the quiz (found in the form URL)
+  FORM_ID: '1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A',
+  
+  // Course information
+  COURSE_NAME: 'OpenStreetMap Training - Chapter 1: OpenStreetMap Ecosystem',
+  COURSE_NUMBER: 'YouthMappers Academy Badge 1',
+  
+  // Certificate template IDs from Google Drive
+  CERTIFICATE_TEMPLATE_ID: '199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8', // 4:3 ratio certificate image
+  SLIDES_TEMPLATE_ID: '1TUZFft_YqSbqRP3vEjP3Z0S_VfEm_FvHwjMXeIoLkrw',   // Google Slides template
+  
+  // Passing grade percentage
+  PASSING_GRADE: 80,
+  
+  // Email configuration
+  EMAIL_FROM_NAME: 'YouthMappers Academy'
+};
+
+// ==================== END CONFIGURATION ====================
 
 function onFormSubmit(e) {
   console.log('Form submitted! Processing response...');
   
   try {
     // Get your specific form by ID
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    const form = FormApp.openById(COURSE_CONFIG.FORM_ID);
     
     // Use the event parameter if available, otherwise get latest response
     let formResponse;
@@ -131,8 +167,8 @@ function onFormSubmit(e) {
     const percentage = totalPossible > 0 ? Math.round((totalEarned / totalPossible) * 100) : 0;
     console.log(`Percentage: ${percentage}%`);
     
-    // Check if passed (80% or higher)
-    if (percentage >= 80) {
+    // Check if passed (passing grade or higher)
+    if (percentage >= COURSE_CONFIG.PASSING_GRADE) {
       // Record that we're sending a certificate
       PropertiesService.getScriptProperties().setProperty(emailKey, currentTime.toString());
       
@@ -161,11 +197,11 @@ function sendCertificate(email, name, percentage, earnedPoints, totalPoints) {
     const subject = 'Congratulations! Your YouthMappers Certificate';
     const body = `Dear ${name},
 
-Congratulations! You have successfully completed the OpenStreetMap Ecosystem training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
+Congratulations! You have successfully completed the ${COURSE_CONFIG.COURSE_NAME} training with a score of ${percentage}% (${earnedPoints}/${totalPoints} points).
 
 Course Details:
-• Course: OpenStreetMap Training - Chapter 1: OpenStreetMap Ecosystem
-• Badge: YouthMappers Academy Badge 1
+• Course: ${COURSE_CONFIG.COURSE_NAME}
+• Badge: ${COURSE_CONFIG.COURSE_NUMBER}
 • Completion Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
 
 Next Steps:
@@ -188,7 +224,7 @@ This is an automated message from the YouthMappers Academy certification system.
       body,
       {
         attachments: [certificateBlob],
-        name: 'YouthMappers Academy'
+        name: COURSE_CONFIG.EMAIL_FROM_NAME
       }
     );
     
@@ -201,9 +237,9 @@ This is an automated message from the YouthMappers Academy certification system.
 
 function sendFailureNotification(email, name, percentage) {
   const subject = 'Quiz Results - Please Retake';
-  const body = `Dear ${name},\n\nThank you for taking the OpenStreetMap Ecosystem quiz. Unfortunately, you scored ${percentage}%, which is below the required 80% passing grade.\n\nPlease review the material and retake the quiz when you're ready.\n\nBest regards,\nYouthMappers Academy Team`;
+  const body = `Dear ${name},\n\nThank you for taking the ${COURSE_CONFIG.COURSE_NAME} quiz. Unfortunately, you scored ${percentage}%, which is below the required ${COURSE_CONFIG.PASSING_GRADE}% passing grade.\n\nPlease review the material and retake the quiz when you're ready.\n\nBest regards,\n${COURSE_CONFIG.EMAIL_FROM_NAME} Team`;
   
-  GmailApp.sendEmail(email, subject, body, {name: 'YouthMappers Academy'});
+  GmailApp.sendEmail(email, subject, body, {name: COURSE_CONFIG.EMAIL_FROM_NAME});
 }
 
 function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoints) {
@@ -211,14 +247,14 @@ function createYouthMappersCertificate(name, percentage, earnedPoints, totalPoin
     console.log('Creating YouthMappers certificate for:', name);
     
     // Your YouthMappers certificate template (4:3 ratio)
-    const templateFileId = '199GtrUU0UA8Iv1_FNZ2CbtjCzx4wfYm8';
+    const templateFileId = COURSE_CONFIG.CERTIFICATE_TEMPLATE_ID;
     
     // Create a new Google Slides presentation
     // const presentation = SlidesApp.create(`YouthMappers_Certificate_${name}`);
     // const slides = presentation.getSlides();
     // const slide = slides[0];
     
-    const templateId = '1TUZFft_YqSbqRP3vEjP3Z0S_VfEm_FvHwjMXeIoLkrw'; 
+    const templateId = COURSE_CONFIG.SLIDES_TEMPLATE_ID; 
     const newPresentationName = 'YouthMappers_Certificate_User';
 
     // Get the file object of the template
@@ -442,46 +478,7 @@ function stopEmailSpam() {
     console.error('Error stopping email spam:', error);
   }
 }
-
-// Set up the form trigger (run this once manually)
-function setupFormTrigger() {
-  try {
-    console.log('=== MANUAL TRIGGER SETUP INSTRUCTIONS ===');
-    console.log('1. Go to your Google Form: https://docs.google.com/forms/d/1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A/edit');
-    console.log('2. Click the three dots menu (⋮) in the top right');
-    console.log('3. Select "Script editor"');
-    console.log('4. In Apps Script, click "Triggers" (clock icon) on the left sidebar');
-    console.log('5. Click "Add Trigger"');
-    console.log('6. Configure:');
-    console.log('   - Function: onFormSubmit');
-    console.log('   - Event source: From form');
-    console.log('   - Event type: On form submit');
-    console.log('7. Click "Save"');
-    console.log('');
-    console.log('This will create a PROPER form submit trigger that only runs when someone actually submits the form.');
-    
-  } catch (error) {
-    console.error('Error setting up trigger:', error);
-    console.log('You can also test manually by running testLatestResponse()');
-  }
-}
-
-// PROPER way to set up form submit trigger (Manual Setup Required)
-function manualTriggerSetupInstructions() {
-  console.log('=== MANUAL TRIGGER SETUP INSTRUCTIONS ===');
-  console.log('1. Go to your Google Form: https://docs.google.com/forms/d/1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A/edit');
-  console.log('2. Click the three dots menu (⋮) in the top right');
-  console.log('3. Select "Script editor"');
-  console.log('4. In Apps Script, click "Triggers" (clock icon) on the left sidebar');
-  console.log('5. Click "Add Trigger"');
-  console.log('6. Configure:');
-  console.log('   - Function: onFormSubmit');
-  console.log('   - Event source: From form');
-  console.log('   - Event type: On form submit');
-  console.log('7. Click "Save"');
-  console.log('');
-  console.log('This will create a PROPER form submit trigger that only runs when someone actually submits the form.');
-}
+ 
 
 // Test function to check the latest response manually
 function testLatestResponse() {
@@ -517,7 +514,7 @@ function testCertificateCreation() {
       `Here is a test certificate generated with your Google Slides template.\n\nThe certificate should show:\n• Name: ${sampleName}\n• Date: ${new Date().toLocaleDateString()}\n\nThis ${fileType} preserves the exact 2000x1545 dimensions without cropping.`,
       {
         attachments: [certificateBlob],
-        name: 'YouthMappers Academy'
+        name: COURSE_CONFIG.EMAIL_FROM_NAME
       }
     );
     
@@ -542,7 +539,7 @@ function testEmailSetup() {
 // Helper function to inspect your form structure
 function inspectForm() {
   try {
-    const form = FormApp.openById('1luEms8em1u4P-AfHNFUeqsq_CYfds_UJZPFLGy6XL7A');
+    const form = FormApp.openById(COURSE_CONFIG.FORM_ID);
     console.log('=== FORM INSPECTION ===');
     console.log('Form Title:', form.getTitle());
     console.log('Is Quiz:', form.isQuiz());
