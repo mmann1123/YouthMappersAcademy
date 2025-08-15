@@ -8,6 +8,9 @@
  * 4. In Apps Script, click "Triggers" (clock icon) on the left sidebar → Click "Add Trigger"
  * 5. Configure: Function: onFormSubmit, Event source: From form, Event type: On form submit
  * 6. Click "Save" - This creates a proper form submit trigger
+ * 7. Paste "testCertificateCreation()" as the bottom of the sheet, click run, accept all permission requests
+ * 8. Delete "testCertificateCreation()" 
+ * 9. Try a form submission
  * 
  * TESTING:
  * - Run testLatestResponse() to test with the most recent form submission
@@ -34,10 +37,47 @@ const COURSE_CONFIG = {
   PASSING_GRADE: 80,
   
   // Email configuration
-  EMAIL_FROM_NAME: 'YouthMappers Academy'
+  EMAIL_FROM_NAME: 'YouthMappers Academy',
+  
+  // Google Sheets logging
+  TRACKING_SHEET_ID: '1q3Dg4L1bP7KEKBa61etjjbTlGhf0U06BaSXJRVIcRgo'
 };
 
 // ==================== END CONFIGURATION ====================
+
+function logCertificateToSheet(name, email, courseName, score) {
+  try {
+    console.log('Logging certificate data to Google Sheet...');
+    
+    const sheet = SpreadsheetApp.openById(COURSE_CONFIG.TRACKING_SHEET_ID).getActiveSheet();
+    
+    // Check if headers exist, if not add them
+    if (sheet.getLastRow() === 0) {
+      sheet.appendRow(['Name', 'Email', 'Course Completed', 'Score', 'Date', 'Certificate Sent']);
+    }
+    
+    const currentDate = new Date().toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric'
+    });
+    
+    // Append the certificate data
+    sheet.appendRow([
+      name,
+      email,
+      courseName,
+      `${score}%`,
+      currentDate,
+      'Yes'
+    ]);
+    
+    console.log(`Certificate data logged for ${name} (${email})`);
+    
+  } catch (error) {
+    console.error('Error logging to Google Sheet:', error);
+  }
+}
 
 function onFormSubmit(e) {
   console.log('Form submitted! Processing response...');
@@ -172,6 +212,9 @@ function onFormSubmit(e) {
       // Record that we're sending a certificate
       PropertiesService.getScriptProperties().setProperty(emailKey, currentTime.toString());
       
+      // Log to Google Sheet before sending certificate
+      logCertificateToSheet(studentName, respondentEmail, COURSE_CONFIG.COURSE_NAME, percentage);
+      
       sendCertificate(respondentEmail, studentName, percentage, totalEarned, totalPossible);
     } else {
       sendFailureNotification(respondentEmail, studentName, percentage);
@@ -205,9 +248,9 @@ Course Details:
 • Completion Date: ${new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
 
 Next Steps:
-• Continue with Chapter 2 of the OpenStreetMap training series
-• Join the YouthMappers community for ongoing mapping activities
+• Contintue working on YM Academy! 
 • Share your achievement on social media using #YouthMappers
+• Make sure your chapter's contributions are tracked! Add all new members <a href="https://mapping.team/>here</a>.
 
 Thank you for your commitment to learning and contributing to the global mapping community!
 
@@ -579,4 +622,5 @@ function inspectForm() {
   }
 }
 // testCertificateCreation()
+// testLatestResponse()
 onFormSubmit() 
