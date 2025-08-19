@@ -127,7 +127,7 @@ The map you see in this application is taken from the latest version of OSM. Bef
 
 ```{figure} static/v1.png
 ---
-label: Downloaded data is highlighted red
+name: Downloaded data is highlighted red
 width: 60%
 align: center
 ---
@@ -138,7 +138,7 @@ By default, editing is locked when you open Vespucci.  In the upper left corner 
 
 ```{figure} static/v2.png
 ---
-label: Downloaded but locked
+name: Downloaded but locked
 width: 60%
 align: center
 ---
@@ -146,7 +146,7 @@ align: center
  
 ```{figure} static/v4.png
 ---
-label: Downloaded now unlocked
+name: Downloaded now unlocked
 width: 60%
 align: center
 ---
@@ -155,7 +155,7 @@ When you have enabled unlock mode, you can now select any downloaded feature by 
 
 ```{figure} static/v5.png
 ---
-label: Feature selected
+name: Feature selected
 width: 60%
 align: center
 ---
@@ -169,7 +169,7 @@ The editor offers several tabs. You can navigate across the tabs by swiping left
 
 ```{figure} static/preset.png
 ---
-label: Present types for selected objects
+name: Present types for selected objects
 width: 40%
 align: center
 ---
@@ -178,7 +178,7 @@ align: center
 
 ```{figure} static/properties.png
 ---
-label: Properties table
+name: Properties table
 width: 40%
 align: center
 ---
@@ -187,7 +187,7 @@ align: center
 
 ```{figure} static/details.png
 ---
-label: Details table
+name: Details table
 width: 40%
 align: center
 ---
@@ -196,7 +196,7 @@ align: center
 
 ```{figure} static/relations.png
 ---
-label: Relations table
+name: Relations table
 width: 40%
 align: center
 ---
@@ -218,7 +218,7 @@ After making several edits, return to the main screen. You’ll see a number abo
 
 ```{figure} static/v0.png
 ---
-label: Transfer icon
+name: Transfer icon
 width: 60%
 align: center
 ---
@@ -270,7 +270,7 @@ Select a building that you know well by tapping on it.
  
 ```{figure} static/v0.png
 ---
-label: Transfer icon
+name: Transfer icon
 width: 60%
 align: center
 ---
