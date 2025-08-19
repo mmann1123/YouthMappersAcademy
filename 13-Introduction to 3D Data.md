@@ -437,7 +437,7 @@ Here is a guide on how to apply the OSM data model for 3D data: [**3D Tagging in
 
 ```{figure} static/key1.png
 ---
-label: list of building keys from OSMWiki
+name: list of building keys from OSMWiki
 width: 75%
 align: center
 ---
@@ -447,7 +447,7 @@ align: center
  
 ```{figure} static/height_final-06.png
 ---
-label: Building part tag
+name: Building part tag
 width: 50%
 align: center
 ---
@@ -459,7 +459,7 @@ align: center
  
 ```{figure} static/height_final-01.png
 ---
-label: Tagging the height of a building or a building height
+name: Tagging the height of a building or a building height
 width: 50%
 align: center
 ---
@@ -472,7 +472,7 @@ align: center
 
 ```{figure} static/height_final-07.png
 ---
-label: The number of above-ground floors in the building
+name: The number of above-ground floors in the building
 width: 50%
 align: center
 ---
@@ -484,7 +484,7 @@ align: center
 
 ```{figure} static/carpark.png
 ---
-label: Underground parking garage illustrates how to properly tag underground floors of a building
+name: Underground parking garage illustrates how to properly tag underground floors of a building
 width: 50%
 align: center
 ---
@@ -501,7 +501,7 @@ align: center
 
 ```{figure} static/roofshape.png
 ---
-label: Different types of roofs with their associated OSM tag
+name: Different types of roofs with their associated OSM tag
 width: 50%
 align: center
 ---
@@ -511,7 +511,7 @@ align: center
 
 ```{figure} static/roof_mat.png
 ---
-label: Different types of roof materials
+name: Different types of roof materials
 width: 50%
 align: center
 ---
@@ -521,7 +521,7 @@ align: center
 
 ```{figure} static/height_final-08.png
 ---
-label: Different types of roof colors
+name: Different types of roof colors
 width: 50%
 align: center
 ---
@@ -535,7 +535,7 @@ align: center
 
 ```{figure} static/height_final-08.png
 ---
-label: Different types of building materials
+name: Different types of building materials
 width: 50%
 align: center
 ---
@@ -545,7 +545,7 @@ align: center
 
 ```{figure} static/buliding_color.png
 ---
-label: Different types of building materials
+name: Different types of building materials
 width: 50%
 align: center
 ---
@@ -557,7 +557,7 @@ align: center
 
 ```{figure} static/3d_bldg_tags.png
 ---
-label: 3D-rendered building
+name: 3D-rendered building
 width: 50%
 align: center
 ---
@@ -566,7 +566,7 @@ align: center
 
 ```{figure} static/2d_bldg_tag.png
 ---
-label: 2D building footprint
+name: 2D building footprint
 width: 50%
 align: center
 ---
