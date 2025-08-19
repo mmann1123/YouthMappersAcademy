@@ -74,8 +74,8 @@ YouthMappers Blogspot: Whoever You Are, Your Data Fits in OSM
 [Whoever You Are, Your Data Fits in OSM](https://www.youthmappers.org/post/2019/10/08/whoever-you-are-your-data-fits-in-osm) By Jim Libby (University of Arizona)
 
 Hear from Jim on the process of discovery, from his first interactions with OpenStreetMap all the way through to his virtual internship position with USAID. Jim discusses how his experiences were the perfect complement to his academic studies in Geography and Urban Planning, allowing him to overlap the theoretical and practical elements of both disciplines.
-
 ```
+
 ## Want to dig a little deeper?
 
 Refer to the information below to learn more about mapping with iD Editor.
@@ -139,6 +139,15 @@ The following competencies derived from both the Geospatial Technology Competenc
 - How to apply geography to interpret the past
 - How to apply geography to interpret the present and plan for the future
 
+
+<div style="background-color:#91ccca;padding: 15px 30px;border-radius: 8px;">
+<h3>Knowledge Checks</h3>
+<p>To test your knowledge, complete the following test:</p>
+<p><a href="https://forms.gle/51xx8JkB2Bmqz1ZY7" style="background-color: #e74c3c; color: white; padding: 10px 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">🎯 Start OSM Mapping with iD Editor Quiz </a></p>
+<p>If you receive a score of 80% or higher, you will receive an email with a certificate for this module.</p>
+</div>
+<!--  
+
 ### Congratulations!
 
 Congratulations on completing **Course 2: Mapping with iD Editor**  of the YouthMappers Academy series! 
@@ -146,4 +155,4 @@ Congratulations on completing **Course 2: Mapping with iD Editor**  of the Youth
 ![alt text](Module2_Static/2.7.gif)
 
 
-
+ -->

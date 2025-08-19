@@ -124,14 +124,15 @@ Skills and proficiencies for the YouthMappers Academy Badge align with:
 - **Geospatial Technology Competency Model (GTCM)**
 - **National Geographic Standards**
 
-### Knowledge Checks
-```{admonition} Knowledge Checks
-To test your knowledge, complete the following [test](https://forms.office.com/Pages/ResponsePage.aspx?id=niOJ1pLExkCzkSxZUdMdFFgyN18wLBpEumnEYJ68m-ZUOUdYNTRBVjNXOVlCMFM4MkhBSllTOFc0RS4u).
 
-If you receive a score of 80% or higher, you will receive a badge for this module.
-
-```
-
+<div style="background-color:#91ccca;padding: 15px 30px;border-radius: 8px;">
+<h3>Knowledge Checks</h3>
+<p>To test your knowledge, complete the following test:</p>
+<p><a href="https://forms.gle/KK84FrnuvgsCFd217" style="background-color: #e74c3c; color: white; padding: 10px 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">🎯 Start OSM Ecosystem Quiz </a></p>
+<p>If you receive a score of 80% or higher, you will receive an email with a certificate for this module.</p>
+</div>
+ 
+ 
 
 <!-- 
 1. The information about “what” something is in OSM is called a:
