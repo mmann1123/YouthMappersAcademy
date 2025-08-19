@@ -270,7 +270,7 @@ Select a building that you know well by tapping on it.
  
 ```{figure} static/v0.png
 ---
-name: Transfer icon
+name: Transfer icon2
 width: 60%
 align: center
 ---
