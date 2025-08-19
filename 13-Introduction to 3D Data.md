@@ -587,3 +587,11 @@ Refer to the information below to learn more about OpenStreetMap Data Model mate
 3. [Mapping in 3D: Bringing Geospatial Data to Life with Cesium Stories](https://www.youtube.com/watch?v=gyF7GDfLtiw&t=5s)
 
 - In this tutorial, we’ll introduce you to Cesium ion, a cloud-based platform that lets you create, host, and stream interactive 3D geospatial content—all without installing software. Perfect for students, developers, and GIS professionals, this video covers how Cesium ion transforms raw 3D data into fast, web-friendly 3D Tiles and enables you to build immersive 3D stories using OpenStreetMap data. 
+
+
+<div style="background-color:#91ccca;padding: 15px 30px;border-radius: 8px;">
+<h3>Knowledge Checks</h3>
+<p>To test your knowledge, complete the following test:</p>
+<p><a href="https://forms.gle/qyEctybtkHV4nDNq7" style="background-color: #e74c3c; color: white; padding: 10px 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">🎯 Start Intro to 3D Data Quiz </a></p>
+<p>If you receive a score of 80% or higher, you will receive an email with a certificate for this module.</p>
+</div>
