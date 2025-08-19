@@ -42,13 +42,3 @@ html:
 sphinx:
   config:
     language: en
-
-# <!-- Google tag (gtag.js) -->
-# <script async src="https://www.googletagmanager.com/gtag/js?id=G-J1EHVT3TZF"></script>
-# <script>
-#   window.dataLayer = window.dataLayer || [];
-#   function gtag(){dataLayer.push(arguments);}
-#   gtag('js', new Date());
-
-#   gtag('config', 'G-J1EHVT3TZF');
-# </script>
