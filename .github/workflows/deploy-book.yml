@@ -40,6 +40,11 @@ jobs:
       run: |
         pip install -r requirements.txt
 
+    # Generate sitemap before building the book
+    - name: Generate sitemap
+      run: |
+        python generate_site_map.py
+
     # (optional) Cache your executed notebooks between runs
     # if you have config:
     # execute:
@@ -54,10 +59,7 @@ jobs:
     - name: Build the book
       run: |
         jupyter-book build .
-    # Add Google Search Console verification file
-    - name: Add Google verification file
-      run: |
-        cp googlee63085d15fc885b1.html _build/html/
+
         
     # Upload the book's HTML as an artifact
     - name: Upload artifact
