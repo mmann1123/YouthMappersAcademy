@@ -10,7 +10,7 @@ urls = []
 for root, dirs, files in os.walk(html_dir):
     for file in files:
         if file.endswith(".html"):
-            rel_path = os.path.relpath(os.path.join(root, file), html_dir)
+            rel_path = os.path.join(file)
             url = site_url + rel_path.replace(os.sep, "/")
             urls.append(url)
 
