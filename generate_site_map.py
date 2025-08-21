@@ -4,7 +4,7 @@ from datetime import datetime
 
 site_url = "https://mmann1123.github.io/YouthMappersAcademy/"  # <-- Update this to your actual site URL
 html_dir = "../"
-sitemap_path = os.path.join(html_dir, "sitemap.xml")
+sitemap_path = os.path.join(html_dir, "sitemap2.xml")
 
 urls = []
 for root, dirs, files in os.walk(html_dir):

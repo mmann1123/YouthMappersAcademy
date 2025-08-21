@@ -42,4 +42,4 @@ html:
 sphinx:
   config:
     language: en
-    html_extra_path: ['googlee63085d15fc885b1.html','sitemap.xml']
+    html_extra_path: ['googlee63085d15fc885b1.html','sitemap2.xml']
