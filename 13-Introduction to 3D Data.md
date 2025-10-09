@@ -595,3 +595,5 @@ Refer to the information below to learn more about OpenStreetMap Data Model mate
 <p><a href="https://forms.gle/qyEctybtkHV4nDNq7" style="background-color: #e74c3c; color: white; padding: 10px 10px; text-decoration: none; border-radius: 8px; font-weight: bold; display: inline-block; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">🎯 Start Intro to 3D Data Quiz </a></p>
 <p>If you receive a score of 80% or higher, you will receive an email with a certificate for this module.</p>
 </div>
+
+Thank you to Cesium for supporting the development of this course and helping make it possible.
