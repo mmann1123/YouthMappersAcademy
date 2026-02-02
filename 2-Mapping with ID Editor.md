@@ -71,7 +71,7 @@ You won’t always encounter a blank slate when mapping in OpenStreetMap, and wi
 ```{tip} 
 YouthMappers Blogspot: Whoever You Are, Your Data Fits in OSM
 
-[Whoever You Are, Your Data Fits in OSM](https://www.youthmappers.org/post/2019/10/08/whoever-you-are-your-data-fits-in-osm) By Jim Libby (University of Arizona)
+[Whoever You Are, Your Data Fits in OSM](https://www.youthmappers.org/post/2019/10/08/whoever-you-are-your-data-fits-in-osm) By Jim Libby (Arizona State University)
 
 Hear from Jim on the process of discovery, from his first interactions with OpenStreetMap all the way through to his virtual internship position with USAID. Jim discusses how his experiences were the perfect complement to his academic studies in Geography and Urban Planning, allowing him to overlap the theoretical and practical elements of both disciplines.
 ```
