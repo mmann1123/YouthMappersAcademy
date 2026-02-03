@@ -1,10 +1,12 @@
-# %%
 import os
 from datetime import datetime
 
-site_url = "https://mmann1123.github.io/YouthMappersAcademy/"  # <-- Update this to your actual site URL
+site_url = "https://mmann1123.github.io/YouthMappersAcademy/"
 html_dir = "_build/html"
 sitemap_path = os.path.join(html_dir, "sitemap2.xml")
+
+# Ensure the output directory exists
+os.makedirs(html_dir, exist_ok=True)
 
 urls = []
 for root, dirs, files in os.walk(html_dir):
@@ -25,4 +27,3 @@ with open(sitemap_path, "w") as f:
         f.write("    <priority>0.5</priority>\n")
         f.write("  </url>\n")
     f.write("</urlset>\n")
-# %%
