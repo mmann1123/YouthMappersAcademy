@@ -16,7 +16,7 @@ Welcome to Module 1 of the YouthMappers Academy. In this course you will learn a
 - The establishment of YouthMappers
 - The Code of Conduct for community members
 - Ethical considerations when mapping in OpenStreetMap
-
+- 
 
 ## What is OpenStreetMap?
 
