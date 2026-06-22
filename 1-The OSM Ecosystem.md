@@ -41,7 +41,7 @@ Open source platforms such as OpenStreetMap are developed and maintained in a co
 
 Click [here](https://opensource.com/resources/what-open-source) to learn more about open source. 
 
-![alt text](Module1_Static/1.01.jpg)
+![Adapting Open Source Software](Module1_Static/1.01.jpg)
 *Image Source: "Adapting Open Source Software" [https://engineering.fb.com/2009/04/10/web]*
 
 ## The OpenStreetMap Infrastructure
