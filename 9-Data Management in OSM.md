@@ -229,7 +229,7 @@ In a couple of words, brainstorm your answer to the following below:
 
 Osmose is a tool that monitors multiple quality control issues in OSM. These include issues with feature geometry (such as overlapping buildings/nodes, incomplete features, and duplications) and common tagging issues (such as missing, unsuitable, or poorly formatted tags). More information about Osmose can be found at the [Osmose OSM Wiki Page](https://wiki.openstreetmap.org/wiki/Osmose).
 
-- Go to http://osmose.openstreetmap.fr/ in your internet browser (Osmose works best with the Google Chrome internet browser. Firefox, Opera, Safari, and other browsers may not display the information correctly.)
+- Go to https://osmose.openstreetmap.fr/ in your internet browser (Osmose works best with the Google Chrome internet browser. Firefox, Opera, Safari, and other browsers may not display the information correctly.)
 
 - Login using your OSM credentials (this isn’t required for most functions, but if you would like the option of fixing tag errors within the platform, you will need to login).
 
@@ -432,7 +432,7 @@ There are many excellent online resources to supplement your exports from OSM. A
 **5. Events** 
 - [ACLED](https://acleddata.com/#/dashboard): The Armed Conflict Location & Event Data Project (ACLED) is a disaggregated data collection, analysis, and crisis mapping project. ACLED collects the dates, actors, locations, fatalities, and types of all reported political violence and protest events around the world. Georeferenced data is available to download as shapefiles.
 
-- [Maxar Open Data Program](https://www.maxar.com/open-data): Maxar releases high-resolution open imagery for select sudden onset major crisis events from 2010 to 2022.
+- [Maxar Open Data Program](https://vantor.com/company/open-data-program/): Maxar (now Vantor) releases high-resolution open imagery for select sudden onset major crisis events from 2010 to 2022.
 
 ## Dig Deeper
 ## Want to Dig a Little Deeper?
