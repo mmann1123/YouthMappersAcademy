@@ -1,0 +1,86 @@
+name: pr-checks
+
+# Validate content on every pull request to main/master.
+# These checks run on the contributor's branch and do NOT deploy anything.
+on:
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+jobs:
+  # --- Required check: the book must compile cleanly ---------------------
+  # Fails the PR on broken Markdown/MyST syntax, missing TOC files,
+  # broken image paths, bad cross-references, or duplicate anchors.
+  build-book:
+    name: Build the book (must pass)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # -W turns warnings into errors; --keep-going reports ALL problems
+      # in one run instead of stopping at the first.
+      - name: Build the book (warnings = errors)
+        run: jupyter-book build . -W --keep-going
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-report
+          path: _build/html/reports/
+          if-no-files-found: ignore
+
+  # --- Advisory check: report dead links, but do NOT block the PR -------
+  # External sites go down / rate-limit / block bots, so a red here is
+  # often not the contributor's fault. Review the report, don't gate on it.
+  link-check:
+    name: Check links (advisory)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run link checker
+        run: jupyter-book build . --builder linkcheck
+
+      - name: Upload link-check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: linkcheck-report
+          path: _build/linkcheck/output.txt
+          if-no-files-found: ignore

@@ -155,7 +155,7 @@ Stella W. Nakacwa (Makerere University, Uganda), and Sonia Torres (Rice Universi
 **Branding, Style, and Visual Representation**
 We encourage you to promote yourselves and your events by using YouthMappers branding. YouthMappers is a large organization and, as such, it’s important to create consistent standards for logos, naming conventions, and use of color across our communications. This will help your group gain and maintain credibility and grow your active members. 
 
-```{image} Module6_Static/6.11.png
+```{image} Module6_Static/6.11.jpg
 :alt: alt text
 :width: 60px
 ```

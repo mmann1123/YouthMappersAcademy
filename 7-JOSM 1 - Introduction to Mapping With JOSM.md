@@ -556,7 +556,7 @@ To save the edits to your layer file, right-click on the layer in the Layer menu
 ***Tip: Save your version of the file after you make your very first edit. Continue to right-click and save regularly while editing.***
 
 ## Conclusion 
-#### Skills, Proficiencies, and Standards 
+### Skills, Proficiencies, and Standards 
 Each badge awarded as part of the YouthMappers Academy has been aligned to the skills and proficiencies outlined in the U.S. Department of Labor’s Geospatial Technology Competency Model (GTCM), as well as National Geographic’s National Geography Standards.
 
 The Geospatial Technology Competency Model identifies the foundational, industry-wide, and industry sector-specific expertise that distinguishes, and binds together, successful geospatial professionals. It identifies core personal, academic, and workplace competencies, as well as sector-specific geospatial knowledge and abilities, including specialized competencies related to data acquisition, data analysis and modeling, imagery interpretation, and software and application development. 

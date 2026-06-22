@@ -545,7 +545,7 @@ align: center
 
 ```{figure} static/buliding_color.png
 ---
-name: Different types of building materials
+name: Different building colours
 width: 50%
 align: center
 ---

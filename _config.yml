@@ -36,9 +36,13 @@ html:
   output_folder: docs
   extra_css:
     - static/custom.css
-  google_analytics_id:  'G-J1EHVT3TZF'  
   analytics:
     google_analytics_id: G-J1EHVT3TZF
+
+# Files that are not part of the book's table of contents
+exclude_patterns:
+  - README.md
+
 sphinx:
   config:
     language: en
