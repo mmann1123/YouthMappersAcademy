@@ -208,8 +208,8 @@ The hierarchical structure of 3D Tiles enables progressive loading, meaning data
 - **Interactivity**: The integration of OSM with 3D Tiles allows for a more immersive and dynamic mapping experience, enhancing user engagement and data visualization.
 
 ### For Further Learning:
-- [What is 3D Tiles?](https://cesium.com/learn/3d-tiles/)
-- [Cesium OSM Buildings Overview](https://cesium.com/learn/cesium-osm-buildings/)
+- [What is 3D Tiles?](https://cesium.com/learn/3d-tiling/)
+- [Cesium OSM Buildings Overview](https://cesium.com/platform/cesium-ion/)
 - [Cesium Blog: OSM in 3D Tiles](https://cesium.com/blog/)
 ```
 

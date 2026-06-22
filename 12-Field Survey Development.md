@@ -122,7 +122,7 @@ It is also important to pilot or test the product and **cross-check your survey 
 ```{tip} 
 YouthMappers Blogspot: SETCO YouthMappers train for Women's Connect Challenge Tanzania
 
-[SETCO YouthMappers train for Women's Connect Challenge Tanzania](https://www.youthmappers.org/post/2019/03/05/setco-youthmappers-train-for-womens-connect-challenge-tanzaniat) By Geoffrey Kateregga, Humanitarian OpenStreetMapTeam
+[SETCO YouthMappers train for Women's Connect Challenge Tanzania](https://www.youthmappers.org/news) By Geoffrey Kateregga, Humanitarian OpenStreetMapTeam
 
 Through the Women Connect Challenge project in Serengeti, Tanzania, HOT conducted a one-day OpenStreetMap introductory training at Serengeti Tourism College, located in Mugumu, Mara Region Tanzania. The tourism school is the only institution of higher learning in Mugumu town, the administrative seat of the Serengeti District. The purpose of the training was to develop the capacity of the students in the use of OpenStreetMap and also initiate the creation of a YouthMappers chapter whose members could also contribute to the Women Connect Challenge project through Crowd2map Tanzania.
 

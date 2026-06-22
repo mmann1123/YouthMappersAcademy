@@ -399,7 +399,7 @@ Refer to the information below to learn more about JOSM 2.
 **- LearnOSM:** LearnOSM is an online resource with step-by-step instructions (in multiple languages) on the many tools and platforms that can be used to generate or add data to OpenStreetMap. It features a section on iDeditor, JOSM, and editing using smartphones.
   - [JOSM: Detailed Editing](https://learnosm.org/en/josm/)
 **- OSM Wiki:** [OSM Tasking Manager and Validating Data](https://wiki.openstreetmap.org/wiki/Tasking_Manager/Validating_data)
-**- Mapbox:** [Validating OpenStreetMap](https://blog.mapbox.com/validating-and-protecting-openstreetmap-893487ed05db)
+**- HOT:** [Validating with JOSM](https://toolbox.hotosm.org/pages/5_data_quality_assurance/5.2._validating_with_josm/)
 **- YouthMappers:** [Validator Training Document](https://docs.google.com/document/d/1wR-hBN8aTe9KPvU8_F25ydrY3z-Ij02z3ov5aX6aHFE/edit?tab=t.0)
 
 **Videos**
