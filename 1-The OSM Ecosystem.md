@@ -164,7 +164,7 @@ The [Humanitarian OpenStreetMap Team](https://www.hotosm.org/) (HOT) is a U.S. r
 - Learn more about [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) and [YouthMapper contributions](https://www.youthmappers.org/post/2020/08/06/How-YouthMappers-Are-Contributing-to-2030-Agenda-for-Sustainable-Development) to the 2030 Agenda for Sustainable Development.
 
 ```{admonition} Watch This!
-**Why Does Open Mapping Matter?** — [Humanitarian OpenStreetMap Team #mapthedifference](https://www.youtube.com/watch?v=Phwrgb16oEM)(https://www.youtube.com/watch?v=8wdzGKmZu-k)
+**Why Does Open Mapping Matter?** — [Humanitarian OpenStreetMap Team #mapthedifference](https://www.youtube.com/watch?v=8wdzGKmZu-k)
 A story of how the Humanitarian OpenStreetMap Team global volunteer network and open maps are making a real difference in the lives of those affected by disaster.
 ```
 
@@ -182,7 +182,7 @@ YouthMappers Blogspot: The Legacy of EverywhereSheMaps
 In the following blog post, hear from Stellamaris on how the Everywhere She Maps program is empowering young women across Uganda, Tanzania, and Nigeria — using open mapping to drive real change in energy access, food security, and healthcare in their communities.
 ```
 
-Everywhere She Maps is defined by five core pillars that have been framed by the [Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals). SDGs are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice. Though mapping as an activity is not specifically outlined in the UN Sustainable Development Goals, but the data, research, and leadership opportunities created through YouthMapper activities supports the attainment of many of these goals. Click on the individual pillar links for an example of YouthMappers’ previous progress in these areas.
+Everywhere She Maps is defined by five core pillars that have been framed by the [Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals). SDGs are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice. Though mapping as an activity is not specifically outlined in the UN Sustainable Development Goals, the data, research, and leadership opportunities created through YouthMapper activities support the attainment of many of these goals. Click on the individual pillar links for an example of YouthMappers’ previous progress in these areas.
 
 - [**Security Improves:**](https://www.youthmappers.org/everywhereshemapssecurityimproves) Marking places as unsafe for women makes visible solutions to improve community welfare
 - [**Lives are Saved:**](https://www.youthmappers.org/everywhereshemapslivesaresaved) Accurate and complete location of health and wellness assets increases women’s health
