@@ -241,7 +241,7 @@ OpenStreetMap also has a Code of Conduct that focuses primarily on how members s
 The Code of Conduct, and further information on violations and how these are adjudicated and enforced can be found on the [OSM Code of Conduct](https://wiki.openstreetmap.org/wiki/Community_Code_of_Conduct_(Draft)) page. These [OSM specific Netiquette Guidelines](https://wiki.openstreetmap.org/wiki/Etiquette) are also useful when reaching out to others in the community. 
 
 ```{tip} 
-Before mapping, consider the ethical responsibilities that come with  the data we create — who it affects, and how it can be used or misused.
+Before mapping, consider the ethical responsibilities that come with the data we create — who it affects, and how it can be used or misused.
 
 **Read this Blog:** By Erica Hagen 
 [The Ethical Mapping Guidelines: how not to map](https://ethicalgeo.org/the-ethical-mapping-guidelines-how-not-to-map/) *by Erica Hagen EthicalGEO — explores how maps and data can either reinforce inequality or help rectify it, especially for vulnerable and marginalized communities.*
