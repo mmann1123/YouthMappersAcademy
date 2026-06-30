@@ -164,7 +164,7 @@ The [Humanitarian OpenStreetMap Team](https://www.hotosm.org/) (HOT) is a U.S. r
 - Learn more about [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) and [YouthMapper contributions](https://www.youthmappers.org/post/2020/08/06/How-YouthMappers-Are-Contributing-to-2030-Agenda-for-Sustainable-Development) to the 2030 Agenda for Sustainable Development.
 
 ```{admonition} Watch This!
-**Why Does Open Mapping Matter?** — [Humanitarian OpenStreetMap Team #mapthedifference](https://www.youtube.com/watch?v=Phwrgb16oEM](https://www.youtube.com/watch?v=8wdzGKmZu-k)
+**Why Does Open Mapping Matter?** — [Humanitarian OpenStreetMap Team #mapthedifference](https://www.youtube.com/watch?v=Phwrgb16oEM)(https://www.youtube.com/watch?v=8wdzGKmZu-k)
 A story of how the Humanitarian OpenStreetMap Team global volunteer network and open maps are making a real difference in the lives of those affected by disaster.
 ```
 
