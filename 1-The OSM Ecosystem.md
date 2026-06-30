@@ -2,6 +2,7 @@
 title: "Module 1: The OSM Ecosystem"
 author: "YouthMappers Academy"
 date: "2024"
+updated: "2026"
 ---
 
 # The OSM Ecosystem
@@ -21,7 +22,7 @@ Welcome to Module 1 of the YouthMappers Academy. In this course you will learn a
 ## What is OpenStreetMap?
 
 ### Overview
-OpenStreetMap is a free, open, editable map of the world built by a global community of mapping collaborators. The OpenStreetMap Project can be found at [OpenStreetMap.org], and, to date, has been contributed to by over *six million* volunteers around the world. Data for the map is gathered using a variety of field-based and desktop mapping techniques, including manual surveys, GPS devices, smartphone applications, tracing features from aerial imagery (satellite and drone imagery being the most popular), and imports from other open sources. 
+OpenStreetMap is a free, open, editable map of the world built by a global community of mapping collaborators. The OpenStreetMap Project can be found at [OpenStreetMap.org](https://www.openstreetmap.org/#map=3/41.11/-87.36), and, to date, has been registered by over *ten million* accounts, with over *two million* active contributors around the world. Data for the map is gathered using a variety of field-based and desktop mapping techniques, including manual surveys, GPS devices, smartphone applications, tracing features from aerial imagery (satellite and drone imagery being the most popular), and imports from other open sources. 
 
 What started as a community-based alternative to heavily copyrighted commercial base maps, is now the base map of choice on thousands of web sites, mobile apps, and hardware devices. To become a member, you simply [create an account](https://www.openstreetmap.org/user/new). All of the data within OSM is jointly owned by the contributors, without any usage fees whatsoever.
 
@@ -44,6 +45,12 @@ Click [here](https://opensource.com/resources/what-open-source) to learn more ab
 ![alt text](Module1_Static/1.01.jpg)
 *Image Source: "Adapting Open Source Software" [https://engineering.fb.com/2009/04/10/web]*
 
+```{admonition} Watch This!
+Get a quick visual introduction to OpenStreetMap — how it's built, who contributes, and why it matters.
+
+**Watch the Video**: [What is OpenStreetMap?](https://www.youtube.com/watch?v=Phwrgb16oEM)
+```
+
 ## The OpenStreetMap Infrastructure
 
 ### Overview
@@ -52,7 +59,7 @@ OpenStreetMap allows us to capture information about features in the physical la
 - The **“where”** being the physical location. 
 - The **“what”** being the additional information that describes or measures those particular features. 
 
-As you’ve already learned, data for the map is collected using a variety of field-based and desktop mapping techniques, including manual surveys, GPS devices, smartphone applications, and tracing features from aerial imagery. This data is stored in the digital map using a rather simple representation system consisting of either point locations, lines, or shapes. This is complemented by a system of labels (called “tags”) that help describe and distinguish one feature from another. We will look at the structure of OSM data in more depth in a later module.
+As you’ve already learned, data for the map is collected using a variety of field-based and desktop mapping techniques, including manual surveys, GPS devices, smartphone applications, and tracing features from aerial imagery. This data is stored in the digital map using a rather simple representation system consisting of either point locations, lines, or shapes. This is complemented by a system of labels (called “tags”) that help describe and distinguish one feature from another. We will look at the structure of OSM data in more depth in a [*Course 4: The OpenStreetMap Data Model*](https://mmann1123.github.io/YouthMappersAcademy/4-The%20OpenStreetMap%20Data%20Model.html).
 
 OSM started with the individual contributions of dedicated but dispersed mappers all over the world, therefore, original global coverage was somewhat patchy. Due to the improvement of mapping tools (especially the online editors and project management platforms⏤known to the community as “tasking managers”), OSM coverage (and quality) has improved dramatically. In recent years, OSM has also benefited from large scale data imports, especially from national mapping agencies with an open-data policy. This has allowed a head start in many global locations.
 
@@ -70,50 +77,61 @@ The OpenStreetMap community is a dynamic, diverse group of people, ranging from 
 - **Data Consumers:** Many different companies, organizations, governments, researchers, and individuals use OpenStreetMap data for any number of uses: transportation and routing, GPS and navigation, healthcare, disaster risk management, city planning, cartography, municipal services, academic research, GIS, and more.
 - **Developers:** Coders, developers, and designers who use OpenStreetMap to make tools like routing, data editing, quality assurance, project management, and more. 
 - **Local and Regional Communities:** Regional, country, state or city level groups that organize OpenStreetMap editing and events in their areas; some of which are officially organized, others gather informally. Many of these groups organize their own conferences. These groups create data for representation and/or for the management of their jurisdictions in a more open, participatory fashion (see Data Consumers for a list of use-cases).
-- **Humanitarian Groups:** Many humanitarian organizations create new map data and use existing OSM data to uspport their projects, either for planning and preparation, logistics, or response. Often there are volunteer mappers (more often than not remote) who help digitize imagery as well as on-the-ground data collectors and mapping staff. 
+- **Humanitarian Groups:** Many humanitarian organizations create new map data and use existing OSM data to support their projects, either for planning and preparation, logistics, or response. Often there are volunteer mappers (more often than not remote) who help digitize imagery as well as on-the-ground data collectors and mapping staff. 
 
 
 ### YouthMappers: Who Are We?
-[YouthMappers](https://www.youthmappers.org) is a global community of students, researchers, educators, and scholars that use open geospatial technologies to highlight and directly address development challenges worldwide. YouthMappers was envisioned to fulfill the demand for open geospatial data access in all parts of our world. A generation of empowered young people has emerged, who have become leaders in creating resilient communities and have defined their world by mapping it. We are now a worldwide network of over 350+ student-led chapters and growing! The students are at the epicenter of all we do.
+[YouthMappers](https://www.youthmappers.org) is a global community of students, researchers, educators, and scholars that use open geospatial technologies to highlight and directly address development challenges worldwide. YouthMappers was envisioned to fulfill the demand for open geospatial data access in all parts of our world. A generation of empowered young people has emerged, who have become leaders in creating resilient communities and have defined their world by mapping it. 
 
-The founding partners of the YouthMappers consortium are Texas Tech University, The George Washington University, and West Virginia University. Arizona State University is the lead fiscal and administrative partner, in collaboration with Texas Tech University, The George Washington University, and West Virginia University. The Steering Committee, which is comprised of faculty and scholars from these institutions, supports chapter efforts to build a socially engaged citizenry, enhance long-term scientific capacity, foster youth leadership, and offer meaningful global learning experiences.
+YouthMappers has over 200 active chapters in 50+ countries, with a legacy of 5,000+ student mappers across 450+ institutions in 80+ countries and growing! The students are at the epicenter of all we do. Explore our global network at: [YouthMappers Network](https://www.youthmappers.org/chapters)
+
+Estimated number of people covered by improved open geographic data generated by [YouthMappers mapping campaigns](https://activity.youthmappers.org/#2.01/13.76/1.22): **67,832,885** 
+
+The [founding partners](https://www.youthmappers.org/partners) of the YouthMappers consortium are Texas Tech University, The George Washington University, and West Virginia University. Arizona State University is the lead fiscal and administrative partner, in collaboration with Texas Tech University, The George Washington University, and West Virginia University. The [Steering Committee](https://www.youthmappers.org/meet-our-team), which is comprised of faculty and scholars from these institutions, supports chapter efforts to build a socially engaged citizenry, enhance long-term scientific capacity, foster youth leadership, and offer meaningful global learning experiences.
 
 At the heart of YouthMappers is an international network of university-based, student-led chapters, who organize, collaborate, and implement mapping activities that respond to actual development needs around the globe. The spatial data that they create, and the research that they conduct is made publicly available through open platforms, such as OpenStreetMap. Chapter affiliation offers these students and their faculty advisors the chance to network with others around the world and exchange information, ideas, and results that lead to a greater understanding of resilience and how technology can be used to address information challenges. 
 
-Members participate in direct mapping activities on the OpenStreetMap platform, both as individual contributors, or, as part of chapter-led activities, such as “Mapathons”. They can also apply for academic opportunities through our Research and Leadership Fellows programs, and funding for field based mapping work through the Fieldwork Program. 
+Members participate in direct mapping activities on the OpenStreetMap platform, both as individual contributors, or, as part of chapter-led activities, such as “Mapathons”. Over the years, YouthMappers has offered a range of additional opportunities to support student leadership and research — including the Research Fellows and Leadership Fellows programs, which brought chapter leaders together with the Steering Committee to expand skills and build connections across the global network, and the Fieldwork Program, which provided funding for field-based mapping projects. These programs reflect the network's ongoing commitment to developing the next generation of geospatial leaders.
 
 ```{admonition} Watch This!
-Get the backstory of how and why the consortium was created. Watch this video and learn from organizers about our vision for Open Mapping for Resilience in Higher Education around the world. This webinar was recorded as part of the series offered by partner organization UCGIS.
+Get the backstory of how and why the consortium was created, and celebrate a decade of open mapping for resilience in higher education around the world. Watch this video to hear from YouthMappers organizers and community members as we mark our 10th anniversary.
 
-[Watch the video](https://www.youtube.com/watch?v=_Y-oIhUcL88&feature=emb_logo)
+**Watch The Video**: [YouthMappers at 10: A Decade of Mapping for Impact](https://www.youtube.com/watch?v=5RLNlBgtLGo)
 ```
 
 While many minds together created the foundation of YouthMappers, the heart of the students is what leads to the success of this global consortium. We are a movement, a movement of students wanting to leave a mark- with the courage to be change agents and resolve in our response to community needs. The collaboration of faculty, staff, and partner organizations has bolstered an experiential learning environment that leads to action. Students decide how and where they put themselves on the map.
 
 Read about the experiences of our members throughout our courses, in their own words, through their blogs published on the YouthMappers Website: [YouthMappers Blog](https://www.youthmappers.org/blog). 
 
-**Your YouthMappers Team:**
+[**YouthMappers Team:**](https://www.youthmappers.org/meet-our-team) YouthMappers is led by a passionate and dedicated team of co-founders, researchers, educators, and professionals who share a common vision: **Empowering the next generation of leaders through open mapping for resilience and sustainable development**. From coordinating global chapter activities and managing data quality, to developing training resources and fostering international partnerships, each team member plays a vital 
+role in keeping this movement growing. Together, they support more than 400 student-led chapters across 80+ countries — and the network keeps expanding. 
 - **Co-Founder, Director, Principal Investigator:** Patricia Solis, Ph.D., Arizona State University
-- **Managing Director:** Marcela Zeballos, Texas Tech University 
-- **Technical Projects Manager:** Elodie Nix, Arizona State University 
+- **Managing Director:** Elodie Nix, Arizona State University 
 - **Co-Founder, Co-Principal Investigator, Director of Data Quality:** Ryan Engstrom, Ph.D., The George Washington University
 - **Co-Founder, YouthMappers Academy Manager:** Nuala Cowan, The World Bank
-- **Co-Founder:** Brent McCusker, Ph.D., West Virginia University
-- **Co-Founder:** Chad Blevins, Co-Founder, Technical Advisor
+- **Co-Founder, Co-Principal Investigator:** Brent McCusker, Ph.D., West Virginia University
+- **Co-Founder, Technical Advisor:** Chad Blevins
 - **Validation Hubs Manager:** Richard Hinton, The George Washington University
-- **OSM Teams Coordinator, Data Systems Analysis and Visualization:** Jennings Anderson, Meta
+- **OSM Teams Coordinator, Data Systems Analysis and Visualization, Technical Advisors:** Jennings Anderson, Meta
 - **Special Projects Manager:** Michael Mann, Ph.D., The George Washington University
 - **Data Localization Manager and Alumni Network Lead:** Ebenezer Boateng, Ph.D., Postdoctoral Scholar, Arizona State University
+- **Social Media & Communications Lead:** Maliha Binte Mohiuddin, Doctoral Candidate, West Virginia University
+- **Management Intern:** Ana Feinson, Arizona State University
+- **Graduate Research Assistant:** Binisha Shrestha, Texas Tech University
 
-Nuala Cowan, Ph.D., The George Washington University
-- **Co-Principal Investigator:** Brent McCusker, Ph.D., West Virginia University, 
-- **Managing Director:** Marcela Zeballos, Texas Tech University
-- **Communications Specialist:** Dara Carney-Nedelman
-​- **Technical Advisors:** Chad Blevins, Jennings Anderson
+[**YouthMappers Alumni Council:**](https://www.youthmappers.org/meet-our-team) The YouthMappers Alumni Council brings together 15 dedicated alumni who have played a pivotal role in shaping the global YouthMappers network over the past decade. As the inaugural council, members will collaborate with the Steering Committee to refine governance structures, guide strategic planning, and help shape the future direction of YouthMappers. Their insight and experience ensure that the network continues to grow in ways that are inclusive, impactful, and aligned with the needs of students and communities worldwide.
 
-![alt text](static/team2.png)
+[**Student Leaders!:**](https://www.youthmappers.org/regional-ambassadors) The YouthMappers Regional Ambassador Program builds on the leadership and expertise of some of our most engaged members to strengthen and sustain the network worldwide. Regional Ambassadors are selected from among past Leadership Fellows and other experienced student leaders who have demonstrated commitment to open mapping and the YouthMappers mission. Throughout their term, Ambassadors act as regional connectors—supporting chapter growth, mentoring new leaders, and providing both technical and community-building training. They help re-engage chapters that may have gone quiet, guide smooth leadership transitions, and introduce students to open-source mapping tools and practices that ensure high-quality contributions to OpenStreetMap. In this way, Ambassadors not only preserve the integrity of our data, but also sustain the energy and inclusivity of the YouthMappers movement.
 
-[Meet Our Student Leaders!](https://www.youthmappers.org/regional-ambassadors)
+```{admonition} YouthMappers is now a Charter Project of OpenStreetMap US!
+YouthMappers owes a great deal of our growth and success to the support and guidance of the United States Agency for International Development (USAID) GeoCenter during the early years of our network. While they are no longer active partners, their vision and commitment played a crucial role in shaping YouthMappers into the global movement it is today.
+
+As YouthMappers enters its next decade, we have officially become a Charter Project of OpenStreetMap US — formalizing a partnership that builds on nearly a decade of collaboration. As a Charter Project, YouthMappers can rely on OSM US's 501(c)(3) non-profit status for fundraising, while enabling new opportunities for coordinated collaborations and long-term sustainability.
+
+[📣 Read the full announcement → OpenStreetMap US hosts YouthMappers as a Charter Project](https://openstreetmap.us/news/2025/12/youthmappers-charter-project/)
+
+[❤️ Donate to Support YouthMappers](https://www.youthmappers.org/so/e3PkK1RLH?languageTag=en)
+```
 
 ### OpenStreetMap and the Humanitarian Community
 
@@ -130,6 +148,11 @@ To read more about how the remote mapping effort evolved, please read the follow
 
 In the aftermath of this event, a new organization called the Humanitarian OpenStreetMap Team (HOT) was born.
 
+```{admonition} Watch This!
+**Who are YouthMappers? What do they do? Why do they map?** — [YouthMappers' Documentary Preview](https://www.youtube.com/watch?v=Phwrgb16oEM)
+Hear from YouthMappers students and HOT volunteers on how open mapping is saving lives and driving development around the world.
+
+```
 #### Humanitarian Organization Examples 
 
 ##### Humanitarian OpenStreetMap Team
@@ -138,40 +161,34 @@ The [Humanitarian OpenStreetMap Team](https://www.hotosm.org/) (HOT) is a U.S. r
 - To take a look at the platform, see [The HOT Tasking Manager](https://tasks.hotosm.org/).
 - Learn more about [UN Sustainable Development Goals](https://www.un.org/sustainabledevelopment/sustainable-development-goals/) and [YouthMapper contributions](https://www.youthmappers.org/post/2020/08/06/How-YouthMappers-Are-Contributing-to-2030-Agenda-for-Sustainable-Development) to the 2030 Agenda for Sustainable Development.
 
+```{admonition} Watch This!
+**Why Does Open Mapping Matter?** — [Humanitarian OpenStreetMap Team #mapthedifference](https://www.youtube.com/watch?v=8wdzGKmZu-k)
+A story of how the Humanitarian OpenStreetMap Team global volunteer network and open maps are making a real difference in the lives of those affected by disaster.
+```
+
 ##### Missing Maps
-[Missing Maps](https://www.missingmaps.org/) is a humanitarian project that preemptively maps parts of the world that are vulnerable to natural disasters, conflicts, and disease epidemics. It was started in 2014, as a collaboration between the American Red Cross, the British Red Cross, Médecins Sans Frontières (MSF), and the Humanitarian OpenStreetMap Team, and membership is open to any NGO, educational establishment, or civil society group that is willing to contribute to their goals and abide by their ethics statement (YouthMappers is an official member of the Missing Maps community). Missing Maps members host global mapping events (registered on their site) and provide instructional materials and tools for new potential mappers and mapping event hosts, such as their [Project Leaderboard](https://www.missingmaps.org/blog/2018/03/23/leaderboard-updates/) and their mobile app [Mapswipe](https://mapswipe.org/en/). To date, over 50 million edits have been made in OpenStreetMap under the Missing Maps banner.
+[Missing Maps](https://www.missingmaps.org/) is a humanitarian project that preemptively maps parts of the world that are vulnerable to natural disasters, conflicts, and disease epidemics. It was started in 2014, as a collaboration between the American Red Cross, the British Red Cross, Médecins Sans Frontières (MSF), and the Humanitarian OpenStreetMap Team, and membership is open to any NGO, educational establishment, or civil society group that is willing to contribute to their goals and abide by their ethics statement (YouthMappers is an official member of the Missing Maps community). Missing Maps members host global mapping events (registered on their site) and provide instructional materials and tools for new potential mappers and mapping event hosts, such as their [Project Leaderboard](https://www.missingmaps.org/blog/2018/03/23/leaderboard-updates/) and their mobile app [Mapswipe](https://mapswipe.org/en/). To date, over *107 million* edits have been made in OpenStreetMap under the Missing Maps banner — and this figure continues to grow daily! See the live [Missing Maps statistics](https://ohsome-now.heigit.org/dashboard#hashtag=missingmaps&start=2005-04-09T20:54:39Z&end=2026-06-29T00:00:00Z&interval=P1M&active_topic=edit&countries=&topics=contributor,edit,building,road&osm_user=115612) for the current total.
 
-##### Empowering Female Mappers: Geochicas
-YouthMappers is committed to increasing the number of female mappers in our ranks and the opportunities available to them, especially with regard to the kind of data that reflects women’s needs and services in the community. We have supported outreach to engage female mappers through [Let Girls Map](https://www.youthmappers.org/letgirlsmap), as well as dedicated leadership programs and data campaigns to address women’s issues through [Everywhere She Maps](http://www.everywhereshemaps.org/). We are proud to work closely with other organizations that are working to close the gender gap in the mapping community. One such organization is Geochicas.
-
-Geochicas was founded in 2016 by a group of female OpenStreetMap contributors who felt strongly about the lack of female participation and project leadership in the open data community. By promoting work that analyzes how women are represented in geospatial and technological spaces, they are helping to improve the overall diversity and quality of the data that goes into OpenStreetMap.
-
-Please read the following article written by Geochicas co-founders Selene Yang, Céline Jacquin, and Miriam González: 
-- [Geochicas: Helping Women Find their Place on the Map](https://blog.mapillary.com/update/2019/05/28/putting-women-on-the-map-with-geochicas.html)
+##### Empowering Female Mappers: Everywhere She Maps
+YouthMappers is committed to increasing the number of female mappers in our ranks and the opportunities available to them, especially with regard to the kind of data that reflects women’s needs and services in the community. We have supported outreach to engage female mappers through [Everywhere She Maps](https://www.youthmappers.org/everywhereshemaps) - YouthMappers' dedicated program to empower female student mappers to create open geospatial data that directly reflects the lives, needs, and voices of women around the world. We are proud to work closely with other organizations that are working to close the gender gap in the mapping community. 
 
 ```{tip} 
-YouthMappers Blogspot: The Beauty of Girls Empowerment
+YouthMappers Blogspot: The Legacy of EverywhereSheMaps
 
-[The Beauty of Girls Empowerment](https://www.youthmappers.org/post/2018/07/20/the-beauty-of-girls-empowerment) By Chidinma Anne Johnson, University of Nigeria Enugu
+[The Legacy of EverywhereSheMaps: Empowering Youth to Tackle Global Challenges](https://www.youthmappers.org/post/the-legacy-of-everywhereshemaps-empowering-youth-to-tackle-global-challenges) By Stellamaris W. Nakacwa, University of Makerere, Uganda
 
-In the following blog post, hear from Chidinma on how mapping as a platform can empower young women, arming them with the tools to support decision making in their communities.
+In the following blog post, hear from Stellamaris on how the Everywhere She Maps program is empowering young women across Uganda, Tanzania, and Nigeria — using open mapping to drive real change in energy access, food security, and healthcare in their communities.
 ```
-### The UN Sustainable Development Goals 
-The [Sustainable Development Goals](https://sdgs.un.org/goals) are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice.
 
-Though mapping as an activity is not specifically outlined in the UN Sustainable Development Goals, the data, research, and leadership opportunities created through YouthMapper activities supports the attainment of many of these goals. 
+Everywhere She Maps is defined by five core pillars that have been framed by the [Sustainable Development Goals (SDGs)](https://sdgs.un.org/goals). SDGs are the blueprint to achieve a better and more sustainable future for all. They address the global challenges we face, including poverty, inequality, climate change, environmental degradation, peace and justice. Though mapping as an activity is not specifically outlined in the UN Sustainable Development Goals, the data, research, and leadership opportunities created through YouthMapper activities support the attainment of many of these goals. Click on the individual pillar links for an example of YouthMappers’ previous progress in these areas.
 
-In the previous section we introduced [Everywhere She Maps](http://www.everywhereshemaps.org/), a targeted training program designed to increase female participation within the YouthMappers network and the rapidly expanding industries that utilize geospatial technologies.
+- [**Security Improves:**](https://www.youthmappers.org/everywhereshemapssecurityimproves) Marking places as unsafe for women makes visible solutions to improve community welfare
+- [**Lives are Saved:**](https://www.youthmappers.org/everywhereshemapslivesaresaved) Accurate and complete location of health and wellness assets increases women’s health
+- [**Power is Generated:**](https://www.youthmappers.org/everywhereshemapspowerisgenerated) Charting transmission lines reveals sites where electric access should be extended to ease women's labor burden
+- [**Prosperity Rises:**](https://www.youthmappers.org/everywhereshemapsprosperityrises) Capacity to use spatial data gives women better access to economic opportunities
+- [**Innovation Happens:**](https://www.youthmappers.org/everywhereshemapsinnovationhappens) Ensuring space for women's vision and leadership yields novel geographic knowledge
 
-Everywhere She Maps is defined by five core pillars that have been framed by the Sustainable Development Goals. Click on the individual pillar links for an example of YouthMappers’ previous progress in these areas.
-
-- **Security Improves:** Marking places as unsafe for women makes visible solutions to improve community welfare
-- **Lives are Saved:** Accurate and complete location of health and wellness assets increases women’s health
-- **Power is Generated:** Charting transmission lines reveals sites where electric access should be extended to ease women's labor burden
-- **Prosperity Rises:** Capacity to use spatial data gives women better access to economic opportunities
-- **Innovation Happens:** Ensuring space for women's vision and leadership yields novel geographic knowledge
-
-#### Open Mapping towards Sustainable Development Goals: Voices of YouthMappers on Community Engaged Scholarship
+##### Open Mapping towards Sustainable Development Goals: Voices of YouthMappers on Community Engaged Scholarship
 
 This 2022 publication, co-edited by YouthMappers own Dr. Patricia Solis, and Marcela Zeballos, invites authors from every region of the world who have emerged as leaders in the YouthMappers movement share their perspectives and knowledge in an accessible and peer-friendly format. These young leaders are working to address SDGs using geospatial technologies and multi-national collaboration. 
 
@@ -220,6 +237,13 @@ OpenStreetMap also has a Code of Conduct that focuses primarily on how members s
 [Click here to download](https://d2jbbv3z6z1uwh.cloudfront.net/youthmappers.course.tc/onboarding/content/uploads/2020/10/22093829/YM_1.4.1_PDF_v2.pdf) a PDF of the above image.
 
 The Code of Conduct, and further information on violations and how these are adjudicated and enforced can be found on the [OSM Code of Conduct](https://wiki.openstreetmap.org/wiki/Community_Code_of_Conduct_(Draft)) page. These [OSM specific Netiquette Guidelines](https://wiki.openstreetmap.org/wiki/Etiquette) are also useful when reaching out to others in the community. 
+
+```{tip} 
+Before mapping, consider the ethical responsibilities that come with the data we create — who it affects, and how it can be used or misused.
+
+**Read this Blog:** By Erica Hagen 
+[The Ethical Mapping Guidelines: how not to map](https://ethicalgeo.org/the-ethical-mapping-guidelines-how-not-to-map/) *by Erica Hagen EthicalGEO — explores how maps and data can either reinforce inequality or help rectify it, especially for vulnerable and marginalized communities.*
+```
 
 ### The OSM Foundation 
 The [OpenStreetMap Foundation](https://osmfoundation.org/wiki/Main_Page) is a not-for-profit organization that supports the OpenStreetMap Project. The foundation consists of members from around the world who elect a board of directors. Much of the foundation’s work is done in the background, yet it is critical to the ongoing functioning and growth of the OpenStreetMap Project.
