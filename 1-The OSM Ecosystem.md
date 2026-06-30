@@ -116,7 +116,7 @@ role in keeping this movement growing. Together, they support more than 400 stud
 - **Special Projects Manager:** Michael Mann, Ph.D., The George Washington University
 - **Data Localization Manager and Alumni Network Lead:** Ebenezer Boateng, Ph.D., Postdoctoral Scholar, Arizona State University
 - **Social Media & Communications Lead:** Maliha Binte Mohiuddin, Doctoral Candidate, West Virginia University
-​- **Management Intern:** Ana Feinson, Arizona State University
+- **Management Intern:** Ana Feinson, Arizona State University
 - **Graduate Research Assistant:** Binisha Shrestha, Texas Tech University
 
 ![alt text](static/team2.png)
@@ -125,7 +125,7 @@ role in keeping this movement growing. Together, they support more than 400 stud
 
 [**Student Leaders!:**](https://www.youthmappers.org/regional-ambassadors) The YouthMappers Regional Ambassador Program builds on the leadership and expertise of some of our most engaged members to strengthen and sustain the network worldwide. Regional Ambassadors are selected from among past Leadership Fellows and other experienced student leaders who have demonstrated commitment to open mapping and the YouthMappers mission. Throughout their term, Ambassadors act as regional connectors—supporting chapter growth, mentoring new leaders, and providing both technical and community-building training. They help re-engage chapters that may have gone quiet, guide smooth leadership transitions, and introduce students to open-source mapping tools and practices that ensure high-quality contributions to OpenStreetMap. In this way, Ambassadors not only preserve the integrity of our data, but also sustain the energy and inclusivity of the YouthMappers movement.
 
-```{admonition} **YouthMappers is now a Charter Project of OpenStreetMap US!**
+```{admonition} YouthMappers is now a Charter Project of OpenStreetMap US!
 YouthMappers owes a great deal of our growth and success to the support and guidance of the United States Agency for International Development (USAID) GeoCenter during the early years of our network. While they are no longer active partners, their vision and commitment played a crucial role in shaping YouthMappers into the global movement it is today.
 
 As YouthMappers enters its next decade, we have officially become a Charter Project of OpenStreetMap US — formalizing a partnership that builds on nearly a decade of collaboration. As a Charter Project, YouthMappers can rely on OSM US's 501(c)(3) non-profit status for fundraising, while enabling new opportunities for coordinated collaborations and long-term sustainability.
